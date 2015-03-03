@@ -1,0 +1,16 @@
+<XDtClass:forAllClasses>
+<XDtClass:ifHasClassTag tagName="gpcsoft.view" superclasses="false">
+	<XDtClass:forAllClassTags tagName="gpcsoft.view">
+	<XDtClass:ifDoesntHaveClassTag tagName="gpcsoft.view" paramName="repeat">
+	<XDtClass:ifHasClassTag tagName="gpcsoft.view" paramName="class">
+<XDtClass:classTagValue tagName="gpcsoft.view" paramName="value"/>.class=<XDtClass:classTagValue tagName="gpcsoft.view" paramName="class"/>
+	</XDtClass:ifHasClassTag>
+	<XDtClass:ifDoesntHaveClassTag tagName="gpcsoft.view" paramName="class">
+<XDtClass:classTagValue tagName="gpcsoft.view" paramName="value"/>.class=org.springframework.web.servlet.view.JstlView
+	</XDtClass:ifDoesntHaveClassTag>
+<XDtClass:classTagValue tagName="gpcsoft.view" paramName="value"/>.url=<XDtClass:classTagValue tagName="gpcsoft.view" paramName="url"/>
+	</XDtClass:ifDoesntHaveClassTag>
+	</XDtClass:forAllClassTags>
+</XDtClass:ifHasClassTag>
+</XDtClass:forAllClasses>
+

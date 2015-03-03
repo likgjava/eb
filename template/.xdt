@@ -1,0 +1,8 @@
+package <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.service;
+
+import com.gpcsoft.core.service.BaseService;
+import <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.domain.<XDtClass:className/>;
+
+public interface <XDtClass:className/>Service extends BaseService<<XDtClass:className/>> {
+
+}

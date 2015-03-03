@@ -1,0 +1,36 @@
+<%@ page pageEncoding="utf-8"%>
+<%@ include file="/view/srplatform/common/init.jsp"%>
+<XDtTagDef:tagDef namespace="FrameClass" handler="com.gpcsoft.core.plugin.FrameClassTagsHandler"/>
+<script type="text/javascript" src="<%=request.getContextPath()%>/view/<XDtClass:classTagValue tagName="gpcsoft.page" paramName="project"/>/<XDtClass:classTagValue tagName="gpcsoft.page" paramName="domain"/>/<XDtFrameClass:classNameLower/>Detail.js"></script>
+
+<div class="formZone">  
+	<form id="<XDtFrameClass:classNameLower/>DetailForm" method="post">
+		<input type="hidden" name="objId" id="objId" value="<c:out value="${param.objId}"/>"/>
+		<div class="desc"><XDtClass:classTagValue tagName="gpcsoft.title" paramName="value"/>      <spring:message code="globe.input.required.prompt"/></div>
+		<div class="formFieldset">
+		<XDtMethod:forAllMethods>
+			<XDtMethod:ifIsGetter>
+				<XDtMethod:ifHasMethodTag tagName="gpcsoft.property">
+			<div class="formRow">
+				<div class="formLabel"><spring:message code="<XDtFrameClass:classNameLower/>Form.<XDtMethod:propertyName/>"/></div>
+				<div class="formField">
+					<div><span id="<XDtMethod:propertyName/>"></span></div>
+				</div>
+			</div>
+				</XDtMethod:ifHasMethodTag>
+				<XDtMethod:ifHasMethodTag tagName="gpcsoft.object">
+			<div class="formRow">
+				<div class="formLabel"><spring:message code="<XDtFrameClass:classNameLower/>Form.<XDtMethod:propertyName/>"/></div>
+			    <div class="formField">
+					<div><span id="<XDtMethod:propertyName/>.<XDtMethod:methodTagValue tagName="gpcsoft.object" paramName="mapingColumn"/>"></span></div>
+            	</div>
+            </div> 
+		         </XDtMethod:ifHasMethodTag>
+           </XDtMethod:ifIsGetter>
+        </XDtMethod:forAllMethods>	              
+		</div>
+	    <div class="btnArea">
+	        <button class="btn primary" id="<XDtFrameClass:classNameLower/>Return" type="button" tabindex="19"><span><span><spring:message code="globe.return"/></span></span></button>
+	    </div>
+	</form>
+</div>

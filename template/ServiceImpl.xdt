@@ -1,0 +1,17 @@
+package <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.service.impl;
+
+import com.gpcsoft.core.service.impl.BaseGenericServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+import <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.manager.<XDtClass:className/>Manager;
+import <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.service.<XDtClass:className/>Service;
+import <XDtClass:fullClassName/>;
+
+@Service 
+public class <XDtClass:className/>ServiceImpl extends BaseGenericServiceImpl<<XDtClass:className/>> implements <XDtClass:className/>Service {
+<XDtTagDef:tagDef namespace="FrameClass" handler="com.gpcsoft.core.plugin.FrameClassTagsHandler"/>
+	@Autowired(required=true) @Qualifier("<XDtFrameClass:classNameLower/>ManagerImpl")
+	private <XDtClass:className/>Manager <XDtFrameClass:classNameLower/>Manager;
+<XDtTagDef:tagDef namespace="FrameClass" handler="com.gpcsoft.core.plugin.FrameClassTagsHandler"/>
+}

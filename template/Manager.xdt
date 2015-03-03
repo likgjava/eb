@@ -1,0 +1,8 @@
+package <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.manager;
+
+import com.gpcsoft.core.manager.BaseManager;
+import <XDtClass:fullClassName/>;
+
+public interface <XDtClass:className/>Manager extends BaseManager<<XDtClass:className/>> {
+
+}

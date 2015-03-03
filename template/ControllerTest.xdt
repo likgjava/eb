@@ -1,0 +1,55 @@
+package <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.web.controller;
+import org.junit.Test;
+import java.util.List;
+import com.gpcsoft.core.utils.JsonUtils;
+import com.gpcsoft.core.Constants;
+import junit.framework.Assert;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.transaction.TransactionConfiguration;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.servlet.ModelAndView;
+import com.gpcsoft.core.utils.Page;
+import com.gpcsoft.srplatform.junit.util.BaseAllTestCaseJunit47;
+import com.gpcsoft.srplatform.junit.util.FileSystemXmlContextLoader;
+import <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.web.controller.<XDtClass:className/>Controller;
+import <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.domain.<XDtClass:className/>;
+
+@ContextConfiguration(locations = {  
+		"lib/junitBean.xml"
+		}, loader = FileSystemXmlContextLoader.class) 
+@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = true) 
+@Transactional 
+public class <XDtClass:className/>ControllerTest extends BaseAllTestCaseJunit47 {
+<XDtTagDef:tagDef namespace="FrameClass" handler="com.gpcsoft.core.plugin.FrameClassTagsHandler"/>
+	//注意使用超类已注入的bean	 FrameBeanFactory类的gean可以获取bean
+	@Autowired(required=true) 
+	private <XDtClass:className/>Controller <XDtFrameClass:classNameLower/>Controller;
+<XDtTagDef:tagDef namespace="FrameClass" handler="com.gpcsoft.core.plugin.FrameClassTagsHandler"/>
+//	@Test//领域模型的增删查改CURD自动赋值测试
+	public void base<XDtClass:className/>CURD(){
+		super.testCURD(<XDtClass:className/>.class);
+	}
+<XDtTagDef:tagDef namespace="FrameClass" handler="com.gpcsoft.core.plugin.FrameClassTagsHandler"/>
+	@SuppressWarnings("unchecked")
+	@Test//具体的业务逻辑测试,  下面方法是测试样例代码,   @NotTransactional加上此注解可以取消事务回滚
+	public void list() throws Exception {
+		//测试应和数据无关，不用直接写死ID和数据测，此测试会自动回滚
+		//测试分三步:1 数据准备		2模拟业务操作            3断言结果没错
+		<XDtClass:className/> <XDtFrameClass:classNameLower/>=(<XDtClass:className/>) this.makeObject(<XDtClass:className/>.class);//数据准备;
+		baseGenericService.save(<XDtFrameClass:classNameLower/>, <XDtClass:className/>.class);
+		
+		request.addParameter(Page.QUERY_COLUMNS, "objId");//指定查哪几列
+		request.addParameter(Page.PAGE_NAME, "1");//当前页大小
+		request.addParameter(Page.PAGE_SIZE_NAME, "15");//得到当前页大小  
+		
+		ModelAndView mv=<XDtFrameClass:classNameLower/>Controller.list(request);
+		List<<XDtClass:className/>> list<XDtClass:className/>=(List<<XDtClass:className/>>) mv.getModelMap().get(Page.DATA);
+		JsonUtils.getJSONString(list<XDtClass:className/>);
+		
+		Assert.assertEquals(Constants.JSON_VIEW, mv.getViewName());//返回的是不是你要的视图,	 可以是FormView  wordView  stringView等
+		Assert.assertNull(mv.getModelMap().get(Constants.FAILURE));//没有异常报错
+		Assert.assertEquals("查询结果错误.", (list<XDtClass:className/>.size()>=1&&list<XDtClass:className/>.size()<=15), true);//数据是否符合预期
+	}
+	
+}

@@ -1,0 +1,198 @@
+<project name="gpcsoft" default="Controller layer java Test" basedir=".">
+	<property name="project" value="srplatform" />
+	<property name="src" value="src" />
+	<property name="test" value="test" />
+	<property name="app" value="eps/agreement" />
+	<property name="conf" value="conf" />
+	<property name="generator" value="generator" />
+	<property name="doc" value="doc" />
+	<property name="lib" value="lib" />
+	<property name="xdoclet" value="lib/xdoclet/" />
+	<property name="dist" value="dist" />
+	<property name="schema" value="schema" />
+	<property name="webapp" value="webapp" />
+	<property name="template" value="template" />
+	<property name="web-inf" value="${webapp}/WEB-INF" />
+	<property name="web-inf.classes" value="${web-inf}/classes" />
+	<property name="web-inf.hbm" value="${web-inf}/hbm" />
+	<property name="web-inf.lib" value="${web-inf}/lib" />
+	<property name="listType" value="List" />
+	<property name="version" value="0.4.0" />
+
+	<property file="${conf}/hibernate.properties"/>
+
+	<mkdir dir="${web-inf.lib}" />
+
+	<path id="class.path">
+		<fileset dir="${xdoclet}">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${web-inf.lib}">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${lib}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<taskdef name="hibernatedoclet" classname="xdoclet.modules.hibernate.HibernateDocletTask" classpathref="class.path" />
+
+	<taskdef classname="xdoclet.DocletTask" classpathref="class.path" name="classdoclet" />
+
+	<taskdef classname="xdoclet.modules.web.WebDocletTask" classpathref="class.path" name="webdoclet" />
+
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties">
+	  <classpath>
+	    <pathelement location="${xdoclet}/ant-contrib-20020829.jar"/>
+	  </classpath>
+	</taskdef>
+	
+	<target name="All *.java" depends="Controller layer java Test,Service layer java Test,Manager layer java Test,Dao layer java Test,generatorController,generatorService,generatorServiceImpl,generatorManager,generatorManagerImpl,generatorDao,generatorDaoHibernate" description="生成Controller 单元测试类(格式：-Ddomain=auth -Dgensrc=User)在main中指定待执行的模块">
+        <echo>+------------------     Controller Test      ---------------+</echo>
+        <echo>| Generates the All Java source filess                          |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+	</target>
+
+	<target name="Controller layer java Test"  description="生成Controller 单元测试类(格式：-Ddomain=auth -Dgensrc=User)在main中指定待执行的模块">
+        <echo>+------------------     Controller Test      ---------------+</echo>
+        <echo>| Generates the Java source filess                          |</echo>
+        <echo>| com/gpcsoft/${app}/${domain}/domain/*.java     |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<classdoclet destdir="${test}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+			</fileset>
+			<template lower="false" destinationFile="com/gpcsoft/${app}/${domain}/web/controller/{0}ControllerTest.java" templateFile="${template}/ControllerTest.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate ControllerTest..." />
+		</classdoclet>
+	</target>
+
+	<target name="Service layer java Test"  description="生成Service 单元测试类(格式：-Ddomain=auth -Dgensrc=User)在main中指定待执行的模块">
+        <echo>+----------------------     Service Test      -------------------+</echo>
+        <echo>| Generates the Java source filess                          |</echo>
+        <echo>| com/gpcsoft/${app}/${domain}/domain/*.java     |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<classdoclet destdir="${test}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+			</fileset>
+			<template lower="false" destinationFile="com/gpcsoft/${app}/${domain}/service/{0}ServiceTest.java" templateFile="${template}/ServiceTest.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate ServiceTest..." />
+		</classdoclet>
+	</target>
+
+	<target name="Manager layer java Test"  description="生成Manager 单元测试类(格式：-Ddomain=auth -Dgensrc=User)在main中指定待执行的模块">
+        <echo>+----------------------     Manager Test      -------------------+</echo>
+        <echo>| Generates the Java source filess                          |</echo>
+        <echo>| com/gpcsoft/${app}/${domain}/domain/*.java     |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<classdoclet destdir="${test}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+			</fileset>
+			<template lower="false" destinationFile="com/gpcsoft/${app}/${domain}/manager/{0}ManagerTest.java" templateFile="${template}/ManagerTest.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate ManagerTest..." />
+		</classdoclet>
+	</target>
+
+	<target name="Dao layer java Test"  description="生成Dao 单元测试类(格式：-Ddomain=auth -Dgensrc=User)在main中指定待执行的模块">
+        <echo>+------------------        Dao   Test    -------------------+</echo>
+        <echo>| Generates the Java source filess                          |</echo>
+        <echo>| com/gpcsoft/${app}/${domain}/domain/*.java     |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<classdoclet destdir="${test}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+			</fileset>
+			<template lower="false" destinationFile="com/gpcsoft/${app}/${domain}/dao/{0}DaoTest.java" templateFile="${template}/DaoTest.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate DaoTest..." />
+		</classdoclet>
+	</target>
+
+	<target name="generatorController"  description="生成Controller(在main中指定待执行的模块，格式：-Ddomain=auth -Dgensrc=User)">
+        <echo>+----------------------    Controller    -------------------+</echo>
+        <echo>| Generates the Java source filess                          |</echo>
+        <echo>| com/gpcsoft/${app}/${domain}/domain/*.java     |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<classdoclet destdir="${src}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+			</fileset>
+			<template lower="false" destinationFile="com/gpcsoft/${app}/${domain}/web/controller/{0}Controller.java" templateFile="${template}/Controller.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate Controller..." />
+		</classdoclet>
+	</target>
+	
+	<target name="generatorService"  description="生成Service、Impl(在main中指定待执行的模块，格式：-Ddomain=auth -Dgensrc=User)">
+        <echo>+----------------------      Service    -------------------+</echo>
+        <echo>| Generates the Java source filess                          |</echo>
+        <echo>| com/gpcsoft/${app}/${domain}/domain/*.java     |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<classdoclet destdir="${src}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+			</fileset>
+			<template lower="false" destinationFile="com/gpcsoft/${app}/${domain}/service/{0}Service.java" templateFile="${template}/Service.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate Service..." />
+		</classdoclet>
+	</target>
+	
+	<target name="generatorServiceImpl"  description="生成ServiceImpl (在main中指定待执行的模块，格式：-Ddomain=auth -Dgensrc=User)">
+        <echo>+----------------------    ServiceImpl   -------------------+</echo>
+        <echo>| Generates the Java source filess                          |</echo>
+        <echo>| com/gpcsoft/${app}/${domain}/domain/*.java     |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<classdoclet destdir="${src}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+			</fileset>
+			<template lower="false" destinationFile="com/gpcsoft/${app}/${domain}/service/impl/{0}ServiceImpl.java" templateFile="${template}/ServiceImpl.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate ServiceImpl..." />
+		</classdoclet>
+	</target>
+	
+	<target name="generatorManager"  description="生成Manager、Impl(在main中指定待执行的模块，格式：-Ddomain=auth -Dgensrc=User)">
+        <echo>+----------------------     Manager      -------------------+</echo>
+        <echo>| Generates the Java source filess                          |</echo>
+        <echo>| com/gpcsoft/${app}/${domain}/domain/*.java     |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<classdoclet destdir="${src}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+			</fileset>
+			<template lower="false" destinationFile="com/gpcsoft/${app}/${domain}/manager/{0}Manager.java" templateFile="${template}/Manager.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate Manager..." />
+		</classdoclet>
+	</target>
+	
+	<target name="generatorManagerImpl"  description="生成ManagerImpl(在main中指定待执行的模块，格式：-Ddomain=auth -Dgensrc=User)">
+        <echo>+----------------------    ManagerImpl    ------------------+</echo>
+        <echo>| Generates the Java source filess                          |</echo>
+        <echo>| com/gpcsoft/${app}/${domain}/domain/*.java     |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<classdoclet destdir="${src}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+			</fileset>
+			<template lower="false" destinationFile="com/gpcsoft/${app}/${domain}/manager/impl/{0}ManagerImpl.java" templateFile="${template}/ManagerImpl.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate ManagerImpl..." />
+		</classdoclet>
+	</target>
+
+	<target name="generatorDao"  description="生成Dao、Impl(在main中指定待执行的模块，格式：-Ddomain=auth -Dgensrc=User)">
+        <echo>+----------------------        Dao       -------------------+</echo>
+        <echo>| Generates the Java source filess                          |</echo>
+        <echo>| com/gpcsoft/${app}/${domain}/domain/*.java     |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<classdoclet destdir="${src}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+			</fileset>
+			<template lower="false" destinationFile="com/gpcsoft/${app}/${domain}/dao/{0}Dao.java" templateFile="${template}/Dao.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate Dao..." />
+		</classdoclet>
+	</target>
+	
+	<target name="generatorDaoHibernate"  description="生成DaoHibernate(在main中指定待执行的模块，格式：-Ddomain=auth -Dgensrc=User)">
+        <echo>+----------------------    DaoHibernate     ----------------+</echo>
+        <echo>| Generates the Java source filess                          |</echo>
+        <echo>| com/gpcsoft/${app}/${domain}/domain/*.java     |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<classdoclet destdir="${src}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+			</fileset>
+			<template lower="false" destinationFile="com/gpcsoft/${app}/${domain}/dao/hibernate/{0}DaoHibernate.java" templateFile="${template}/DaoHibernate.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate DaoHibernate..." />
+		</classdoclet>
+	</target>
+</project>

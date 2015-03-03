@@ -1,0 +1,62 @@
+<project name="srplatform" default="report-html" basedir=".">
+	<property name="src" value="src" />
+	<property name="test" value="test" />
+	<property name="reports" value="test/reports" />
+	<property name="xml" location="xml" />
+
+	<property name="webapp" value="webapp" />
+	<property name="web-inf" value="${webapp}/WEB-INF" />
+	<property name="web-inf.classes" value="${web-inf}/classes" />
+	<property name="web-inf.lib" value="${web-inf}/lib" />
+	<property name="xdoclet" value="lib/xdoclet/" />
+	<property name="lib" value="lib" />
+
+	<path id="class.path">
+		<fileset dir="${xdoclet}">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${web-inf.lib}">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${lib}">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${web-inf.classes}">
+			<include name="**/*.class"/>
+		</fileset>
+
+		<pathelement path="${src}"/>
+		<pathelement location="${web-inf.classes}" />
+	</path>
+
+    <target name="init">
+		<mkdir dir="${xml}" />
+		<mkdir dir="${reports}" />
+    </target>
+	
+	<target name="junit4" depends="init" description="测试准备">
+		<junit printsummary="yes">
+			<classpath refid="class.path" />
+			<formatter type="xml" />
+			<formatter type="brief" usefile="false"/>
+			<batchtest fork="yes" todir="${reports}">
+				<fileset dir="${test}">
+					<!--注意include和includes的区别,我在这吃了大亏,找这个错误浪费了我好多时间-->
+					<!-- batchtest指定的java源文件或class文件，而不是要运行的测试类名称，junit从这些文件中找出要运行的测试类名-->
+					<include name="**/AddOperationTest.class" />
+				</fileset>
+			</batchtest>
+
+		</junit>
+	</target>
+
+	<target name="report-html" depends="junit4" description="测试报告">
+		<junitreport todir="${reports}">
+			<fileset dir="${reports}">
+				<include name="TEST-*.xml" />
+			</fileset>
+			<report format="frames" todir="${reports}" />
+		</junitreport>
+	</target>
+
+</project>

@@ -1,0 +1,37 @@
+package <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.web.controller;
+<XDtTagDef:tagDef namespace="FrameClass" handler="com.gpcsoft.core.plugin.FrameClassTagsHandler"/>
+import java.util.Map;
+import java.util.HashMap;
+import javax.servlet.http.HttpServletRequest;
+import org.springframework.stereotype.Controller;
+import org.springframework.context.annotation.Scope;
+import org.springframework.web.bind.annotation.RequestMapping;
+import com.gpcsoft.core.web.controller.AnnotationMultiController;
+import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.web.servlet.ModelAndView;
+import com.gpcsoft.core.Constants;
+import <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.service.<XDtClass:className/>Service;
+import <XDtClass:fullClassName/>;
+
+/**
+  * @gpcsoft.view value="<XDtFrameClass:classNameLower/>FormView"
+  *  url="view/<XDtClass:classTagValue tagName="gpcsoft.page" paramName="project"/>/<XDtClass:classTagValue tagName="gpcsoft.page" paramName="domain"/>/<XDtFrameClass:classNameLower/>Form.jsp"
+  * @gpcsoft.view value="<XDtFrameClass:classNameLower/>TreeFormView"
+  *  url="view/<XDtClass:classTagValue tagName="gpcsoft.page" paramName="project"/>/<XDtClass:classTagValue tagName="gpcsoft.page" paramName="domain"/>/<XDtFrameClass:classNameLower/>TreeForm.jsp"
+  * @gpcsoft.view value="<XDtFrameClass:classNameLower/>ListView"
+  *  url="view/<XDtClass:classTagValue tagName="gpcsoft.page" paramName="project"/>/<XDtClass:classTagValue tagName="gpcsoft.page" paramName="domain"/>/<XDtFrameClass:classNameLower/>List.jsp"
+  * @gpcsoft.view value="<XDtFrameClass:classNameLower/>DetailView"
+  *  url="view/<XDtClass:classTagValue tagName="gpcsoft.page" paramName="project"/>/<XDtClass:classTagValue tagName="gpcsoft.page" paramName="domain"/>/<XDtFrameClass:classNameLower/>Detail.jsp"
+  */
+@Controller//标识为控制器
+@Scope("request")
+@SessionAttributes(types={<XDtClass:className/>.class})
+@RequestMapping("/<XDtClass:className/>Controller.do")//页面请求路径,可修改
+public class <XDtClass:className/>Controller extends AnnotationMultiController<<XDtClass:className/>> {
+<XDtTagDef:tagDef namespace="FrameClass" handler="com.gpcsoft.core.plugin.FrameClassTagsHandler"/>
+	@Autowired(required=true) @Qualifier("<XDtFrameClass:classNameLower/>ServiceImpl")
+	private <XDtClass:className/>Service <XDtFrameClass:classNameLower/>Service;
+<XDtTagDef:tagDef namespace="FrameClass" handler="com.gpcsoft.core.plugin.FrameClassTagsHandler"/>
+}

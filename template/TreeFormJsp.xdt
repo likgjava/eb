@@ -1,0 +1,202 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ include file="/view/resource/common/init.jsp"%>
+<XDtTagDef:tagDef namespace="FrameClass" handler="com.gpcsoft.core.plugin.FrameClassTagsHandler"/>
+<script type="text/javascript" src="<%=request.getContextPath()%>/view/srplatform/<XDtClass:classTagValue tagName="gpcsoft.page" paramName="domain"/>/<XDtFrameClass:classNameLower/>TreeForm.js"></script>
+
+<div class="treePage">
+<div class="treeOutside">
+  <div class="treeBtn">
+    <button class="btn" type="button" id="<XDtFrameClass:classNameLower/>Up"><span><span><spring:message code="globe.up"/></span></span></button>
+    <button class="btn" type="button" id="<XDtFrameClass:classNameLower/>Down"><span><span><spring:message code="globe.down"/></span></span></button>
+    <button class="btn" type="button" id="<XDtFrameClass:classNameLower/>Expand"><span><span><spring:message code="globe.expand"/></span></span></button>
+    <button class="btn" type="button" id="<XDtFrameClass:classNameLower/>Search"><span><span><spring:message code="globe.search"/></span></span></button>
+  </div>
+  <div id="<XDtFrameClass:classNameLower/>TreeForm" class="treeContentDiv"></div>
+  <div class="treeResize" ></div>
+</div>
+
+<!--Form表单div开始-->
+<div class="treeRight">
+	<div id="<XDtFrameClass:classNameLower/>TreeFormDiv" class="formZone">
+		<form id="<XDtFrameClass:classNameLower/>Form"  method="post">
+		<input type="hidden" name="objId" id="objId" value="<c:out value="${param.objId}"/>"/>
+		<input type="hidden" name="parent.objId" id="parent.objId" value="<c:out value="${param.parent.objId}"/>"/>
+	    
+		<div class="desc"><XDtClass:classTagValue tagName="gpcsoft.title" paramName="value"/>      <spring:message code="globe.input.required.prompt"/></div>
+            <div class="formFieldset">
+     	<XDtMethod:forAllMethods>
+			<XDtMethod:ifIsGetter>
+			     <XDtMethod:ifHasMethodTag tagName="gpcsoft.property">
+	     	<div class="formRow">
+        		<div class="formLabel"><spring:message code="<XDtFrameClass:classNameLower/>Form.<XDtMethod:propertyName/>"/><XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="class" paramValue="required"><em>*</em></XDtMethod:ifHasMethodTag></div>
+        		<div class="formField">
+					<input type="text" name="<XDtMethod:propertyName/>" id="<XDtMethod:propertyName/>" class="required" 
+							<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate">
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="class">
+									class="<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="class"/>"
+								</XDtMethod:ifHasMethodTag>
+								
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="maxLength">
+									maxLength="<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="maxLength"/>"
+								</XDtMethod:ifHasMethodTag>
+								
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="minLength">
+									minLength="<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="minLength"/>"
+								</XDtMethod:ifHasMethodTag>
+								
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="max">
+									max="<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="max"/>"
+								</XDtMethod:ifHasMethodTag>
+								
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="min">
+									min="<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="min"/>"
+								</XDtMethod:ifHasMethodTag>
+								
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="equalTo">
+									equalTo="#<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="equalTo"/>"
+								</XDtMethod:ifHasMethodTag>
+								
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="lessThenTo">
+									lessThenTo="#<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="lessThenTo"/>"
+								</XDtMethod:ifHasMethodTag>
+								
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="greaterThenTo">
+									greaterThenTo="#<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="greaterThenTo"/>"
+								</XDtMethod:ifHasMethodTag>
+								
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="lessEqualTo">
+									lessEqualTo="#<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="lessEqualTo"/>"
+								</XDtMethod:ifHasMethodTag>
+								
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="greaterEqualTo">
+									greaterEqualTo="#<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="greaterEqualTo"/>"
+								</XDtMethod:ifHasMethodTag>
+							</XDtMethod:ifHasMethodTag>
+						    <XDtMethod:ifHasMethodTag tagName="hibernate.property" paramName="length">length="<XDtMethod:methodTagValue tagName="hibernate.property" paramName="length"/>"</XDtMethod:ifHasMethodTag> 
+						    <XDtMethod:ifIsOfType type="java.lang.Integer">class="number"</XDtMethod:ifIsOfType><XDtMethod:ifIsOfType type="int">class="number"</XDtMethod:ifIsOfType><XDtMethod:ifIsOfType type="double">class="number"</XDtMethod:ifIsOfType><XDtMethod:ifIsOfType type="float">class="number"</XDtMethod:ifIsOfType>  />
+				</div>
+				<div class="formTips"></div><p class="error"></p>	
+    	    </div>
+			     </XDtMethod:ifHasMethodTag>
+			     
+			     
+			     <XDtMethod:ifHasMethodTag tagName="gpcsoft.select">
+	     	<div class="formRow">
+        		<div class="formLabel"><spring:message code="<XDtFrameClass:classNameLower/>Form.<XDtMethod:propertyName/>"/><XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="class" paramValue="required"><em>*</em></XDtMethod:ifHasMethodTag></div>
+        		<div class="formField">
+        		     	<select name="<XDtMethod:propertyName/>" id="<XDtMethod:propertyName/>" 
+						 	<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate">
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="class">
+									class="<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="class"/>"
+								</XDtMethod:ifHasMethodTag>
+								
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="maxLength">
+									maxLength="<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="maxLength"/>"
+								</XDtMethod:ifHasMethodTag>
+									
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="minLength">
+									minLength="<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="minLength"/>"
+								</XDtMethod:ifHasMethodTag>
+								
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="max">
+									max="<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="max"/>"
+								</XDtMethod:ifHasMethodTag>
+								
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="min">
+									min="<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="min"/>"
+								</XDtMethod:ifHasMethodTag>
+								
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="equalTo">
+									equalTo="#<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="equalTo"/>"
+								</XDtMethod:ifHasMethodTag>
+								
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="lessThenTo">
+									lessThenTo="#<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="lessThenTo"/>"
+								</XDtMethod:ifHasMethodTag>
+								
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="greaterThenTo">
+									greaterThenTo="#<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="greaterThenTo"/>"
+								</XDtMethod:ifHasMethodTag>
+								
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="lessEqualTo">
+									lessEqualTo="#<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="lessEqualTo"/>"
+								</XDtMethod:ifHasMethodTag>
+								
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="greaterEqualTo">
+									greaterEqualTo="#<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="greaterEqualTo"/>"
+								</XDtMethod:ifHasMethodTag>
+							</XDtMethod:ifHasMethodTag>
+								/>
+					 	</select>
+				 </div>	
+				 <div class="formTips"></div><p class="error"></p>	
+    		 </div>
+			     </XDtMethod:ifHasMethodTag>
+			     
+			     <XDtMethod:ifHasMethodTag tagName="gpcsoft.object">
+			     	<div class="formRow">
+	            		<div class="formLabel"><spring:message code="<XDtFrameClass:classNameLower/>Form.<XDtMethod:propertyName/>"/><XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="class" paramValue="required"><em>*</em></XDtMethod:ifHasMethodTag></div>
+	            		<div class="formField">
+			            	<input type="hidden" name="<XDtMethod:propertyName/>.objId" id="<XDtMethod:propertyName/>.objId" value="" size="20">
+							<input type="text" name="<XDtMethod:propertyName/>.<XDtMethod:ifHasMethodTag tagName="gpcsoft.object" paramName="name"><XDtMethod:methodTagValue tagName="gpcsoft.object" paramName="name"/></XDtMethod:ifHasMethodTag><XDtMethod:ifDoesntHaveMethodTag tagName="gpcsoft.object" paramName="name">name</XDtMethod:ifDoesntHaveMethodTag>"
+								<XDtMethod:ifDoesntHaveMethodTag tagName="gpcsoft.validate">
+									class="newWin" 
+								</XDtMethod:ifDoesntHaveMethodTag>	
+								
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate">
+									<<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="class">
+										class="<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="class"/>"
+									</XDtMethod:ifHasMethodTag>
+									
+									<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="maxLength">
+										maxLength="<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="maxLength"/>"
+									</XDtMethod:ifHasMethodTag>
+										
+									<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="minLength">
+										minLength="<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="minLength"/>"
+									</XDtMethod:ifHasMethodTag>
+									
+									<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="max">
+										max="<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="max"/>"
+									</XDtMethod:ifHasMethodTag>
+									
+									<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="min">
+										min="<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="min"/>"
+									</XDtMethod:ifHasMethodTag>
+									
+									<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="equalTo">
+										equalTo="#<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="equalTo"/>"
+									</XDtMethod:ifHasMethodTag>
+									
+									<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="lessThenTo">
+										lessThenTo="#<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="lessThenTo"/>"
+									</XDtMethod:ifHasMethodTag>
+									
+									<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="greaterThenTo">
+										greaterThenTo="#<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="greaterThenTo"/>"
+									</XDtMethod:ifHasMethodTag>
+									
+									<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="lessEqualTo">
+										lessEqualTo="#<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="lessEqualTo"/>"
+									</XDtMethod:ifHasMethodTag>
+									
+									<XDtMethod:ifHasMethodTag tagName="gpcsoft.validate" paramName="greaterEqualTo">
+										greaterEqualTo="#<XDtMethod:methodTagValue tagName="gpcsoft.validate" paramName="greaterEqualTo"/>"
+									</XDtMethod:ifHasMethodTag>
+								</XDtMethod:ifHasMethodTag>
+							 id="<XDtMethod:propertyName/>.<XDtMethod:ifHasMethodTag tagName="gpcsoft.object" paramName="name"><XDtMethod:methodTagValue tagName="gpcsoft.object" paramName="name"/></XDtMethod:ifHasMethodTag><XDtMethod:ifDoesntHaveMethodTag tagName="gpcsoft.object" paramName="name">name</XDtMethod:ifDoesntHaveMethodTag>" value="" size="20" readonly="readyonly">
+            			<div class="formTips"></div><p class="error"></p>
+            		</div>
+			     </XDtMethod:ifHasMethodTag>
+			</XDtMethod:ifIsGetter>
+		</XDtMethod:forAllMethods>
+			</form>
+		</div>
+		<div class="btnArea">
+	        <button class="btn primary" id="<XDtFrameClass:classNameLower/>Save" type="button" tabindex="19"><span><span><spring:message code="globe.save"/></span></span></button>
+	        <button class="btn primary" id="<XDtFrameClass:classNameLower/>Reset" type="button" tabindex="19"><span><span><spring:message code="globe.reset"/></span></span></button>
+	        <button class="btn" type="reset" id="<XDtFrameClass:classNameLower/>Delete" tabindex="20" ><span><span><spring:message code="globe.delete"/></span></span></button>
+	    </div>
+	</div>
+</div>
+</div>

@@ -1,0 +1,40 @@
+<XDtTagDef:tagDef namespace="FrameClass" handler="com.gpcsoft.core.plugin.FrameClassTagsHandler"/>
+<XDtClass:forAllClasses>
+<XDtClass:ifHasClassTag tagName="gpcsoft.domain">
+
+#<XDtFrameClass:classNameLower/>Form
+<XDtMethod:forAllMethods superclasses="false">
+  <XDtMethod:ifIsGetter>
+    <XDtMethod:ifHasMethodTag tagName="gpcsoft.property" paramName="title">
+<XDtFrameClass:classNameLower/>Form.<XDtMethod:propertyName/>=<XDtMethod:methodTagValue tagName="gpcsoft.property" paramName="title"/>
+    </XDtMethod:ifHasMethodTag>
+        <XDtMethod:ifHasMethodTag tagName="gpcsoft.select" paramName="title">
+<XDtFrameClass:classNameLower/>Form.<XDtMethod:propertyName/>=<XDtMethod:methodTagValue tagName="gpcsoft.select" paramName="title"/>
+    </XDtMethod:ifHasMethodTag>
+    <XDtMethod:ifHasMethodTag tagName="gpcsoft.object" paramName="title">
+<XDtFrameClass:classNameLower/>Form.<XDtMethod:propertyName/>=<XDtMethod:methodTagValue tagName="gpcsoft.object" paramName="title"/>
+    </XDtMethod:ifHasMethodTag>
+    
+  </XDtMethod:ifIsGetter>
+</XDtMethod:forAllMethods>
+</XDtClass:ifHasClassTag>
+
+<XDtClass:ifHasClassTag tagName="hibernate.class">
+
+#<XDtFrameClass:classNameLower/>Form
+<XDtMethod:forAllMethods superclasses="false">
+  <XDtMethod:ifIsGetter>
+    <XDtMethod:ifHasMethodTag tagName="gpcsoft.property" paramName="title">
+<XDtFrameClass:classNameLower/>Form.<XDtMethod:propertyName/>=<XDtMethod:methodTagValue tagName="gpcsoft.property" paramName="title"/>
+    </XDtMethod:ifHasMethodTag>
+        <XDtMethod:ifHasMethodTag tagName="gpcsoft.select" paramName="title">
+<XDtFrameClass:classNameLower/>Form.<XDtMethod:propertyName/>=<XDtMethod:methodTagValue tagName="gpcsoft.select" paramName="title"/>
+    </XDtMethod:ifHasMethodTag>
+    <XDtMethod:ifHasMethodTag tagName="gpcsoft.object" paramName="title">
+<XDtFrameClass:classNameLower/>Form.<XDtMethod:propertyName/>=<XDtMethod:methodTagValue tagName="gpcsoft.object" paramName="title"/>
+    </XDtMethod:ifHasMethodTag>
+    
+  </XDtMethod:ifIsGetter>
+</XDtMethod:forAllMethods>
+</XDtClass:ifHasClassTag>
+</XDtClass:forAllClasses>

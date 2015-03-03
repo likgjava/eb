@@ -1,0 +1,177 @@
+<project name="gpcsoft" default="Generator List.jsp" basedir=".">
+	<property name="project" value="srplatform" />
+	<property name="src" value="src" />
+	<property name="test" value="test" />
+	<property name="app" value="srplatform" />
+	<property name="conf" value="conf" />
+	<property name="generator" value="generator" />
+	<property name="doc" value="doc" />
+	<property name="lib" value="lib" />
+	<property name="xdoclet" value="lib/xdoclet/" />
+	<property name="dist" value="dist" />
+	<property name="schema" value="schema" />
+	<property name="webapp" value="webapp" />
+	<property name="template" value="template" />
+	<property name="web-inf" value="${webapp}/WEB-INF" />
+	<property name="web-inf.classes" value="${web-inf}/classes" />
+	<property name="web-inf.hbm" value="${web-inf}/hbm" />
+	<property name="web-inf.lib" value="${web-inf}/lib" />
+	<property name="listType" value="List" />
+
+
+	<property file="${conf}/hibernate.properties"/>
+
+	<mkdir dir="${web-inf.lib}" />
+
+	<path id="class.path">
+		<fileset dir="${xdoclet}">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${web-inf.lib}">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${lib}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<taskdef name="hibernatedoclet" classname="xdoclet.modules.hibernate.HibernateDocletTask" classpathref="class.path" />
+
+	<taskdef classname="xdoclet.DocletTask" classpathref="class.path" name="classdoclet" />
+
+	<taskdef classname="xdoclet.modules.web.WebDocletTask" classpathref="class.path" name="webdoclet" />
+
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties">
+	  <classpath>
+	    <pathelement location="${xdoclet}/ant-contrib-20020829.jar"/>
+	  </classpath>
+	</taskdef>
+	
+	<target name="Generator TreeForm.jsp"  description="产生TreeForm.jsp (在main中指定待执行的模块，格式：-Ddomain=auth -Dgensrc=User -DlistType=TreeForm) ">
+			        <echo>+-----------------------------------------------------------+</echo>
+			        <echo>| Generates ${gensrc}TreeForm.jsp source filess                        |</echo>
+			        <echo>+-----------------------------------------------------------+</echo>
+					<mkdir dir="${webapp}/view/${app}/${domain}" />
+
+				<webdoclet destdir="${webapp}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+					<fileset dir="${src}">
+						<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+					</fileset>
+					<template destinationFile="view/${app}/${domain}/{0}TreeForm.jsp" templateFile="${template}/TreeFormJsp.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate ${listType} Jsp..." />
+				</webdoclet>
+	</target>
+
+	<target name="Generator TreeForm.js"  description="产生TreeForm.js (在main中指定待执行的模块，格式：-Ddomain=auth -Dgensrc=User -DlistType=TreeForm) ">
+			        <echo>+-----------------------------------------------------------+</echo>
+			        <echo>| Generates ${gensrc}TreeForm.js source filess                        |</echo>
+			        <echo>+-----------------------------------------------------------+</echo>
+					<mkdir dir="${webapp}/view/${app}/${domain}" />
+
+				<webdoclet destdir="${webapp}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+					<fileset dir="${src}">
+						<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+					</fileset>
+					<template destinationFile="view/${app}/${domain}/{0}TreeForm.js" templateFile="${template}/TreeFormJs.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate ${listType} Js..." />
+				</webdoclet>
+	</target>
+
+	<target name="Generator List.jsp"  description="产生List.jsp (在main中指定待执行的模块，格式：-Ddomain=auth -Dgensrc=User -DlistType=TreeForm) ">
+			        <echo>+-----------------------------------------------------------+</echo>
+			        <echo>| Generates ${gensrc}List.jsp source filess                        |</echo>
+			        <echo>+-----------------------------------------------------------+</echo>
+					<mkdir dir="${webapp}/view/${app}/${domain}" />
+
+				<webdoclet destdir="${webapp}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+					<fileset dir="${src}">
+						<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+					</fileset>
+					<template destinationFile="view/${app}/${domain}/{0}List.jsp" templateFile="${template}/${listType}Jsp.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate ${listType} Jsp..." />
+				</webdoclet>
+	</target>
+
+	<target name="Generator List.js"  description="产生List.js (在main中指定待执行的模块，格式：-Ddomain=auth -Dgensrc=User -DlistType=TreeForm) ">
+			        <echo>+-----------------------------------------------------------+</echo>
+			        <echo>| Generates ${gensrc}List.js source filess                        |</echo>
+			        <echo>+-----------------------------------------------------------+</echo>
+					<mkdir dir="${webapp}/view/${app}/${domain}" />
+
+				<webdoclet destdir="${webapp}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+					<fileset dir="${src}">
+						<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+					</fileset>
+					<template destinationFile="view/${app}/${domain}/{0}List.js" templateFile="${template}/${listType}Js.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate ${listType} Js..." />
+				</webdoclet>
+	</target>
+	
+	<target name="Generator Form.jsp"  description="产生Form.jsp (在main中指定待执行的模块，格式：-Ddomain=auth -Dgensrc=User -DlistType=TreeForm) ">
+			        <echo>+-----------------------------------------------------------+</echo>
+			        <echo>|             ${gensrc}Form.jsp source filess               |</echo>
+			        <echo>+-----------------------------------------------------------+</echo>
+					<mkdir dir="${webapp}/view/${app}/${domain}" />
+
+				<webdoclet destdir="${webapp}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+					<fileset dir="${src}">
+						<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+					</fileset>
+					<template destinationFile="view/${app}/${domain}/{0}Form.jsp" templateFile="${template}/FormJsp.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate Form Jsp..." />
+				</webdoclet>
+	</target>
+	
+	<target name="Generator Form.js"  description="产生Form.js (在main中指定待执行的模块，格式：-Ddomain=auth -Dgensrc=User -DlistType=TreeForm) ">
+			        <echo>+-----------------------------------------------------------+</echo>
+			        <echo>| Generates ${gensrc}Form.js source filess                        |</echo>
+			        <echo>+-----------------------------------------------------------+</echo>
+					<mkdir dir="${webapp}/view/${app}/${domain}" />
+
+				<webdoclet destdir="${webapp}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+					<fileset dir="${src}">
+						<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+					</fileset>
+					<template destinationFile="view/${app}/${domain}/{0}Form.js" templateFile="${template}/FormJs.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate Form Js..." />
+				</webdoclet>
+	</target>
+	
+	<target name="Generator Detail.jsp"  description="产生Detail.jsp (在main中指定待执行的模块，格式：-Ddomain=auth -Dgensrc=User -DlistType=TreeForm)">
+			        <echo>+-----------------------------------------------------------+</echo>
+			        <echo>| Generates ${gensrc}Detail.jsp source filess                        |</echo>
+			        <echo>+-----------------------------------------------------------+</echo>
+					<mkdir dir="${webapp}/view/${app}/${domain}" />
+
+				<webdoclet destdir="${webapp}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+					<fileset dir="${src}">
+						<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+					</fileset>
+					<template destinationFile="view/${app}/${domain}/{0}Form.jsp" templateFile="${template}/FormJsp.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate Form Jsp..." />
+					<template destinationFile="view/${app}/${domain}/{0}Detail.jsp" templateFile="${template}/DetailJsp.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate Detail Jsp..." />
+					<template destinationFile="view/${app}/${domain}/{0}List.jsp" templateFile="${template}/${listType}Jsp.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate ${listType} Jsp..." />
+				</webdoclet>
+				<webdoclet destdir="${webapp}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+					<fileset dir="${src}">
+						<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+					</fileset>
+					<template destinationFile="view/${app}/${domain}/{0}Detail.jsp" templateFile="${template}/DetailJsp.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate Detail Js..." />
+				</webdoclet>
+	</target>
+	
+	<target name="Generator Detail.js"  description="产生Detail.js (在main中指定待执行的模块，格式：-Ddomain=auth -Dgensrc=User -DlistType=TreeForm)">
+			        <echo>+-----------------------------------------------------------+</echo>
+			        <echo>| Generates ${gensrc}Detail.js source filess               |</echo>
+			        <echo>+-----------------------------------------------------------+</echo>
+					<mkdir dir="${webapp}/view/${app}/${domain}" />
+
+				<webdoclet destdir="${webapp}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+					<fileset dir="${src}">
+						<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+					</fileset>
+					<template destinationFile="view/${app}/${domain}/{0}Form.jsp" templateFile="${template}/FormJsp.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate Form Jsp..." />
+					<template destinationFile="view/${app}/${domain}/{0}Detail.jsp" templateFile="${template}/DetailJsp.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate Detail Jsp..." />
+					<template destinationFile="view/${app}/${domain}/{0}List.jsp" templateFile="${template}/${listType}Jsp.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate ${listType} Jsp..." />
+				</webdoclet>
+				<webdoclet destdir="${webapp}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+					<fileset dir="${src}">
+						<include name="com/gpcsoft/${app}/${domain}/domain/${gensrc}.java" />
+					</fileset>
+					<template destinationFile="view/${app}/${domain}/{0}Detail.js" templateFile="${template}/DetailJs.xdt" acceptAbstractClasses="false" prefixWithPackageStructure="false" subTaskName="Generate Detail Js..." />
+				</webdoclet>
+	</target>
+</project>

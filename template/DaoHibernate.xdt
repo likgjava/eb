@@ -1,0 +1,11 @@
+package <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.dao.hibernate;
+
+import com.gpcsoft.core.dao.hibernate.BaseGenericDaoHibernate;
+import <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.dao.<XDtClass:className/>Dao;
+import <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.domain.<XDtClass:className/>;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class <XDtClass:className/>DaoHibernate extends BaseGenericDaoHibernate<<XDtClass:className/>> implements <XDtClass:className/>Dao {
+<XDtTagDef:tagDef namespace="FrameClass" handler="com.gpcsoft.core.plugin.FrameClassTagsHandler"/>
+}

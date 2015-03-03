@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+<!-- Add new Service here -->
+<XDtClass:forAllClasses>
+<XDtClass:ifHasClassTag tagName="gpcsoft.service" superclasses="false">
+
+	<bean id="<XDtPackage:packageName/>.<XDtClass:className/>" class="<XDtPackage:packageName/>.impl.<XDtClass:className/>Impl">
+		<property name="daoLocator"><ref bean="beanDaoLocator"/></property>
+		
+		<XDtClass:ifHasClassTag tagName="gpcsoft.property">		
+		<XDtClass:forAllClassTags tagName="gpcsoft.property">
+		<property name="<XDtClass:classTagValue tagName="gpcsoft.property" paramName="name"/>" ref="<XDtClass:classTagValue tagName="gpcsoft.property" paramName="value"/>"/>
+		</XDtClass:forAllClassTags>
+		</XDtClass:ifHasClassTag>
+		
+		<XDtClass:ifHasClassTag tagName="gpcsoft.value">
+		<XDtClass:forAllClassTags tagName="gpcsoft.value">
+		<property name="<XDtClass:classTagValue tagName="gpcsoft.value" paramName="name"/>"><value><XDtClass:classTagValue tagName="gpcsoft.value" paramName="value"/></value></property>
+		</XDtClass:forAllClassTags>
+		</XDtClass:ifHasClassTag>
+		
+	</bean>
+</XDtClass:ifHasClassTag>
+</XDtClass:forAllClasses>
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

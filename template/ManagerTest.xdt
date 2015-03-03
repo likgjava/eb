@@ -1,0 +1,48 @@
+package <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.manager;
+import org.junit.Test;
+import org.junit.Assert;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.test.context.transaction.TransactionConfiguration;
+import org.springframework.transaction.annotation.Transactional;
+import com.gpcsoft.srplatform.junit.util.BaseAllTestCaseJunit47;
+import com.gpcsoft.srplatform.junit.util.FileSystemXmlContextLoader;
+
+import <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.manager.<XDtClass:className/>Manager;
+import <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.domain.<XDtClass:className/>;
+
+@ContextConfiguration(locations = {  
+		"lib/junitBean.xml"
+		}, loader = FileSystemXmlContextLoader.class) 
+@TransactionConfiguration(transactionManager = "transactionManager", defaultRollback = true) 
+@Transactional 
+public class <XDtClass:className/>ManagerTest extends BaseAllTestCaseJunit47 {
+<XDtTagDef:tagDef namespace="FrameClass" handler="com.gpcsoft.core.plugin.FrameClassTagsHandler"/>
+	@Autowired(required=true) @Qualifier("<XDtFrameClass:classNameLower/>ManagerHibernate")//有多个实现的要指定bean名, 注意第1个字母是小写
+	private <XDtClass:className/>Manager <XDtFrameClass:classNameLower/>Manager;
+
+	//@Test//领域模型的增删查改CURD自动赋值测试
+	public void base<XDtClass:className/>CURD(){
+		super.testCURD(<XDtClass:className/>.class);
+	}
+<XDtTagDef:tagDef namespace="FrameClass" handler="com.gpcsoft.core.plugin.FrameClassTagsHandler"/>
+	@Test//具体的业务逻辑测试,  下面方法是测试样例代码,   @NotTransactional加上此注解可以取消事务回滚
+	public void demo() throws Exception{
+		//测试应和数据无关，不用直接写死ID和数据测，此测试会自动回滚
+		//测试分三步:1 数据准备		2模拟业务操作            3断言结果没错
+		<XDtClass:className/> <XDtFrameClass:classNameLower/>=(<XDtClass:className/>) this.makeObject(<XDtClass:className/>.class);//数据准备
+		baseGenericService.save(<XDtFrameClass:classNameLower/>, <XDtClass:className/>.class);//保存到数据库
+		//上面一行等加于下面
+		//<XDtFrameClass:classNameLower/>Service.save(<XDtFrameClass:classNameLower/>, <XDtClass:className/>.class);
+		//baseGenericService.save(<XDtFrameClass:classNameLower/>, <XDtClass:className/>.class);
+		
+		<XDtClass:className/> new<XDtClass:className/>=(<XDtClass:className/>) baseGenericService.save(<XDtFrameClass:classNameLower/>.getObjId(), <XDtClass:className/>.class);;//查询数据
+		//上面一行等加于下面
+		//baseGenericService.get(<XDtFrameClass:classNameLower/>.getObjId(), <XDtClass:className/>.class);
+		//<XDtFrameClass:classNameLower/>Service.get(<XDtFrameClass:classNameLower/>.getObjId(), <XDtClass:className/>.class);
+		Assert.assertNotNull(new<XDtClass:className/>);//断言结果没错
+		Assert.assertEquals(new<XDtClass:className/>.getObjId(), <XDtFrameClass:classNameLower/>.getObjId());//断言结果没错
+	}
+	
+}

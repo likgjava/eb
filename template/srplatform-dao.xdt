@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!-- Generic Dao - can be used when doing standard CRUD 
+
+	<bean id="baseDao"
+		class="com.gpcsoft.core.dao.hibernate.BaseDaoHibernate">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+-->
+	<!-- Add new Daos here -->
+	<!-- UserDao: Hibernate implementation -->
+	<XDtClass:forAllClasses>
+	<XDtClass:ifHasClassTag tagName="gpcsoft.dao" superclasses="false">
+		<bean id="<XDtPackage:packageName/>.<XDtClass:className/>" class="<XDtPackage:packageName/>.hibernate.<XDtClass:className/>Hibernate">
+			<property name="sessionFactory" ref="sessionFactory" />
+		</bean>
+	</XDtClass:ifHasClassTag>
+	</XDtClass:forAllClasses>
+	
+	
+	<!-- Add new Daos here -->
+	<!-- UserDao: jdbc implementation -->
+	<XDtClass:forAllClasses>
+	<XDtClass:ifHasClassTag tagName="gpcsoft.jdbcdao" superclasses="false">
+		<bean id="<XDtPackage:packageName/>.<XDtClass:className/>" class="<XDtPackage:packageName/>.jdbc.<XDtClass:className/>JDBCImpl">
+			<property name="dataSource" ref="dataSource" />
+		</bean>
+	</XDtClass:ifHasClassTag>
+	</XDtClass:forAllClasses>
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

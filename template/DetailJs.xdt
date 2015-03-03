@@ -1,0 +1,15 @@
+<XDtTagDef:tagDef namespace="FrameClass" handler="com.gpcsoft.core.plugin.FrameClassTagsHandler"/>
+var <XDtFrameClass:classNameLower/>Form={};
+$(document).ready(function(){
+	if($('#objId').val()!=''){
+    	var queryColumns=[];
+    	$.getJSON($('#initPath').val()+'/<XDtClass:className/>Controller.do?method=createOrUpdate',{objId:$('#objId').val(), includedProperties:''},function(json){
+    		if(json.result)alert(json.result);if(json.failure)return;
+    		json2Object('<XDtFrameClass:classNameLower/>DetailForm',json.<XDtFrameClass:classNameLower/>);
+    	});
+    }
+	//返回
+	$('#<XDtFrameClass:classNameLower/>Return').click(function(){
+		$('#conBody').loadPage($('#initPath').val()+'/<XDtClass:className/>Controller.do');
+	});
+});

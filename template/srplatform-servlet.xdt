@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!--DispatcherServlet application context-->
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+       
+<!--Web Controller Configuration-->
+
+<XDtClass:forAllClasses>
+<XDtClass:ifHasClassTag tagName="gpcsoft.controller" superclasses="false">
+<XDtClass:ifHasClassTag tagName="gpcsoft.scope" superclasses="false">
+<bean name="/<XDtClass:className/>.do" class="<XDtClass:fullClassName/>" scope="request">
+		<property name="methodNameResolver" ref="methodNameResolver"/>
+	<property name="serviceLocator"><ref bean="beanServiceLocator"/></property>
+	<XDtClass:forAllClassTags tagName="gpcsoft.view">
+	<property name="<XDtClass:classTagValue tagName="gpcsoft.view" paramName="name"/>"><value><XDtClass:classTagValue tagName="gpcsoft.view" paramName="value"/></value></property>
+	</XDtClass:forAllClassTags>
+	<XDtClass:forAllClassTags tagName="gpcsoft.property">
+	<property name="<XDtClass:classTagValue tagName="gpcsoft.property" paramName="name"/>" ref="<XDtClass:classTagValue tagName="gpcsoft.property" paramName="value"/>"/>
+	</XDtClass:forAllClassTags>
+</bean>
+</XDtClass:ifHasClassTag>
+<XDtClass:ifDoesntHaveClassTag tagName="gpcsoft.scope" superclasses="false">
+<bean name="/<XDtClass:className/>.do" class="<XDtClass:fullClassName/>">
+		<property name="methodNameResolver" ref="methodNameResolver"/>
+	<property name="serviceLocator"><ref bean="beanServiceLocator"/></property>
+	<XDtClass:forAllClassTags tagName="gpcsoft.view">
+	<property name="<XDtClass:classTagValue tagName="gpcsoft.view" paramName="name"/>"><value><XDtClass:classTagValue tagName="gpcsoft.view" paramName="value"/></value></property>
+	</XDtClass:forAllClassTags>
+	<XDtClass:forAllClassTags tagName="gpcsoft.property">
+	<property name="<XDtClass:classTagValue tagName="gpcsoft.property" paramName="name"/>" ref="<XDtClass:classTagValue tagName="gpcsoft.property" paramName="value"/>"/>
+	</XDtClass:forAllClassTags>
+</bean>
+</XDtClass:ifDoesntHaveClassTag>
+</XDtClass:ifHasClassTag>
+
+</XDtClass:forAllClasses>
+
+  
+</beans>

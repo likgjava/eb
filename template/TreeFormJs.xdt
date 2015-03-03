@@ -1,0 +1,173 @@
+<XDtTagDef:tagDef namespace="FrameClass" handler="com.gpcsoft.core.plugin.FrameClassTagsHandler"/>
+var <XDtFrameClass:classNameLower/>TreeForm={};
+<XDtFrameClass:classNameLower/>TreeForm.tree;
+<XDtFrameClass:classNameLower/>TreeForm.isSort=0;
+
+//点击目录树操作
+<XDtFrameClass:classNameLower/>TreeForm.edit=function(objId){
+	if(objId==''){
+		return;
+	}	
+	if(objId=='-1'){
+		$('#<XDtFrameClass:classNameLower/>Form')[0].reset();
+	}else{
+		$.getJSON($('#initPath').val()+'/<XDtClass:className/>Controller.do?method=createOrUpdate',{"objId":objId},function(json){
+    		jsonObjectToForm('<XDtFrameClass:classNameLower/>Form',json.<XDtFrameClass:classNameLower/>);
+    	});	
+	}
+}
+
+function treeTab(){
+	treeHe();
+	$(window).wresize(treeHe);
+	var h =$('#contentThis').height();
+	$('.treeOutside').jqResize('.treeResize',function(w){if(parseInt(w)<240){$('.treeOutside').width(240);}	$('.treeOutside').height(h)});
+	function treeHe(){$('.treeOutside,.treeRight,.treeResize').height($('#contentThis').height());}
+}
+
+//点击节点事件
+<XDtFrameClass:classNameLower/>TreeForm.nodeClick=function(id){
+	$.getJSON($('#initPath').val()+'/<XDtClass:className/>Controller.do?method=createOrUpdate',{objId:id},function(json){
+		jsonObjectToForm('<XDtFrameClass:classNameLower/>Form', json.<XDtFrameClass:classNameLower/>);
+	});
+}
+
+//初始化树
+<XDtFrameClass:classNameLower/>TreeForm.init<XDtClass:className/>Tree=function(){
+	//dhtmlXTreeObject(htmlObject, width, height, rootId)//rootId 虚拟根节点，在界面上不会显示，一般取值0
+	<XDtFrameClass:classNameLower/>TreeForm.tree=new dhtmlXTreeObject('<XDtFrameClass:classNameLower/>TreeForm',"100%","100%",0);
+	<XDtFrameClass:classNameLower/>TreeForm.tree.setImagePath($('#initPath').val()+'/view/resource/plug-in/dhtmlxtree/imgs/');
+	//<XDtFrameClass:classNameLower/>TreeForm.tree.enableCheckBoxes(1);
+	<XDtFrameClass:classNameLower/>TreeForm.tree.enableDragAndDrop(1);
+	<XDtFrameClass:classNameLower/>TreeForm.tree.enableThreeStateCheckboxes(true);
+	//<XDtFrameClass:classNameLower/>TreeForm.tree.setOnClickHandler(<XDtFrameClass:classNameLower/>TreeForm.nodeClick);
+	<XDtFrameClass:classNameLower/>TreeForm.tree.setXMLAutoLoading($('#initPath').val()+'/<XDtClass:className/>Controller.do?method=getTree&action=listById');//点 + 号触发展开事件
+	<XDtFrameClass:classNameLower/>TreeForm.tree.loadXML($('#initPath').val()+'/<XDtClass:className/>Controller.do?method=getTree&action=listTop&isOpen=1',function(){
+		//初始化树之后的回调函数
+	});
+}
+
+$(document).ready(function(){	
+	$('#<XDtFrameClass:classNameLower/>Form').validate();//表单验证
+	<XDtFrameClass:classNameLower/>TreeForm.init<XDtClass:className/>Tree();//加载树
+		
+	<XDtMethod:forAllMethods>
+  		<XDtMethod:ifIsGetter>
+  			<XDtMethod:ifHasMethodTag tagName="gpcsoft.select">
+  				var <XDtMethod:propertyName/>List=$.ajax({ url: $('#initPath').val()+ '/<XDtMethod:methodTagValue tagName="gpcsoft.select" paramName="mapingObj"/>Controller.do?method=getObject',data:{"<XDtMethod:methodTagValue tagName="gpcsoft.select" paramName="mapingColumn"/>":"<XDtMethod:methodTagValue tagName="gpcsoft.select" paramName="mapingValue"/>"}, async: false }).responseText
+  				var <XDtMethod:propertyName/>Josn =JSON.parse(<XDtMethod:propertyName/>List);
+  				$.each(<XDtMethod:propertyName/>Josn,function(i,n){
+						$('select[@name=<XDtMethod:propertyName/>]').append('<option value='"+n.objId+"'>'+n.<XDtMethod:methodTagValue tagName="gpcsoft.select" paramName="optionName"/>+'</option>')
+				});
+  			</XDtMethod:ifHasMethodTag>
+  			<XDtMethod:ifHasMethodTag tagName="gpcsoft.object">	
+			   	 	$('input[id=<XDtMethod:propertyName/>.name]').click(function(e){
+					    $.epsDialog({
+					        title:'请选择<XDtMethod:methodTagValue tagName="gpcsoft.object" paramName="title"/>',
+					        url:$('#initPath').val()+'/TreeController.do?method=toTree&property=<XDtMethod:propertyName/>&className=<XDtMethod:methodTagValue tagName="gpcsoft.object" paramName="hov"/>&action=listTop&isOpen=1',
+					        width: '500',
+					        height: '400',
+					        onOpen: function(){ },
+					        afterLoad: function(){ },
+					        onClose: function(){ }
+					    }); 
+			   	 	});	
+     		</XDtMethod:ifHasMethodTag>
+  	   </XDtMethod:ifIsGetter>
+   </XDtMethod:forAllMethods>
+	
+	<XDtMethod:forAllMethods>
+		<XDtMethod:ifIsGetter>
+  			<XDtMethod:ifHasMethodTag tagName="gpcsoft.select">
+		    	$.getJSON($('#initPath').val()+"/<XDtMethod:methodTagValue tagName="gpcsoft.select" paramName="mapingObj"/>Controller.do?method=createOrUpdate", {"<XDtMethod:methodTagValue tagName="gpcsoft.select" paramName="mapingColumn"/>":"<XDtMethod:methodTagValue tagName="gpcsoft.select" paramName="mapingValue"/>"} ,function(json){
+	  				$.each(json,function(i,n){
+							$("select[name=<XDtMethod:propertyName/>]").append("<option value='"+n.objId+"'>"+n.<XDtMethod:methodTagValue tagName="gpcsoft.select" paramName="optionName"/>+"</option>")
+					});
+		    	});
+			</XDtMethod:ifHasMethodTag>
+	   </XDtMethod:ifIsGetter>
+	</XDtMethod:forAllMethods>
+	
+	//提交
+	$('#<XDtFrameClass:classNameLower/>Save').click(function(){
+		if(!$('#<XDtFrameClass:classNameLower/>Form').valid()){alert('请正确填写表单!');return;}
+		$.getJSON($('#initPath').val()+'/<XDtClass:className/>Controller.do?method=save', formToJsonObject('<XDtFrameClass:classNameLower/>Form'), function(json){
+			if(json.result)alert(json.result);if(json.failure)return;
+			var pid=$("input[id=parent.objId]").val();
+			var id=$('#objId').val();
+			if(id == "" && pid == "")treeUtil.refreshTree(<XDtFrameClass:classNameLower/>TreeForm.tree,"new",$('#<XDtClass:classTagValue tagName="gpcsoft.text" paramName="value"/>').val());
+			else if(id == "" && pid != "")treeUtil.refreshTree(<XDtFrameClass:classNameLower/>TreeForm.tree,"child",$('#<XDtClass:classTagValue tagName="gpcsoft.text" paramName="value"/>').val());
+			else treeUtil.refreshTree(<XDtFrameClass:classNameLower/>TreeForm.tree,'edit',$('#<XDtClass:classTagValue tagName="gpcsoft.text" paramName="value"/>').val());
+			$('#<XDtFrameClass:classNameLower/>Form')[0].reset();
+			$("input[id=parent.objId]").val(pid);
+			$('#objId').val(id);
+		});
+	});
+	//删除节点
+   	$('#<XDtFrameClass:classNameLower/>Delete').click(function(){
+   		if($.trim($('#objId').val())!=""){
+   			if(window.confirm("确定删除?")){
+	   			$.getJSON($('#initPath').val()+'/<XDtClass:className/>Controller.do?method=remove',{objId:$('#objId').val()},function(json){
+					if(json.result)alert(json.result);if(json.failure)return;
+					treeUtil.refreshTree(<XDtFrameClass:classNameLower/>TreeForm.tree,'delete','');
+					$('#<XDtFrameClass:classNameLower/>Form')[0].reset();
+				});
+			}
+   		}
+   	});
+   	
+	//设置拖拽事件
+	<XDtFrameClass:classNameLower/>TreeForm.tree.setDragHandler(function(id,newParentId){
+		if(<XDtFrameClass:classNameLower/>TreeForm.isSort==1)return true;
+   		var jsonObj={};
+   		jsonObj.sort=<XDtFrameClass:classNameLower/>TreeForm.tree._globalIdStorageFind(newParentId).childsCount;
+   		if(newParentId == "-1")newParentId = null;
+   		jsonObj.objId=id;jsonObj.parent={};jsonObj.parent.objId=newParentId;
+   		jsonObj.json=JSON.stringify(jsonObj);
+		$.getJSON($('#initPath').val()+'/<XDtFrameClass:classNameLower/>Controller.do?method=save', jsonObj, function(json){
+			if(json.failure){if(json.result)alert(json.result);return;}
+		});
+		return true;
+   	});
+   	//展开合并所有节点
+   	var isOpen = false;  //是否是展开状态
+	var isFirst = true;  //是否是第一次展开
+	$('#openAll').click(function(){
+		if(!isOpen){
+			if(isFirst){
+				<XDtFrameClass:classNameLower/>TreeForm.tree.deleteChildItems(0);//删掉根节点的所有子节点
+				<XDtFrameClass:classNameLower/>TreeForm.tree.loadXML($('#initPath').val()+'/<XDtClass:className/>Controller.do?method=getTree&action=listTop&isOpen=1');
+				isFirst = false;
+			}
+			else <XDtFrameClass:classNameLower/>TreeForm.tree.openAllItems('0');
+			$('#openAll').html('关闭');
+			isOpen=true;
+		}else{
+			<XDtFrameClass:classNameLower/>TreeForm.tree.closeAllItems('0');
+			$('#openAll').html('展开');
+			isOpen=false;
+		}
+	});
+   	//增加下级节点
+   	$('#newChild').click(function(){ 
+   		if(<XDtFrameClass:classNameLower/>TreeForm.tree.getSelectedItemId() == null || <XDtFrameClass:classNameLower/>TreeForm.tree.getSelectedItemId() == '')
+  			alert("请先选中一个节点，再进行该操作！");
+  		else if(<XDtFrameClass:classNameLower/>TreeForm.tree.getSelectedItemId() != "-1"){
+  			var pid=$('#objId').val();
+  			$('#<XDtFrameClass:classNameLower/>Form')[0].reset();
+  			$('input[id=parent.objId]').val(pid);
+  		}
+   	});
+   	//节点上移
+   	$('#<XDtFrameClass:classNameLower/>Up').click(function(){
+   		<XDtFrameClass:classNameLower/>TreeForm.isSort=1;
+   		if(myTreeSort('up_strict',<XDtFrameClass:classNameLower/>TreeForm.tree,'up','down',$('#initPath').val()+'/SortController.do?method=updateSort&className=<XDtClass:classTagValue tagName='gpcsoft.package' paramName='packageDir'/>.domain.<XDtClass:className/>','sort'))
+   	    	<XDtFrameClass:classNameLower/>TreeForm.isSort=0;
+	});
+	//节点下移
+	$('#<XDtFrameClass:classNameLower/>Down').click(function(){
+		<XDtFrameClass:classNameLower/>TreeForm.isSort=1;
+		if(myTreeSort('down_strict',<XDtFrameClass:classNameLower/>TreeForm.tree,'up','down',$('#initPath').val()+'/SortController.do?method=updateSort&className=<XDtClass:classTagValue tagName='gpcsoft.package' paramName='packageDir'/>.domain.<XDtClass:className/>','sort'))
+	    	<XDtFrameClass:classNameLower/>TreeForm.isSort=0;
+	});
+});

@@ -1,0 +1,85 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ include file="/view/srplatform/common/init.jsp"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title></title>
+	<XDtTagDef:tagDef namespace="FrameClass" handler="com.gpcsoft.core.plugin.FrameClassTagsHandler"/>
+	<script type="text/javascript" src="<%=request.getContextPath()%>/view/<XDtClass:classTagValue tagName="gpcsoft.page" paramName="project"/>/<XDtClass:classTagValue tagName="gpcsoft.page" paramName="domain"/>/<XDtFrameClass:classNameLower/>List.js"></script>
+</head>
+<body>	  
+
+	<form id="<XDtFrameClass:classNameLower/>SearchZone" >
+		<div class="conSearch">
+			<h4><span><spring:message code="globe.query"/></span></h4>
+			<ul>
+			  	<XDtMethod:forAllMethods>
+					<XDtMethod:ifIsGetter>
+						<XDtMethod:ifHasMethodTag tagName="gpcsoft.query">
+							<XDtMethod:ifHasMethodTag tagName="gpcsoft.property">
+								<li><label><spring:message code="<XDtFrameClass:classNameLower/>Form.<XDtMethod:propertyName/>"/>
+									<XDtMethod:ifIsNotOfType type="java.util.Date">
+										<input type="text" name="<XDtMethod:propertyName/>" <XDtMethod:ifHasMethodTag tagName="hibernate.property" paramName="length">length="<XDtMethod:methodTagValue tagName="hibernate.property" paramName="length"/>"</XDtMethod:ifHasMethodTag> <XDtMethod:ifIsOfType type="java.lang.Integer">class="number"</XDtMethod:ifIsOfType><XDtMethod:ifIsOfType type="int">class="number"</XDtMethod:ifIsOfType><XDtMethod:ifIsOfType type="double">class="number"</XDtMethod:ifIsOfType><XDtMethod:ifIsOfType type="float">class="number"</XDtMethod:ifIsOfType>>
+									</XDtMethod:ifIsNotOfType>
+									<XDtMethod:ifIsOfType type="java.util.Date">
+										<script>calendar("<XDtMethod:propertyName/>","<fmt:formatDate value="${param.<XDtMethod:propertyName/>}"/>");</script>
+									</XDtMethod:ifIsOfType>
+									<XDtMethod:ifHasMethodTag tagName="gpcsoft.query" paramName="op">
+									   <input type="hidden" name="<XDtMethod:propertyName/>_op" value="<XDtMethod:methodTagValue tagName="gpcsoft.query" paramName="op"/>"/>
+									</XDtMethod:ifHasMethodTag></label></li>
+							</XDtMethod:ifHasMethodTag>
+						<XDtMethod:ifHasMethodTag tagName="gpcsoft.object">
+								<li><label><spring:message code="<XDtFrameClass:classNameLower/>Form.<XDtMethod:propertyName/>"/>
+								<input type="hidden" name="<XDtMethod:propertyName/>.objId" id="<XDtMethod:propertyName/>.objId" value="" size="20" />
+								<input type="text" name="<XDtMethod:propertyName/>.<XDtMethod:methodTagValue tagName="gpcsoft.object" paramName="mapingColumn"/>" id="<XDtMethod:propertyName/>.name" value="" class="newWin"/>
+								<XDtMethod:ifHasMethodTag tagName="gpcsoft.query" paramName="op">
+									<input type="hidden" name="<XDtMethod:propertyName/>.<XDtMethod:methodTagValue tagName="gpcsoft.object" paramName="mapingColumn"/>_op" value="<XDtMethod:methodTagValue tagName="gpcsoft.query" paramName="op"/>"/>
+								</XDtMethod:ifHasMethodTag></label></li>
+						</XDtMethod:ifHasMethodTag>
+						</XDtMethod:ifHasMethodTag>
+						<XDtMethod:ifHasMethodTag tagName="gpcsoft.select">
+							<li><label><spring:message code="<XDtFrameClass:classNameLower/>Form.<XDtMethod:propertyName/>"/>
+							<select name="<XDtMethod:propertyName/>.<XDtMethod:methodTagValue tagName="gpcsoft.select" paramName="mapingColumn"/>" style="width:100px">
+								<option value=""><spring:message code="globe.pleaseChoose"/></option>
+							</select>
+							<XDtMethod:ifHasMethodTag tagName="gpcsoft.query" paramName="op">
+								<input type="hidden" name="<XDtMethod:propertyName/>.<XDtMethod:methodTagValue tagName="gpcsoft.select" paramName="mapingColumn"/>_op" value="<XDtMethod:methodTagValue tagName="gpcsoft.query" paramName="op"/>"/>
+							</XDtMethod:ifHasMethodTag></label></li>
+						</XDtMethod:ifHasMethodTag>
+					</XDtMethod:ifIsGetter>
+				</XDtMethod:forAllMethods>
+				<li><button type="submit"><span><spring:message code="globe.query"/></span></button></li>
+			</ul>
+		</div>
+	</form>
+
+	<flex:flexgrid checkbox="true"
+		id="<XDtFrameClass:classNameLower/>Grid" url="<XDtClass:className/>Controller.do?method=list" queryColumns=""  
+			searchZone="<XDtFrameClass:classNameLower/>SearchZone" rp="10" title="<XDtClass:classTagValue tagName="gpcsoft.title" paramName="value"/>" width="800" height="200" 
+			onSubmit="<XDtFrameClass:classNameLower/>List.before" onSuccess="<XDtFrameClass:classNameLower/>List.success">
+			
+		
+		
+		<XDtMethod:forAllMethods>
+			<XDtMethod:ifIsGetter>
+				<XDtMethod:ifHasMethodTag tagName="gpcsoft.property">
+					<flex:flexCol name="<XDtMethod:propertyName/>" display="<XDtFrameClass:classNameLower/>Form.<XDtMethod:propertyName/>" sortable="true" width="100"align="left"></flex:flexCol>
+				</XDtMethod:ifHasMethodTag>
+				<XDtMethod:ifHasMethodTag tagName="gpcsoft.select">
+					<flex:flexCol name="<XDtMethod:propertyName/>.<XDtMethod:methodTagValue tagName="gpcsoft.select" paramName="mapingColumn"/>" display="<XDtFrameClass:classNameLower/>Form.<XDtMethod:propertyName/>" sortable="true" width="100"align="left"></flex:flexCol>
+				</XDtMethod:ifHasMethodTag>
+				<XDtMethod:ifHasMethodTag tagName="gpcsoft.object">
+					<flex:flexCol name="<XDtMethod:propertyName/>.<XDtMethod:methodTagValue tagName="gpcsoft.object" paramName="mapingColumn"/>" display="<XDtFrameClass:classNameLower/>Form.<XDtMethod:propertyName/>" sortable="true" width="100"align="left"></flex:flexCol>
+ 				</XDtMethod:ifHasMethodTag>
+           </XDtMethod:ifIsGetter>
+        </XDtMethod:forAllMethods>	  
+                  
+		
+		<flex:flexBtn name="globe.new" bclass="add" onpress="<XDtFrameClass:classNameLower/>List.add"></flex:flexBtn>	
+		<flex:flexBtn name="globe.modify" bclass="add" onpress="<XDtFrameClass:classNameLower/>List.update"></flex:flexBtn>	
+		<flex:flexBtn name="globe.delete" bclass="delete" onpress="<XDtFrameClass:classNameLower/>List.remove"></flex:flexBtn>	
+	</flex:flexgrid>
+</body>
+</html>
+	

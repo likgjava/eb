@@ -1,0 +1,17 @@
+package <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.manager.impl;
+
+import org.springframework.stereotype.Repository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import com.gpcsoft.core.manager.impl.BaseManagerImpl;
+import <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.dao.<XDtClass:className/>Dao;
+import <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.manager.<XDtClass:className/>Manager;
+import <XDtClass:classTagValue tagName="gpcsoft.package" paramName="packageDir"/>.domain.<XDtClass:className/>;
+
+@Repository
+public class <XDtClass:className/>ManagerImpl extends BaseManagerImpl<<XDtClass:className/>> implements <XDtClass:className/>Manager {
+<XDtTagDef:tagDef namespace="FrameClass" handler="com.gpcsoft.core.plugin.FrameClassTagsHandler"/>
+	@Autowired(required=true)  @Qualifier("<XDtFrameClass:classNameLower/>DaoHibernate")
+	private <XDtClass:className/>Dao <XDtFrameClass:classNameLower/>DaoHibernate;
+<XDtTagDef:tagDef namespace="FrameClass" handler="com.gpcsoft.core.plugin.FrameClassTagsHandler"/>
+}

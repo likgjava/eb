@@ -1,0 +1,53 @@
+<XDtTagDef:tagDef namespace="FrameClass" handler="com.gpcsoft.core.plugin.FrameClassTagsHandler"/>
+var <XDtFrameClass:classNameLower/>Form={};
+
+$(document).ready(function(){
+	$('#<XDtFrameClass:classNameLower/>Form').validate();
+	<XDtMethod:forAllMethods>
+  		<XDtMethod:ifIsGetter>
+  			<XDtMethod:ifHasMethodTag tagName="gpcsoft.select">
+		    	$.getJSON($('#initPath').val()+"/<XDtMethod:methodTagValue tagName="gpcsoft.select" paramName="mapingObj"/>Controller.do?method=getObject&queryColumns=objId,<XDtMethod:methodTagValue tagName="gpcsoft.select" paramName="mapingColumn"/>", {"<XDtMethod:methodTagValue tagName="gpcsoft.select" paramName="mapingColumn"/>":""} ,function(json){
+	  				if(json.result)alert(json.result);if(json.failure)return;
+	  				$.each(json.list,function(i,n){
+							$('select[name=<XDtMethod:propertyName/>.<XDtMethod:methodTagValue tagName="gpcsoft.select" paramName="mapingColumn"/>]').append("<option value='"+n.objId+"'>"+n.<XDtMethod:methodTagValue tagName="gpcsoft.select" paramName="mapingColumn"/>+"</option>")
+					});
+		    	});
+  			</XDtMethod:ifHasMethodTag>
+  			<XDtMethod:ifHasMethodTag tagName="gpcsoft.object">	
+			   	 	$('input[id=<XDtMethod:propertyName/>.name]').click(function(e){
+					    $.epsDialog({
+					        title:'请选择<XDtMethod:methodTagValue tagName="gpcsoft.object" paramName="title"/>',
+					        url:$('#initPath').val()+'/TreeController.do?method=toTree&property=<XDtMethod:propertyName/>&className=<XDtMethod:methodTagValue tagName="gpcsoft.object" paramName="hov"/>&action=listTop&isOpen=1',
+					        width: '500',
+					        height: '400',
+					        onOpen: function(){ },
+					        afterLoad: function(){ },
+					        onClose: function(){ }
+					    }); 
+			   	 	});	
+     		</XDtMethod:ifHasMethodTag>
+     		<XDtMethod:ifIsOfType type="java.util.Date">
+     			$("#<XDtMethod:propertyName/>").epsDatepicker();
+     		</XDtMethod:ifIsOfType>
+  	   </XDtMethod:ifIsGetter>
+   </XDtMethod:forAllMethods>
+    if($('#objId').val()!=''){
+    	$.getJSON($('#initPath').val()+'/<XDtClass:className/>Controller.do?method=createOrUpdate',{objId:$('#objId').val(), includedProperties:''},function(json){
+			if(json.result)alert(json.result);if(json.failure)return;
+    		jsonObjectToForm('<XDtFrameClass:classNameLower/>Form', json.<XDtFrameClass:classNameLower/>);
+    	});
+    }
+	//返回
+	$('#<XDtFrameClass:classNameLower/>Return').click(function(){
+		$('#conBody').loadPage($('#initPath').val()+"/<XDtClass:className/>Controller.do");
+	});
+	//提交
+	$('#<XDtFrameClass:classNameLower/>Save').click(function(){
+		if(!$('#<XDtFrameClass:classNameLower/>Form').valid()){alert('请正确填写表单!');return;}
+		$.getJSON($('#initPath').val()+'/<XDtClass:className/>Controller.do?method=save', formToJsonObject('<XDtFrameClass:classNameLower/>Form'), function(json){
+			if(json.result)alert(json.result);if(json.failure)return;
+			$('#conBody').loadPage($('#initPath').val()+'/<XDtClass:className/>Controller.do');
+		});
+	});
+
+});

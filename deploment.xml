@@ -1,0 +1,388 @@
+<project name="gpcsoft" default="deploment properties xml" basedir=".">
+	<property name="src" value="src" />
+	<property name="app" value="smallscale" />
+	<property name="conf" value="conf" />
+	<property name="generator" value="generator" />
+	<property name="doc" value="doc" />
+	<property name="lib" value="lib" />
+	<property name="xdoclet" value="lib/xdoclet/" />
+	<property name="dist" value="dist" />
+	<property name="schema" value="schema" />
+	<property name="webapp" value="webapp" />
+	<property name="template" value="template" />
+	<property name="web-inf" value="${webapp}/WEB-INF" />
+	<property name="web-inf.classes" value="${web-inf}/classes" />
+	<property name="web-inf.hbm" value="${web-inf}/hbm" />
+	<property name="web-inf.lib" value="${web-inf}/lib" />
+	<property name="listType" value="List" />
+	<property name="version" value="0.5.0" />
+
+	<mkdir dir="${web-inf.lib}" />
+
+	<path id="class.path">
+		<fileset dir="${xdoclet}">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${web-inf.lib}">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${lib}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<taskdef name="hibernatedoclet" classname="xdoclet.modules.hibernate.HibernateDocletTask" classpathref="class.path" />
+
+	<taskdef classname="xdoclet.DocletTask" classpathref="class.path" name="classdoclet" />
+
+	<taskdef classname="xdoclet.modules.web.WebDocletTask" classpathref="class.path" name="webdoclet" />
+	<target name="clear sys/class/xml/properties"  description="清理sys配置和当前项目的.class  .xml  .properties">
+		<delete failonerror="false" verbose="true" includeemptydirs="true">
+			<fileset dir="${web-inf.classes}"/>
+		</delete>
+	</target>
+	<target name="compile"  description="编译源码(只编译.class)">
+		<javac srcdir="${src}" destdir="${web-inf.classes}" debug="on" classpathref="class.path" />
+	</target>
+	
+	<target name="deploment properties xml" description="部署生成properties xml配置文件" >
+		<mkdir dir="${conf}/bean/${app}" />
+		<copy todir="${web-inf}/conf/bean/">
+			<fileset dir="${conf}/bean/">
+				<include name="**/*.xml" />
+			</fileset>
+		</copy>
+		<copy todir="${web-inf.classes}/i18n/enum/${app}" flatten="true">
+			<fileset dir="${conf}/i18n/enum">
+				<include name="**/*.properties" />
+			</fileset>
+		</copy>
+		<copy todir="${web-inf.classes}/i18n/message/${app}" flatten="true">
+			<fileset dir="${conf}/i18n/message">
+				<include name="**/*.properties" />
+			</fileset>
+		</copy>
+		<copy todir="${web-inf.classes}/sys" overwrite="true">
+			<fileset dir="${conf}/sys">
+				<include name="**/*.properties" />
+				<include name="**/*.xml" />
+			</fileset>
+		</copy>
+		<copy todir="${web-inf.classes}/db" overwrite="true">
+			<fileset dir="${conf}/db">
+				<include name="**/*.properties" />
+				<include name="**/*.xml" />
+			</fileset>
+		</copy>
+		<copy todir="${web-inf.classes}/i18n/view" overwrite="true">
+			<fileset dir="${conf}/i18n/view">
+				<include name="**/*.properties" />
+				<include name="**/*.xml" />
+			</fileset>
+		</copy>
+		<copy todir="${web-inf.classes}" overwrite="true">
+			<fileset dir="${conf}/sys">
+				<include name="log4j.properties" />
+				<include name="jbpm.cfg.xml" />
+				<include name="ds.config.xml" />
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="generator mvc properties config"  description="生产Spring MVC View Jsp映射配置文件  views-*.properties">
+        <echo>+-----------------------------------------------------------+</echo>
+        <echo>|            Generates the Spring MVC View Jsp              |</echo>
+        <echo>|                views-bizplatform.properties                    |</echo>
+        <echo>+-----------------------------------------------------------+</echo>	
+		<webdoclet destdir="${conf}/i18n/view/" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/bizplatform/**/*.java" />
+			</fileset>
+			<template destinationFile="views-bizplatform.properties" templateFile="${template}/views-properties.xdt" subTaskName="Generate views-${app}.properties Config..." />
+		</webdoclet>
+		<echo>+-----------------------------------------------------------+</echo>
+        <echo>|            Generates the Spring MVC View Jsp              |</echo>
+        <echo>|                views-goods.properties                    |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<webdoclet destdir="${conf}/i18n/view/" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/goods/**/*.java" />
+			</fileset>
+			<template destinationFile="views-goods.properties" templateFile="${template}/views-properties.xdt" subTaskName="Generate views-${app}.properties Config..." />
+		</webdoclet>
+		<echo>+-----------------------------------------------------------+</echo>
+        <echo>|            Generates the Spring MVC View Jsp              |</echo>
+        <echo>|                views-pubservice.properties                    |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<webdoclet destdir="${conf}/i18n/view/" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/pubservice/**/*.java" />
+			</fileset>
+			<template destinationFile="views-pubservice.properties" templateFile="${template}/views-properties.xdt" subTaskName="Generate views-${app}.properties Config..." />
+		</webdoclet>
+		<echo>+-----------------------------------------------------------+</echo>
+        <echo>|            Generates the Spring MVC View Jsp              |</echo>
+        <echo>|                views-agreement.properties                    |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<webdoclet destdir="${conf}/i18n/view/" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/agreement/**/*.java" />
+			</fileset>
+			<template destinationFile="views-agreement.properties" templateFile="${template}/views-properties.xdt" subTaskName="Generate views-${app}.properties Config..." />
+		</webdoclet>
+		<echo>+-----------------------------------------------------------+</echo>
+        <echo>|            Generates the Spring MVC View Jsp              |</echo>
+        <echo>|                views-serve.properties                    |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<webdoclet destdir="${conf}/i18n/view/" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/serve/**/*.java" />
+			</fileset>
+			<template destinationFile="views-serve.properties" templateFile="${template}/views-properties.xdt" subTaskName="Generate views-${app}.properties Config..." />
+		</webdoclet>
+		<echo>+-----------------------------------------------------------+</echo>
+        <echo>|            Generates the Spring MVC View Jsp              |</echo>
+        <echo>|                views-smallscale.properties                    |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<webdoclet destdir="${conf}/i18n/view/" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/smallscale/**/*.java" />
+			</fileset>
+			<template destinationFile="views-smallscale.properties" templateFile="${template}/views-properties.xdt" subTaskName="Generate views-${app}.properties Config..." />
+		</webdoclet>
+		<copy todir="${web-inf.classes}/i18n/view" overwrite="true">
+			<fileset dir="${conf}/i18n/view/">
+				<include name="*.properties" />
+				<include name="view*.xml" />
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="generator and deploment i18n"  description="领域、业务、异常、日志、全局命名国际化messages-*.properties">
+		<mkdir dir="${conf}/i18n/message" />
+		<mkdir dir="${conf}/i18n/message/sys" />
+		<echo>+-----------------------------------------------------------+</echo>
+        <echo>| Generates the Messages    filess                          |</echo>
+        <echo>| messages-bizplatform.properties                          |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<webdoclet destdir="${generator}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/bizplatform/**/*.java" />
+			</fileset>
+			<template destinationFile="i18n/message/bizplatform/messages-bizplatform_zh_CN.properties" templateFile="${template}/messages-properties.xdt" subTaskName="Generate Form Messages..." />
+		</webdoclet>
+		<mkdir dir="${conf}/i18n/message/bizplatform" />
+		<exec executable="native2ascii" output="${conf}/i18n/message/bizplatform/messages-bizplatform_zh_CN.properties">
+			<arg value="-encoding"/>
+			<arg value="UTF-8" />
+			<arg value="${generator}/i18n/message/bizplatform/messages-bizplatform_zh_CN.properties" />
+		</exec>
+		<echo>+-----------------------------------------------------------+</echo>
+        <echo>| Generates the Messages    filess                          |</echo>
+        <echo>| messages-goods.properties                          |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<webdoclet destdir="${generator}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/goods/**/*.java" />
+			</fileset>
+			<template destinationFile="i18n/message/goods/messages-goods_zh_CN.properties" templateFile="${template}/messages-properties.xdt" subTaskName="Generate Form Messages..." />
+		</webdoclet>
+		<mkdir dir="${conf}/i18n/message/goods" />
+		<exec executable="native2ascii" output="${conf}/i18n/message/goods/messages-goods_zh_CN.properties">
+			<arg value="-encoding"/>
+			<arg value="UTF-8" />
+			<arg value="${generator}/i18n/message/goods/messages-goods_zh_CN.properties" />
+		</exec>
+		<echo>+-----------------------------------------------------------+</echo>
+        <echo>| Generates the Messages    filess                          |</echo>
+        <echo>| messages-pubservice.properties                          |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<webdoclet destdir="${generator}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/pubservice/**/*.java" />
+			</fileset>
+			<template destinationFile="i18n/message/pubservice/messages-pubservice_zh_CN.properties" templateFile="${template}/messages-properties.xdt" subTaskName="Generate Form Messages..." />
+		</webdoclet>
+		<mkdir dir="${conf}/i18n/message/pubservice" />
+		<exec executable="native2ascii" output="${conf}/i18n/message/pubservice/messages-pubservice_zh_CN.properties">
+			<arg value="-encoding"/>
+			<arg value="UTF-8" />
+			<arg value="${generator}/i18n/message/pubservice/messages-pubservice_zh_CN.properties" />
+		</exec>
+		<echo>+-----------------------------------------------------------+</echo>
+        <echo>| Generates the Messages    filess                          |</echo>
+        <echo>| messages-agreement.properties                          |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<webdoclet destdir="${generator}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/agreement/**/*.java" />
+			</fileset>
+			<template destinationFile="i18n/message/agreement/messages-agreement_zh_CN.properties" templateFile="${template}/messages-properties.xdt" subTaskName="Generate Form Messages..." />
+		</webdoclet>
+		<mkdir dir="${conf}/i18n/message/agreement" />
+		<exec executable="native2ascii" output="${conf}/i18n/message/agreement/messages-agreement_zh_CN.properties">
+			<arg value="-encoding"/>
+			<arg value="UTF-8" />
+			<arg value="${generator}/i18n/message/agreement/messages-agreement_zh_CN.properties" />
+		</exec>
+		<echo>+-----------------------------------------------------------+</echo>
+        <echo>| Generates the Messages    filess                          |</echo>
+        <echo>| messages-serve.properties                          |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<webdoclet destdir="${generator}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/serve/**/*.java" />
+			</fileset>
+			<template destinationFile="i18n/message/serve/messages-serve_zh_CN.properties" templateFile="${template}/messages-properties.xdt" subTaskName="Generate Form Messages..." />
+		</webdoclet>
+		<mkdir dir="${conf}/i18n/message/serve" />
+		<exec executable="native2ascii" output="${conf}/i18n/message/serve/messages-serve_zh_CN.properties">
+			<arg value="-encoding"/>
+			<arg value="UTF-8" />
+			<arg value="${generator}/i18n/message/serve/messages-serve_zh_CN.properties" />
+		</exec>
+		<echo>+-----------------------------------------------------------+</echo>
+        <echo>| Generates the Messages    filess                          |</echo>
+        <echo>| messages-smallscale.properties                          |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<webdoclet destdir="${generator}" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="com/gpcsoft/smallscale/**/*.java" />
+			</fileset>
+			<template destinationFile="i18n/message/smallscale/messages-smallscale_zh_CN.properties" templateFile="${template}/messages-properties.xdt" subTaskName="Generate Form Messages..." />
+		</webdoclet>
+		<mkdir dir="${conf}/i18n/message/smallscale" />
+		<exec executable="native2ascii" output="${conf}/i18n/message/smallscale/messages-smallscale_zh_CN.properties">
+			<arg value="-encoding"/>
+			<arg value="UTF-8" />
+			<arg value="${generator}/i18n/message/smallscale/messages-smallscale_zh_CN.properties" />
+		</exec>
+		<exec executable="native2ascii" output="${conf}/i18n/message/sys/messages_global_zh_CN.properties">
+			<arg value="-encoding"/>
+			<arg value="UTF-8" />
+			<arg value="${generator}/i18n/message/sys/messages_global_zh_CN.properties" />
+		</exec>
+		<copy todir="${web-inf.classes}/i18n/message/${app}" overwrite="true">
+			<fileset dir="${conf}/i18n/message/${app}">
+				<include name="messages-${app}_zh_CN.properties" />
+			</fileset>
+		</copy>
+		<copy todir="${web-inf.classes}/i18n/message/sys" overwrite="true">
+			<fileset dir="${conf}/i18n/message/sys">
+				<include name="messages_global_zh_CN.properties" />
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="deploment enum properties"  description="部署enum枚举属性文件">
+		<echo>+-----------------------------------------------------------+</echo>
+        <echo>|                                                           |</echo>
+        <echo>| deploment enum properties                                 |</echo>
+        <echo>| generatorEnum                                             |</echo>
+        <echo>|                                                           |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<mkdir dir="${conf}/i18n/enum/${app}" />
+		<native2ascii encoding="UTF-8" src="${conf}/i18n/enum/${app}" dest="${web-inf.classes}/i18n/enum/${app}" includes="*.properties" />
+	</target>
+
+	<target name="deploment tempate ftl"  description="部署Freemark ftl模版文件">
+		<delete failonerror="false" includeemptydirs="true">
+			<fileset dir="${web-inf}/conf/template" />
+		</delete>
+		<mkdir dir="${web-inf}/conf/template" />
+		<copy todir="${web-inf}/conf/template" flatten="true">
+			<fileset dir="${conf}/template">
+				<include name="*.ftl" />
+				<include name="*.htm" />
+			</fileset>
+		</copy>
+	</target>
+				
+	<target name="generatorValidation"  description="产生验证框架代码">
+        <echo>+-----------------------------------------------------------+</echo>
+        <echo>|                                                           |</echo>
+        <echo>| Generates the Validation  filess                          |</echo>
+        <echo>| generatorValidation                                       |</echo>
+        <echo>|                                                           |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<webdoclet destdir="${web-inf}/${conf}/${app}/" excludedtags="@version,@author,@todo" force="true" verbose="true">
+			<fileset dir="${src}">
+				<include name="**/*.java" />
+			</fileset>
+			<template destinationFile="validation-${app}.xml" templateFile="${template}/validation.xdt" subTaskName="Generate Validate..." />
+		</webdoclet>
+	</target>
+	
+	<target name="jar" depends="compile"  description="对源码进行打包">
+		<echo>+-----------------------------------------------------------+</echo>
+        <echo>|                                                           |</echo>
+        <echo>| **/${app}/**/*.class                         				  |</echo>
+        <echo>| ${dist}/${app}-${version}.jar                             |</echo>
+        <echo>|                                                           |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<jar destfile="${dist}/${app}-${version}.jar" basedir="${web-inf.classes}" includes="**/${app}/**/*.class"/>
+	</target>
+	
+	<target name="zip"  description="将项目作为业务套件进行打包">
+		<jar destfile="${dist}/${app}-${version}.jar" basedir="${web-inf.classes}" excludes="**/*.svn" includes="**/*.class"/>
+		<zip destfile="${dist}/${app}-webapp-${version}.zip" basedir="${webapp}"  excludes="**/*.svn,view/${app}/htm/*.*" includes="view/${app}/**/*.*"/>
+		<zip destfile="${dist}/${app}-conf-${version}.zip" basedir="" excludes="**/*.svn" includes="lib/*.xml,${conf}/**/*.*,${web-inf.classes}/sys/*.xml,${web-inf.classes}/sys/*.properties,${web-inf.classes}/db/*.properties,${web-inf.classes}/i18n/enum/${app}/*.properties,${web-inf.classes}/i18n/message/${app}/*.properties,${web-inf.classes}/i18n/view/**/*.*,${web-inf}/conf/bean/${app}/**/*.xml,${web-inf}/conf/template/*.ftl,${web-inf}/web.xml,${web-inf}/tlds/*.tld,${generator}/**/*.properties"/>
+		<zip destfile="${dist}/${app}-db-${version}.zip" basedir="${schema}" excludes="**/*.svn" includes="*.*" encoding="GBK"/>
+		<zip destfile="${dist}/${app}-${doc}-${version}.zip" basedir="${doc}" excludes="**/*.svn" includes="*.*" encoding="GBK"/>
+	</target>
+	
+	<target name="unzip"  description="部署业务套件，需要手工指定套件包（依赖platform运行）">
+        <echo>+---------------------------------------------------+</echo>
+        <echo>|                                                   |</echo>
+        <echo>| Deploy                                            |</echo>
+        <echo>|                                                   |</echo>
+        <echo>+---------------------------------------------------+</echo>	
+		<mkdir dir="${web-inf}/hbm" />
+		<mkdir dir="${schema}/srplatform" />
+		<unzip src="${dist}/srplatform/srplatform-webapp-${version}.zip" dest="${webapp}"/>
+		<unzip src="${dist}/srplatform/srplatform-conf-${version}.zip" dest="."/>
+		<unzip src="${dist}/srplatform/srplatform-db-${version}.zip" dest="${schema}/srplatform" encoding="GBK"/>
+		<unzip src="${dist}/srplatform/srplatform-template-${version}.zip" dest="${template}"/>
+		<unzip src="${dist}/srplatform/srplatform-doc-${version}.zip" dest="${doc}" encoding="GBK"/>
+		<copy todir="${web-inf.lib}">
+			<fileset dir="${dist}/srplatform">
+				<include name="srplatform-${version}.jar" />
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="war" depends="compile"  description="生产发布包（独立运行）">
+        <echo>+---------------------------------------------------+</echo>
+        <echo>|                                                   |</echo>
+        <echo>| Generates the ${app}.war file                           |</echo>
+        <echo>|                                                   |</echo>
+        <echo>+---------------------------------------------------+</echo>	
+		<war destfile="${dist}/${app}.war" webxml="${web-inf}/web.xml">
+
+			<fileset dir="${webapp}">
+				<include name="**/*.*" />
+				
+			</fileset>
+		</war>
+	</target>
+	
+	<target name="db-load" description="执行数据库角本、初始化数据库（需要手工指定待执行的角本文件）">
+        <echo>+-----------------------------------------------------------+</echo>
+        <echo>|                                                           |</echo>
+        <echo>| Generates DB Schema                                       |</echo>
+        <echo>| /schema                                                   |</echo>
+        <echo>|                                                           |</echo>
+        <echo>+-----------------------------------------------------------+</echo>
+		<sql onerror="continue" 
+					driver="${hibernate.connection.driver_class}" 
+					url="${hibernate.connection.url}" 
+					userid="${hibernate.connection.username}" 
+					password="${hibernate.connection.password}" 
+					classpathref="class.path">
+			<fileset dir="schema">
+				<include name="platform-db-schema-db2.sql" />
+				<include name="platform-init-data-db2.sql" />
+			</fileset>
+		</sql>
+	</target>
+</project>
