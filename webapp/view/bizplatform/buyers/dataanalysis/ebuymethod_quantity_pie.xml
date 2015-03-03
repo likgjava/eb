@@ -1,0 +1,6 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<chart palette='3' caption='各采购方式年度采购量分布图' subCaption='2010年' baseFont='Arial' baseFontSize='12'>
+	<set label="竞价" value="40" />
+	<set label="议价" value="51" />
+	<set label="直接订购" value="22" isSliced="1" />
+</chart>

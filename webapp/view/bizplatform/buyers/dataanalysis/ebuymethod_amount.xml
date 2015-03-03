@@ -1,0 +1,59 @@
+﻿<chart caption='各采购方式月采购额分布比例图' subCaption='2010年' baseFont='Arial' baseFontSize='12' shownames='1'
+	numberPrefix='￥' showSum='0' decimals='0' useRoundEdges='1'>
+	<categories>
+		<category label='01' />
+		<category label='02' />
+		<category label='03' />
+		<category label='04' />
+		<category label='05' />
+		<category label='06' />
+		<category label='07' />
+		<category label='08' />
+		<category label='09' />
+		<category label='10' />
+		<category label='11' />
+		<category label='12' />
+	</categories>
+	<dataset seriesName='竞价' color='AFD8F8' showValues='0'>
+		<set value='25601.34' />
+		<set value='20148.82' />
+		<set value='17372.76' />
+		<set value='35407.15' />
+		<set value='17372.76' />
+		<set value='35407.15' />
+		<set value='38105.68' />
+		<set value='25601.34' />
+		<set value='35407.15' />
+		<set value='20148.82' />
+		<set value='17372.76' />
+		<set value='80000' />
+	</dataset>
+	<dataset seriesName='议价' color='F6BD0F' showValues='0'>
+		<set value='57401' />
+		<set value='117320' />
+		<set value='41941' />
+		<set value='45263' />
+		<set value='114845' />
+		<set value='15000' />
+		<set value='41941' />
+		<set value='57401' />
+		<set value='41941' />
+		<set value='45263' />
+		<set value='117320' />
+		<set value='10000' />
+	</dataset>
+	<dataset seriesName='直接订购' color='8BBA00' showValues='0'>
+		<set value='45000.65' />
+		<set value='44835.76' />
+		<set value='18722.18' />
+		<set value='77557.31' />
+		<set value='92633.68' />
+		<set value='150000' />
+		<set value='180000' />
+		<set value='11722.18' />
+		<set value='20000' />
+		<set value='18722.18' />
+		<set value='77557.31' />
+		<set value='90000' />
+	</dataset>
+</chart>

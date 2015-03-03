@@ -1,0 +1,73 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<chart caption='品目月采购量对比图' subcaption='2010年' baseFont='Arial' baseFontSize='12'
+	lineThickness='1' showValues='0' formatNumberScale='0' anchorRadius='2'
+	divLineAlpha='20' divLineColor='CC3300' divLineIsDashed='1'
+	showAlternateHGridColor='1' alternateHGridAlpha='5'
+	alternateHGridColor='CC3300' shadowAlpha='40'
+	numvdivlines='5' bgColor='FFFFFF,CC3300' bgAngle='270'
+	bgAlpha='10,10'>
+	<categories>
+		<category label='01' />
+		<category label='02' />
+		<category label='03' />
+		<category label='04' />
+		<category label='05' />
+		<category label='06' />
+		<category label='07' />
+		<category label='08' />
+		<category label='09' />
+		<category label='10' />
+		<category label='11' />
+		<category label='12' />
+	</categories>
+	<dataset seriesName='笔记本' color='1D8BD1' anchorBorderColor='1D8BD1' anchorBgColor='1D8BD1'>
+		<set value='1327' />
+		<set value='1826' />
+		<set value='1699' />
+		<set value='1511' />
+		<set value='1904' />
+		<set value='1957' />
+		<set value='1296' />
+		<set value='1826' />
+		<set value='1699' />
+		<set value='1511' />
+		<set value='1904' />
+		<set value='1957' />
+		<set value='1296' />
+	</dataset>
+
+	<dataset seriesName='台式电脑' color='F1683C' anchorBorderColor='F1683C'
+		anchorBgColor='F1683C'>
+		<set value='2042' />
+		<set value='3210' />
+		<set value='2994' />
+		<set value='3115' />
+		<set value='2844' />
+		<set value='3576' />
+		<set value='1862' />
+		<set value='3210' />
+		<set value='2994' />
+		<set value='3115' />
+		<set value='2844' />
+		<set value='3576' />
+		<set value='1862' />
+	</dataset>
+
+	<dataset seriesName='服务器' color='2AD62A'
+		anchorBorderColor='2AD62A' anchorBgColor='2AD62A'>
+		<set value='850' />
+		<set value='1010' />
+		<set value='1116' />
+		<set value='1234' />
+		<set value='1210' />
+		<set value='1054' />
+		<set value='802' />
+		<set value='1010' />
+		<set value='1116' />
+		<set value='1234' />
+		<set value='1210' />
+		<set value='1054' />
+		<set value='802' />
+	</dataset>
+
+</chart>

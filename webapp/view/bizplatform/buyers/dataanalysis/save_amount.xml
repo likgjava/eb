@@ -1,0 +1,62 @@
+﻿<chart caption='月采购预算、实际额及节省额对比图' subCaption='2010年' baseFont='Arial' baseFontSize='12'
+	showValues='0' numberPrefix='￥' >
+	<categories>
+		<category label='01' />
+		<category label='02' />
+		<category label='03' />
+		<category label='04' />
+		<category label='05' />
+		<category label='06' />
+		<category label='07' />
+		<category label='08' />
+		<category label='09' />
+		<category label='10' />
+		<category label='11' />
+		<category label='12' />
+	</categories>
+
+	<dataset seriesName='预算'>
+		<set value='5000' />
+		<set value='4000' />
+		<set value='4000' />
+		<set value='9000' />
+		<set value='5000' />
+		<set value='4000' />
+		<set value='4000' />
+		<set value='9000' />
+		<set value='5000' />
+		<set value='4000' />
+		<set value='4000' />
+		<set value='8000' />
+	</dataset>
+	<dataset seriesName='实际' renderAs='Line'>
+		<set value='4000' />
+		<set value='3500' />
+		<set value='3900' />
+		<set value='8000' />
+		<set value='4000' />
+		<set value='3500' />
+		<set value='3900' />
+		<set value='8000' />
+		<set value='4000' />
+		<set value='3500' />
+		<set value='3900' />
+		<set value='7900' />
+	</dataset>
+
+	<dataset seriesName='节省金额' renderAs='Area'>
+		<set value='1000' />
+		<set value='500' />
+		<set value='100' />
+		<set value='1000' />
+		<set value='1000' />
+		<set value='500' />
+		<set value='100' />
+		<set value='1000' />
+		<set value='1000' />
+		<set value='500' />
+		<set value='100' />
+		<set value='100' />
+	</dataset>
+
+</chart>

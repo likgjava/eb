@@ -1,0 +1,65 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<chart caption='笔记本月采购额、采购量、节省额趋势图' subCaption='2011年' baseFont='Arial' baseFontSize='12'
+	showValues='0' divLineDecimalPrecision='1' limitsDecimalPrecision='1'
+	PYAxisName='Amount' SYAxisName='Quantity' numberPrefix='￥' >
+	<categories>
+		<category label='01' />
+		<category label='02' />
+		<category label='03' />
+		<category label='04' />
+		<category label='05' />
+		<category label='06' />
+		<category label='07' />
+		<category label='08' />
+		<category label='09' />
+		<category label='10' />
+		<category label='11' />
+		<category label='12' />
+	</categories>
+
+	<dataset seriesName='采购额'>
+		<set value='5854' />
+		<set value='4171' />
+		<set value='1375' />
+		<set value='1875' />
+		<set value='2246' />
+		<set value='2696' />
+		<set value='1287' />
+		<set value='2696' />
+		<set value='1287' />
+		<set value='2140' />
+		<set value='1603' />
+		<set value='1628' />
+	</dataset>
+	
+	<dataset lineThickness='3' seriesName='采购量' parentYAxis='S'>
+		<set value='174' />
+		<set value='197' />
+		<set value='155' />
+		<set value='15' />
+		<set value='66' />
+		<set value='85' />
+		<set value='37' />
+		<set value='85' />
+		<set value='37' />
+		<set value='10' />
+		<set value='44' />
+		<set value='322' />
+	</dataset>
+	
+	<dataset seriesName='节省额' renderAs='Area'>
+		<set value='854' />
+		<set value='471' />
+		<set value='375' />
+		<set value='275' />
+		<set value='246' />
+		<set value='296' />
+		<set value='187' />
+		<set value='496' />
+		<set value='187' />
+		<set value='140' />
+		<set value='103' />
+		<set value='328' />
+	</dataset>
+
+</chart>

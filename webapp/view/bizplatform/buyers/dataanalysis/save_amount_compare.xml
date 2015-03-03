@@ -1,0 +1,47 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<chart caption='月采购节省总额同比、环比图' subCaption='2010 VS 2011' shownames='1' showvalues='0' 
+	baseFont='Arial' baseFontSize='12'
+	decimals='0' numberPrefix='￥' useRoundEdges='1' legendBorderAlpha='0'>
+	<categories>
+		<category label='01' />
+		<category label='02' />
+		<category label='03' />
+		<category label='04' />
+		<category label='05' />
+		<category label='06' />
+		<category label='07' />
+		<category label='08' />
+		<category label='09' />
+		<category label='10' />
+		<category label='11' />
+		<category label='12' />
+	</categories>
+	<dataset seriesName='2010年' color='AFD8F8' showValues='0'>
+		<set value='10000' />
+		<set value='50000' />
+		<set value='40000' />
+		<set value='10000' />
+		<set value='10000' />
+		<set value='30000' />
+		<set value='60000' />
+		<set value='10000' />
+		<set value='10000' />
+		<set value='20000' />
+		<set value='10000' />
+		<set value='60000' />
+	</dataset>
+	<dataset seriesName='2011年' color='F6BD0F' showValues='0'>
+		<set value='50000' />
+		<set value='40000' />
+		<set value='45263.37' />
+		<set value='17320.16' />
+		<set value='14845.27' />
+		<set value='20002' />
+		<set value='114845.27' />
+		<set value='30000' />
+		<set value='9000' />
+		<set value='4845.27' />
+		<set value='11111' />
+		<set value='20000' />
+	</dataset>
+</chart>

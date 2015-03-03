@@ -1,0 +1,60 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<chart caption='品目月采购额对比图' subCaption='2010年' shownames='1' showvalues='0' 
+	baseFont='Arial' baseFontSize='12' numberPrefix='￥' useRoundEdges='1'>
+	<categories>
+		<category label='01' />
+		<category label='02' />
+		<category label='03' />
+		<category label='04' />
+		<category label='05' />
+		<category label='06' />
+		<category label='07' />
+		<category label='08' />
+		<category label='09' />
+		<category label='10' />
+		<category label='11' />
+		<category label='12' />
+	</categories>
+	<dataset seriesName='笔记本' color='AFD8F8' showValues='0'>
+		<set value='10000' />
+		<set value='50000' />
+		<set value='40000' />
+		<set value='10000' />
+		<set value='10000' />
+		<set value='30000' />
+		<set value='60000' />
+		<set value='10000' />
+		<set value='10000' />
+		<set value='20000' />
+		<set value='10000' />
+		<set value='60000' />
+	</dataset>
+	<dataset seriesName='台式电脑' color='F6BD0F' showValues='0'>
+		<set value='50000' />
+		<set value='40000' />
+		<set value='45263.37' />
+		<set value='17320.16' />
+		<set value='14845.27' />
+		<set value='20002' />
+		<set value='114845.27' />
+		<set value='30000' />
+		<set value='9000' />
+		<set value='4845.27' />
+		<set value='11111' />
+		<set value='20000' />
+	</dataset>
+	<dataset seriesName='服务器' color='8BBA00' showValues='0'>
+		<set value='45000.65' />
+		<set value='44835.76' />
+		<set value='18722.18' />
+		<set value='557.31' />
+		<set value='77557.31' />
+		<set value='7557.31' />
+		<set value='27557.31' />
+		<set value='57.31' />
+		<set value='77557.31' />
+		<set value='37557.31' />
+		<set value='77557.31' />
+		<set value='0' />
+	</dataset>
+</chart>

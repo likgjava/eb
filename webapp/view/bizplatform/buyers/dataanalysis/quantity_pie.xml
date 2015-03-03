@@ -1,0 +1,10 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<chart palette='4' caption='各品目年度采购总量分布图' subCaption='2010年' baseFont='Arial' baseFontSize='12' formatNumberScale='0'>
+	<set label="笔记本" value="40" />
+	<set label="台式电脑" value="5" />
+	<set label="服务器" value="22" isSliced="1" />
+	<set label="电冰箱" value="4" />
+	<set label="洗衣机" value="31" />
+	<set label="红酒" value="5" />
+	<set label="电视机" value="4" />
+</chart>

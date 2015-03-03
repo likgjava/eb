@@ -1,0 +1,78 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<chart caption='月采购额和采购量同比环比图' subCaption='2010 VS 2011' baseFont='Arial' baseFontSize='12'
+	showValues='0' divLineDecimalPrecision='1' limitsDecimalPrecision='1'
+	PYAxisName='Amount' SYAxisName='Quantity' numberPrefix='￥' >
+	<categories>
+		<category label='01' />
+		<category label='02' />
+		<category label='03' />
+		<category label='04' />
+		<category label='05' />
+		<category label='06' />
+		<category label='07' />
+		<category label='08' />
+		<category label='09' />
+		<category label='10' />
+		<category label='11' />
+		<category label='12' />
+	</categories>
+
+	<dataset seriesName='2010采购额'>
+		<set value='5854' />
+		<set value='4171' />
+		<set value='1375' />
+		<set value='1875' />
+		<set value='2246' />
+		<set value='2696' />
+		<set value='1287' />
+		<set value='2696' />
+		<set value='1287' />
+		<set value='2140' />
+		<set value='1603' />
+		<set value='1628' />
+	</dataset>
+	<dataset seriesName='2011采购额'>
+		<set value='6854' />
+		<set value='5171' />
+		<set value='1000' />
+		<set value='875' />
+		<set value='2346' />
+		<set value='4696' />
+		<set value='5287' />
+		<set value='6696' />
+		<set value='1287' />
+		<set value='140' />
+		<set value='603' />
+		<set value='268' />
+	</dataset>
+	
+	<dataset lineThickness='3' seriesName='2010采购量' parentYAxis='S'>
+		<set value='174' />
+		<set value='197' />
+		<set value='155' />
+		<set value='15' />
+		<set value='66' />
+		<set value='85' />
+		<set value='37' />
+		<set value='85' />
+		<set value='37' />
+		<set value='10' />
+		<set value='44' />
+		<set value='322' />
+	</dataset>
+	<dataset lineThickness='3' seriesName='2011采购量' parentYAxis='S'>
+		<set value='274' />
+		<set value='397' />
+		<set value='155' />
+		<set value='115' />
+		<set value='66' />
+		<set value='45' />
+		<set value='27' />
+		<set value='85' />
+		<set value='137' />
+		<set value='150' />
+		<set value='160' />
+		<set value='320' />
+	</dataset>
+
+</chart>
