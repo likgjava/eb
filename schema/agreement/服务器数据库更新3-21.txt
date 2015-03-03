@@ -1,0 +1,758 @@
+﻿--广告位表
+create table eps_pub_advertising_position (
+       adver_position_id varchar2(50),
+       position_dictionary_id varchar2(50),
+       position_name varchar2(50),
+       adver_type char(2),
+       adver_length number(8),
+       adver_width number(8),
+       adver_file_maxValue number(8),
+       adver_outLay number(8),
+       creator_id varchar2(50),
+       create_time date,
+       modifier varchar2(50),
+       modifier_time date
+);
+comment on table eps_pub_advertising_position is '广告位';
+comment on column eps_pub_advertising_position.adver_position_id is '记录号';
+comment on column eps_pub_advertising_position.position_dictionary_id is '位置字典项';
+comment on column eps_pub_advertising_position.position_name is '位置名称';
+comment on column eps_pub_advertising_position.adver_type is '广告类型';
+comment on column eps_pub_advertising_position.adver_length is '广告长度';
+comment on column eps_pub_advertising_position.adver_width is '广告宽度';
+comment on column eps_pub_advertising_position.adver_file_maxvalue is '广告文件最大值';
+comment on column eps_pub_advertising_position.adver_outlay is '位置资费';
+comment on column eps_pub_advertising_position.creator_id is '创建人';
+comment on column eps_pub_advertising_position.create_time is '创建时间';
+comment on column eps_pub_advertising_position.modifier is '修改人';
+comment on column eps_pub_advertising_position.modifier_time is '修改时间';
+
+--主键
+alter table eps_pub_advertising_position add constraint advertising_position_pk primary key(adver_position_id);
+
+--广告订阅表
+create table eps_pub_advertising_subscribe(
+       adver_subscribe_id varchar2(50),
+       adver_position_id varchar2(50),
+       orgInfo_id varchar2(50),
+       orgInfo_orgName varchar2(100),
+       adver_link varchar2(100),
+       adver_file varchar2(50),
+       start_time timestamp(6),
+       end_time timestamp(6),
+       total_outLay number(8),
+       use_status char(2),
+       audit_status char(2),
+       auditor varchar(50),
+       audit_time date,
+       audit_option varchar2(200),
+       creator varchar2(50),
+       create_time date,
+       modifier varchar2(50),
+       modify_time date
+);
+alter table eps_pub_advertising_subscribe add constraint advertising_subscribe_PK primary key(adver_subscribe_id);
+
+comment on table eps_pub_advertising_subscribe is '广告订阅';
+comment on column eps_pub_advertising_subscribe.adver_subscribe_id is '记录号';
+comment on column eps_pub_advertising_subscribe.adver_position_id is '广告位Id';
+comment on column eps_pub_advertising_subscribe.orginfo_id is '投放机构';
+comment on column eps_pub_advertising_subscribe.orginfo_orgname is '投放机构名称';
+comment on column eps_pub_advertising_subscribe.adver_link is '广告链接';
+comment on column eps_pub_advertising_subscribe.adver_file is '广告文件';
+comment on column eps_pub_advertising_subscribe.start_time is '开始时间';
+comment on column eps_pub_advertising_subscribe.end_time is '结束时间';
+comment on column eps_pub_advertising_subscribe.total_outlay is '总资费';
+comment on column eps_pub_advertising_subscribe.use_status is '使用状态';
+comment on column eps_pub_advertising_subscribe.audit_status is '审核状态';
+comment on column eps_pub_advertising_subscribe.auditor is '审核人';
+comment on column eps_pub_advertising_subscribe.audit_time is '审核时间';
+comment on column eps_pub_advertising_subscribe.audit_option is '审核意见';
+comment on column eps_pub_advertising_subscribe.creator is '创建人';
+comment on column eps_pub_advertising_subscribe.create_time is '创建时间';
+comment on column eps_pub_advertising_subscribe.modifier is '修改人';
+comment on column eps_pub_advertising_subscribe.modify_time is '修改时间';
+
+
+-- 服务管理
+create table SERVICE_BASE
+(
+  SERVICE_ID             VARCHAR2(50) not null,
+  SERVICE_NAME           VARCHAR2(200),
+  SERVICE_PIC            VARCHAR2(50),
+  SERVICE_DESC           VARCHAR2(1000),
+  SERVICE_LINK           VARCHAR2(200),
+  SERVICE_PRICE          NUMBER(23,7),
+  SERVICE_UNIT           VARCHAR2(50),
+  SERVICE_PREPOSITION    VARCHAR2(50),
+  IS_SINGLE_PURCHASE     CHAR(1),
+  IS_RECOMMENDATION      CHAR(1),
+  USE_STATUS             CHAR(2),
+  CREATOR                VARCHAR2(50),
+  CREATETIME             DATE,
+  SERVICE_AGREEMENT_LINK VARCHAR2(200)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the columns 
+comment on column SERVICE_BASE.SERVICE_ID
+  is '主键';
+comment on column SERVICE_BASE.SERVICE_NAME
+  is '服务名称
+';
+comment on column SERVICE_BASE.SERVICE_PIC
+  is '服务图片
+';
+comment on column SERVICE_BASE.SERVICE_DESC
+  is '服务简单描述
+';
+comment on column SERVICE_BASE.SERVICE_LINK
+  is '服务介绍外部链接
+';
+comment on column SERVICE_BASE.SERVICE_PRICE
+  is '单价
+';
+comment on column SERVICE_BASE.SERVICE_UNIT
+  is '金额单位
+';
+comment on column SERVICE_BASE.SERVICE_PREPOSITION
+  is '前置服务
+';
+comment on column SERVICE_BASE.IS_SINGLE_PURCHASE
+  is '是否可单独购买
+';
+comment on column SERVICE_BASE.IS_RECOMMENDATION
+  is '是否推荐服务
+';
+comment on column SERVICE_BASE.USE_STATUS
+  is '使用状态
+';
+comment on column SERVICE_BASE.CREATOR
+  is '创建人
+';
+comment on column SERVICE_BASE.CREATETIME
+  is '创建时间
+';
+comment on column SERVICE_BASE.SERVICE_AGREEMENT_LINK
+  is '服务协议外部链接';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table SERVICE_BASE
+  add constraint PK_SERVICE_ID primary key (SERVICE_ID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+
+
+
+-- 服务标准计费管理
+create table SERVICE_CHARGING
+(
+  SERVICE_CHARGING_ID VARCHAR2(50) not null,
+  MEMBER_CLASS_ID     VARCHAR2(50),
+  SERVICE_ID          VARCHAR2(50),
+  DURATION            NUMBER(10),
+  AMOUNT              NUMBER(23,7),
+  DISCOUNT            NUMBER(23,7),
+  USE_STATUS          CHAR(2),
+  CREATOR             VARCHAR2(50),
+  CREATETIME          DATE
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table SERVICE_CHARGING
+  is '服务计费管理';
+-- Add comments to the columns 
+comment on column SERVICE_CHARGING.SERVICE_CHARGING_ID
+  is '主键';
+comment on column SERVICE_CHARGING.MEMBER_CLASS_ID
+  is '会员级别';
+comment on column SERVICE_CHARGING.SERVICE_ID
+  is '服务';
+comment on column SERVICE_CHARGING.DURATION
+  is '时长';
+comment on column SERVICE_CHARGING.AMOUNT
+  is '金额
+';
+comment on column SERVICE_CHARGING.DISCOUNT
+  is '折扣率
+';
+comment on column SERVICE_CHARGING.USE_STATUS
+  is '有效状态
+';
+comment on column SERVICE_CHARGING.CREATOR
+  is '创建人
+';
+comment on column SERVICE_CHARGING.CREATETIME
+  is '创建时间
+';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table SERVICE_CHARGING
+  add constraint PK_SERVICE_CHARGING_ID primary key (SERVICE_CHARGING_ID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+
+
+-- 服务组合计费管理
+create table SERVICE_GROUP
+(
+  SERVICE_GROUP_ID  VARCHAR2(50) not null,
+  MAIN_SERVICE_ID   VARCHAR2(50),
+  DISCOUNT          NUMBER(23,7),
+  DURATION          NUMBER(10),
+  AMOUNT            NUMBER(23,7),
+  USE_STATUS        CHAR(2),
+  CREATOR           VARCHAR2(50),
+  CREATETIME        DATE,
+  APPEND_SERVICE_ID VARCHAR2(50),
+  MEMBER_CLASS_ID   VARCHAR2(50)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the columns 
+comment on column SERVICE_GROUP.SERVICE_GROUP_ID
+  is '主键';
+comment on column SERVICE_GROUP.MAIN_SERVICE_ID
+  is '主服务';
+comment on column SERVICE_GROUP.DISCOUNT
+  is '折扣';
+comment on column SERVICE_GROUP.DURATION
+  is '时长';
+comment on column SERVICE_GROUP.AMOUNT
+  is '缴费金额';
+comment on column SERVICE_GROUP.USE_STATUS
+  is '使用状态';
+comment on column SERVICE_GROUP.CREATOR
+  is '创建人
+';
+comment on column SERVICE_GROUP.CREATETIME
+  is '创建时间
+';
+comment on column SERVICE_GROUP.APPEND_SERVICE_ID
+  is '搭配服务';
+comment on column SERVICE_GROUP.MEMBER_CLASS_ID
+  is '会员级别';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table SERVICE_GROUP
+  add constraint PK_SERVICE_GROUP_ID primary key (SERVICE_GROUP_ID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+
+
+-- 会员级别管理
+create table MEMBER_CLASS
+(
+  MEMBER_CLASS_ID   VARCHAR2(50) not null,
+  MEMBER_CLASS_NUM  CHAR(1),
+  MEMBER_CLASS_NAME VARCHAR2(100),
+  MEMBER_CLASS_PIC  VARCHAR2(50),
+  MEMBER_CLASS_DESC VARCHAR2(2000),
+  MIN_AGE           NUMBER(10),
+  MAX_AGE           NUMBER(10),
+  MIN_FEE           NUMBER(10,2),
+  MAX_FEE           NUMBER(10,2),
+  CREATOR           VARCHAR2(50),
+  CREATETIME        DATE
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table MEMBER_CLASS
+  is '会员级别管理';
+-- Add comments to the columns 
+comment on column MEMBER_CLASS.MEMBER_CLASS_ID
+  is '主键
+';
+comment on column MEMBER_CLASS.MEMBER_CLASS_NUM
+  is '会员级别
+';
+comment on column MEMBER_CLASS.MEMBER_CLASS_NAME
+  is '级别名称
+';
+comment on column MEMBER_CLASS.MEMBER_CLASS_PIC
+  is '级别的图片
+';
+comment on column MEMBER_CLASS.MEMBER_CLASS_DESC
+  is '级别描述
+';
+comment on column MEMBER_CLASS.MIN_AGE
+  is '入会最小年限
+';
+comment on column MEMBER_CLASS.MAX_AGE
+  is '入会最大年限
+';
+comment on column MEMBER_CLASS.MIN_FEE
+  is '缴费最小金额
+';
+comment on column MEMBER_CLASS.MAX_FEE
+  is '缴费最大金额
+';
+comment on column MEMBER_CLASS.CREATOR
+  is '创建人';
+comment on column MEMBER_CLASS.CREATETIME
+  is '创建时间';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table MEMBER_CLASS
+  add constraint PK_MEMBER_CLASS_ID primary key (MEMBER_CLASS_ID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+
+-- 会员管理
+create table MEMBER
+(
+  MEMBER_ID       VARCHAR2(50) not null,
+  ORG_INFO_ID     VARCHAR2(50),
+  MEMBER_DURATION NUMBER(10),
+  PAY_AMOUNT      NUMBER(23,7),
+  MEMBER_CLASS_ID VARCHAR2(50),
+  CREATOR         VARCHAR2(50),
+  CREATETIME      DATE,
+  MODIFIER        VARCHAR2(36),
+  MODIFY_TIME     DATE
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table MEMBER
+  is '会员管理';
+-- Add comments to the columns 
+comment on column MEMBER.MEMBER_ID
+  is '主键';
+comment on column MEMBER.ORG_INFO_ID
+  is '机构名称
+';
+comment on column MEMBER.MEMBER_DURATION
+  is '加入会员时长
+';
+comment on column MEMBER.PAY_AMOUNT
+  is '已缴纳金额
+';
+comment on column MEMBER.MEMBER_CLASS_ID
+  is '会员级别
+';
+comment on column MEMBER.CREATOR
+  is '创建人';
+comment on column MEMBER.CREATETIME
+  is '创建时间
+';
+comment on column MEMBER.MODIFIER
+  is ' 修改人';
+comment on column MEMBER.MODIFY_TIME
+  is '修改时间';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table MEMBER
+  add constraint PK_MEMBER_ID primary key (MEMBER_ID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+
+
+
+
+-- 服务订阅管理
+create table SERVICE_SUBSCRIBE
+(
+  SERVICE_SUBSCRIBE_ID VARCHAR2(50) not null,
+  ORG_INFO_ID          VARCHAR2(50),
+  SERVICE_ID           VARCHAR2(50),
+  START_TIME           DATE,
+  END_TIME             DATE,
+  PAY_AMOUNT           NUMBER(23,7),
+  CREATOR              VARCHAR2(50),
+  CREATETIME           DATE,
+  AUDIT_STATUS         CHAR(2),
+  AUDIT_USER           VARCHAR2(50),
+  AUDIT_TIME           DATE,
+  REMARK			   VARCHAR2(1000)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table SERVICE_SUBSCRIBE
+  is '服务订阅管理';
+-- Add comments to the columns 
+comment on column SERVICE_SUBSCRIBE.SERVICE_SUBSCRIBE_ID
+  is '主键
+';
+comment on column SERVICE_SUBSCRIBE.ORG_INFO_ID
+  is '机构名称
+';
+comment on column SERVICE_SUBSCRIBE.SERVICE_ID
+  is '订阅的服务
+';
+comment on column SERVICE_SUBSCRIBE.START_TIME
+  is '开始时间
+';
+comment on column SERVICE_SUBSCRIBE.END_TIME
+  is '结束时间
+';
+comment on column SERVICE_SUBSCRIBE.PAY_AMOUNT
+  is '缴费金额
+';
+comment on column SERVICE_SUBSCRIBE.CREATOR
+  is '创建人
+';
+comment on column SERVICE_SUBSCRIBE.CREATETIME
+  is '创建时间
+';
+comment on column SERVICE_SUBSCRIBE.AUDIT_STATUS
+  is '审核状态
+
+';
+comment on column SERVICE_SUBSCRIBE.AUDIT_USER
+  is '审核人';
+comment on column SERVICE_SUBSCRIBE.AUDIT_TIME
+  is '审核时间
+'
+comment on column SERVICE_SUBSCRIBE.REMARK
+  is '备注
+';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table SERVICE_SUBSCRIBE
+  add constraint PK_SERVICE_SUBSCRIBE_ID primary key (SERVICE_SUBSCRIBE_ID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+
+--修改广告位资费数据类型
+alter table eps_pub_advertising_position modify ADVER_OUTLAY number(16,4);
+--修改广告订阅总资费数据类型
+alter table eps_pub_advertising_subscribe modify TOTAL_OUTLAY number(16,4);
+
+
+--采购需求表
+-- Create table
+create table EPS_PURCHASE_REQUIREMENT
+(
+  PURCHASE_REQUIRE_ID VARCHAR2(50 CHAR) not null,
+  ORG_INFO_ID         VARCHAR2(50 CHAR),
+  CATEGORY_ID         VARCHAR2(50 CHAR),
+  PURCHASE_TITLE      VARCHAR2(200 CHAR),
+  PURCHASE_NUMBER     NUMBER(16,2),
+  PURCHASE_BUDGET     NUMBER(16,2),
+  DISTRICT_ID         VARCHAR2(50 CHAR),
+  DESCRIPTION         VARCHAR2(4000 CHAR),
+  PICTURE             VARCHAR2(50 CHAR),
+  ENDTIME             DATE,
+  EMAIL               VARCHAR2(50 CHAR),
+  LINKTEL             VARCHAR2(50 CHAR),
+  LINKMEN             VARCHAR2(50 CHAR),
+  AUDIT_STATUS        CHAR(2),
+  AUDIT_USER          VARCHAR2(50 CHAR),
+  AUDIT_TIME          DATE,
+  PUBLISH_STATUS      CHAR(2),
+  PUBLISH_TIME        DATE,
+  CREATE_USER         VARCHAR2(50 CHAR),
+  CREATE_TIME         DATE,
+  MODIFY_USER         VARCHAR2(50 CHAR),
+  MODIFY_TIME         DATE,
+  DISTRICT_NAMES      VARCHAR2(100 CHAR),
+  PROJECT_ID          VARCHAR2(50 CHAR),
+  IS_ANONYMOUS        CHAR(1)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table EPS_PURCHASE_REQUIREMENT
+  is '采购需求表';
+-- Add comments to the columns 
+comment on column EPS_PURCHASE_REQUIREMENT.PURCHASE_REQUIRE_ID
+  is '主键
+';
+comment on column EPS_PURCHASE_REQUIREMENT.ORG_INFO_ID
+  is '发布机构
+';
+comment on column EPS_PURCHASE_REQUIREMENT.CATEGORY_ID
+  is '采购品目
+';
+comment on column EPS_PURCHASE_REQUIREMENT.PURCHASE_TITLE
+  is '标题
+';
+comment on column EPS_PURCHASE_REQUIREMENT.PURCHASE_NUMBER
+  is '采购数量
+';
+comment on column EPS_PURCHASE_REQUIREMENT.PURCHASE_BUDGET
+  is '预算
+';
+comment on column EPS_PURCHASE_REQUIREMENT.DISTRICT_ID
+  is '供货区域
+';
+comment on column EPS_PURCHASE_REQUIREMENT.DESCRIPTION
+  is '具体要求描述
+';
+comment on column EPS_PURCHASE_REQUIREMENT.PICTURE
+  is '相关图片
+';
+comment on column EPS_PURCHASE_REQUIREMENT.ENDTIME
+  is '有效截至时间
+';
+comment on column EPS_PURCHASE_REQUIREMENT.EMAIL
+  is '电子邮件
+';
+comment on column EPS_PURCHASE_REQUIREMENT.LINKTEL
+  is '联系电话
+';
+comment on column EPS_PURCHASE_REQUIREMENT.LINKMEN
+  is '联系人
+';
+comment on column EPS_PURCHASE_REQUIREMENT.AUDIT_STATUS
+  is '审核状态
+';
+comment on column EPS_PURCHASE_REQUIREMENT.AUDIT_USER
+  is '审核人
+';
+comment on column EPS_PURCHASE_REQUIREMENT.AUDIT_TIME
+  is '审核时间
+';
+comment on column EPS_PURCHASE_REQUIREMENT.PUBLISH_STATUS
+  is '发布状态
+';
+comment on column EPS_PURCHASE_REQUIREMENT.PUBLISH_TIME
+  is '发布时间
+';
+comment on column EPS_PURCHASE_REQUIREMENT.CREATE_USER
+  is '创建人
+';
+comment on column EPS_PURCHASE_REQUIREMENT.CREATE_TIME
+  is '创建时间
+';
+comment on column EPS_PURCHASE_REQUIREMENT.MODIFY_USER
+  is '修改人
+';
+comment on column EPS_PURCHASE_REQUIREMENT.MODIFY_TIME
+  is '修改时间
+';
+comment on column EPS_PURCHASE_REQUIREMENT.DISTRICT_NAMES
+  is '供货区域名称';
+comment on column EPS_PURCHASE_REQUIREMENT.PROJECT_ID
+  is '项目ID';
+comment on column EPS_PURCHASE_REQUIREMENT.IS_ANONYMOUS
+  is '是否匿名';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table EPS_PURCHASE_REQUIREMENT
+  add constraint PK_PURCHASE_REQUIRE primary key (PURCHASE_REQUIRE_ID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+
+
+--采购需求报名表
+-- Create table
+create table EPS_PURCHASE_REQUIREMENT_REG
+(
+  EPS_PURCHASE_REQ_REG_ID VARCHAR2(50 CHAR) not null,
+  ORG_INFO_ID             VARCHAR2(50 CHAR),
+  PURCHASE_REQUIRE_ID     VARCHAR2(50 CHAR),
+  REGIST_FILE             VARCHAR2(50 CHAR),
+  LINKMEN                 VARCHAR2(50 CHAR),
+  LINKTEL                 VARCHAR2(20 CHAR),
+  EMAIL                   VARCHAR2(20 CHAR),
+  FAX                     VARCHAR2(20 CHAR),
+  IS_QUALIFIED            CHAR(1),
+  IS_RECOMMEND            CHAR(1),
+  AUDIT_STATUS            CHAR(2),
+  AUDIT_USER              VARCHAR2(50 CHAR),
+  AUDIT_TIME              DATE,
+  CREATE_USER             VARCHAR2(50 CHAR),
+  CREATE_TIME             DATE,
+  IDCARD                  VARCHAR2(50),
+  ADDRESS                 VARCHAR2(500),
+  ZIPCODE                 VARCHAR2(50)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table EPS_PURCHASE_REQUIREMENT_REG
+  is '供应商需求报名表';
+-- Add comments to the columns 
+comment on column EPS_PURCHASE_REQUIREMENT_REG.EPS_PURCHASE_REQ_REG_ID
+  is '主键
+';
+comment on column EPS_PURCHASE_REQUIREMENT_REG.ORG_INFO_ID
+  is '关联机构id
+';
+comment on column EPS_PURCHASE_REQUIREMENT_REG.PURCHASE_REQUIRE_ID
+  is '采购需求
+';
+comment on column EPS_PURCHASE_REQUIREMENT_REG.REGIST_FILE
+  is '报名附件
+';
+comment on column EPS_PURCHASE_REQUIREMENT_REG.LINKMEN
+  is '联系人
+';
+comment on column EPS_PURCHASE_REQUIREMENT_REG.LINKTEL
+  is '联系电话
+';
+comment on column EPS_PURCHASE_REQUIREMENT_REG.EMAIL
+  is '电子邮件
+';
+comment on column EPS_PURCHASE_REQUIREMENT_REG.FAX
+  is '传真
+';
+comment on column EPS_PURCHASE_REQUIREMENT_REG.IS_QUALIFIED
+  is '是否符合采购人要求
+';
+comment on column EPS_PURCHASE_REQUIREMENT_REG.IS_RECOMMEND
+  is '是否是推荐供应商
+';
+comment on column EPS_PURCHASE_REQUIREMENT_REG.AUDIT_STATUS
+  is '审核状态
+';
+comment on column EPS_PURCHASE_REQUIREMENT_REG.AUDIT_USER
+  is '审核人
+';
+comment on column EPS_PURCHASE_REQUIREMENT_REG.AUDIT_TIME
+  is '审核时
+间
+';
+comment on column EPS_PURCHASE_REQUIREMENT_REG.CREATE_USER
+  is '创建人
+';
+comment on column EPS_PURCHASE_REQUIREMENT_REG.CREATE_TIME
+  is '创建时间
+';
+comment on column EPS_PURCHASE_REQUIREMENT_REG.IDCARD
+  is '身份证号';
+comment on column EPS_PURCHASE_REQUIREMENT_REG.ADDRESS
+  is '联系地址';
+comment on column EPS_PURCHASE_REQUIREMENT_REG.ZIPCODE
+  is '邮编';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table EPS_PURCHASE_REQUIREMENT_REG
+  add constraint PK_PURCHASE_REQUIRE_REG_ID primary key (EPS_PURCHASE_REQ_REG_ID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+
+  

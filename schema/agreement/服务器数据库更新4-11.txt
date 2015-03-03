@@ -1,0 +1,25 @@
+﻿
+--修改公告的标题字段长度
+alter table ecp_base_bulletin modify title varchar2(1000)
+
+--创建默认采购人角色，新注册用户，包含资源：发布采购需求
+insert into auth_role (ROL_ID, ROL_EN_NAME, ORG_ID, ROL_CH_NAME, ROL_IS_DEFAULT, ROL_MEMO, ROL_STATUS, ROL_TYPE, ROL_PARENT_ID, DEPT_ID, ROL_SORT, CREATE_TIME)
+values ('2c9087f72f420ad4012f421fdeaa0003', 'default_buyer', '', '默认采购人', '0', '', '1', '5', '', '', null, '11-4月 -11 09.14.35.562000 上午');
+--分配资源
+insert into auth_role_resource (ROL_ID, RES_ID, ISCHECKED, CREATE_TIME)
+values ('2c9087f72f420ad4012f421fdeaa0003', '2c9087f02f14e91e012f14f750b60004', '1', '');
+insert into auth_role_resource (ROL_ID, RES_ID, ISCHECKED, CREATE_TIME)
+values ('2c9087f72f420ad4012f421fdeaa0003', '402886dc29f2a12c0129f2e4e08b006c', '2', '');
+insert into auth_role_resource (ROL_ID, RES_ID, ISCHECKED, CREATE_TIME)
+values ('2c9087f72f420ad4012f421fdeaa0003', '402887982ad046e2012ad056d8d3001c', '2', '');
+
+--创建默认供应商角色，新注册用户，包含资源：发布商品
+insert into auth_role (ROL_ID, ROL_EN_NAME, ORG_ID, ROL_CH_NAME, ROL_IS_DEFAULT, ROL_MEMO, ROL_STATUS, ROL_TYPE, ROL_PARENT_ID, DEPT_ID, ROL_SORT, CREATE_TIME)
+values ('2c9087f72f420ad4012f422023160005', 'default_supplier', '', '默认供应商', '0', '', '1', '6', '', '', null, '11-4月 -11 09.14.53.078000 上午');
+--分配资源
+insert into auth_role_resource (ROL_ID, RES_ID, ISCHECKED, CREATE_TIME)
+values ('2c9087f72f420ad4012f422023160005', '402886dc29f2a12c0129f2e50e90006f', '2', '');
+insert into auth_role_resource (ROL_ID, RES_ID, ISCHECKED, CREATE_TIME)
+values ('2c9087f72f420ad4012f422023160005', '402886dc29f2a12c0129f2ea26a40090', '2', '');
+insert into auth_role_resource (ROL_ID, RES_ID, ISCHECKED, CREATE_TIME)
+values ('2c9087f72f420ad4012f422023160005', '402886dc29f2a12c0129f2ebe3480096', '1', '');

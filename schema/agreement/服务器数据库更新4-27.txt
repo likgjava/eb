@@ -1,0 +1,88 @@
+﻿--更新公告的状态
+update ecp_base_bulletin b set b.bulletin_type = '12' where b.bulletin_type = '01';
+
+
+-- 品牌功能更新
+create table GOODS_BRAND_CHANGE
+(
+  GOODS_BRAND_CHANGE_ID VARCHAR2(50) not null,
+  MODIFY_TYPE           VARCHAR2(50),
+  OLD_VALUE             VARCHAR2(500),
+  NEW_VALUE             VARCHAR2(500),
+  MODIFIER              VARCHAR2(50),
+  MODIFY_TIME           DATE,
+  AUDIT_STATUS          VARCHAR2(2),
+  VERIFY_TIME           DATE,
+  OPINION               VARCHAR2(500),
+  GOODS_BRAND_ID        VARCHAR2(50),
+  VERIFIER_ID           VARCHAR2(50),
+  CREATOR               VARCHAR2(50),
+  CREATE_TIME           DATE
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table GOODS_BRAND_CHANGE
+  is '品牌变更历史';
+-- Add comments to the columns 
+comment on column GOODS_BRAND_CHANGE.GOODS_BRAND_CHANGE_ID
+  is '主键';
+comment on column GOODS_BRAND_CHANGE.MODIFY_TYPE
+  is '变更类型';
+comment on column GOODS_BRAND_CHANGE.OLD_VALUE
+  is '旧值';
+comment on column GOODS_BRAND_CHANGE.NEW_VALUE
+  is '新值';
+comment on column GOODS_BRAND_CHANGE.MODIFIER
+  is '变更人';
+comment on column GOODS_BRAND_CHANGE.MODIFY_TIME
+  is '变更时间';
+comment on column GOODS_BRAND_CHANGE.AUDIT_STATUS
+  is '审核状态';
+comment on column GOODS_BRAND_CHANGE.VERIFY_TIME
+  is '审核时间';
+comment on column GOODS_BRAND_CHANGE.OPINION
+  is '审核意见';
+comment on column GOODS_BRAND_CHANGE.GOODS_BRAND_ID
+  is '机构ID';
+comment on column GOODS_BRAND_CHANGE.VERIFIER_ID
+  is '审核人';
+comment on column GOODS_BRAND_CHANGE.CREATOR
+  is '创建人';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table GOODS_BRAND_CHANGE
+  add constraint PK_BRAND_CHANGE_KEY primary key (GOODS_BRAND_CHANGE_ID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+
+
+
+-- 更改品牌字段大小
+alter table GOODS_BRAND modify BRAND_DESC VARCHAR2(500);
+alter table GOODS_BRAND modify GOODS_CLASS_NAMES VARCHAR2(500);
+
+--更改主键可为空
+-- Add/modify columns 
+alter table GOODS_BRAND_TO_CLASS modify GOODS_CLASS_ID not null;
+alter table GOODS_BRAND_TO_CLASS modify GOODS_BRAND_ID not null;
+alter table GOODS_BRAND_TO_CLASS modify GOODS_BRAND_TO_CLASS_ID null;
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table GOODS_BRAND_TO_CLASS
+  add constraint PK_GOODS_BRAND_TO_CLASS primary key (GOODS_CLASS_ID, GOODS_BRAND_ID);

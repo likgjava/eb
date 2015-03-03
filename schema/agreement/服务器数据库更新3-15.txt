@@ -1,0 +1,4 @@
+﻿--更新"我的报价"的请求路径
+update auth_resource t set t.res_url = 'view/goods/goodsprice/s_price_goods_list.jsp'
+where res_name = '我的报价'
+

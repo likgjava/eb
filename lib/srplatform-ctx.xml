@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:aop="http://www.springframework.org/schema/aop"
+		xmlns:tx="http://www.springframework.org/schema/tx"
+		xmlns:jee="http://www.springframework.org/schema/jee"
+		xmlns:p="http://www.springframework.org/schema/p"  
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd">
+	<bean id="hovProvider"
+		class="com.gpcsoft.core.utils.hov.HovProviderImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="configurationLoader"
+		class="org.springmodules.validation.bean.conf.loader.annotation.AnnotationBeanValidationConfigurationLoader" />
+	<bean id="validator" class="org.springmodules.validation.bean.BeanValidator"
+		p:configurationLoader-ref="configurationLoader" />  
+
+	<!-- For mail settings and future properties files -->
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>file:D:/Projects/myWorkSpace/gpcsoft-agreement-order/conf/sys/mail.properties</value>
+				<value>file:D:/Projects/myWorkSpace/gpcsoft-agreement-order/conf/db/hibernate.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+    <!-- Load WEB-INF/classes/ApplicationResources.properties for i18n messages using JSTL's fmt tag -->
+   
+    <bean id="messageSource" class="com.gpcsoft.core.context.RegexPropertyMessageResources">
+        <property name="jname" value="*"/>
+        <property name="basename"  value="file:D:/Projects/myWorkSpace/gpcsoft-agreement-order/conf/i18n/message/**/*.properties"/>
+    </bean>
+    
+    <bean id="enumServiceImpl" class="com.gpcsoft.core.service.impl.EnumServiceImpl">
+        <property name="dir">
+        	<value>file:D:/Projects/myWorkSpace/gpcsoft-agreement-order/conf/i18n/enum/**/*.properties</value>
+        </property>
+        <property name="includes">
+        	<value>**/*.properties</value>
+        </property>
+    </bean>
+        
+	<bean id="systemPropertiesLoader" class="com.gpcsoft.core.utils.SystemPropertiesLoader">
+        <property name="dir">
+        	<value>classpath*:../conf</value>
+        </property>
+        <property name="includes">
+        	<value>sys/**/*.properties</value>
+        </property>
+	</bean>
+    
+    <bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="host" value="${mail.host}"/>
+        <property name="username" value="${mail.username}"/>
+        <property name="password" value="${mail.password}"/>
+    </bean>
+
+    <bean id="simpleMailMessage" class="org.springframework.mail.SimpleMailMessage" scope="prototype">
+        <property name="from" value="${mail.default.from}"/>
+    </bean>
+    
+	<bean id="freeMarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer"> 
+		<!-- <property name="templateLoaderPath" value="file:D:/Projects/myWorkSpace/srplatform/webapp/WEB-INF/templates" />  -->
+		<property name="templateLoaderPath" value="/WEB-INF/conf/template/" /> 
+		<property name="freemarkerSettings">   
+			<props> 
+				<prop key="template_update_delay">360000</prop> 
+				<prop key="default_encoding">UTF-8</prop> 
+				<prop key="locale">zh_CN</prop> 
+			</props> 
+		</property> 
+	</bean>
+
+</beans>

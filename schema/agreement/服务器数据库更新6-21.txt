@@ -1,0 +1,191 @@
+--团购表
+create table EPS_GROUP_BUYING
+(
+  GROUP_BUYING_ID  VARCHAR2(50) not null,
+  GOODS_ID         VARCHAR2(50),
+  GOODS_CLASS_ID   VARCHAR2(50),
+  NAME             VARCHAR2(200),
+  PICTURE          VARCHAR2(50),
+  MARKET_PRICE     NUMBER(23,7),
+  GROUP_PRICE      NUMBER(23,7),
+  DISCOUNT         NUMBER(4,2),
+  START_TIME       DATE,
+  END_TIME         DATE,
+  MIN_NUMBER       NUMBER(16),
+  MAX_NUMBER       NUMBER(16),
+  CURRENT_NUMBER   NUMBER(16),
+  MEET_NUMBER_TIME DATE,
+  CURRENT_STATUS   CHAR(2),
+  IS_SUCCESS       CHAR(1),
+  USE_STATUS       VARCHAR2(50),
+  CREATOR_ID       VARCHAR2(50),
+  CREATE_TIME      DATE,
+  GROUP_DESC       VARCHAR2(1000)
+)
+;
+comment on table EPS_GROUP_BUYING
+  is '团购表';
+comment on column EPS_GROUP_BUYING.GROUP_BUYING_ID
+  is '主键
+';
+comment on column EPS_GROUP_BUYING.GOODS_ID
+  is '商品ID';
+comment on column EPS_GROUP_BUYING.GOODS_CLASS_ID
+  is '商品分类ID';
+comment on column EPS_GROUP_BUYING.NAME
+  is '名称';
+comment on column EPS_GROUP_BUYING.PICTURE
+  is '图片';
+comment on column EPS_GROUP_BUYING.MARKET_PRICE
+  is '市场价';
+comment on column EPS_GROUP_BUYING.GROUP_PRICE
+  is '团购价';
+comment on column EPS_GROUP_BUYING.DISCOUNT
+  is '折扣';
+comment on column EPS_GROUP_BUYING.START_TIME
+  is '开始时间';
+comment on column EPS_GROUP_BUYING.END_TIME
+  is '结束时间';
+comment on column EPS_GROUP_BUYING.MIN_NUMBER
+  is '最低团购数';
+comment on column EPS_GROUP_BUYING.MAX_NUMBER
+  is '最大团购数';
+comment on column EPS_GROUP_BUYING.CURRENT_NUMBER
+  is '当前团购数';
+comment on column EPS_GROUP_BUYING.MEET_NUMBER_TIME
+  is '达到最低团购数时间';
+comment on column EPS_GROUP_BUYING.CURRENT_STATUS
+  is '当前状态';
+comment on column EPS_GROUP_BUYING.IS_SUCCESS
+  is '是否团购成功';
+comment on column EPS_GROUP_BUYING.USE_STATUS
+  is '使用状态';
+comment on column EPS_GROUP_BUYING.CREATOR_ID
+  is '创建人';
+comment on column EPS_GROUP_BUYING.CREATE_TIME
+  is '创建时间';
+comment on column EPS_GROUP_BUYING.GROUP_DESC
+  is '描述';
+alter table EPS_GROUP_BUYING
+  add constraint EPS_GROUP_BUYING_PK primary key (GROUP_BUYING_ID);
+  
+--团购采购人表
+create table EPS_GROUP_BUYER
+(
+  GROUP_BUYER_ID  VARCHAR2(50) not null,
+  ORG_INFO_ID     VARCHAR2(50),
+  GROUP_BUYING_ID VARCHAR2(50),
+  AMOUNT          NUMBER(16),
+  RECEIVE_NAME    VARCHAR2(20),
+  MOBILE_PHONE    VARCHAR2(60),
+  FIXED_PHONE     VARCHAR2(60),
+  EMAIL           VARCHAR2(60),
+  PROVINCE        VARCHAR2(50),
+  ADDRESS         VARCHAR2(200),
+  POST_CODE       CHAR(6),
+  PAYMENT_METHOD  CHAR(2),
+  PAY_STATUS  	  CHAR(2),
+  SHIPPING_METHOD CHAR(2),
+  CREATOR_ID      VARCHAR2(50),
+  CREATE_TIME     DATE
+)
+;
+comment on table EPS_GROUP_BUYER
+  is '团购采购人';
+comment on column EPS_GROUP_BUYER.GROUP_BUYER_ID
+  is '主键';
+comment on column EPS_GROUP_BUYER.ORG_INFO_ID
+  is '所属机构';
+comment on column EPS_GROUP_BUYER.GROUP_BUYING_ID
+  is '所属团购';
+comment on column EPS_GROUP_BUYER.AMOUNT
+  is '购买数量';
+comment on column EPS_GROUP_BUYER.RECEIVE_NAME
+  is '收货人姓名';
+comment on column EPS_GROUP_BUYER.MOBILE_PHONE
+  is '手机号码';
+comment on column EPS_GROUP_BUYER.FIXED_PHONE
+  is '固定电话';
+comment on column EPS_GROUP_BUYER.EMAIL
+  is '电子邮件';
+comment on column EPS_GROUP_BUYER.PROVINCE
+  is '省份';
+comment on column EPS_GROUP_BUYER.ADDRESS
+  is '详细地址';
+comment on column EPS_GROUP_BUYER.POST_CODE
+  is '邮编';
+comment on column EPS_GROUP_BUYER.PAYMENT_METHOD
+  is '支付方式';
+comment on column EPS_GROUP_BUYER.PAY_STATUS
+  is '支付状态';
+comment on column EPS_GROUP_BUYER.SHIPPING_METHOD
+  is '配送方式';
+comment on column EPS_GROUP_BUYER.CREATOR_ID
+  is '创建人';
+comment on column EPS_GROUP_BUYER.CREATE_TIME
+  is '创建时间';
+alter table EPS_GROUP_BUYER
+  add constraint EPS_GROUP_BUYER_PK primary key (GROUP_BUYER_ID);
+
+--团购供应商
+create table EPS_GROUP_SUPPLIER
+(
+  GROUP_SUPPLIER_ID VARCHAR2(50) not null,
+  ORG_INFO_ID       VARCHAR2(50),
+  GROUP_BUYING_ID   VARCHAR2(50),
+  ASK_PRICE         NUMBER(23,7),
+  IS_DEAL           CHAR(1),
+  CREATOR_ID        VARCHAR2(50),
+  CREATE_TIME       DATE
+)
+;
+comment on table EPS_GROUP_SUPPLIER
+  is '团购供应商';
+comment on column EPS_GROUP_SUPPLIER.GROUP_SUPPLIER_ID
+  is '主键';
+comment on column EPS_GROUP_SUPPLIER.ORG_INFO_ID
+  is '所属机构';
+comment on column EPS_GROUP_SUPPLIER.GROUP_BUYING_ID
+  is '所属团购';
+comment on column EPS_GROUP_SUPPLIER.ASK_PRICE
+  is '卖价';
+comment on column EPS_GROUP_SUPPLIER.IS_DEAL
+  is '是否参与供货';
+comment on column EPS_GROUP_SUPPLIER.CREATOR_ID
+  is '创建人';
+comment on column EPS_GROUP_SUPPLIER.CREATE_TIME
+  is '创建时间';
+alter table EPS_GROUP_SUPPLIER
+  add constraint EPS_GROUP_SUPPLIER_PK primary key (GROUP_SUPPLIER_ID);
+
+create table EPS_GROUP_BUYING_CLASS
+(
+  GROUP_BUYING_CLASS_ID VARCHAR2(50) not null,
+  GOODS_CLASS_ID        VARCHAR2(50),
+  NAME                  VARCHAR2(100),
+  IS_SHOW_INDEX         CHAR(1),
+  SORT                  NUMBER,
+  CREATOR_ID            VARCHAR2(50),
+  CREATE_TIME           DATE
+)
+;
+comment on table EPS_GROUP_BUYING_CLASS
+  is '团购分类';
+comment on column EPS_GROUP_BUYING_CLASS.GROUP_BUYING_CLASS_ID
+  is '主键';
+comment on column EPS_GROUP_BUYING_CLASS.GOODS_CLASS_ID
+  is '商品分类id';
+comment on column EPS_GROUP_BUYING_CLASS.NAME
+  is '团购分类名称';
+comment on column EPS_GROUP_BUYING_CLASS.IS_SHOW_INDEX
+  is '是否显示在首页';
+comment on column EPS_GROUP_BUYING_CLASS.SORT
+  is '排序';
+comment on column EPS_GROUP_BUYING_CLASS.CREATOR_ID
+  is '创建人';
+comment on column EPS_GROUP_BUYING_CLASS.CREATE_TIME
+  is '创建时间';
+alter table EPS_GROUP_BUYING_CLASS
+  add constraint GROUP_BUYING_CLASS_PK primary key (GROUP_BUYING_CLASS_ID);
+
+  

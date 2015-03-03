@@ -1,0 +1,6 @@
+﻿--更新采购预告发布状态为已发布状态
+update ECP_Base_Bulletin t set t.relstatus='02';
+
+--对商圈帖子主题添加'是否精华'字段
+alter table ecp_forum_topic add is_Elite char(1);
+comment on column ecp_forum_topic.is_elite is '是否精华(0：否,1：是)';

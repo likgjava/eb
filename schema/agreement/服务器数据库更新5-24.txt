@@ -1,0 +1,169 @@
+﻿-- 报价详情 表
+create table EPS_AGREE_RECORD_DETAIL
+(
+  RECORD_DETAIL_ID VARCHAR2(50) not null,
+  BARGIN_TIME      DATE default sysdate not null,
+  GOODS_TOTAL      NUMBER(16,6),
+  MEMO             VARCHAR2(3000),
+  BARGIN_FILE      VARCHAR2(50),
+  SERVICE_CONTENT  VARCHAR2(2000),
+  SUPLIER_ID       VARCHAR2(50),
+  PROJECT_ID       VARCHAR2(50),
+  CRE_USER_ID      VARCHAR2(50),
+  REQUIRE_DTL_ID   VARCHAR2(50),
+  GOODS_ID         VARCHAR2(50),
+  GOODS_PRICE      NUMBER(16,6),
+  IS_CHOOSE        CHAR(1) default 0,
+  SORT             NUMBER(19)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table EPS_AGREE_RECORD_DETAIL
+  is '报价记录详细';
+-- Add comments to the columns 
+comment on column EPS_AGREE_RECORD_DETAIL.RECORD_DETAIL_ID
+  is '记录号
+';
+comment on column EPS_AGREE_RECORD_DETAIL.BARGIN_TIME
+  is '报价时间
+';
+comment on column EPS_AGREE_RECORD_DETAIL.GOODS_TOTAL
+  is '金额
+';
+comment on column EPS_AGREE_RECORD_DETAIL.MEMO
+  is '备注
+';
+comment on column EPS_AGREE_RECORD_DETAIL.BARGIN_FILE
+  is '报价文件
+';
+comment on column EPS_AGREE_RECORD_DETAIL.SERVICE_CONTENT
+  is '服务内容
+';
+comment on column EPS_AGREE_RECORD_DETAIL.SUPLIER_ID
+  is '供应商';
+comment on column EPS_AGREE_RECORD_DETAIL.PROJECT_ID
+  is '项目';
+comment on column EPS_AGREE_RECORD_DETAIL.CRE_USER_ID
+  is '创建人';
+comment on column EPS_AGREE_RECORD_DETAIL.REQUIRE_DTL_ID
+  is '需求';
+comment on column EPS_AGREE_RECORD_DETAIL.GOODS_ID
+  is '商品';
+comment on column EPS_AGREE_RECORD_DETAIL.GOODS_PRICE
+  is '单价';
+comment on column EPS_AGREE_RECORD_DETAIL.IS_CHOOSE
+  is '是否选定';
+comment on column EPS_AGREE_RECORD_DETAIL.SORT
+  is '排序';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table EPS_AGREE_RECORD_DETAIL
+  add constraint PK_RECORD_DETAIL_ID primary key (RECORD_DETAIL_ID)
+  using index 
+  tablespace SYSTEM
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+  
+  
+  -- Add/modify columns 
+alter table EPS_AGREE_RECORD_DETAIL add IS_DEAL CHAR(1);
+-- Add comments to the columns 
+comment on column EPS_AGREE_RECORD_DETAIL.IS_DEAL
+  is '是否成交';
+  
+
+  
+-- 报价历史表
+create table EPS_AGREE_RECORD_HISTORY
+(
+  RECORD_HISTORY_ID VARCHAR2(50) not null,
+  BARGIN_TIME       DATE default sysdate not null,
+  GOODS_TOTAL       NUMBER(16,6),
+  CRE_USER_ID       VARCHAR2(50),
+  RECORD_DETAIL_ID  VARCHAR2(50),
+  GOODS_PRICE       NUMBER(16,6),
+  BARGAIN_TURN_ID   VARCHAR2(50)
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table EPS_AGREE_RECORD_HISTORY
+  is '报价历史记录';
+-- Add comments to the columns 
+comment on column EPS_AGREE_RECORD_HISTORY.RECORD_HISTORY_ID
+  is '记录号
+';
+comment on column EPS_AGREE_RECORD_HISTORY.BARGIN_TIME
+  is '报价时间
+';
+comment on column EPS_AGREE_RECORD_HISTORY.GOODS_TOTAL
+  is '金额
+';
+comment on column EPS_AGREE_RECORD_HISTORY.CRE_USER_ID
+  is '创建人';
+comment on column EPS_AGREE_RECORD_HISTORY.RECORD_DETAIL_ID
+  is '报价详情id';
+comment on column EPS_AGREE_RECORD_HISTORY.GOODS_PRICE
+  is '单价';
+comment on column EPS_AGREE_RECORD_HISTORY.BARGAIN_TURN_ID
+  is '轮次';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table EPS_AGREE_RECORD_HISTORY
+  add constraint PK_RECORD_HISTORY_ID primary key (RECORD_HISTORY_ID)
+  using index 
+  tablespace SYSTEM
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+  
+  --订单条目描述
+  -- Add/modify columns 
+alter table EPS_AGREEMENT_ORDER_ITEM add decr VARCHAR2(200);
+-- Add comments to the columns 
+comment on column EPS_AGREEMENT_ORDER_ITEM.decr
+  is '描述';
+  
+  
+  -- Add/modify columns 
+alter table EPS_AGREEMENT_ORDER_ITEM modify GOODS_ID null;
+
+--订单支付状态
+-- Add/modify columns 
+alter table EPS_AGREEMENT_ORDER add PAY_STATUS CHAR(2) default '00';
+-- Add comments to the columns 
+comment on column EPS_AGREEMENT_ORDER.PAY_STATUS
+  is '支付状态';
+  
+  -- Add/modify columns 
+alter table EPS_AGREEMENT_ORDER modify PAY_STATUS default '00';
+
+  

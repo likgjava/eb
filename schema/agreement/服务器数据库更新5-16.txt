@@ -1,0 +1,27 @@
+﻿--推荐商品品牌表
+create table RECOMMEND_GOODS_BRAND
+(
+  ID             VARCHAR2(50) not null,
+  GOODS_BRAND_ID VARCHAR2(50),
+  RECOMMENDER    VARCHAR2(50),
+  REASON         VARCHAR2(1000),
+  CREATE_TIME    DATE,
+  SORT           NUMBER
+)
+;
+comment on table RECOMMEND_GOODS_BRAND
+  is '推荐商品品牌';
+comment on column RECOMMEND_GOODS_BRAND.ID
+  is '主键';
+comment on column RECOMMEND_GOODS_BRAND.GOODS_BRAND_ID
+  is '推荐的商品品牌ID';
+comment on column RECOMMEND_GOODS_BRAND.RECOMMENDER
+  is '推荐人';
+comment on column RECOMMEND_GOODS_BRAND.REASON
+  is '推荐理由';
+comment on column RECOMMEND_GOODS_BRAND.CREATE_TIME
+  is '创建时间';
+comment on column RECOMMEND_GOODS_BRAND.SORT
+  is '排序序号';
+alter table RECOMMEND_GOODS_BRAND
+  add constraint RECOMMEND_GOODS_BRAND_PK primary key (ID);

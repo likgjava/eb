@@ -1,0 +1,18 @@
+﻿--添加媒体角色
+insert into auth_role (ROL_ID, ROL_EN_NAME, ORG_ID, ROL_CH_NAME, ROL_IS_DEFAULT, ROL_MEMO, ROL_STATUS, ROL_TYPE, ROL_PARENT_ID, DEPT_ID, ROL_SORT, CREATE_TIME)
+values ('2c9087db3005effb0130061322610056', 'medium', '', '媒体', '0', '媒体', '1', 't', '', '', null, '19-5月 -11 10.26.15.265000 上午');
+
+
+--删除三级菜单‘投票管理’
+delete from auth_role_resource rr where rr.res_id = '2c9087db2e5526d4012e553ffc3d0007';
+delete from auth_menu m where m.mnu_id = '2c9087db2e5526d4012e553ffc3d0006';
+delete from auth_resource r where r.res_id = '2c9087db2e5526d4012e553ffc3d0007';
+commit;
+
+--添加排序字段
+alter table vote_assessed_expert add expert_sort number(9);
+comment on column vote_assessed_expert.expert_sort is '专家排序';
+
+alter table vote_assessed_thing add assess_sort number(9);
+comment on column vote_assessed_thing.assess_sort is '参选单位排序';
+commit;

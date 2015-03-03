@@ -1,0 +1,85 @@
+-- 商品变更历史表
+create table GOODS_CHANGE
+(
+  GOODS_CHANGE_ID VARCHAR2(50) not null,
+  MODIFY_TYPE        VARCHAR2(50),
+  OLD_VALUE          VARCHAR2(500),
+  NEW_VALUE          VARCHAR2(500),
+  MODIFIER           VARCHAR2(50),
+  MODIFY_TIME        DATE,
+  AUDIT_STATUS       VARCHAR2(2),
+  VERIFY_TIME        DATE,
+  OPINION            VARCHAR2(500),
+  GOODS_ID        VARCHAR2(50),
+  VERIFIER_ID        VARCHAR2(50),
+  CREATOR            VARCHAR2(50),
+  CREATE_TIME        DATE
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+	    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the table 
+comment on table GOODS_CHANGE
+  is '商品变更历史';
+-- Add comments to the columns 
+comment on column GOODS_CHANGE.GOODS_CHANGE_ID
+  is '主键';
+comment on column GOODS_CHANGE.MODIFY_TYPE
+  is '变更类型';
+comment on column GOODS_CHANGE.OLD_VALUE
+  is '旧值';
+comment on column GOODS_CHANGE.NEW_VALUE
+  is '新值';
+comment on column GOODS_CHANGE.MODIFIER
+  is '变更人';
+comment on column GOODS_CHANGE.MODIFY_TIME
+  is '变更时间';
+comment on column GOODS_CHANGE.AUDIT_STATUS
+  is '审核状态';
+comment on column GOODS_CHANGE.VERIFY_TIME
+  is '审核时间';
+comment on column GOODS_CHANGE.OPINION
+  is '审核意见';
+comment on column GOODS_CHANGE.GOODS_ID
+  is '机构ID';
+comment on column GOODS_CHANGE.VERIFIER_ID
+  is '审核人';
+comment on column GOODS_CHANGE.CREATOR
+  is '创建人';
+comment on column ORG_INFO_MODIFY.CREATE_TIME
+  is '创建时间';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table GOODS_CHANGE
+  add constraint GOODS_CHANGE_KEY primary key (GOODS_CHANGE_ID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    minextents 1
+    maxextents unlimited
+  );
+  
+  
+  -- Add/modify columns 
+alter table ECP_BUSINESS_COMMUNITY add GROUP_ID VARCHAR2(50);
+-- Add comments to the columns 
+comment on column ECP_BUSINESS_COMMUNITY.GROUP_ID
+  is '社区群号';
+  
+  
+  -- Add/modify columns 
+alter table ECP_BUSINESS_COMMUNITY add picture VARCHAR2(50);
+-- Add comments to the columns 
+comment on column ECP_BUSINESS_COMMUNITY.picture
+  is '社区图片';

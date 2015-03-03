@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	
+<!--Web Controller Configuration-->
+
+    <context:component-scan base-package="com.gpcsoft"/>
+    	<context:annotation-config/> 
+    	
+    <!--	用传统方式配置事务时需要注释掉	
+    <tx:annotation-driven/>
+    -->
+
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />    
+    <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"/>
+
+    <!-- Load WEB-INF/classes/ApplicationResources.properties for i18n messages using JSTL's fmt tag -->
+    
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="20097152"/>
+    </bean>
+
+    <!--Company-BEAN-END-->
+    <!-- Add additional controller beans here -->
+
+    <!-- Load WEB-INF/classes/ApplicationResources.properties for i18n messages using JSTL's fmt tag -->
+    <bean id="messageSource" class="com.gpcsoft.core.context.RegexPropertyMessageResources">
+        <property name="jname" value="*"/>
+        <property name="basename"  value="messages*"/>
+    </bean>
+    
+    <bean id="filenameController" class="org.springframework.web.servlet.mvc.UrlFilenameViewController"/>
+
+    <bean id="methodNameResolver" class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+        <property name="paramName" value="method"/>
+        <property name="defaultMethodName" value="init"/>
+    </bean>
+    <!-- View Resolver for JSPs -->
+	<!--<bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="cache" value="false"/>
+        <property name="prefix" value="/"/>
+        <property name="suffix" value=".ftl"/>
+        <property name="exposeSpringMacroHelpers" value="true"/>
+        <property name="exposeRequestAttributes" value="true"/>
+        <property name="contentType" value="text/html; charset=UTF-8"/>
+    </bean>
+
+    <bean id="freemarkerConfig" class="com.quickframe.core.extras.freemarker.CustomerFreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="WEB-INF/freemarker/"/>
+        <property name="configLocation" value="classpath:freemarker.properties"/>
+    </bean>-->
+    <bean name="/HovController.do" class="com.gpcsoft.core.utils.hov.HovController">
+		<property name="treeView" value="hovTreeView"/>
+		<property name="tableView" value="hovTableView"/>
+	</bean>
+	
+	<!-- ajaxmul方式xml配置支持 --> 
+	<bean name="ajaxMulRequest" class="org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter" />
+	
+	<!-- 注解方式配置支持 --> 
+	<bean name="annotationRequest" class="com.gpcsoft.core.springmvc.AnnotationMethodHandlerAdapter">
+		<property name="webBindingInitializer" >
+			<bean class="com.gpcsoft.core.springmvc.BindingInitializer"/>
+		</property>
+	</bean>
+    <bean name="simpleController" class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />
+ 
+	<bean id="exceptionResolver" class="com.gpcsoft.core.web.handler.FrameSimpleMappingExceptionResolver">
+  		<property name="defaultErrorView">
+   			<value>jsonView</value>
+  		</property>
+	 	<property name="exceptionMappings">
+	   		<props>
+	   			<!--	/exception/showError	 是viewName	 
+	   					com.gpcsoft.core.exception.BusinessException
+	   					<prop key="java.lang.RuntimeException">/exception/showError</prop>   
+	   			--> 
+	   		</props> 
+	  	</property>
+ 	</bean>
+ 	
+</beans>

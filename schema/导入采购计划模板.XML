@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+
+<purchasePlan className="com.gpcsoft.agreement.order.domain.Procurementtask">
+<periodType name="periodType">year</periodType>
+<periodValue name="periodValue">2011</periodValue>
+<sumQty name="sumQty">30</sumQty>
+<sumTotal name="sumTotal">300000</sumTotal>
+<memo name="memo">九合互联采购计划</memo>
+<orgCode name="buyer.orgCode" className="com.gpcsoft.bizplatform.organization.domain.OrgInfo">68196750-7</orgCode>
+
+<protaskItems name="protaskItems">
+	<planItem name="planItem" className="com.gpcsoft.agreement.order.domain.ProtaskItem">
+		<categoryCode name="purCategory.categoryCode" className="com.gpcsoft.bizplatform.base.purcategory.domain.PurCategory">A010301</categoryCode>
+		<goodsClassCode name="goodsClass.goodsClassCode" className="com.gpcsoft.goods.goodsclass.domain.GoodsClass">B10</goodsClassCode>
+		<goodsTotal name="goodsTotal">200000</goodsTotal>
+		<goodsQty name="goodsQty">50</goodsQty>
+		<goodsPrice name="goodsPrice">4000</goodsPrice>
+		<memo name="memo">台式电脑50台</memo>
+	</planItem>
+	<planItem name="planItem" className="com.gpcsoft.agreement.order.domain.ProtaskItem">
+		<categoryCode name="purCategory.categoryCode" className="com.gpcsoft.bizplatform.base.purcategory.domain.PurCategory">A010302</categoryCode>
+		<goodsClassCode name="goodsClass.goodsClassCode" className="com.gpcsoft.goods.goodsclass.domain.GoodsClass">B09</goodsClassCode>
+		<goodsTotal name="goodsTotal">100000</goodsTotal>
+		<goodsQty name="goodsQty">20</goodsQty>
+		<goodsPrice name="goodsPrice">5000</goodsPrice>
+		<memo name="memo">笔记本电脑20台</memo>
+	</planItem>
+</protaskItems>
+
+</purchasePlan>
+
+<purchasePlan className="com.gpcsoft.agreement.order.domain.Procurementtask">
+<periodType name="periodType">year</periodType>
+<periodValue name="periodValue">2011</periodValue>
+<sumQty name="sumQty">30</sumQty>
+<sumTotal name="sumTotal">600000</sumTotal>
+<memo name="memo">九合互联采购计划</memo>
+<orgCode name="buyer.orgCode" className="com.gpcsoft.bizplatform.organization.domain.OrgInfo">68196750-7</orgCode>
+
+<protaskItems name="protaskItems">
+	<planItem name="planItem" className="com.gpcsoft.agreement.order.domain.ProtaskItem">
+		<categoryCode name="purCategory.categoryCode" className="com.gpcsoft.bizplatform.base.purcategory.domain.PurCategory">A010301</categoryCode>
+		<goodsClassCode name="goodsClass.goodsClassCode" className="com.gpcsoft.goods.goodsclass.domain.GoodsClass">B10</goodsClassCode>
+		<goodsTotal name="goodsTotal">400000</goodsTotal>
+		<goodsQty name="goodsQty">100</goodsQty>
+		<goodsPrice name="goodsPrice">4000</goodsPrice>
+		<memo name="memo">台式电脑100台</memo>
+	</planItem>
+	<planItem name="planItem" className="com.gpcsoft.agreement.order.domain.ProtaskItem">
+		<categoryCode name="purCategory.categoryCode" className="com.gpcsoft.bizplatform.base.purcategory.domain.PurCategory">A010302</categoryCode>
+		<goodsClassCode name="goodsClass.goodsClassCode" className="com.gpcsoft.goods.goodsclass.domain.GoodsClass">B09</goodsClassCode>
+		<goodsTotal name="goodsTotal">200000</goodsTotal>
+		<goodsQty name="goodsQty">40</goodsQty>
+		<goodsPrice name="goodsPrice">5000</goodsPrice>
+		<memo name="memo">笔记本电脑40台</memo>
+	</planItem>
+</protaskItems>
+
+</purchasePlan>
+
+</root>

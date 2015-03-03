@@ -1,0 +1,18 @@
+﻿-更新商品的spec字段长度
+alter table goods modify spec varchar2(2000)
+
+
+
+--更新计划条目表
+-- Add/modify columns 
+alter table EPS_AGREEMENT_PROTASK_ITEM add GOODS_CLASS_ID VARCHAR2(50);
+-- Add comments to the columns 
+comment on column EPS_AGREEMENT_PROTASK_ITEM.GOODS_CLASS_ID
+  is '分类';
+alter table EPS_AGREEMENT_PROTASK_ITEM modify TASK_ID null;
+alter table EPS_AGREEMENT_PROTASK_ITEM modify PUR_CATEGORY_ID null;
+alter table EPS_AGREEMENT_PROTASK_ITEM modify GOODS_TOTAL null;
+alter table EPS_AGREEMENT_PROTASK_ITEM modify FIN_GOOD_SQTY null;
+alter table EPS_AGREEMENT_PROTASK_ITEM modify GOODS_QTY null;
+alter table EPS_AGREEMENT_PROTASK_ITEM modify GOODS_PRICE null;
+alter table EPS_AGREEMENT_PROTASK_ITEM modify FIN_GOODS_TOTAL null;

@@ -1,0 +1,4 @@
+﻿--修改我发起的项目资源路径
+update auth_resource t set t.res_url='view/agreement/bargin/project/bargain/bargain_project_list.jsp'
+       where t.res_url = 'view/agreement/bargin/project/bargain/s_bargain_project_list.jsp';
+commit;

@@ -1,0 +1,4 @@
+﻿--在商品行情中增加会员价字段
+alter table goods_price add MEMBER_PRICE  NUMBER(23,7);
+comment on column GOODS_PRICE.MEMBER_PRICE
+  is '会员价';
