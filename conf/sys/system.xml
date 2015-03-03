@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<framesite>
+  <sitename>www.ebid360.com</sitename>
+  <servername>www.ebid360.com</servername>
+  <compname>北京国信商通科技有限公司</compname>
+  <address>北京市海淀区首体南路22号国兴大厦11层</address>
+  <telephone>010-88354986-517</telephone>
+  <email>admin@gpcsoft.com</email>
+  <defaultSkin>start</defaultSkin>
+  <ecompname>GPCSOFT</ecompname>
+  <welcome>欢迎来到阳光易购</welcome>
+  <version>V1.0</version>
+  <projectname>阳光易购采购交易平台</projectname>
+  <eprojectname>Authority Managerment Platform</eprojectname>
+  <csstheme>simplicity</csstheme>
+  <listnumperpage>10</listnumperpage>
+  <numOfMessage>100</numOfMessage>
+  <uploadSize>1024</uploadSize>
+  <maxLogNumber>1000</maxLogNumber>
+  <resetTime>60</resetTime>
+  <concurrentUserNum>24</concurrentUserNum>
+  <defaultPassword></defaultPassword>
+  <useProjectPlan>1</useProjectPlan>
+  <openValidateCode>true</openValidateCode>
+  <sysFlag>xejy</sysFlag>
+  <chartFormatNumberScale>0</chartFormatNumberScale>
+  
+  <ableEmail>true</ableEmail>
+  <ableMessage>true</ableMessage>
+  <ableMobileMessage>false</ableMobileMessage>
+  
+</framesite>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="qingdao_bzwj" xmlns="http://jbpm.org/4.3/jpdl">
+   <task g="456,72,109,49" name="接受委托协议">
+      <transition g="-47,-44" name="to 设定项目规则" to="设定项目规则"/>
+   </task>
+   <task g="324,72,109,49" name="设定项目规则">
+      <transition g="-22,-45" name="to 项目分包" to="项目分包"/>
+   </task>
+   <task g="192,72,109,49" name="项目分包">
+      <transition g="-28,-43" name="to 预定标评室" to="预定标评室"/>
+   </task>
+   <task g="12,72,109,49" name="预定标评室">
+      <transition g="-36,-8" name="to 制作采购文件" to="制作采购文件"/>
+   </task>
+   <task g="12,240,109,49" name="制作采购文件">
+      <transition g="-43,24" name="to 论证采购文件" to="论证采购文件"/>
+   </task>
+   <task g="144,240,109,49" name="论证采购文件">
+      <transition name="to exclusive1" to="exclusive1" g="-46,-26"/>
+   </task>
+   <task g="336,240,109,49" name="确认采购文件">
+      <transition name="to exclusive2" to="exclusive2" g="-44,-40"/>
+   </task>
+   <task g="528,240,109,49" name="监察局审核">
+      <transition name="to exclusive3" to="exclusive3" g="-41,24"/>
+   </task>
+   <task g="768,240,121,49" name="采购办审核">
+      <transition name="to exclusive4" to="exclusive4" g="-87,-7"/>
+   </task>
+   <end g="672,384,13,1" name="end1"/>
+   <start g="816,72,48,48" name="start1">
+      <transition name="to 指定项目经办人" to="指定项目经办人" g="-107,-17"/>
+   </start>
+   <task g="588,72,109,49" name="指定项目经办人">
+      <transition g="-61,-43" name="to 接受委托协议" to="接受委托协议"/>
+   </task>
+   <decision name="exclusive1" g="276,240,48,48">
+      <transition name="N" to="制作采购文件" g="210,205:-12,-11"/>
+      <transition name="Y" to="确认采购文件" g="-5,-15"/>
+   </decision>
+   <decision name="exclusive2" g="468,240,48,48">
+      <transition name="Y" to="监察局审核" g="-6,-19"/>
+      <transition name="N" to="制作采购文件" g="365,340:-9,-18"/>
+   </decision>
+   <decision name="exclusive3" g="684,240,48,48">
+      <transition name="Y" to="采购办审核" g="-3,-21"/>
+      <transition name="to 制作采购文件" to="制作采购文件" g="230,157:-95,-17"/>
+   </decision>
+   <decision name="exclusive4" g="804,336,48,48">
+      <transition name="N" to="制作采购文件" g="363,362:2,-17"/>
+      <transition name="Y" to="end1" g="-29,-5"/>
+   </decision>
+</process>

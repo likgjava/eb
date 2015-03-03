@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="qingdao_xmps" xmlns="http://jbpm.org/4.3/jpdl">
+   <start name="start1" g="24,72,48,48">
+      <transition name="to 开标（开标一览表）" to="开标（开标一览表）" g="-62,-38"/>
+   </start>
+   <task name="开标（开标一览表）" g="108,72,133,52">
+      <transition name="to 项目初审表" to="项目初审表" g="-27,-45"/>
+   </task>
+   <task name="项目初审表" g="276,72,97,52">
+      <transition name="to 项目复审表" to="项目复审表" g="-30,-50"/>
+   </task>
+   <task name="项目复审表" g="408,72,97,52">
+      <transition name="to 确认评审结果" to="确认评审结果" g="-43,-52"/>
+   </task>
+   <task name="确认评审结果" g="540,72,109,49">
+      <transition name="to 生成评审报告" to="生成评审报告" g="-37,-47"/>
+   </task>
+   <task name="生成评审报告" g="684,72,121,49">
+      <transition name="to end1" to="end1" g="-47,-17"/>
+   </task>
+   <end name="end1" g="828,72,48,48"/>
+</process>

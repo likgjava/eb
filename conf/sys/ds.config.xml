@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<ds-config>
+		<!--<pool>
+			<type>mysql</type>
+			<name>sm</name>
+			<driver>com.mysql.jdbc.Driver</driver>
+			<url>jdbc:mysql://172.16.7.38:3306/sms_test?useUnicode=true&amp;characterEncoding=utf8</url>
+			<username>sms</username>
+			<password>wxsms</password>
+			<maxconn>20</maxconn>
+		</pool>		
+		--><pool>
+			<type>mysql</type>
+			<name>sm</name>
+			<driver>com.mysql.jdbc.Driver</driver>
+			<url>jdbc:mysql://172.16.7.38:3306/sms_test?useUnicode=true&amp;characterEncoding=utf8</url>
+			<username>sms</username>
+			<password>wxsms</password>
+			<maxconn>20</maxconn>
+		</pool>
+
+	</ds-config>

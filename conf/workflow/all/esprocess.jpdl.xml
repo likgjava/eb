@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<process name="esprocess" xmlns="http://jbpm.org/4.3/jpdl">
+   <start name="start1" g="12,108,48,48">
+      <transition name="to 任务书" to="任务书" g="-59,-17"/>
+   </start>
+   <sub-process name="任务书" g="84,108,97,49" sub-process-key="TASKPLAN">
+      <transition name="to 委托协议" to="委托协议" g="-71,-17"/>
+   </sub-process>
+   <sub-process name="委托协议" g="204,108,97,49" sub-process-key="CONSIGNPROTOCOL">
+      <transition name="to end1" to="end1" g="-47,-17"/>
+   </sub-process>
+   <end name="end1" g="480,124,48,48"/>
+</process>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<process name="consignprotocol" xmlns="http://jbpm.org/4.3/jpdl" key="CONSIGNPROTOCOL">
+   <start name="start1" g="12,132,48,48">
+      <transition name="to 起草委托协议" to="起草委托协议" g="-46,-22"/>
+   </start>
+   <end name="end1" g="636,132,48,48"/>
+   <task name="起草委托协议" g="180,132,97,49">
+      <transition name="to 接受委托协议" to="接受委托协议" g="-41,-22"/>
+   </task>
+   <task name="接受委托协议" g="408,130,97,51">
+      <transition name="to end1" to="end1" g="-23,-21"/>
+   </task>
+</process>

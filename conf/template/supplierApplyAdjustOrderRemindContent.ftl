@@ -1,0 +1,1 @@
+您好！供应商${supplierOrgName!}已申请调整订单，请登陆【${siteName!}】查看

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="toubiao" xmlns="http://jbpm.org/4.3/jpdl">
+   <task name="供应商投标" g="241,148,92,52"/>
+</process>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process key="taskplanaudit" name="taskplanaudit" xmlns="http://jbpm.org/4.3/jpdl">
+   <start g="240,12,48,48" name="start1">
+      <transition g="-107,-17" name="to 审核任务申报书" to="审核任务申报书"/>
+   </start>
+   <end g="245,495,48,48" name="end1"/>
+   <task assignee="dljg" form="TaskPlanController.do?method=toAuditTaskPlan" g="204,132,121,49" name="审核任务申报书">
+      <transition g="-83,-17" name="to exclusive1" to="exclusive1"/>
+   </task>
+   <task assignee="buyer" form="TaskPlanController.do?method=toCreateOrUpdate" g="372,396,109,49" name="修改任务申报书">
+      <transition g="-107,-17" name="to 修改申报书条目" to="修改申报书条目"/>
+   </task>
+   <decision g="240,396,48,48" name="exclusive1">
+   		<handler class="com.gpcsoft.plugin.wflow.service.decision.AuditDesision" />
+      <transition g="-1,-15" name="N" to="修改任务申报书"/>
+      <transition g="-7,-20" name="Y" to="end1"/>
+   </decision>
+   <task assignee="buyer" form="TaskPlanDetailController.do?method=toTaskPlanDetail" g="372,132,109,49" name="调整资金明细">
+      <transition g="-57,-52" name="to 审核任务申报书" to="审核任务申报书"/>
+   </task>
+   <task assignee="buyer" form="TaskPlanSubController.do?method=toUpdateSubTaskPlan" g="372,264,109,49" name="修改申报书条目">
+      <transition g="-95,-17" name="to 调整资金明细" to="调整资金明细"/>
+   </task>
+</process>

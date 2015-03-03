@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<ehcache>
+
+    <diskStore path="java.io.tmpdir"/>
+    <defaultCache
+        maxElementsInMemory="0"	 
+        eternal="false"
+        timeToIdleSeconds="0"	 
+        timeToLiveSeconds="0"	 
+        diskPersistent="false"
+        diskExpiryThreadIntervalSeconds="0"/>
+    
+    <!-- 缓存首页index.jsp -->
+    <cache name="SimplePageCachingFilter" 
+        maxElementsInMemory = "10" 
+        maxElementsOnDisk = "10" 
+        eternal = "false" 
+        overflowToDisk = "true" 
+        diskSpoolBufferSizeMB = "20" 
+        timeToIdleSeconds = "120" 
+        timeToLiveSeconds = "120" 
+        memoryStoreEvictionPolicy = "FIFO" 
+    /> 
+ 
+ 	<!-- 缓存当前登陆的用户 Acegi专用-->
+    <cache name="userAcegiCache"
+           maxElementsInMemory="1000"	
+           eternal="false"
+           timeToIdleSeconds="1000"	 
+		   timeToLiveSeconds="1000"	 
+		   diskPersistent="false"
+		   overflowToDisk="false"/>
+           
+    <!-- 缓存登陆用户的权限资源 Acegi专用-->
+    <cache name="resouceAcegiCache"
+           maxElementsInMemory="1000"	
+           eternal="false"
+           timeToIdleSeconds="1000"	 
+		   timeToLiveSeconds="1000"	 
+		   diskPersistent="false"
+		   overflowToDisk="false"/>
+
+	<!--  用户缓存 -->
+    <cache name="com.gpcsoft.srplatform.auth.domain.User"
+           maxElementsInMemory="1000"	
+           eternal="false"
+           timeToIdleSeconds="1000"	 
+		   timeToLiveSeconds="1000"	
+		   memoryStoreEvictionPolicy="LRU"  
+		   diskPersistent="false"
+		   overflowToDisk="false"
+    />
+    
+	<!--  资源权限缓存 -->
+    <cache name="com.gpcsoft.srplatform.auth.domain.Resource"
+           maxElementsInMemory="1000"	
+           eternal="false"
+           timeToIdleSeconds="1000"	 
+		   timeToLiveSeconds="1000"	  
+		   memoryStoreEvictionPolicy="LRU"  
+		   diskPersistent="false"
+		   overflowToDisk="false"
+    />
+
+	<!-- 角色缓存 -->
+    <cache name="com.gpcsoft.srplatform.auth.domain.Role"
+           maxElementsInMemory="1000"	
+           eternal="false"
+           timeToIdleSeconds="1000"	 
+		   timeToLiveSeconds="1000"
+		   memoryStoreEvictionPolicy="LRU"	  
+		   diskPersistent="false"
+		   overflowToDisk="false"
+    />
+    
+	<!-- 菜单缓存 -->
+    <cache name="com.gpcsoft.srplatform.auth.domain.Menu"
+           maxElementsInMemory="1000"	
+           eternal="false"
+           timeToIdleSeconds="1000"	 
+		   timeToLiveSeconds="1000"	  
+		   memoryStoreEvictionPolicy="LRU"
+		   diskPersistent="false"
+		   overflowToDisk="false"
+    />
+    
+    <!-- 菜单缓存 -->
+    <cache name="com.gpcsoft.srplatform.baseData.domain.District"
+           maxElementsInMemory="1000"	
+           eternal="false"
+           timeToIdleSeconds="1000"	 
+		   timeToLiveSeconds="1000"	  
+		   memoryStoreEvictionPolicy="LRU"
+		   diskPersistent="false"
+		   overflowToDisk="false"
+    />
+
+	<!-- 字典数据缓存 -->
+    <cache name="com.gpcsoft.srplatform.baseData.domain.Dictionary"
+           maxElementsInMemory="1000"	
+           eternal="false"
+           timeToIdleSeconds="1000"	 
+		   timeToLiveSeconds="1000"	 
+		   memoryStoreEvictionPolicy="LRU"
+		   diskPersistent="false"
+		   overflowToDisk="false"
+    />
+    <!-- 字典类型数据缓存 -->
+    <cache name="com.gpcsoft.srplatform.baseData.domain.DictionaryType"
+           maxElementsInMemory="1000"	
+           eternal="false"
+           timeToIdleSeconds="1000"	 
+		   timeToLiveSeconds="1000"	  
+		   memoryStoreEvictionPolicy="LRU"
+		   diskPersistent="false"
+		   overflowToDisk="false"
+    />
+    
+    
+	<!-- 组织部门岗位机构缓存 -->
+    <cache name="com.gpcsoft.srplatform.auth.domain.Orgnization"
+           maxElementsInMemory="1000"	
+           eternal="false"
+           timeToIdleSeconds="1000"	 
+		   timeToLiveSeconds="1000"	 
+		   memoryStoreEvictionPolicy="LRU"
+		   diskPersistent="false"
+		   overflowToDisk="false"
+    />
+    <!-- See http://ehcache.sourceforge.net/documentation/#mozTocId258426 for how to configure caching for your objects -->
+</ehcache>

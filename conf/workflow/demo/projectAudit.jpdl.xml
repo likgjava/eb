@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="projectAudit" xmlns="http://jbpm.org/4.3/jpdl">
+   <start g="60,192,48,48" name="start1">
+      <transition name="to 审核项目" to="审核项目" g="-71,-17"/>
+   </start>
+   <end g="432,192,48,48" name="end1"/>
+   <task form="ProjectController.do?method=toAudit" g="216,192,121,49" name="审核项目">
+      <transition name="to end1" to="end1" g="-47,-17"/>
+   </task>
+</process>

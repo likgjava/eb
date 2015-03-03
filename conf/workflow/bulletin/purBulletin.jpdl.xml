@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process key="AUDIT_PURBULLETIN" name="purBulletin" xmlns="http://jbpm.org/4.3/jpdl">
+   <task assignee="buyer" form="BulletinController.do?method=toCreateOrUpdate" g="132,52,99,52" name="起草采购公告">
+   </task>
+   <task assignee="dljg" form="BulletinController.do?method=toPurbulletinAudit" g="136,195,97,49" name="审核采购公告">
+   </task>
+   <task assignee="dljg" form="BulletinController.do?method=toPurbulletinAudit" g="141,258,97,49" name="审批采购公告">
+   </task>
+   <task g="135,129,97,52" name="提交采购公告">
+   </task>
+</process>

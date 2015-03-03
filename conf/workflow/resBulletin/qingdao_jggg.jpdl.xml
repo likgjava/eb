@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="qingdao_jggg" xmlns="http://jbpm.org/4.3/jpdl">
+   <start name="start1" g="48,48,48,48">
+      <transition name="to 确认成交候选人" to="确认成交候选人" g="7,-18"/>
+   </start>
+   <task name="确认成交候选人" g="24,144,97,49">
+      <transition name="to 审核成交候选人" to="审核成交候选人" g="-57,26"/>
+   </task>
+   <task name="审核成交候选人" g="180,144,109,49">
+      <transition name="to exclusive1" to="exclusive1" g="-72,-25"/>
+   </task>
+   <decision name="exclusive1" g="312,144,48,48">
+      <transition name="N" to="确认成交候选人" g="231,113:10,-7"/>
+      <transition name="Y" to="起草结果公示" g="-3,-18"/>
+   </decision>
+   <task name="起草结果公示" g="384,144,97,49">
+      <transition name="to 提交结果公示" to="提交结果公示" g="-46,21"/>
+   </task>
+   <task name="提交结果公示" g="528,144,97,49">
+      <transition name="to 审核结果公示" to="审核结果公示" g="-62,-41"/>
+   </task>
+   <task name="审核结果公示" g="660,144,97,49">
+      <transition name="to exclusive2" to="exclusive2" g="-83,-17"/>
+   </task>
+   <decision name="exclusive2" g="816,144,48,48">
+      <transition name="N" to="起草结果公示" g="662,102:15,-11"/>
+      <transition name="Y" to="起草结果公告" g="-13,-9"/>
+   </decision>
+   <task name="起草结果公告" g="792,228,97,49">
+      <transition name="to 提交结果公告" to="提交结果公告" g="-57,-34"/>
+   </task>
+   <task name="提交结果公告" g="636,228,97,49">
+      <transition name="to 审核结果公告" to="审核结果公告" g="-53,-39"/>
+   </task>
+   <task name="审核结果公告" g="516,228,97,49">
+      <transition name="to exclusive4" to="exclusive4" g="-50,-36"/>
+   </task>
+   <task name="生成结果通知书" g="324,228,97,49">
+      <transition name="to 确认结果通知书" to="确认结果通知书" g="-62,-38"/>
+   </task>
+   <task name="确认结果通知书" g="204,228,97,52">
+      <transition name="to exclusive3" to="exclusive3" g="-56,-31"/>
+   </task>
+   <decision name="exclusive3" g="132,228,48,48">
+      <transition name="Y" to="end1" g="2,7"/>
+      <transition name="N" to="生成结果通知书" g="252,320:-28,-11"/>
+   </decision>
+   <end name="end1" g="48,228,48,48"/>
+   <decision name="exclusive4" g="444,228,48,48">
+      <transition name="Y" to="生成结果通知书" g="-4,-20"/>
+      <transition name="N" to="起草结果公告" g="644,325:-32,-6"/>
+   </decision>
+</process>

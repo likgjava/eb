@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process key="newproject" name="newproject" xmlns="http://jbpm.org/4.3/jpdl">
+   <start g="24,192,48,48" name="start1">
+      <transition to="新建项目"/>
+   </start>
+   <task form="ProjectController.do?method=toAdd" g="96,192,97,49" name="新建项目">
+      <transition g="-26,-17" name="to 审核项目" to="审核项目">
+      	<event-listener class="com.gpcsoft.perform.wflow.service.impl.InfoListener">
+      		<field name="checkMsg"><string value="新建项目完成"/></field>
+      	</event-listener>
+      </transition>
+   </task>
+   <end g="756,192,48,48" name="end1"/>
+   <sub-process g="240,192,92,52" name="审核项目" outcome="toAudit" sub-process-key="projectAudit">
+      <transition g="-41,-16" name="toAudit" to="审核中转"/>
+   </sub-process>
+   <decision g="360,192,48,48" name="审核中转">
+   	  <handler class="com.gpcsoft.perform.wflow.service.decision.AuditDesision" />
+      <transition g="355,157:11,-4" name="N" to="新建项目"/>
+      <transition g="-10,-15" name="Y" to="上下级判断"/>
+   </decision>
+   <decision g="444,192,48,48" name="上下级判断">
+   	  <handler class="com.gpcsoft.perform.wflow.service.decision.CheckSubLeader" />
+      <transition g="-18,3" name="有上级" to="上级审核"/>
+      <transition g="730,160:-35,-15" name="没有上级" to="end1"/>
+   </decision>
+   <sub-process g="552,192,92,49" name="上级审核" outcome="toAudit2" sub-process-key="projectSubAudit">
+      <transition g="-5,-17" name="toAudit2" to="上级审核中转"/>
+   </sub-process>
+   <decision g="672,192,48,48" name="上级审核中转">
+      <handler class="com.gpcsoft.perform.wflow.service.decision.AuditDesision" />
+      <transition g="-4,-12" name="Y" to="end1"/>
+      <transition g="529,295:32,-6" name="N" to="审核项目"/>
+   </decision>
+</process>

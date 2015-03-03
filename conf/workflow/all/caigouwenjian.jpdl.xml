@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="caigouwenjian" xmlns="http://jbpm.org/4.3/jpdl">
+   <task name="制作采购文件" g="256,28,92,52"/>
+   <task name="论证采购文件" g="257,94,92,52"/>
+   <task name="确认采购文件" g="256,160,92,52"/>
+   <task name="监查局审核" g="259,227,92,52"/>
+   <task name="采购办审核" g="263,300,92,52"/>
+</process>

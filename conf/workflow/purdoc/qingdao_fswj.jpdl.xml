@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="qingdao_fswj" xmlns="http://jbpm.org/4.3/jpdl" key="qingdao_fswj">
+   <task g="276,228,121,49" name="确认供应商报名">
+      <transition name="to end1" to="end1" g="-47,-17"/>
+   </task>
+   <end g="312,324,13,1" name="end1"/>
+   <start g="312,132,48,48" name="start1">
+      <transition name="to 确认供应商报名" to="确认供应商报名" g="-107,-17"/>
+   </start>
+</process>

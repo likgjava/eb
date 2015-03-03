@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="dingbiao" xmlns="http://jbpm.org/4.3/jpdl">
+   <task name="确认成交候选人" g="223,29,114,52"/>
+   <task name="审核成交候选人" g="227,98,105,52"/>
+</process>

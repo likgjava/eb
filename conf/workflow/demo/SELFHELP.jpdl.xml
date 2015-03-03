@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process key="SELFHELP" name="自助终端流程" xmlns="http://jbpm.org/4.0/jpdl">
+   <start g="352,15,48,48" name="开始">
+      <transition g="-21,-19" name="发起工单" to="确定安装环境是否适合"/>
+   </start>
+   <end g="374,844,48,48" name="完成">
+        <on event="start">
+      		<event-listener class="com.onest.workflow.jbpm.handle.EventHandleEndBill"/>
+      	</on>
+   </end>
+   <task candidate-groups="203" g="336,188,92,52" name="市场部审批" smsOn="1">
+   	  <assignment-handler class="com.onest.workflow.jbpm.handle.ProcessHandleCommon"/>
+      <transition g="-12,-8" name="同意" to="fork2"/>
+      <transition g="39,-17" name="不同意" to="中止"/>
+      <transition g="137,215:87,-17" name="驳回给提单人" to="工单发起人"/>
+   </task>
+   <task candidate-groups="202" deptOn="1" g="302,103,148,52" name="确定安装环境是否适合">
+      <assignment-handler class="com.onest.workflow.jbpm.handle.ProcessHandleCommon"/>
+      <transition g="-10,-12" name="同意" to="市场部审批"/>
+      <transition g="806,127:-190,-18" name="不同意" to="中止"/>
+      <transition g="-26,-13" name="驳回给提单人" to="工单发起人"/>
+   </task>
+   <task assignee="#{userId}" g="150,407,127,52" name="会签及签定协议">
+      <assignment-handler class="com.onest.workflow.jbpm.handle.ProcessHandleCommon"/>
+      <transition g="208,621:-13,-117" name="同意" to="join1"/>
+   </task>
+   <fork g="362,279,48,48" name="fork2">
+      <transition g="573,301:-47,38" name="管线设计并配合勘点" to="管线设计并配合勘点"/>
+      <transition g="213,305:-48,41" name="会签及签定协议" to="会签及签定协议"/>
+      <transition g="-39,-16" name="支撑中心配合勘点" to="支撑中心配合勘点"/>
+   </fork>
+   <task candidate-groups="207" g="317,402,148,52" name="支撑中心配合勘点">
+      <assignment-handler class="com.onest.workflow.jbpm.handle.ProcessHandleCommon"/>
+      <transition g="-8,-19" name="同意" to="确定机构号"/>
+   </task>
+   <task candidate-groups="205" g="489,399,168,52" name="管线设计并配合勘点">
+      <assignment-handler class="com.onest.workflow.jbpm.handle.ProcessHandleCommon"/>
+      <transition g="-20,-12" name="同意" to="传输建设"/>
+   </task>
+   <task candidate-groups="206" g="527,502,92,52" name="传输建设">
+      <assignment-handler class="com.onest.workflow.jbpm.handle.ProcessHandleCommon"/>
+      <transition g="575,616:-13,-44" name="同意" to="join1"/>
+      <assignment-handler class="com.onest.workflow.jbpm.handle.ProcessHandleCommon"/>
+   </task>
+   <task candidate-groups="204" deptOn="1" g="345,503,92,52" name="确定机构号">
+      <assignment-handler class="com.onest.workflow.jbpm.handle.ProcessHandleCommon"/>
+      <transition g="-10,-9" name="同意" to="join1"/>
+   </task>
+   <task candidate-groups="208" g="350,673,92,52" name="开通网络">
+      <assignment-handler class="com.onest.workflow.jbpm.handle.ProcessHandleCommon"/>
+      <transition g="-12,-8" name="同意" to="搬运设备到位"/>
+   </task>
+   <task candidate-groups="209" g="353,756,92,52" name="搬运设备到位">
+      <assignment-handler class="com.onest.workflow.jbpm.handle.ProcessHandleCommon"/>
+      <transition g="-8,-9" name="同意" to="完成"/>
+   </task>
+   <join g="367,595,48,48" name="join1" multiplicity="3">
+      <transition g="-24,-7" name="开通网络" to="开通网络"/>
+   </join>
+   <end-cancel g="783,192,48,48" name="中止">
+   		<on event="start">
+      		<event-listener class="com.onest.workflow.jbpm.handle.EventHandleEndBill"/>
+      	</on>
+   </end-cancel>
+   <task assignee="#{userId}" g="93,106,92,52" name="工单发起人">
+      <assignment-handler class="com.onest.workflow.jbpm.handle.ProcessHandleCommon"/>
+      <transition g="138,88;376,87:-34,-17" name="重新发起工单" to="确定安装环境是否适合"/>
+   </task>
+</process>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="esprocess" xmlns="http://jbpm.org/4.3/jpdl">
+   <sub-process name="任务书" g="48,96,97,49" sub-process-key="TASKPLAN"/>
+   <sub-process name="委托协议" g="192,96,97,49" sub-process-key="CONSIGNPROTOCOL"/>
+</process>

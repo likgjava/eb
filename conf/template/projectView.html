@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE></TITLE>
+ </HEAD>
+<BODY>
+	<div id="printingId" class="frameReport">
+   		<div class="reportTitle">
+     		<h2>${project.projName }</h2>
+    		<span class="projectNumber">项目编号：${project.projCode }</span>
+    		<span class="publishTime">发布时间：
+    		<#if project.createTime?exists  >
+    			${project.createTime?string('yyyy-MM-dd')}
+    		</#if>
+    	</div>
+		<div class="abstract">
+			<p>
+				<span>报名时间：
+					<#if project.signUpSTime?exists  >
+		    			${project.signUpSTime?string('yyyy-MM-dd')}
+		    		</#if>
+		           	至
+		 			<#if project.signUpETime?exists  >
+		    			${project.signUpETime?string('yyyy-MM-dd')}
+		    		</#if>
+		  		</span>
+		          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		        <span>投标时间：
+		        	<#if project.tenderStartTime?exists  >
+		    			${project.tenderStartTime?string('yyyy-MM-dd')}
+		    		</#if>
+		    		 至 
+		    		<#if project.tenderEndTime?exists  >
+		    			${project.tenderEndTime?string('yyyy-MM-dd')}
+		    		</#if>
+		    		</span></p>
+       	<p></p>
+   	</div>
+	<p> 参与供应商如下：
+	    </p><table>
+	     	<thead>
+	        <tr>
+	          <th class="name" style="width:60%">公司名称</th>
+	          <th class="name" style="width:25%">是否参与投标</th>
+	          <th class="name" style="width:15%">中标情况</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	      <#if supplierList?exists  >
+			  <#list supplierList as signupRecord>
+				<tr>
+			          <td>${signupRecord.supplierName}</td>
+			          <td class="name"></td>
+			          <td class="name"></td>
+			        </tr>
+			  </#list>
+		   </#if>
+	      
+	      </tbody>
+	    </table>
+	<div class="operationBtnDiv">
+      <button id="printBtn" class="iconBtn" type="button"><span>打印</span></button>
+    </div>
+</div>
+ </BODY>
+</HTML>

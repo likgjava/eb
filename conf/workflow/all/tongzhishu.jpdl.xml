@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="tongzhishu" xmlns="http://jbpm.org/4.3/jpdl">
+   <task name="生成结果通知书" g="216,54,106,52"/>
+   <task name="确认结果通知书" g="222,137,104,52"/>
+</process>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="1" xmlns="http://jbpm.org/4.3/jpdl">
+   <sub-process name="采购申报书" g="24,81,92,52"/>
+   <sub-process name="委托" g="22,150,92,52"/>
+   <sub-process name="招标采购" g="22,225,92,52"/>
+   <sub-process name="合同" g="24,307,92,52"/>
+   <sub-process name="立项" g="252,8,92,52"/>
+   <sub-process name="采购文件" g="332,126,92,52"/>
+   <sub-process name="采购公告" g="256,196,92,52"/>
+   <sub-process name="供应商报名" g="264,258,92,52"/>
+   <sub-process name="投标" g="263,318,92,52"/>
+   <sub-process name="评审小组" g="197,371,92,52"/>
+   <sub-process name="开标小组" g="343,373,92,52"/>
+   <sub-process name="评标室" g="194,130,92,52"/>
+   <sub-process name="开/评标" g="263,422,92,52"/>
+   <sub-process name="定标" g="262,477,92,52"/>
+   <sub-process name="结果公示" g="263,534,92,52"/>
+   <sub-process name="结果公告" g="268,593,92,52"/>
+   <sub-process name="通知书" g="269,654,92,52"/>
+   <sub-process name="结项" g="271,717,92,52"/>
+   <sub-process name="备案" g="23,382,92,52"/>
+   <sub-process name="资格预审" g="255,71,92,52"/>
+</process>

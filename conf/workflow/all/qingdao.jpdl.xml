@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<process name="qingdao" xmlns="http://jbpm.org/4.3/jpdl">
+   <task g="108,72,109,49" name="录入采购申报书">
+      <transition g="-51,-35" name="to 汇总采购申报书" to="汇总采购申报书"/>
+   </task>
+   <task g="240,72,109,49" name="汇总采购申报书">
+      <transition g="-55,-37" name="to 审核采购资金" to="审核采购资金"/>
+   </task>
+   <task g="372,72,109,49" name="审核采购资金">
+      <transition g="-52,-41" name="to 指定项目负责人" to="指定项目负责人"/>
+   </task>
+   <task g="504,72,109,49" name="指定项目负责人">
+      <transition g="-47,-40" name="to 审核采购申报书" to="审核采购申报书"/>
+   </task>
+   <task g="636,72,109,49" name="审核采购申报书">
+      <transition g="-45,-45" name="to 设置采购方式" to="设置采购方式"/>
+   </task>
+   <task g="768,72,109,49" name="设置采购方式">
+      <transition g="-51,-46" name="to 设置项目编号" to="设置项目编号"/>
+   </task>
+   <task g="900,72,109,49" name="设置项目编号">
+      <transition g="20,-5" name="to 指定代理机构" to="指定代理机构"/>
+   </task>
+   <task g="900,144,109,49" name="指定代理机构">
+      <transition g="-61,-42" name="to 提交委托协议" to="提交委托协议"/>
+   </task>
+   <task g="768,144,109,49" name="提交委托协议">
+      <transition g="-70,-42" name="to 指定项目经办人" to="指定项目经办人"/>
+   </task>
+   <task g="636,144,109,49" name="指定项目经办人">
+      <transition g="-61,-43" name="to 接受委托协议" to="接受委托协议"/>
+   </task>
+   <task g="504,144,109,49" name="接受委托协议">
+      <transition g="-47,-44" name="to 设定项目规则" to="设定项目规则"/>
+   </task>
+   <task g="372,144,109,49" name="设定项目规则">
+      <transition g="-22,-45" name="to 项目分包" to="项目分包"/>
+   </task>
+   <task g="240,144,109,49" name="项目分包">
+      <transition g="-28,-43" name="to 预定标评室" to="预定标评室"/>
+   </task>
+   <task g="108,144,109,49" name="预定标评室">
+      <transition g="-96,-6" name="to 制作采购文件" to="制作采购文件"/>
+   </task>
+   <task g="108,216,109,49" name="制作采购文件">
+      <transition g="-42,-37" name="to 论证采购文件" to="论证采购文件"/>
+   </task>
+   <task g="240,216,109,49" name="论证采购文件">
+      <transition g="-48,-39" name="to 确认采购文件" to="确认采购文件"/>
+   </task>
+   <task g="372,216,109,49" name="确认采购文件">
+      <transition g="-36,-41" name="to 监察局审核" to="监察局审核"/>
+   </task>
+   <task g="504,216,109,49" name="监察局审核">
+      <transition g="-43,-36" name="to 采购办审核" to="采购办审核"/>
+   </task>
+   <task g="636,216,109,49" name="采购办审核">
+      <transition g="-48,-38" name="to 起草采购公告" to="起草采购公告"/>
+   </task>
+   <task g="768,216,109,49" name="起草采购公告">
+      <transition g="-44,-47" name="to 提交采购公告" to="提交采购公告"/>
+   </task>
+   <task g="900,216,109,49" name="提交采购公告">
+      <transition g="18,-8" name="to 审核采购公告" to="审核采购公告"/>
+   </task>
+   <task g="900,288,109,49" name="审核采购公告">
+      <transition g="-46,-42" name="to 审批采购公告" to="审批采购公告"/>
+   </task>
+   <task g="768,288,109,49" name="审批采购公告">
+      <transition g="-32,-40" name="to 采购办审批" to="采购办审批"/>
+   </task>
+   <task g="636,288,109,49" name="采购办审批">
+      <transition g="-30,-36" name="to 确认供应商报名" to="确认供应商报名"/>
+   </task>
+   <task g="504,288,109,49" name="确认供应商报名">
+      <transition g="-62,-39" name="to 设置专家抽取规则" to="设置专家抽取规则"/>
+   </task>
+   <task g="372,288,109,49" name="设置专家抽取规则">
+      <transition g="-53,-41" name="to 获取专家名称" to="获取专家名称"/>
+   </task>
+   <task g="240,288,109,49" name="获取专家名称">
+      <transition g="-33,-33" name="to 专家签到" to="专家签到"/>
+   </task>
+   <task g="108,288,109,49" name="专家签到">
+      <transition g="-125,-5" name="to 开标(开标一览表)" to="开标(开标一览表)"/>
+   </task>
+   <task g="108,360,109,49" name="开标(开标一览表)">
+      <transition g="-39,-40" name="to 项目初审表" to="项目初审表"/>
+   </task>
+   <task g="240,360,109,49" name="项目初审表">
+      <transition g="-24,-37" name="to 项目复审表" to="项目复审表"/>
+   </task>
+   <task g="372,360,109,49" name="项目复审表">
+      <transition g="-44,-41" name="to 确认评审结果" to="确认评审结果"/>
+   </task>
+   <task g="504,360,109,49" name="确认评审结果">
+      <transition g="-44,-39" name="to 生成评审报告" to="生成评审报告"/>
+   </task>
+   <task g="636,360,109,49" name="生成评审报告">
+      <transition g="-52,-40" name="to 确认成交候选人" to="确认成交候选人"/>
+   </task>
+   <task g="768,360,109,49" name="确认成交候选人">
+      <transition g="-43,-38" name="to 审核成交候选人" to="审核成交候选人"/>
+   </task>
+   <task g="900,360,109,49" name="审核成交候选人">
+      <transition g="24,-6" name="to 起草结果公示" to="起草结果公示"/>
+   </task>
+   <task g="900,432,109,49" name="起草结果公示">
+      <transition g="-42,21" name="to 提交结果公示" to="提交结果公示"/>
+   </task>
+   <task g="768,432,109,49" name="提交结果公示">
+      <transition g="-56,25" name="to 审核结果公示" to="审核结果公示"/>
+   </task>
+   <task g="636,432,109,49" name="审核结果公示">
+      <transition g="-70,28" name="to 生成结果通知书" to="生成结果通知书"/>
+   </task>
+   <task g="504,432,109,49" name="生成结果通知书">
+      <transition g="-71,28" name="to 确认结果通知书" to="确认结果通知书"/>
+   </task>
+   <task g="372,432,109,49" name="确认结果通知书">
+      <transition g="-43,26" name="to 签署合同" to="签署合同"/>
+   </task>
+   <task g="240,432,109,49" name="签署合同">
+      <transition g="-32,28" name="to 项目结项" to="项目结项"/>
+   </task>
+   <task g="108,432,109,49" name="项目结项">
+      <transition g="-86,-5" name="to 项目存档" to="项目存档"/>
+   </task>
+   <task g="108,504,109,49" name="项目存档">
+      <transition g="-47,-17" name="to end1" to="end1"/>
+   </task>
+   <end g="276,504,13,1" name="end1"/>
+   <start g="130,3,48,48" name="start1">
+      <transition g="-107,-17" name="to 录入采购申报书" to="录入采购申报书"/>
+   </start>
+</process>

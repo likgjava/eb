@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="lixiang" xmlns="http://jbpm.org/4.3/jpdl">
+   <task name="审核采购方式" g="156,36,109,49"/>
+   <task name="审核项目编号" g="312,36,97,49"/>
+   <task name="指定代理机构" g="456,36,97,49"/>
+   <task name="设置项目规则" g="312,108,97,49"/>
+   <task name="项目工作计划" g="312,180,97,49"/>
+   <task name="标段" g="312,252,97,49"/>
+</process>

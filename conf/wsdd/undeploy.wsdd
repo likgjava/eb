@@ -1,0 +1,6 @@
+<undeployment xmlns="http://xml.apache.org/axis/wsdd/"
+xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+	<!--           取消发布的服务名 -->
+	<service name="testHandler">
+	</service>
+</undeployment>	

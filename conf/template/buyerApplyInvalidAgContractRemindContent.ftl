@@ -1,0 +1,1 @@
+您好！采购人${buyerOrgName!}申请作废合同，请登陆【${siteName!}】查看

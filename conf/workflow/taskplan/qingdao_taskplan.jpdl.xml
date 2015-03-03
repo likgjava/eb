@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="qingdao_taskplan" xmlns="http://jbpm.org/4.3/jpdl">
+   <task g="108,192,121,49" name="录入采购申报书">
+      <transition g="-52,27" name="to 汇总采购申报书" to="汇总采购申报书"/>
+   </task>
+   <task g="264,192,109,49" name="汇总采购申报书">
+      <transition g="-51,23" name="to 审核采购资金" to="审核采购资金"/>
+   </task>
+   <task g="396,192,109,49" name="审核采购资金">
+      <transition g="-37,23" name="to exclusive1" to="exclusive1"/>
+   </task>
+   <task g="600,192,109,49" name="指定项目负责人">
+      <transition g="-47,-40" name="to 审核采购申报书" to="审核采购申报书"/>
+   </task>
+   <task g="744,192,121,49" name="审核采购申报书">
+      <transition g="12,16" name="to exclusive2" to="exclusive2"/>
+   </task>
+   <task g="589,349,121,49" name="设置采购方式">
+      <transition name="to 设置项目编号" to="设置项目编号" g="-59,-44"/>
+   </task>
+   <task g="433,346,109,49" name="设置项目编号">
+      <transition name="to 指定代理机构" to="指定代理机构" g="-46,-44"/>
+   </task>
+   <task g="265,340,109,49" name="指定代理机构">
+      <transition g="-61,-42" name="to 提交委托协议" to="提交委托协议"/>
+   </task>
+   <task g="133,340,109,49" name="提交委托协议">
+      <transition g="-29,-24" name="to end1" to="end1"/>
+   </task>
+   <start g="145,93,48,48" name="start1">
+      <transition g="-107,-17" name="to 录入采购申报书" to="录入采购申报书"/>
+   </start>
+   <decision g="528,192,48,48" name="exclusive1">
+      <transition g="-3,-17" name="Y" to="指定项目负责人"/>
+      <transition g="384,114:13,-10" name="N" to="录入采购申报书"/>
+   </decision>
+   <decision g="780,264,48,48" name="exclusive2">
+      <transition g="168,289:-16,-14" name="N" to="录入采购申报书"/>
+      <transition name="to 立项" to="立项" g="-47,-17"/>
+   </decision>
+   <end g="37,340,48,48" name="end1"/>
+   <java name="立项" g="755,344,92,52">
+      <transition name="to 设置采购方式" to="设置采购方式" g="-78,-39"/>
+   </java>
+</process>

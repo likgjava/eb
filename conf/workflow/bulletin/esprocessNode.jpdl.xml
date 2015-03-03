@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="esprocess" xmlns="http://jbpm.org/4.3/jpdl">
+   <start name="start1" g="12,60,25,25">
+      <transition name="to 采购计划管理" to="采购计划管理" g="-36,-46"/>
+   </start>
+   <sub-process name="采购计划管理" g="84,60,97,49">
+      <transition name="to 委托协议管理" to="委托协议管理" g="-41,-48"/>
+   </sub-process>
+   <sub-process name="委托协议管理" g="204,60,97,49">
+      <transition name="to 采购需求管理" to="采购需求管理" g="-39,-48"/>
+   </sub-process>
+   <sub-process name="采购需求管理" g="324,60,97,49">
+      <transition name="to 采购文件制作" to="采购文件制作" g="-44,-46"/>
+   </sub-process>
+   <sub-process name="采购文件制作" g="444,60,97,49">
+      <transition name="to 采购公告制作" to="采购公告制作" g="-38,-48"/>
+   </sub-process>
+   <sub-process name="采购公告制作" g="564,60,97,49">
+      <transition name="to 标前准备" to="标前准备" g="-31,-46"/>
+   </sub-process>
+   <sub-process name="供应商投标" g="684,192,97,49">
+      <transition name="to 开标人开标" to="开标人开标" g="-35,35"/>
+   </sub-process>
+   <sub-process name="开标人开标" g="564,192,97,49">
+      <transition name="to 专家评审" to="专家评审" g="-24,34"/>
+   </sub-process>
+   <sub-process name="标前准备" g="684,60,97,49">
+      <transition name="to 供应商投标" to="供应商投标" g="-77,-5"/>
+   </sub-process>
+   <sub-process name="专家评审" g="444,192,97,49">
+      <transition name="to 通知书管理" to="通知书管理" g="-25,36"/>
+   </sub-process>
+   <sub-process name="通知书管理" g="324,192,97,49">
+      <transition name="to 结果公告管理" to="结果公告管理" g="-38,36"/>
+   </sub-process>
+   <sub-process name="结果公告管理" g="204,192,97,49">
+      <transition name="to 合同管理" to="合同管理" g="-29,38"/>
+   </sub-process>
+   <sub-process name="合同管理" g="84,192,97,49">
+      <transition name="to end1" to="end1" g="-21,-40"/>
+   </sub-process>
+   <end name="end1" g="12,192,48,48"/>
+</process>

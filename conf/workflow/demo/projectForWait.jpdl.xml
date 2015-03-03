@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process key="newproject" name="newproject" xmlns="http://jbpm.org/4.3/jpdl">
+   <start g="24,192,48,48" name="start1">
+      <transition to="新建项目"/>
+   </start>
+   <task form="ProjectController.do?method=toAdd" g="226,188,97,49" name="新建项目">
+      <transition g="-22,-46" name="to 审核项目" to="审核项目">
+      </transition>
+   </task>
+   <end g="756,192,48,48" name="end1"/>
+   <task g="388,232,92,52" name="审核项目">
+      <transition g="-47,-17" name="to end1" to="end1"/>
+   </task>
+</process>

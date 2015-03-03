@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "/web_data/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    
+
+<!--记录操作日志-->
+ 	<bean id="beanAuditLogAdvice" class="com.gpcsoft.srplatform.common.aop.AuditLogAdvice">
+			<property name="resourceCache"><ref bean="resourceCache"/></property>
+    </bean>
+    <!-- 工作流 业务处理后集中回调 -->
+    <bean id="beanWorkFlowAdvice" class="com.gpcsoft.epp.common.utils.WorkFlowAdvice"/>
+    
+    <!-- 
+	<bean id="beanAuditLogAdviceAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">  
+        <property name="patterns">
+        <list>
+        <value>.*remove.*</value>
+        <value>.*create.*</value>
+        <value>.*save.*</value>
+        <value>.*update.*</value>
+        </list>
+        </property>
+        <property name="advice"><ref bean="beanAuditLogAdvice"/></property>
+    </bean>
+  
+	<bean id="methodSecurityInterceptorAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">  
+        <property name="patterns">
+        <list>
+        <value>.*remove.*</value>
+        <value>.*create.*</value>
+        <value>.*save.*</value>
+        <value>.*update.*</value>
+        </list>
+        </property>
+        <property name="advice"><ref bean="methodSecurityInterceptor"/></property>
+    </bean> -->
+</beans>

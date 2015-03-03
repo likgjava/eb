@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="jieguogongshi" xmlns="http://jbpm.org/4.3/jpdl">
+   <task name="起草结果公示" g="234,15,114,52"/>
+   <task name="提交结果公示" g="239,86,92,52"/>
+   <task name="审核结果公示" g="239,150,92,52"/>
+</process>

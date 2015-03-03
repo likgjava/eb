@@ -1,0 +1,1 @@
+您好！供应商${supplierOrgName!}${supplierConfirmStatusCN!}合同，请登陆【${siteName!}】查看

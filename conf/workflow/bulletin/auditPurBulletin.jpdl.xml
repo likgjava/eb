@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GBK"?>
+
+<process name="auditPurBulletin" xmlns="http://jbpm.org/4.3/jpdl" key="AUDIT_PURBULLETIN">
+   <start name="start1" g="12,180,48,48">
+      <transition name="to 审核采购公告" to="审核采购公告" g="-49,-33"/>
+   </start>
+   <task name="修改采购公告" form="BulletinController.do?method=toCreateOrUpdate" g="276,36,92,52" assignee="buyer">
+      <transition name="to 审核采购公告" to="审核采购公告" g="-95,-17"/>
+   </task>
+   <task name="审核采购公告" form="BulletinController.do?method=toPurbulletinAudit" g="144,180,97,49" assignee="dljg">
+      <transition name="to exclusive1" to="exclusive1" g="-42,30"/>
+   </task>
+   <task name="审批采购公告" form="BulletinController.do?method=toPurbulletinAudit" g="408,180,97,49" assignee="dljg">
+      <transition name="to exclusive2" to="exclusive2" g="-38,8"/>
+   </task>
+   <end name="end1" g="720,180,440,48"/>
+   <decision name="exclusive1" g="300,180,48,48">
+   		<handler class="com.gpcsoft.plugin.wflow.service.decision.AuditDesision" />
+      <transition name="Y" to="审批采购公告" g="2,-19"/>
+      <transition name="N" to="修改采购公告" g="-23,-1"/>
+   </decision>
+   <decision name="exclusive2" g="552,180,48,48">
+   	  <handler class="com.gpcsoft.plugin.wflow.service.decision.AuditDesision" />
+      <transition name="N" to="修改采购公告" g="17,-15"/>
+      <transition name="Y" to="end1" g="-12,-14"/>
+   </decision>
+</process>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="pingbiao" xmlns="http://jbpm.org/4.3/jpdl">
+   <task name="开标一览表" g="239,25,92,52"/>
+   <task name="项目初审表" g="240,96,92,52"/>
+   <task name="项目复审表" g="239,162,92,52"/>
+   <task name="确认评审结果" g="239,234,92,52"/>
+   <task name="生成评审报告" g="245,307,92,52"/>
+</process>

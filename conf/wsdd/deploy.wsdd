@@ -1,0 +1,72 @@
+<deployment xmlns="http://xml.apache.org/axis/wsdd/"
+xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+ 	
+ 	<!-- 配置授权认证器 -->
+  <!--<handler name="zcAuthenticationHandler" type="java:com.gpcsoft.epp.webService.handlers.security.AuthenticationHandler">
+   </handler>-->
+   <!-- 配置日志记录器 -->
+  <!--<handler name="logging" type="java:com.gpcsoft.epp.webService.handlers.log.LogHandler">
+ 	 	<parameter name="filename" value="d:\\zcws.log"/>
+ 	</handler>-->
+   
+
+	<!-- 配置执行平台与编评系统的接口 -->
+	<!--                                          RPC是服务类型 -->
+	<service name="es/evaluatesys/projectSoapService" provider="java:RPC">
+		<parameter name="className" value="com.gpcsoft.epp.webService.webService.evaluate.soap.ProjectSoapService"/>
+		<parameter name="allowedMethods" value="*"/>
+		<!--                    value有request、session、application -->
+		<parameter name="scope" value="session"/>
+	</service>
+	
+	<service name="es/evaluatesys/uploadOpenBidService" provider="java:RPC">
+		<parameter name="className" value="com.gpcsoft.epp.webService.webService.evaluate.soap.UploadOpenBidService"/>
+		<parameter name="allowedMethods" value="*"/>
+		<!--                    value有request、session、application -->
+		<parameter name="scope" value="session"/>
+	</service>
+	
+	<service name="es/evaluatesys/uploadEvalBidRecordService" provider="java:RPC">
+		<parameter name="className" value="com.gpcsoft.epp.webService.webService.evaluate.soap.UploadEvalBidRecordService"/>
+		<parameter name="allowedMethods" value="*"/>
+		<!--                    value有request、session、application -->
+		<parameter name="scope" value="session"/>
+	</service>
+	
+	<service name="es/evaluatesys/BidSoapService" provider="java:RPC">
+		<parameter name="className" value="com.gpcsoft.epp.webService.webService.bid.ws.BidSoapService"/>
+		<parameter name="allowedMethods" value="*"/>
+		<!--                    value有request、session、application -->
+		<parameter name="scope" value="session"/>
+	</service>
+	
+	
+	
+	
+	<!-- 配置执行平台与UE系统的接口 -->
+	<!--                                          RPC是服务类型 -->
+	<service name="es/ueSystem/orginfoSoapService" provider="java:RPC">
+		<parameter name="className" value="com.gpcsoft.epp.webService.webService.ue.soap.OrginfoSoapService"/>
+		<parameter name="allowedMethods" value="*"/>
+		<!--                    value有request、session、application -->
+		<parameter name="scope" value="session"/>
+	</service>
+	
+	<service name="openBidSoapService" provider="java:RPC">
+		<parameter name="className" value="com.gpcsoft.epp.webService.openbid.OpenBidService"/>
+		<parameter name="allowedMethods" value="enterOpenBidRoom,signOpenBidRoom,getSignedSuppliers,getWorkGroup,startOpenBid,getOpenBidInfo,confirmOpenInfo,getOpenConfirmInfo,uploadOpenBid,uploadSubKey,downSubKey,getPrjOpenStatus"/>
+		<!--                    value有request、session、application -->
+		<parameter name="scope" value="session"/>
+	</service>
+	
+	<!-- <service name="testHandler" provider="java:RPC">
+		<requestFlow>
+			<handler type="logging"/>
+			<handler type="zcAuthenticationHandler"/>
+		</requestFlow>
+		<parameter name="className" value="com.gpcsoft.ws.Handler"/>
+		<parameter name="allowedMethods" value="*"/>-->
+		<!--                    value有request、session、application -->
+	 <!--<parameter name="scope" value="session"/>
+	</service>-->
+</deployment>	

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process key="TASKPLAN" name="taskplan" xmlns="http://jbpm.org/4.3/jpdl">
+   <start g="252,24,37,37" name="start1">
+      <transition g="-109,-6" name="to 新增任务申报书" to="新增任务申报书"/>
+   </start>
+   <end g="254,396,48,48" name="end1"/>
+   <task assignee="buyer" form="TaskPlanController.do?method=toCreateOrUpdate" g="216,96,121,49" name="新增任务申报书">
+      <transition g="-107,-17" name="to 添加申报书条目" to="添加申报书条目"/>
+   </task>
+   <task assignee="buyer" form="TaskPlanDetailController.do?method=toTaskPlanDetail" g="216,240,121,49" name="调整资金明细">
+      <transition g="-109,-7" name="to 审核任务申报书" to="审核任务申报书"/>
+   </task>
+   <task assignee="buyer" form="TaskPlanSubController.do?method=toList" g="216,168,121,49" name="添加申报书条目">
+      <transition g="-95,-17" name="to 调整资金明细" to="调整资金明细"/>
+   </task>
+   <sub-process g="216,312,121,49" name="审核任务申报书" sub-process-key="taskplanaudit">
+      <transition g="-53,-16" name="to end1" to="end1"/>
+   </sub-process>
+</process>

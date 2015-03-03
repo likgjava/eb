@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="qingdao_djwj" xmlns="http://jbpm.org/4.3/jpdl">
+   <start name="start1" g="336,72,48,48">
+      <transition name="to 设置专家组规则" to="设置专家组规则" g="-106,-5"/>
+   </start>
+   <end name="end1" g="336,336,48,48"/>
+   <task name="设置专家组规则" g="300,168,121,49">
+      <transition name="to 获取专家名称" to="获取专家名称" g="-95,-17"/>
+   </task>
+   <task name="获取专家名称" g="300,252,121,49">
+      <transition name="to end1" to="end1" g="-47,-7"/>
+   </task>
+</process>

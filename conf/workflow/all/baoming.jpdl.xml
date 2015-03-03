@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process name="baoming" xmlns="http://jbpm.org/4.3/jpdl">
+   <task name="供应商报名" g="239,29,110,56"/>
+   <task name="审核供应商报名" g="238,120,111,49"/>
+   <task name="下载采购文件" g="240,192,109,49"/>
+</process>
