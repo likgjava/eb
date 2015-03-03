@@ -1,0 +1,174 @@
+模板使用手册
+
+时  间：2010-07-12
+
+编辑人：郭永荣
+
+  
+
+为了进一步提高系统的推广和访问速度，本系统通过FreeMarker模板引擎将系统发布成html静态页面。在生成静态页前需要将数据用freemarker的语法编写模板以控制生成静态页面的格式，以下介绍使用模板过程中的一些方法以及注意事项。
+
+一、文件结构：
+
+ common:公用的模板 
+
+ macro:freemarker模板宏定义     
+
+ ftllib:用于存放最小单位的数据格式化模板
+
+ index:存放主页所用到的模板，放到index下便用管理
+
+ channel:存放主页以外的其他栏目的页面，放到channel下便用管理，也可再细化文件结构
+
+ include:存放其他模板可直接引用的公共的模板，例如可以将网站的头部信息和尾部信息做成一个公共的模板。（注：该引用的公共模板中所用到的数据需在要引用的模板中定义才可使用，这与后面的自定义引用模板的是不同的，这里引用的是freemarker格式的模板，引用语法也是freemarker的语法，没有自己数据来源定义；而自定义引用模板是将模板生成出静态的html页后再引用，引用语法是html或js的引用语法，有自己数据来源定义。）
+
+二、系统初始化数据及使用方法：
+
+ Freemarker的标签可选用尖括号（<...>）和方括号（[...]），尖括号是freemarker默认的标签，但有的时候为了避免和html标签冲突，可以用方括号的形式，用方括号需在每个模板中添加[#ftl]然后用[#include "common/common.ftl" /] 形式。
+
+ ${resbase}：系统资源路径，系统所用的js，css，img等资源存放于此
+
+ 使用：<script type="text/javascript" src="${resbase}/scripts/jquery.js">
+
+ ${base}:系统的上下文
+
+ ${load}:引用自定义模板生成的静态文件路径  （通过js将静态页面load到指定的位置）
+
+使用：$("#foot").load("${load}/foot.html");   
+
+ menu:系统的所有一级菜单
+
+二、在使用模板过程中有很灵活的使用方法，下面介绍一下常用的使用方法：
+
+1,直接在模板中使用list，如下：
+
+ <#list menu as m>
+   <li><a id="chnl_${m.objId}" href="${m.url!}" class="">${m.name!}</a></li>
+ </#list>
+
+2,通过调用宏和定义的数据模板使用，如下：
+
+ f是为模板起的一个别名
+ 
+ gpcsoft是宏的名称
+ 
+ <@f.gpcsoft list=menu ftl="menu" dateFormat='yyyy-MM-dd'/>
+ <@f.gpcsoft list=cggg ftl="list" titLen=20 dataFormat='yyyy-MM-dd'/>
+ list=menu其中menu是系统初始化的菜单列表,这里不能加引号
+
+ ftl="menu" menu是一个定义好的的名称为ftl_ment的模板存放于ftlLib，这里写参数时只需写menu即可，具体调用时程会将前半部分的ftl_补全。
+
+ titLen是标题的长度，这里不能加引号，可以不写
+
+ dateFormat是用于对时间的格式化，可以不写
+
+ftl_menu的模板定义如下：
+ 
+ <#list menu as m>
+  <li><a id="chnl_${m.objId}" href="${m.url!}" class="">${m.name!}</a></li>
+ </#list>
+
+ftl_list的模板定义如下：
+
+<#list list as l>
+ <li>
+ <a href="${l.url!}">${l.getTit(titLen)}</a>
+ <#if dataFormat != '' ><span class="right">${(l.date)!?string(dataFormat)}   </span></#if>
+ </li>
+</#list>
+
+3,可以预先定义好，然后再要使用到的地方用freemarker的语法引入即可，如下
+
+ <#list menu as m>
+  <li><a id="chnl_${m.objId}" href="${m.url!}" class="">${m.name!}</a></li>
+ </#list>
+  写于include并命名为head,然后通过<#include "/include/head.ftl"/>调用，如果对freemarker的宏比较熟悉可以通过宏来定义
+
+4，也可将要展现的信息通过自定义引用模板生成也一个静态页面，然后在要用到的地方通过html语法或js语法引用，如下
+
+ $("#head").load("${load}/head.html");   
+
+  在模板中所有的列表都可以用以上几种方式实现，这里需要注意的是自定义模板没有初始化数据，如需用到动态数据可以为自定义模板定义数据，然后再生成静态页面
+
+  如果引用的只是一些公共的信息且都是一些静态的信息，两种引用的方式都可用（建议使用直接引用模板的方法）
+
+ list:初始化当前栏目的所有信息列表，栏目页面不需再为其定义，可以直接使用，使用方法同上。
+
+ chnl:初始化当前栏目对象，当前栏目和当前内容页面可直接使用，使用方法：${chnl.url},${chnl.name}等，具体的对象属性见栏目对象属性说明。
+ news:初始化信息对象，使用方法：${news.title},${news.url}等，具本的对象属性见信息对象属性说明。
+ 
+  在使用模板时可以借助于freemarker的语法实现多种效果，
+ 
+  如果当前属性是时间，可以直接对其进行格式化输出${date!?string('yyyy-MM-dd')}
+  
+  如果当前属性是布尔值，可以直接输出true或false对应的值${boolean?('是','否')}
+  
+ <#if l_has_next></#if> has_next是判断是否有下一个
+ 
+ <#if c.url??> 双问号的意思就是是否为空。与if (c.url != null)相当。
+
+ 通过使用freemarker其丰富的语法格式可定义出多种丰富的模板来实现各种效果，freemarker常用的语法请参考帮助文档中的《常用的freemarker语法》，也可以通过网络来了解更多的使用方法。
+ 
+5，栏目的分页，其中最常用到的分页有以下一些分页的标签属性
+
+ ${curPage}页次
+
+ ${totalPage}总页数
+
+ ${pageSize}每页条数据
+
+ ${firstPage}首页 
+
+ ${prePage}上一页
+
+ ${nextPage}下一页
+
+ ${lastPage}尾页
+
+ ${hasPrePage}是否有上一页
+
+ ${hasNextPage}是否有下一页
+
+  实现分页效果有多种方法，常用的有以下几种方法
+  
+  在需要显示分页的地方调用宏<@f.chnlPage/>来实现分页，<@f.chnlPage/>实现分页的模板保存于ftllib/chnl_page.ftl，可以修改其分页效果
+  
+  也可以直接在栏目页面上用以上标签属性拼装分页
+  
+  也要以通过引用[#include "/include/filePage.ftl"/]默认的分页效果（提供多种格式的默认分页）
+
+6,搜索功能
+
+  搜索功能由搜索的form表单和搜索的结果页面两部分组成，使用方法如下：
+  
+  在搜索的位置引用<#include "/include/search_form.ftl"/>，这个模板组成搜索框，可以修改其样式级其组成结构
+  
+  搜索操作返回的结果是searList，其展现页面是include/search_result.ftl。
+  
+  返回结果searList是一个集合，使用方法同其他的使用方法一样
+  
+  搜索结果的展现页面名称和位置不可改变，但其模板内容可以根据需求任意修改
+  
+  搜索结果的分页通过引用<@f.searchPage/>来实现，其分页效果保存在ftllib/search_page.ftl里面，可根据展现形式对其进行修改
+  
+7,可以直接在模板中写js脚本，以用于生成静态页面后调用，如下：
+
+<script language="javascript" type="text/javascript">
+$(function(){
+ if("${chnl.parent.objId}"!="${home.objId}"){
+  $("#menuList a[id=chnl_${chnl.parent.objId}]").addClass("homePage");
+ }else{
+  $("#menuList a[id=chnl_${chnl.objId}]").addClass("homePage");
+ }
+ $("#foot").load("${load}/foot.html");
+ $("#leftCggg").load("${load}/left.html");
+});
+</script>
+
+以上脚本于用为当前菜单填加选中的样式，写法与其它js写法一样
+8，投票功能
+  在要使用的地方直接引用<@f.voteTopic vote=vote />，投票分为单投和多选投票，具体设置在后台投票管理设置。
+9，${notice_index.url!}:栏目的栏目主页面也可以通过${notice_index.url!}栏目的来实现，一般用于更多链接
+  。。。接下来会继续完善
+
+       

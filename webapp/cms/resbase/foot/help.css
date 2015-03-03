@@ -1,0 +1,98 @@
+/* CSS Document */
+
+
+
+.bottom_menu h1,bottom_menu h2,bottom_menu h3,bottom_menu h4,bottom_menu h5,bottom_menu h6,bottom_menu ul,bottom_menu li,bottom_menu p{margin:0;padding:0;font-family: "宋体";font-size:12px;text-align:left;}
+.bottom_menu li{list-style:none;}
+.bottom_menu a{text-decoration:none;color:#0066CC;}
+.bottom_menu a:hover{text-decoration:underline;color:#0066CC;}
+.bottom_menu img{border:1px solid #ccc;margin-bottom:10px;}
+
+/*------------------------layout-------------------------------------*/
+.bottom_menu{text-align:left;margin:0;padding:0;width:100%;font-family:"宋体",Arial, Helvetica, sans-serif;font-size:12px;}
+.bottom_menu .menu{width:170px;float:left;margin-top:10px;min-height:500px;}
+.bottom_menu .content{width:760px;float:left;padding:10px;padding-left:30px;border-left:1px solid #ddd;}
+
+.bottom_menu .bzcd{width:760px;height:30px;margin:0 auto 10px auto;line-height:30px;font-size:14px;font-weight:100;}
+.bottom_menu .bzcd a{display:block;margin-right:30px;float:left;}
+
+.bottom_menu .fanhui{width:760px;height:30px;margin:10px auto;line-height:30px;font-size:14px;font-weight:100;}
+.bottom_menu .fanhui a{display:block;margin-right:30px;float:right;text-align:right;}
+
+.bottom_menu .content_all{width:960px;padding:10px 20px;}
+
+/*---------------------------通用样式----------------------------------------*/
+.bottom_menu .clearfloat{clear:both;}
+.bottom_menu .song{font-family:"宋体";font-size:12px;}
+.bottom_menu p{font-size:12px;color:#444;text-indent:2em;line-height:1.8em;margin-bottom:1em;}
+.bottom_menu h1{font-size:18px;font-weight:bold;margin-bottom:20px;margin-top:10px;}
+.bottom_menu h3{font-size:14px;margin-bottom:10px;}
+
+.bottom_menu .greyborder{border:1px solid #bbb;}
+.bottom_menu .fontfamily{font-family:Tahoma,Arial,Helvetica,sans-serif,"宋体";}
+.bottom_menu .greybg{background-color:#efefef;}
+
+/*-----------------.menu---------------------------------------*/
+.bottom_menu .menu h2{font-size:14px;font-weight:700;color:#222;border-bottom:1px solid #ddd;padding-left:35px;padding-bottom:5px;padding-top:5px;background:transparent url(images/h1_b.gif) no-repeat 10px 8px!important;background:transparent url(images/h1_b.gif) no-repeat 10px 5px;}
+.bottom_menu .menu li a{color:#666;display:block;padding:5px!important;margin:0;font-size:12px;}
+.bottom_menu .menu li{border:1px solid #fff;padding-left:30px;background:transparent url(images/li_b.gif) no-repeat 20px center;}
+.bottom_menu .menu ul{padding-top:10px;background:#fff;border-top:3px solid #efefef;}
+.bottom_menu .menu li.current_li a{font-weight:bold;color:#333;}
+
+/*-----------------.content---------------------------------------*/
+.bottom_menu .breadcrumb{height:20px;width:100%;border-bottom:1px solid #ddd;padding-bottom:10px!important;padding-bottom:2px;padding-top:0!important;padding-top:4px;}
+.bottom_menu .breadcrumb li{float:left;margin:0 2px; height:20px;}
+.bottom_menu .breadcrumb li a{font-size:12px;color:#666;}
+.bottom_menu .breadcrumb li span{margin:0 5px;font-size:12px;color:#666;}
+
+
+/*-----------------.frlink-----------------------------------------*/
+.bottom_menu .frlink_img,.bottom_menu .frlink_text,.bottom_menu  .frlink_apply{margin-top:10px;width:100%;}
+.bottom_menu .frlink_img li{float:left;width:88px;height:31px;margin-right:14px;margin-bottom:10px;border:1px solid #ddd;padding:1px;overflow:hidden;}
+.bottom_menu .frlink_text{padding-top:10px!important;padding-top:16px;border-top:1px dashed #ddd;}
+.bottom_menu .frlink_text li{float:left;width:105px;height:20px;margin-right:14px;margin-bottom:5px;}
+.bottom_menu .frlink_text li a{color:#333;font-size:12px;}
+.bottom_menu .frlink_apply{border:3px solid #ddd;padding:10px 0 10px 0!important;padding-bottom:0px;padding-top:13px;}
+.bottom_menu .frlink_apply .step{float:left;width:300px;margin-left:20px!important;margin-left:10px;}
+.bottom_menu .frlink_apply .apply{margin-left:30px;float:left;width:560px;padding-left:20px;padding-bottom:10px;border-left:1px solid #ddd;}
+.bottom_menu .frlink_apply .step,.bottom_menu .frlink_apply .apply{padding-top:5px;}
+.bottom_menu .frlink_apply table{width:500px;}
+.bottom_menu .frlink_apply .apply th{width:70px;font-weight:normal;}
+.bottom_menu .frlink_apply .apply td{width:420px;}
+.bottom_menu .frlink_apply .apply th,.bottom_menu .frlink_apply .apply td{padding:3px;padding-left:0;}
+.bottom_menu .frlink_apply .apply input.txt_size{width:250px;height:24px;padding-left:2px;line-height:24px;}
+.bottom_menu .frlink_apply .apply textarea.txt_size{width:360px;height:100px;padding-left:2px;padding-top:2px;}
+
+
+/*------------------.partner----------------------------------------*/
+.bottom_menu .partner{margin-top:10px;width:100%;}
+.bottom_menu .partner_li{width:463px;height:81px!important;height:80px;float:left;background:#efefef;padding:10px 0 0 12px;margin-bottom:10px;margin-right:10px;overflow:hidden;}
+.bottom_menu .partner_li .partner_logo{border:1px solid #ddd;width:120px;height:50px;overflow:hidden;float:left;background-color:#fff;text-align:center;padding:5px 5px;}
+.bottom_menu .partner_info{float:left;padding-top:2px;width:312px;}
+.bottom_menu .partner_info p{padding-left:10px;text-indent:0;}
+.bottom_menu .partner p.partner_name{margin:0;padding:0;padding-left:10px;}
+.bottom_menu .partner p.partner_name a{font-weight:700;font-size:14px;color:#0066CC;}
+.bottom_menu .partner img{border:0;}
+.bottom_menu .no_margin_right{margin-right:0;}
+
+/*------------------.map---------------------------------------------*/
+.bottom_menu .map{margin-top:10px;width:100%;}
+.bottom_menu .map_li{width:474px;height:100px;float:left;padding:0 0 10px 0;margin-right:5px;margin-bottom:5px;}
+.bottom_menu .map_li h3.sort_name{padding:0 0 0 26px;line-height:25px!important;line-height:26px;height:26px;background:#efefef url(images/h1_b.gif) no-repeat 10px center;border-top:1px solid #ddd;font-size:13px;}
+.bottom_menu .map_li .sort_li li{float:left;margin:2px 8px 4px 8px;width:125px;}
+.bottom_menu .map_li .sort_li{width:450px;}
+/*.map_li .sort_li a{color:#333;}*/
+
+
+
+/*--------------------.hire----------------------------------------------*/
+.bottom_menu ol li{line-height:22px;}
+.bottom_menu ol{margin-top:5px;margin-bottom:0;}
+.bottom_menu h3.job_sort{font-size:14px;text-align:center;border-bottom:1px dotted #ddd;padding:35px 0 10px 0;}
+.bottom_menu h4{font-size:13px;margin-top:20px;color:#fc560d;}
+.bottom_menu h5{margin:10px 0 0 18px;font-size:12px;}
+
+.bottom_menu .contact_info{font-weight:bold;font-family:Tahoma, Arial, Helvetica, sans-serif,"宋体";margin-top:20px;}
+.bottom_menu .contact_info li{line-height:24px;}
+.bottom_menu .toTop_btn{position:fixed;right:200px;bottom:20px;}
+

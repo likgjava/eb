@@ -1,0 +1,1298 @@
+最常用的概念
+1、 scalars：存储单值
+
+字符串：简单文本由单或双引号括起来。
+数字：直接使用数值。
+日期：通常从数据模型获得
+布尔值：true或false，通常在<#if …>标记中使用
+
+ 
+2、 hashes：充当其它对象的容器，每个都关联一个唯一的查询名字
+
+具有一个唯一的查询名字和他包含的每个变量相关联。
+
+ 
+3、 sequences：充当其它对象的容器，按次序访问
+
+使用数字和他包含的每个变量相关联。索引值从0开始。
+
+ 
+4、 集合变量：
+
+除了无法访问它的大小和不能使用索引来获得它的子变量：集合可以看作只能由<#list...>指令使用的受限sequences。
+
+ 
+5、 方法：通过传递的参数进行计算，以新对象返回结果
+
+方法变量通常是基于给出的参数计算值在数据模型中定义。
+
+ 
+6、 用户自定义FTL指令：宏和变换器
+
+ 
+7、 节点
+
+节点变量表示为树型结构中的一个节点，通常在XML处理中使用。
+ 
+在模板里对sequences和hashes初始化
+sequences 
+
+    1. [“you”,”me”,”he”] 2. 1..100 3. [ {“Akey”:”Avalue”},{“Akey1”:”Avalue1”}, {“Bkey”:”Bvalue”},{“Bkey1”:”Bvalue1”}, ]     hashes      {“you”:”a”,”me”:”b”,”he”:”c”}    
+
+注释标志
+<#--
+
+ 
+这里是注释
+-->
+旧版本的freemarker采用的是<#comment> 注释 </#comment>方法
+ 
+sequences内置方法
+sequence?first
+返回sequence的第一个值;前提条件sequence不能是null
+sequence?last
+       返回sequence最后一个值
+sequence?reverse
+       反转sequence的值
+sequence?size
+       返回sequence的大小
+sequence?sort
+       对sequence按里面的对象toString()的结果进行排序
+sequence?sort_by(value)
+对sequence 按里面的对象的属性value进行排序
+如: sequence里面放入的是10 个user对象，user对象里面包含name,age等属性
+sequence?sort_by(name) 表示所有的user按user.name进行排序
+hashes内置方法
+hash?keys
+       返回hash里的所有keys, 返回结果类型sequence
+hash?values
+       返回hash里的所有value, 返回结果类型sequence
+ 
+ 
+模板
+使用FTL（freeMarker模板语言）编写
+
+组成部分
+
+一、整体结构
+
+1、注释：<#--注释内容-->，不会输出。
+
+2、文本：直接输出。
+
+3、interpolation:由 ${var} 或 #{var} 限定，由计算值代替输出。
+
+4、FTL标记
+
+ 
+
+二.表达式
+
+1、直接指定值：
+
+1-1、字符串：
+由双引号或单引号括起来的字符串，其中的特殊字符（如' " \等）需要转义。
+
+
+1-2、raw字符串：
+有一种特殊的字符串称为raw字符串，被认为是纯文本，其中的\和{等不具有特殊含义，该类字符串在引号前面加r，下面是一个例子：
+${r"/${data}"year""}屏幕输出结果为：/${data}"year"
+
+
+转义    含义
+序列   
+ 
+\"  双引号(u0022) 
+\'  单引号(u0027) 
+\\  反斜杠(u005C) 
+\n  换行(u000A) 
+\r  Return (u000D) 
+\t  Tab (u0009) 
+\b  Backspace (u0008) 
+\f  Form feed (u000C) 
+\l  < 
+\g  > 
+\a  & 
+\{  { 
+\xCode  4位16进制Unicode代码 
+ 
+1-3、数字：直接输入，不需要引号
+
+1)、精度数字使用“.”分隔，不能使用分组符号 
+2)、目前版本不支持科学计数法，所以“1E3”是错误的 
+3)、不能省略小数点前面的0，所以“.5”是错误的 
+4)、数字8、+8、08和8.00都是相同的 
+
+1-4、布尔值：true和false，不使用引号
+
+1-5、序列：由逗号分隔的子变量列表，由[]方括号限定。
+1)、子变量列表可以是表达式
+2)、可以使用数字范围定义数字序列，不需要方括号限定，例如2..5等同于[2, 3, 4, 5]，但是更有效率，可以定义反递增范围如：5..2。
+
+1-6、散列(hash)
+1)、由逗号分隔的键/值列表，由{}大括号限定，键和值之间用冒号分隔，如：{"key1":valu1,"key2":"character string"....}
+2)、键和值都是表达式，但是键必须是字符串。
+
+2、获取变量：
+
+2-1、顶层变量：${变量名}
+
+变量名只能是字母、数字、下划线、$、#、@ 的组合，且不能以数字开头。
+
+2-2、散列：有两种方法
+
+1)、点语法：变量名字和顶层变量的名字受同样的限制
+2)、方括号语法：变量名字无限制，可以是任意的表达式的结果
+book.author.name
+book.author.["name"]
+book["author"].name
+book["author"]["name"]
+以上是等价的。
+
+2-3、序列：使用散列的方括号语法获取变量，方括号中的表达式结果必须为数字。注意：第一个项目的索引为0。可以使用
+[startindex..endindex]语法获取序列片段。
+
+2-4、特殊变量：FreeMarker内定义变量，使用.variablename语法访问。
+
+3、字符串操作
+
+3-1、interpolation:使用${}或#{}在文本部分插入表达式的值，例如：
+
+${"hello${username}!"}
+${"${username}${username}${username}"}
+
+也可以使用+来获得同样的结果：
+${"hello"+username+"!"}
+${username+username+username}
+
+注意：${}只能用于文本部分而不能出现于标记内。
+
+<#if ${user.login}>或<#if "${user.login}">都是错误的;
+<#if user.login>是正确的。
+本例中user.login的值必须是布尔类型。
+
+3-2、子串：
+举例说明：假如user的值为"Big Joe"
+${user[0]}${user[4]}结果是：BJ
+${user[1..4]}结果是：ig J
+
+4、序列操作
+
+4-1、连接操作：可以使用+来操作，例如：
+["title","author"]+["month","day"]
+
+5、散列操作
+5-1、连接操作：可以使用+来操作，如果有相同的KEY，则右边的值会替代左边的值，例如： 
+{"title":散列,"author":"emma"}+{"month":5,"day":5}+{"month":6}结果month的值就是6。
+
+6、算术运算
+
+6-1、操作符：+、-、*、/、%
+除+号以外的其他操作符两边的数据，必须都是数字类型。
+如果+号操作符一边有一个字符型数据，会自动将另一边的数据转换为字符型数据，运算结果为字符型数据。
+
+6-2、比较操作符：
+1}、= 
+2}、==
+3}、!=
+4}、<
+5}、<=
+6}、>
+7}、>=
+1-3的操作符，两边的数据类型必须相同，否则会产生错误
+4-7的操作符，对于日期和数字可以使用，字符串不可以使用。
+
+注意：
+1}、FreeMarker是精确比较，所以"x" "x " "X"是不等的。
+2}、因为<和>对FTL来说是开始和结束标记，所以，可以用两种方法来避免这种情况：
+一种是使用括号<#if (a<b)> 
+另一是使用替代输出，对应如下：
+<  lt 
+<= lte 
+>  gt 
+>= gte 
+
+6-3、逻辑操作符：只能用于布尔值，否则会出现错误。
+
+&&(and)与运算
+||(or)或运算
+!(not)非运算
+
+6-4、内建函数：使用方法类似于访问散列的子变量，只是使用?代替.例如：${test?upper_case?html}
+
+常用的内建函数列举如下：
+
+1}、字符串使用：
+
+html:对字符串进行HTML编码
+cap_first:字符串第一个字母大写
+lower_first:字符串第一个字母小写
+upper_case:将字符串转换成大写
+trim:去掉字符前后的空白字符
+
+2)、序列使用：
+size:获得序列中元素的数目
+
+3)、数字使用：
+int:取得数字的整数部分
+
+7、操作符的优先顺序：
+
+后缀：[subbarName][subStringRange].(mathodParams)
+一元：+expr、-expr、! (not)
+内建：?
+乘法：*、/、%
+加法：+、-
+关系：<、<=、>、>= (lt、lte、gt、gte)
+相等：=、==、!=
+逻辑与：&& (and)
+逻辑或：|| (or)
+数字范围：..
+
+四、interpolation
+
+inperpolation只能用于文本，有两种类型：通用interpolation及数字interpolation
+
+1、通用interpolation
+
+如${expr}
+
+1-1、插入字符串值：直接输出表达式结果。
+1-2、插入数字值：根据缺省格式(由setting指令设置)将表达式结果转换成文本输出;可以使用内建函数string来格式化单个interpolation
+
+如：
+<#setting number_format="currency" />
+<#assign answer=42 />
+${answer}  <#-- ￥42.00 -->
+${answer?string}  <#-- ￥42.00 -->
+${answer?string.number}  <#-- 42 -->
+${answer?string.currency}  <#-- ￥42.00 -->
+${answer?string.percent}  <#-- 42,00％ -->
+
+1-3、插入日期值：根据缺省格式(由setting指令设置)将表达式结果转换成文本输出;可以使用内建函数string来格式化单个interpolation
+
+如：
+
+${lastupdata?string("yyyy-MM-dd HH:mm:ss zzzz")}  <#-- 2003-04-08 21:24:44 Pacific Daylight Time -->
+${lastupdata?string("EEE,MMM d, ''yy")}  <#-- tue,Apr 8, '03 -->
+${lastupdata?string("EEEE,MMMM dd, yyyy,hh:mm:ss a '('zzz')'")}  <#-- Tuesday,April 08, 2003, 09:24:44 PM (PDT)-->
+
+1-4、插入布尔值：根据缺省格式(由setting指令设置)将表达式结果转换成文本输出;可以使用内建函数string来格式化单个interpolation
+
+如：
+<#assign foo=ture />
+${foo?string("yes","no")} <#-- yes -->
+
+2、数字interpolation:
+
+有两种形式：
+1)、#{expr}
+2)、#{expr;format}：format可以用来格式化数字，format可以是如下：
+mX:小数部分最小X位
+MX:小数部分最大X位
+
+例如：
+<#assign x=2.582 />
+<#assign y=4 />
+#{x;M2} <#-- 2.58 -->
+#{y;M2} <#-- 4 -->
+#{x;m1} <#-- 2.582 -->
+#{y;m1} <#-- 4.0 -->
+#{x;m1M2} <#-- 2.58 -->
+#{y;m1M2} <#-- 4.0 -->
+ 
+ 
+宏
+
+宏和变换器变量是两种不同类型的用户自定义指令，他们的区别是：
+
+宏可以在模板中用macro指令来定义
+变换器是在模板外由程序定义
+
+1、宏：和某个变量关联的模板片段，以便在模板中通过用户自定义指令使用该变量
+1-1、基本用法：
+例如：
+<#macro greet>
+<font size="+2"> Hello JOE!
+</#macro>
+
+
+使用时：
+<@greet></@greet>
+如果没有体内容也可以用
+<@greet />
+
+1-2、变量：
+
+1)、可以在宏定义之后定义参数，宏参数是局部变量，只在宏定义中有效。如：
+
+<#macro greet person>
+<font size="+2"> Hello ${person}!
+</#macro>
+使用时：
+<@greet person="emma"> and <@greet person="LEO">
+输出为：
+<font size="+2"> Hello emma!
+<font size="+2"> Hello LEO!
+
+注意：宏的参数是FTL表达式，所以，person=emma和上面的例子中具有不同的意义，这意味着将变量emma的值传给person,这个值可能是任意一种数据类型，甚至是一个复杂的表达式。
+
+
+宏可以有多个参数，使用时参数的次序是无关的，但是只能使用宏中定义的参数，并且对所有参数赋值。如：
+<#macro greet person color>
+<font size="+2" color="${color}"> Hello ${person}!
+</#macro>
+
+使用时：
+<@greet color="black" person="emma" />正确
+<@greet person="emma" />错误，color没有赋值，此时，如果在定义宏时为color定义缺省值<#macro greet person color="black">这样的话，这个使用方法就是正确的。
+<@greet color="black" person="emma" bgcolor="yellow" />错误，宏greet定义中未指定bgcolor这个参数
+
+
+2、嵌套内容：
+
+2-1、自定义指令可以有嵌套内容，使用<#nested>指令，执行自定义指令开始和结束标记之间的模板片段。例如：
+<#macro greet>
+
+<#nested>
+
+</#macro>
+
+
+<@greet>hello Emma!</@greet>
+
+输出为
+
+hello Emma!
+
+2-2、<#nested>指令可以被多次调用，例如
+<#macro greet>
+
+<#nested>
+<#nested>
+<#nested>
+<#nested>
+ 
+
+
+</#macro>
+
+<@greet>hello Emma!</@greet>
+
+输出为
+
+hello Emma!
+hello Emma!
+hello Emma!
+hello Emma!
+ 
+
+ 
+
+2-3、嵌套的内容可以是有效的FTL，例如：
+<#macro welcome>
+
+<#nested>
+
+</#macro>
+
+<#macro greet person color="black">
+<font size="+2" color="${color}"> Hello ${person}!
+</#macro>
+
+<@welcome>
+<@greet person="Emma" color="red" />
+<@greet person="Andrew" />
+<@greet person="Peter" />
+</@welcome>
+
+输出为：
+
+<font size="+2" color="red"> Hello Emma!
+<font size="+2" color="black"> Hello Andrew!
+<font size="+2" color="black"> Hello Peter!
+ 
+
+2-4、宏定义中的局部变量对嵌套内容是不可见的，例如：
+
+<#macro repeat count>
+<#local y="test" /> 
+<#list 1..count as x>
+${y}${count}/${x}:<#nested />
+</#list>
+</#macro>
+
+<@repeat count=3> 
+${y?default("?")} 
+${x?default("?")}
+${count?default("?")}
+</@repeat>
+
+输出结果为
+test 3/1:???
+test 3/2:???
+test 3/3:???
+
+2-5、在宏定义中使用循环变量，通常用来重复嵌套内容，基本用法为：作为nested指令的参数，传递循环变量的实际值，而在调用自定义指令时，在标记的参数后面指定循环变量的名字。
+例如：
+<#macro repeat count>
+<#list 1..count as x>
+<#nested x,x/2,x==count />
+</#list>
+</#macro>
+
+<@repeat count=4;c,halfc,last>
+${c}. ${halfc}
+<#if last>
+last!
+</#if>
+</@repeat>
+
+输出结果是
+
+1. 0.5
+2. 1
+3. 1.5
+4. 2last!
+
+注意：指定循环变量的数目和用户定义指令开始标记指定的不同不会有问题
+调用时，少指定循环变量，多指定的值会不见
+调用时，多指定循环变量，多余的循环变量不会被创建
+
+二、在模板中定义变量
+
+1、在模板中定义的变量有三种类型
+
+1-1、plain变量：可以在模板的任何地方访问，包括使用include指令插入的模板，使用assign指令创建和替换。
+1-2、局部变量：在宏定义体中有效，使用local指令创建和替换。
+1-3、循环变量：只能存在于指令的嵌套内容，由指令(如list)自动创建。
+
+注意：
+1)、宏的参数是局部变量，不是循环变量。
+2)、局部变量隐藏同名的plain变量
+3)、循环变量隐藏同名的plain变量和局部变量。
+
+例如：
+
+<#assign x="plain">
+1. ${x} <#-- plain -->
+
+<@test />
+
+6. ${x}
+<#list ["loop"] as x>
+7. ${x} <#-- loop -->
+<#assign x="plain2">
+8. ${x} <#-- loop -->
+</#list>
+9. ${x} <#-- plain2 -->
+
+<#macro test>
+2. ${x} <#-- plain -->
+<#local x="local">
+3. ${x} <#-- local -->
+<#list ["loop"] as x>
+4. ${x} <#-- loop -->
+</#list>
+5. ${x} <#-- local -->
+</#macro>
+
+4)、内部循环变量隐藏同名的外部循环变量
+
+<#list ["loop1"] as x>
+${x} <#-- loop1 -->
+<#list ["loop2"] as x>
+${x} <#-- loop2 -->
+<#list ["loop3"] as x>
+${x} <#-- loop3 -->
+</#list>
+${x} <#-- loop2 -->
+</#list>
+${x} <#-- loop1 -->
+</#list>
+
+5)、模板中的变量会隐藏数据模型中的同名变量，如果需访问数据模型中的变量，使用特殊变量global。
+
+例如：
+假设数据模型中的user值为Emma
+<#assign user="Man">
+${user} <#-- Man -->
+${.global.user} <#-- Emma -->
+ 
+macro, nested, return
+语法
+ 
+<#macro name param1 param2 ... paramN>
+
+   ...  <#nested loopvar1, loopvar2, ..., loopvarN>  ...  <#return>  ... </#macro>
+
+用例
+<#macro test foo bar="Bar"[A1] baaz=-1>  Test text, and the params: ${foo}, ${bar}, ${baaz} </#macro> <@test foo="a" bar="b" baaz=5*5-2/> <@test foo="a" bar="b"/> <@test foo="a" baaz=5*5-2/>
+
+<@test foo="a"/> 
+
+ 
+输出
+ Test text, and the params: a, b, 23
+
+ Test text, and the params: a, b, -1  Test text, and the params: a, Bar, 23
+
+ Test text, and the params: a, Bar, -1
+ 
+定义循环输出的宏
+<#macro list title items>
+
+${title?cap_first}:
+ <ul>
+     <#list items as x>
+       <li>${x?cap_first}
+     </#list>
+</#macro> 
+
+<@list items=["mouse", "elephant", "python"] title="Animals"/>
+
+ 
+输出结果 
+
+Animals:
+
+包含body的宏
+<#macro repeat count>
+   <#list 1..count as x>
+     <#nested x, x/2, x==count>  
+   </#list> 
+</#macro> 
+<@repeat count=4 ; c halfc last>  
+  ${c}. ${halfc}
+  <#if last> Last!</#if> 
+</@repeat> 
+ 
+输出
+1. 0.5
+2. 1  3. 1.5 
+4. 2 Last!
+
+t, lt, rt
+语法
+<#t> 去掉左右空白和回车换行
+<#lt>去掉左边空白和回车换行   
+<#rt>去掉右边空白和回车换行   
+<#nt>取消上面的效果   
+ 
+
+ 
+ 
+B指令
+freemarker指令有两种：
+1、预定义指令：引用方式为<#指令名称>
+2、用户定义指令：引用方式为<@指令名称>，引用用户定义指令时须将#换为@。
+注意：如果使用不存在的指令，FreeMarker不会使用模板输出，而是产生一个错误消息。
+
+freemarker指令由FTL标记来引用，FTL标记和HTML标记类似，名字前加#来加以区分。如HTML标记的形式为<h1></h1>则FTL标记的形式是<#list></#list>（此处h1标记和list指令没有任何功能上的对应关系，只是做为说明使用一下）。
+
+有三种FTL标记：
+1)、开始标记：<#指令名称>
+2)、结束标记：</#指令名称>
+3)、空标记：<#指令名称/>
+
+注意：
+
+1) FTL会忽略标记之中的空格，但是，<#和指令 与 </#和指令 之间不能有空格。
+2) FTL标记不能够交叉，必须合理嵌套。每个开始标记对应一个结束标记，层层嵌套。 如：
+<#list>
+<li>
+${数据}
+<#if 变量>
+
+game over!
+
+
+</#if>
+
+</#list>
+
+注意事项：
+1)、FTL对大小写敏感。所以使用的标记及interpolation要注意大小写。name与NAME就是不同的对象。<#list>是正确的标记，而<#List>则不是。
+2)、interpolation只能在文本部分使用，不能位于FTL标记内。如<#if ${var}>是错误的，正确的方法是：<#if var>,而且此处var必须为布尔值。
+3)、FTL标记不能位于另一个FTL标记内部，注释例外。注释可以位于标记及interpolation内部。
+
+ 
+if, else, elseif
+语法
+<#if condition>
+   ... <#elseif condition2>  ... <#elseif condition3>  ... ... <#else>  ... 
+</#if>
+
+ 
+用例
+<#if x = 1>
+   x is 1 
+</#if>
+
+
+<#if x = 1>
+   x is 1 
+  <#else>  x is not 1 
+</#if>
+
+We have these animals:
+
+<table border=1>
+ <tr><th>Name<th>Price
+ <#list animals as being>
+ <tr>
+    <td>
+      <#if being.size = "large"></#if></#if>
+      ${being.name}
+      <#if being.size = "large">
+    <td>${being.price} Euros
+ </#list>
+</table>
+<#if user = "Big Joe">
+ It is Big Joe
+</#if>
+<#if user != "Big Joe">
+ It is not Big Joe
+</#if>
+ 
+ 
+switch, case, default, break
+语法
+<#switch value>
+
+   <#case refValue1>     ...     <#break>
+   <#case refValue2>     ...     <#break>
+   <#case refValueN>     ...     <#break>  <#default>     ... </#switch> 
+用例
+字符串
+<#switch being.size>
+
+   <#case "small">      This will be processed if it is small      <#break>
+   <#case "medium">      This will be processed if it is medium      <#break>
+   <#case "large">      This will be processed if it is large      <#break>  
+   <#default>      This will be processed if it is neither 
+</#switch>
+
+ 
+数字
+<#switch x>
+
+   <#case x = 1>     1
+   <#case x = 2>     2
+   <#default>     d
+   </#switch>   
+如果x=1 输出 1 2, x=2输出 2, x=3 输出d
+
+ 
+ 
+list, break
+语法
+<#list sequence as item>
+
+  ... <#if item = "spring"><#break></#if> ... </#list> 关键字 item_index:是list当前值的下标 item_has_next:判断list是否还有值   
+用例
+<#assign seq = ["winter", "spring", "summer", "autumn"]> <#list seq as x>  ${x_index + 1}. ${x}<#if x_has_next>,</#if> </#list>   输出  1. winter,  2. spring,  3. summer,  4. autumn       
+include
+语法
+<#include filename> or <#include filename options> options包含两个属性 encoding=”GBK” 编码格式 parse=true 是否作为ftl语法解析,默认是true，false就是以文本方式引入.注意在ftl文件里布尔值都是直接赋值的如parse=true,而不是parse=”true” 
+用例
+/common/copyright.ftl包含内容
+
+ 
+Copyright 2001-2002 ${me}<br>
+
+  All rights reserved.  
+模板文件
+
+ 
+<#assign me = "Juila Smith">
+
+  <h1>Some test</h1> 
+Yeah.
+
+<#include "/common/copyright.ftl" encoding=”GBK”> 
+
+ 
+输出结果
+<h1>Some test</h1>
+
+  
+Yeah.
+
+<html>
+
+ 
+<head>
+ <title>Test page</title>
+</head>
+<body>
+ <h1>Test page</h1>
+  
+Blah blah...
+
+<#include "/copyright_footer.html">
+</body>
+</html> 
+ 
+Import
+语法
+<#import path as hash>
+
+类似于java里的import,它导入文件，然后就可以在当前文件里使用被导入文件里的宏组件   
+用例
+
+ 
+假设mylib.ftl里定义了宏copyright那么我们在其他模板页面里可以这样使用
+<#import "/libs/mylib.ftl" as my>
+
+<@my.copyright date="1999-2002"/>
+ 
+"my"在freemarker里被称作namespace
+  
+compress
+语法
+<#compress>  ... 
+</#compress>
+
+ 
+用来压缩空白空间和空白的行
+用例
+<#assign x = "    moo \n\n   ">
+
+(<#compress>  1 2 3   4    5  ${moo}  test only    I said, test only   </#compress>)  
+输出
+
+ 
+(1 2 3 4 5
+moo test only 
+I said, test only) 
+ 
+escape, noescape
+语法
+<#escape identifier as expression>
+
+...  <#noescape>...</#noescape>  ... </#escape> 
+用例
+主要使用在相似的字符串变量输出，比如某一个模块的所有字符串输出都必须是html安全的，这个时候就可以使用该表达式 <#escape x as x?html>  First name: ${firstName}  <#noescape>Last name: ${lastName}</#noescape>  Maiden name: ${maidenName} </#escape> 相同表达式    First name: ${firstName?html}  Last name: ${lastName }  Maiden name: ${maidenName?html} 
+assign
+语法
+<#assign name=value> or <#assign name1=value1 name2=value2 ... nameN=valueN> or <#assign same as above... in namespacehash> or <#assign name>  capture this </#assign> or <#assign name in namespacehash>  capture this </#assign> 
+用例
+生成变量,并且给变量赋值 给seasons赋予序列值 <#assign seasons = ["winter", "spring", "summer", "autumn"]>   给变量test加1 <#assign test = test + 1>   给my namespage 赋予一个变量bgColor,下面可以通过my.bgColor来访问这个变量 <#import "/mylib.ftl" as my> <#assign bgColor="red" in my>   将一段输出的文本作为变量保存在x里 下面的阴影部分输出的文本将被赋值给x <#assign x>  <#list 1..3 as n>     ${n} <@myMacro />  </#list> </#assign> Number of words: ${x?word_list?size} ${x}   <#assign x>Hello ${user}!</#assign>     error <#assign x=” Hello ${user}!”>         true   同时也支持中文赋值，如： <#assign 语法>  java </#assign> ${语法} 打印输出: java 
+global
+语法
+<#global name=value> or <#global name1=value1 name2=value2 ... nameN=valueN> or <#global name>  capture this </#global> 
+ 
+全局赋值语法，利用这个语法给变量赋值，那么这个变量在所有的namespace中是可见的,如果这个变量被当前的assign语法覆盖 如<#global x=2> <#assign x=1> 在当前页面里x=2将被隐藏，或者通过${.global.x}来访问[A2]
+ 
+setting
+语法
+<#setting name=value>
+  
+用来设置整个系统的一个环境
+ 
+locale
+number_format
+boolean_format
+date_format, time_format, datetime_format
+time_zone
+classic_compatible
+用例
+假如当前是匈牙利的设置，然后修改成美国
+${1.2}
+<#setting locale="en_US"> ${1.2}  
+输出
+1,2
+1.2 
+因为匈牙利是采用“,”作为十进制的分隔符，美国是用“.”
+ 
+C一些常用方法或注意事项
+表达式转换类
+${expression}计算expression并输出
+#{ expression }数字计算#{ expression ;format}安格式输出数字format为M和m
+M表示小数点后最多的位数,m表示小数点后最少的位数如#{121.2322;m2M2}输出121.23
+ 
+ 
+ 
+ 
+数字循环
+1..5 表示从1到5，原型number..number
+对浮点取整数
+${123.23?int} 输出123
+给变量默认值
+${var?default(“hello world<br>”)?html}如果var is null那么将会被hello world<br>替代
+ 
+判断对象是不是null
+<#if mouse?exists>
+Mouse found <#else> 也可以直接${mouse?if_exists})输出布尔形 
+常用格式化日期
+openingTime必须是Date型,详细查看freemarker文档 Reference->build-in referece->build-in for date   ${openingTime?date} ${openingTime?date_time} ${openingTime?time}   
+添加全局共享变量数据模型
+在代码里的实现     cfg = Configuration.getDefaultConfiguration(); cfg.setSharedVariable("global", "you good"); 页面实现可以通过global指令,具体查看指令里的global部分 
+直接调用java对象的方法
+${object.methed(args)}    
+字符串处理(内置方法)
+html安全输出
+“abc<table>sdfsf”?html
+
+ 
+返回安全的html输出,替换掉html代码
+xml安全输出
+var?xml   
+substring的用法
+<#assign user=”hello jeen”>
+
+${user[0]}${user[4]} ${user[1..4]} 输出 : ho ello  
+类似String.split的用法 
+“abc;def;ghi”?split(“;”)返回sequence 
+将字符串按空格转化成sequence,然后取sequence的长度
+var?word_list 效果同 var?split(“ ”)
+var?word_list?size
+    
+取得字符串长度
+var?length   
+大写输出字符
+var?upper_case
+  
+小写输出字符
+var?lower_case   
+首字符大写
+var?cap_first   
+首字符小写
+var?uncap_first   
+去掉字符串前后空格 
+var?trim   
+每个单词的首字符大写
+var?capitalize   
+类似String.indexof: “babcdabcd”?index_of(“abc”) 返回1          
+“babcdabcd”?index_of(“abc”,2) 返回5 
+
+类似String.lastIndexOf 
+last_index_of和String.lastIndexOf类似,同上   
+下面两个可能在代码生成的时候使用（在引号前加”\”）
+j_string: 在字符串引号前加”\”         
+<#assign beanName = 'The "foo" bean.'>         String BEAN_NAME = "${beanName?j_string}"; 
+打印输出:  String BEAN_NAME = "The \"foo\" bean."; js_string:     <#assign user = "Big Joe's \"right hand\"."> <script>  alert("Welcome ${user}!"); </script>  
+打印输出:  alert("Welcome Big Joe\'s \"right hand\"!");   
+替换字符串 replace${s?replace(‘ba’, ‘XY’ )} ${s?replace(‘ba’, ‘XY’ , ‘规则参数’)}将s里的所有的ba替换成xy 规则参数包含:i r m s c f具体含义如下: 
+·i: 大小写不区分.
+·f: 只替换第一个出现被替换字符串的字符串
+·r:  XY是正则表达式
+·m: Multi-line mode for regular expressions. In multi-line mode the expressions ^ and $ match just after or just before, respectively, a line terminator or the end of the string. By default these expressions only match at the beginning and the end of the entire string.
+·s: Enables dotall mode for regular expressions (same as Perl singe-line mode). In dotall mode, the expression . matches any character, including a line terminator. By default this expression does not match line terminators.
+·c: Permits whitespace and comments in regular expressions.
+ 
+
+    
+D freemarker在web开发中注意事项
+freemarker与webwork整合
+
+ 
+web中常用的几个对象
+Freemarker的ftl文件中直接使用内部对象:
+${Request ["a"]}
+${RequestParameters["a"]}
+${Session ["a"]}
+${Application ["a"]}
+${JspTaglibs ["a"]}
+ 
+与webwork整合之后 通过配置的servlet 已经把request,session等对象置入了数据模型中
+在view中存在下面的对象
+ 我们可以在ftl中${req}来打印req对象
+req - the current HttpServletRequest 
+res - the current HttpServletResponse 
+stack - the current OgnlValueStack 
+ognl - the OgnlTool instance 
+webwork - an instance of FreemarkerWebWorkUtil 
+action - the current WebWork action 
+exception - optional the Exception instance, if the view is a JSP exception or Servlet exception view 
+view中值的搜索顺序
+${name}将会以下面的顺序查找name值
+freemarker variables 
+value stack 
+request attributes 
+session attributes 
+servlet context attributes 
+在模板里ftl里使用标签
+注意，如果标签的属性值是数字，那么必须采用nubmer=123方式给属性赋值
+JSP页面
+< contentType="text/html;charset=ISO-8859-2" language="java"%>
+< uri="/WEB-INF/struts-html.tld" prefix="html"%> 
+< uri="/WEB-INF/struts-bean.tld" prefix="bean"%>   
+<html>  
+    <body>     
+        <h1><bean:message key="welcome.title"/></h1>     
+        <html:errors/>     
+        <html:form action="/query">       
+            Keyword: <html:text property="keyword"/><br>       
+            Exclude: <html:text property="exclude"/><br>       
+        <html:submit value="Send"/>     
+        </html:form> 
+    </body> 
+</html>  
+模板ftl页面
+
+ 
+<#assign html=JspTaglibs["/WEB-INF/struts-html.tld"]>
+<#assign bean=JspTaglibs["/WEB-INF/struts-bean.tld"]>   
+<html>
+  <body>
+     <h1><@bean.message key="welcome.title"/></h1>
+     <@html.errors/>
+     <@html.form action="/query">       
+ Keyword: <@html.text property="keyword"/><br>       
+ Exclude: <@html.text property="exclude"/><br>
+     <@html.submit value="Send"/>     
+     </@html.form>
+  </body>
+</html>  
+ 
+
+ 
+ 
+如何初始化共享变量
+1． 初始化全局共享数据模型
+freemark在web上使用的时候对共享数据的初始化支持的不够,不能在配置初始化的时候实现，而必须通过ftl文件来初始化全局变量。这是不能满主需求的，我们需要在servlet init的时候留出一个接口来初始化系统的共享数据
+具体到和webwork整合,因为本身webwork提供了整合servlet,如果要增加全局共享变量，可以通过修改com.opensymphony.webwork.views.freemarker.FreemarkerServlet来实现,我们可以在这个servlet初始化的时候来初始化全局共享变量
+与webwork整合配置
+配置web.xml
+<servlet>
+    <servlet-name>freemarker</servlet-name>
+    <servlet-class>com.opensymphony.webwork.views.freemarker.FreemarkerServlet</servlet-class>
+    <init-param>
+      <param-name>TemplatePath</param-name>
+<param-value>/</param-value>
+<!—模板载入文件夹，这里相对context root，递归获取该文件夹下的所有模板-->
+    </init-param>
+    <init-param>
+      <param-name>NoCache</param-name> <!—是否对模板缓存-->
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>ContentType</param-name>
+      <param-value>text/html</param-value>
+    </init-param>
+    <init-param>
+<param-name>template_update_delay</param-name>
+<!—模板更新时间,0表示每次都更新,这个适合开发时候-->
+      <param-value>0</param-value>
+    </init-param>
+    <init-param>
+      <param-name>default_encoding</param-name>
+      <param-value>GBK</param-value>
+    </init-param>
+    <init-param>
+      <param-name>number_format</param-name>
+      <param-value>0.##########</param-value><!—数字显示格式-->
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+ </servlet>
+ <servlet-mapping>
+    <servlet-name>freemarker</servlet-name>
+    <url-pattern>*.ftl</url-pattern>
+ </servlet-mapping>
+ 
+E高级方法
+自定义方法
+${timer("yyyy-MM-dd H:mm:ss", x)}
+
+  
+${timer("yyyy-MM-dd ", x)} 
+
+ 
+ 
+在模板中除了可以通过对象来调用方法外（${object.methed(args)}）也可以直接调用java实现的方法，java类必须实现接口TemplateMethodModel的方法exec(List args). 下面以把毫秒的时间转换成按格式输出的时间为例子
+public class LongToDate implements TemplateMethodModel {
+
+      public TemplateModel exec(List args) throws TemplateModelException { SimpleDateFormat mydate = new SimpleDateFormat((String) args.get(0)));         return mydate.format(new Date(Long.parseLong((String)args.get(1)));     } } 
+
+将LongToDate对象放入到数据模型中 root.put("timer", new IndexOfMethod()); ftl模板里使用 <#assign x = "123112455445"> ${timer("yyyy-MM-dd H:mm:ss", x)} ${timer("yyyy-MM-dd ", x)} 
+
+ 
+
+ 
+输出
+2001-10-12 5:21:12
+2001-10-12
+ 
+自定义 Transforms
+实现自定义的<@transform>文本或表达式</@transform>的功能,允许对中间的最终文本进行解析转换
+ 
+例子：实现<@upcase>str</@upcase> 将str转换成STR 的功能
+ 
+代码如下：
+import java.io.*;
+
+  import java.util.*; import freemarker.template.TemplateTransformModel;   class UpperCaseTransform implements TemplateTransformModel {       public Writer getWriter(Writer out, Map args) {         return new UpperCaseWriter(out);     }       private class UpperCaseWriter extends Writer {                private Writer out;                    UpperCaseWriter (Writer out) {             this.out = out;         }           public void write(char[] cbuf, int off, int len)                 throws IOException {             out.write(new String(cbuf, off, len).toUpperCase());         }           public void flush() throws IOException {             out.flush();         }           public void close() {         }     } }  
+然后将此对象put到数据模型中
+
+ 
+root.put("upcase", new UpperCaseTransform());
+ 
+在view(ftl)页面中可以如下方式使用
+ 
+<@upcase>
+hello world
+</@upcase>
+ 
+打印输出:
+HELLO WORLD
+ 
+ 
+ 
+ 
+F．Built-ins
+${x?upper_case} – 小写变大写
+${test?html} - 转换为HTML编码格式
+${repeat("A", B)} – 复制B次A
+ 
+Example:
+${test?html}
+${test?upper_case?html}
+Assuming that test stores the string ``Tom & Jerry'', the output will be:
+Tom &amp; Jerry
+TOM &amp; JERRY
+ 
+---------
+${repeat("What", 3)}
+will print: ：WhatWhatWhat 
+ 
+1. String内置的JavaScript转换： js_string 
+用途：用于JavaScript转义，转换',",换行等特殊字符 
+模板:
+<script> 
+alert("${errorMessage?js_string}"); 
+</script>
+输出:
+<script> 
+alert("Readonly\'s pet name is \"Cross Bone\""); 
+</script>
+2.内置的默认值处理：default 
+用途: 用于处理默认值 
+模本:
+User: ${userLogin.name?default("Anonymous")}
+<td>${(employee.department.manager.name)?default("&nbsp;")}</td>
+输出:
+User: Anonymous 
+<td>&nbsp;</td>
+注，可以对整个对象树加上()，再用内置处理器这种方便的做法，偶也是最近刚学会的，以前一直用很傻的方法做.....
+3. Sequence内置的计数器: xxx_index 
+用途：显示序号 
+模板:
+<#list employees as e> 
+${e_index}. ${e.name} 
+</#list>
+输出:
+1. Readonly 
+2. Robbin
+4. Sequence内置的分段器: chunk 
+用途：某些比较BT的排版需求 
+模板:
+<#assign seq = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']> 
+<#list seq?chunk(4) as row> 
+<ul> 
+<li><#list row as cell>${cell} </#list> 
+
+</#list>
+<#list seq?chunk(4, '-') as row> 
+<tr> 
+<td><#list row as cell>${cell} </#list></td> 
+</tr> 
+</#list> 
+输出:
+<ul> 
+<li>a 
+<li>b 
+<li>c 
+<li>d 
+
+<ul> 
+<li>e 
+<li>f 
+<li>g 
+<li>h 
+
+<ul> 
+<li>i 
+<li>j 
+
+<tr> 
+<td>a</td> 
+<td>b</td> 
+<td>c</td> 
+<td>d</td> 
+</tr> 
+<tr> 
+<td>e</td> 
+<td>f</td> 
+<td>g</td> 
+<td>h</td> 
+</tr> 
+<tr> 
+<td>i</td> 
+<td>j</td> 
+<td>-</td> 
+<td>-</td> 
+</tr>
+String 
+${"It's \"quoted\" and 
+this is a backslash: \\"} 
+
+
+${'It\'s "quoted" and 
+this is a backslash: } 
+
+
+${r"${foo}"} 
+raw字符串，原封不动地现实引号中的内容
+
+
+ps:前一种是用双引号来引用字符串，后一种是用单引号来引用字符串。 
+分别需要对双引号和单引号进行转义 
+
+
+${"${user}${user}${user}${user}"} 
+${user + user + user + user} 
+效果相同 
+
+
+★substring 
+${user[0]}${user[4]} 
+${user[1..4]} 
+${user[4..]} 
+
+★number 
+不支持科学计数法 
+小数点前面的零不能省略 
+
+★sequences 
+<#list ["winter", "spring", "summer", "autumn"] as x> 
+${x} 
+</#list> 
+
+
+<#list 2..5 as x> ${x} </#list> 
+<#list [2,3,4,5] as x> ${x} </#list> 
+
+
+数组的拼接 
+<#list ["Joe", "Fred"] + ["Julia", "Kate"] as user> 
+- ${user} 
+</#list> 
+
+★hash 
+<#assign ages = {"Joe":23, "Fred":25} + {"Joe":30, "Julia":18}> 
+- Joe is ${ages.Joe} 
+- Fred is ${ages.Fred} 
+- Julia is ${ages.Julia} 
+注意重复的键对应的值取最后的一个 
+
+
+★运算 
+${5/2?int} 显示2
+ 
+cap_first : 首字母大写
+ 
+capitalize: 所有单词首刺目大写
+ 
+html : 转换为HTML格式
+< replaced with &lt; 
+> replaced with &gt; 
+& replaced with &amp; 
+" replaced with &quot; 
+index_of : 显示元素所在的位置
+"abcabc"?index_of("bc")
+返回值为1(下标从0开始)
+ 
+Contains:判断是否存在字符
+<#if "piceous"?contains("ice")>It contains "ice"</#if>
+输出: It contains "ice"
+ 
+Replace :替换
+ 
+split(“XX”):截取XX之后的字符
+ 
+<#list "someMOOtestMOOtext"?split("MOO") as x>
+- ${x}
+</#list>
+ 
+输出:
+- some
+- test
+- text
+ 
+ 
+starts_with :字符串由什么开始返回布尔型
+ 
+trim :去掉空格
+ 
+seq_index_of 数组中元素的位置
+ 
+<#assign colors = ["red", "green", "blue"]>
+${colors?seq_index_of("blue")}
+输出: 2
+
+    Default : 设置变量的默认值 
+ 
+
+ 
+Exists:放在if句 如果没有…..
+ 
+<#if mouse?exists>
+ Mouse found
+<#else>
+ No mouse found
+</#if>
+Creating mouse...
+<#assign mouse = "Jerry">
+<#if mouse?exists>
+ Mouse found
+<#else>
+ No mouse found
+</#if>  
+输出 :
+
+No mouse found 
+Creating mouse...
+
+Mouse found 
+ 
+if_exists 放在一般语句
+ 
+(${mouse?if_exists})
+Creating mouse...
+<#assign mouse = "Jerry">
+(${mouse?if_exists}) 
+输出:
+()
+Creating mouse...
+(Jerry) 
+ 
+ 
+删除空白行和空格
+<#compress>
+ ...
+</#compress>
+ 
+让此标记内的代码都执行<#escape 后的?参数
+ 
+<#escape>
+ 
+</#escape>
+ 
+<#escape x as x?html>
+ From: ${mailMessage.From}
+ Subject: ${mailMessage.Subject}
+ <#noescape>Message: ${mailMessage.htmlFormattedBody}</#noescape>
+ ...
+</#escape>
+ 
+输出:
+From: ${mailMessage.From?html}
+ Subject: ${mailMessage.Subject?html}
+ Message: ${mailMessage.htmlFormattedBody}
+  ...
+ 
+ [A1]默认值
+ [A2]<#import “lib/abc.ftl” as abc>这里的abc叫做namespace
+
