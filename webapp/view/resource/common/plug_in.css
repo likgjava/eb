@@ -1,0 +1,38 @@
+﻿@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: all
+Design: OTiger
+Email: fanhy@gpcsoft.com
+Remark: 控件样式引用文件，用于引用系统控件默认样式表。
+--------------------------------------------------------------------------------------------------------- */
+/*弹出层样式*/
+@import url(../scripts/jquery/epsDialog/epsDialog.css);
+/*tab样式*/
+@import url(../plug-in/jquery/base/ui.tabs.css);
+/*grid样式*/
+@import url(../plug-in/jquery/flexigrid/css/flexigrid/flexigrid.css);
+/*时间选择控件*/
+@import url(../scripts/jquery/epsDatepicker/epsDatepicker.css);
+/*内容右键菜单样式 by lijx*/
+@import url(../scripts/jquery/epsContentMenu/epsContentMenu.css);
+/*树菜单样式*/
+@import url(../plug-in/dhtmlxTree/dhtmlxtree.css);
+/*控件验证样式*/
+@import url(../scripts/jquery/epsValidate/epsValidate.css);
+/*智能搜索样式*/
+@import url(../plug-in/jquery/autocomplete/jquery.autocomplete.css);
+/*分页控件*/
+@import url(../plug-in/jquery/ajaxpager/ajaxpager.css);
+/*图片走马灯*/
+@import url(../plug-in/jquery/imgPlay/imgPlay.css);
+
+/*桌面任务样式*/
+@import url(../plug-in/jquery/easywidgets/jquery.easywidgets.css);
+@import url(../plug-in/jquery/easywidgets/example.css);
+
+/*datatable样式*/
+@import url(../plug-in/jquery/dataTables/media/css/demo_page.css);
+@import url(../plug-in/jquery/dataTables/media/css/demo_table.css);
+@import url(../plug-in/jquery/dataTables/media/css/tableForm.css);
