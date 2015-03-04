@@ -1,0 +1,14 @@
+$(function(){
+	$("#sureBtn").click(function(){
+		if($("#upFile").val()!='')
+		{
+			if(window.confirm("确定要上传?")){
+				alert("上传成功!");
+			}
+		}
+		else
+		{
+			alert("请选择上传的文件");
+		}
+	});
+})

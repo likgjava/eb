@@ -1,0 +1,9 @@
+$(document).ready(function(){
+	$('[name=execute_proj_plan]').click(function(){
+		$('#epsDialogCloseReload').click();
+		ProjectInfo.selectedProjectPlan($(this).attr("objId"),$(this).attr("parentTaskId"));
+	})
+	$('#return_plan_info').click(function(){
+		$('#epsDialogCloseReload').click();
+	})
+})

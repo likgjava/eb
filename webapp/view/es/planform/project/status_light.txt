@@ -1,0 +1,38 @@
+﻿({
+		"result": [
+		    {
+				name: '制定计划',
+				url: 'OppugnRequisitionController.do?method=toList&projectId=',
+				status: '01',
+				children: [
+					{
+						name: '准备计划',
+						url: 'ProjectController.do?method=checkRoleForToProjectGenView&projectId=',
+						status: '02'
+				    },
+				    {
+						name: '设计计划',
+						url: 'OppugnRequisitionController.do?method=toList&projectId=',
+						status: '01'						
+				    }
+			    ]
+		    },
+		    {
+				name: '制定计划2',
+				url: 'OppugnRequisitionController.do?method=toList&projectId=',
+				status: '01',
+				children: [
+					{
+						name: '准备计划2',
+						url: 'ProjectController.do?method=checkRoleForToProjectGenView&projectId=',
+						status: '02'
+				    },
+				    {
+						name: '设计计划2',
+						url: 'OppugnRequisitionController.do?method=toList&projectId=',
+						status: '01'						
+				    }
+			    ]
+		    }
+        ]
+})
