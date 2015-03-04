@@ -1,0 +1,33 @@
+﻿/*epsContentMenu*/
+.epsContentMenu { background:url("images/bgTop.png") no-repeat scroll left top transparent; display:none;padding-top:10px;width:129px;border:medium none;}
+.epsContentMenu ul{ background:url("images/bgBottom.png") no-repeat scroll left bottom transparent;padding:0 0 10px 0;margin: 0px;}
+.epsContentMenu li { background:url("images/bgBody.png") no-repeat scroll left center transparent;clear:both;margin:0;padding:5px 0 0 6px;list-style:none; display:block; height:18px;clear:both; cursor: default;}
+.epsContentMenu ul li span{ width:16px; height:16px; overflow:hidden; display:block; float:left; background:url(images/icons.gif) no-repeat;margin:0 10px 0 0;}
+.epsContentMenu a { display:block; font-size:12px; font-weight:normal; text-decoration:none; color:#2F414E; }
+.epsContentMenu ul li.hover {background:url("images/bgBodyHover.png") no-repeat scroll left center transparent;padding:5px 0 0 6px;height:18px;}
+
+.epsContentMenu a.upMove span { background-position:0px 0px; }
+.epsContentMenu a.downMove span { background-position:0px -16px; }
+.epsContentMenu a.open span { background-position:0px -32px; }
+.epsContentMenu a.close span { background-position:0px -48px; }
+.epsContentMenu a.ok span { background-position:0px -64px; }
+.epsContentMenu a.refresh span { background-position:0px -80px; }
+.epsContentMenu a.authorize span { background-position:0px -96px; }
+.epsContentMenu a.unAuthorize span { background-position:0px -112px; }
+.epsContentMenu a.add span { background-position:0px -128px; }
+.epsContentMenu a.del span { background-position:0px -144px; }
+.epsContentMenu a.undo span { background-position:0px -160px; }
+.epsContentMenu a.redo span { background-position:0px -176px; }
+.epsContentMenu a.smallOpen span { background-position:0px -192px; }
+.epsContentMenu a.smallClose span { background-position:0px -208px; }
+.epsContentMenu a.base span { background-position:0px -224px; }
+.epsContentMenu a.del2 span { background-position:0px -240px; }
+.epsContentMenu a.warn span { background-position:0px -256px; }
+.epsContentMenu a.stop span { background-position:0px -272px; }
+.epsContentMenu a.stop2 span { background-position:0px -288px; }
+.epsContentMenu a.del3 span { background-position:0px -304px; }
+.epsContentMenu a.modify span { background-position:0px -320px; }
+.epsContentMenu a.look span { background-position:0px -336px; }
+.epsContentMenu a.addOrg span { background-position:0px -352px; }
+.epsContentMenu a.addDep span { background-position:0px -368px; }
+.epsContentMenu a.addJob span { background-position:0px -384px; }

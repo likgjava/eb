@@ -1,0 +1,45 @@
+﻿@charset "utf-8";
+/*
+ * epsDialog
+ * 弹出层样式
+ */
+
+/*遮挡层*/
+.epsDialogBg { width:100%; height:100%; position:absolute; top:0px; left:0px; background:#000; -moz-opacity:0.5; opacity:0.5; filter:alpha(opacity=50); z-index:80;}
+
+/*窗口容器*/
+.epsDialog { position:absolute;float:left;/* overflow:hidden;*/ z-index:82;}
+.epsDialogContent { position:relative; background:#ccc; display:block; overflow:hidden; border:1px solid #666; padding:2px;}
+
+/*拖动手柄*/
+.epsDialogResize { position:absolute;}
+	.epsDialogResizeSE,.epsDialogResizeSW,.epsDialogResizeNW { width:15px; height:15px; z-index:84;}
+	.epsDialogResizeSE { cursor:se-resize; bottom:0px; right:0px; background:#FFF;}
+	.epsDialogResizeSW { cursor:sw-resize; bottom:0px; left:0px;}
+	.epsDialogResizeNW { cursor:nw-resize; top:0px; left:0px;}
+	.epsDialogResizeE,.epsDialogResizeW,.epsDialogResizeS,.epsDialogResizeN { width:5px; height:5px; left:0; top:0; z-index:83;}	
+	.epsDialogResizeE { height:100%; cursor:e-resize; right:0px; left:auto;}
+	.epsDialogResizeW { height:100%; cursor:w-resize;}
+	.epsDialogResizeS { width:100%; cursor:s-resize; top:auto; bottom:0px;}
+	.epsDialogResizeN { width:100%; cursor:n-resize;}
+
+/*窗口图标*/
+.epsDialogIcon { position:absolute; top:0px; right:0px; width:100px; height:24px; z-index:89;}
+.epsDialogIcon a { position:absolute; top:4px; width:16px; height:16px; overflow:hidden; z-index:89; text-indent:-9999px; background:url(images/epsDialog.gif) no-repeat;}
+	a.epsDialogClose { right:4px; background-position:0px -64px;}
+	a.epsDialogClose:hover { background-position:0px -80px;}
+	a.epsDialogMax { right:24px; background-position:0px 0px;}
+	a.epsDialogMax:hover { background-position: 0px -16px;}
+	a.epsDialogMax.min { background-position:0px -32px;}
+	a.epsDialogMax.min:hover { background-position:0px -48px;}
+	a.epsDialogNewWin { right:44px; background-position:0px -96px;}
+	a.epsDialogNewWin:hover { background-position:0px -112px;}
+
+/*窗口标题*/
+.epsDialog h3 {}
+
+/*窗口内容*/	
+.epsDialogText { overflow:auto; position:relative; background:#fff; border:1px solid #999; padding:5px; z-index:88;}
+
+/*IE6弹出层遮挡下拉框修复*/
+.epsDialogIe6Bg { background:#F00; position:absolute; top:0px; left:0px; display:block;}
