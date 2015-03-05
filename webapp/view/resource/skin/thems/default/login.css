@@ -1,0 +1,39 @@
+/* CSS Document */
+.page {background:url(img/login/login_bg.jpg) no-repeat left center; margin:20px auto; zoom:1;}
+#userLogin{ float:right; margin-right:10px; display:inline; width:400px;}
+
+/*Tab 样式修改*/
+.ui-tabs{ padding:0.2em 0; }
+.ui-widget-content{border-color:#0082a9;}
+.ui-widget-header{background:url(img/login/pageTurn.png) repeat-x left bottom; border-radius:0; border-bottom:1px solid #0082a9;}
+.ui-tabs .ui-tabs-nav{ padding:0 0.2em;}
+.ui-tabs .ui-tabs-panel{ padding:10px;}
+.ui-state-active, .ui-widget-content .ui-state-active{border-color:#0082a9;}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a{ background:url(img/login/seclect_a.jpg) no-repeat 10px center; padding-left:40px; font-weight:bold; font-size:1.2em;}
+.ui-tabs .ui-tabs-nav li{ padding:5px 0;}
+
+/*登录内容*/
+.loginBox{ color:#000;}
+.loginBox li { margin-bottom:10px; }
+.loginBox li img{ vertical-align:middle;}
+.loginBox li label{ width:110px; text-align:right; display:inline-block;}
+.loginBox li input{background:url(img/login/button_a.gif) repeat-x left top; height:24px; border:1px solid #ccc;}
+
+/*登录按钮*/
+.conOperation{ padding-left:70px; margin-bottom:10px;}
+.conOperation a{margin-right:10px; color:#f00;}
+.conOperation a:hover{ color:#000;}
+.conOperation .enterBtn{ background:url(img/login/login.gif) no-repeat; width:82px; height:29px; overflow:hidden; border:none; margin-right:10px; float:left;}
+.conOperation .enterBtn span{ display:none; }
+.conOperation .enterBtn:hover{ background-position:0 -39px;}
+
+.reg{ background:url(img/login/re.gif) no-repeat; width:82px; height:29px; display:inline-block; text-indent:-9999px;}
+.reg:hover{ background-position:0 -39px;}
+
+
+/*注意事项*/
+.securityRemind{ border-top:1px dashed #ccc; padding-top:10px;}
+.securityRemind h3{ background:url(img/icons/warning_triangle.png) no-repeat left center; padding-left:20px; height:30px; line-height:30px;}
+
+/*错误提示*/
+#ErrorMsg{ color:#f00; border:1px dotted #C4D9EF; background:#f9fdff url(../../sysicon/16/error_fuck.png) no-repeat 10px center;  display:block; height:30px; line-height:30px; padding-left:35px;} 

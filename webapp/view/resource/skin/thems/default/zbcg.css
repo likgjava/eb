@@ -1,0 +1,58 @@
+/* CSS Document */
+
+/*头条信息*/
+.headlinesArea{ position:relative; font-size:1.2em; padding-bottom:10px;}
+.headlinesArea h3{position:absolute; top:10px; left:200px; font-size:1.1em;}
+.headlinesArea .hotImg{ position: absolute; left:10px; top:10px; width:180px; height:180px; overflow:hidden; margin-right:10px;}
+.headlinesArea .hotDetails{ padding-top:40px; padding-left:200px;}
+.headlinesArea .hotDetails li{ position:relative;}
+.headlinesArea .hotDetails li .projectProgress{ position: absolute; left:75px; top:2px;}
+.headlinesArea .hotDetails li em{ color:#fc560d;}
+/*为什么选择阳光易购*/
+.advantage{ border-width:1px; border-style:solid; padding:5px 10px; font-size:1.2em; background:#f6fbff; border-color:#C4D9EF; color:#0059A2;}
+.advantage h2{ font-size:1.2em; margin-bottom:10px; color:#f17d01;}
+/*了解更多*/
+.learnMore{ background:url(img/learnMore.png) no-repeat;}
+.learnMore:hover{ background-position:0 -31px;}
+.learnMore{ width:130px; height:29px; text-indent:-9999px; display:inline-block;}
+/*newsList li无背景*/
+.newsList li{ background:none; margin-bottom:5px; padding-left:0;}
+/*重点招标单位-推荐、列表*/
+.ehotAreaNews{line-height:20px; position:relative; margin:10px; _width:278px; overflow:hidden;}
+.ehotAreaNews h3{position:absolute; top:0; left:110px;}
+.ehotAreaNews .hotImg{ position: absolute; left:0; top:0; width:100px; height:100px; overflow:hidden; margin-right:10px;}
+.ehotAreaNews .hotImg img{ width:100px; height:100px; overflow:hidden;}
+.ehotAreaNews .hotDetails{ padding-top:20px; padding-left:110px;}
+
+.eInfoList{ font-size:0.9em; margin:10px;}
+.eInfoList h3{ float:left; font-size:1.2em; padding:5px 10px;}
+.eInfoList h4{ padding:5px 10px; font-weight:normal; color:#666;}
+.eInfoList ul ul { padding:0; overflow:hidden; }
+.eInfoList li{ border-bottom:1px dotted #ccc; padding-top:2px; padding-bottom:2px; position:relative;}
+.eInfoList li li{ border:none; float:left; margin-right:10px;  white-space:nowrap;}
+.eInfoList li .btnBoxR{ position:absolute; right:0; bottom:2px; }
+.eInfoList li.last{ border:none;}
+
+/*需求列表*/
+.demandList{ overflow:hidden;}
+.demandList ul{ overflow:hidden; padding-top:0;}
+.demandList li{ float:left; width:49%; margin-right:10px;}
+.demandList li li{ width:auto;}
+.demandList li.omega{ margin-right:0;}
+/*开标直播厅*/
+.liveHall{ position:relative; }
+.liveHall .video{ position:absolute; left:10px; top:32px; width:278px; overflow:hidden; height:278px;}
+.liveHall h4{padding:290px 10px 10px 10px;}
+
+/*栏目高度相同*/
+.sameHeigh{height:373px;}
+.recommendArea,.advantage{ height:220px;}
+
+/*热销商品*/
+#demand,#hotGoods{height:440px;}
+.verticalShowListM{ overflow:hidden;}.verticalShowListM li{ position:relative; width:132px; margin-right:10px; margin-bottom:5px; float:left; overflow:hidden;}
+.verticalShowListM li.omega{ margin-right:0;}
+.verticalShowListM li .hotImg{ position:absolute; top:0; left:0; width:132px; height:132px; overflow:hidden;}
+.verticalShowListM li h3{ padding-top:134px; font-weight:normal; text-align:center; height:40px; line-height:20px;}
+.verticalShowListM .hotPrice{ text-align:center;}
+.verticalShowListM .hotPrice em{ color:#fc560d;}

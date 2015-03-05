@@ -1,0 +1,94 @@
+﻿@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: sunshineBusiness 阳光商务
+Design: OTiger
+Email: fanhy@gpcsoft.com
+Remark: 控件修改样式表，用于修改系统控件默认样式。
+--------------------------------------------------------------------------------------------------------- */
+/*flexigrid表格控件样式修改
+-------------------------------------------------------------------*/
+/*输入框修复*/
+.flexigrid input[type="text"],.flexigrid input[type="password"] { width:auto;}
+.flexigrid select { width:auto;}
+/*树列表行高修复*/
+.flexigrid div.bDiv .gridTree td div{ padding-top:0; padding-bottom:0;}
+.flexigrid  div.bDiv td div .treeGridIcon { height:25px;}
+/*tBody*/
+	.flexigrid div.bDiv table { border-bottom:1px solid #ccc;}
+/*grid表格样式*/
+.flexigrid{border:0;}
+.flexigrid div.mDiv,.flexigrid div.pDiv{background:#9bd4e9 url(../img/tableTh_bg.gif) repeat-x scroll 0 0;border:#4691d8 1px solid; border-bottom:0;}
+.flexigrid div.vGrip{ border-color:#4691d8; background:#fff;}
+.flexigrid div.tDiv{border-color:#4691d8; background:#f3f6f9;}
+.flexigrid div.pDiv{border:#4691d8 1px solid; border-top:0;}
+.flexigrid table{border-color:#9fc5e8;}
+.flexigrid table td,.flexigrid table th{border-color:#9fc5e8;}
+.flexigrid div.hDiv{ background:#cce2f8; border-top:0;border-bottom:#4691d8 1px solid;border-color:#4691d8;}
+.flexigrid div.hDivBox  th{border:0;}
+.flexigrid div.hDivBox{border-top:#4691d8 1px solid;}
+.flexigrid div.bDiv{border-color:#4691d8;}
+.flexigrid div.hDiv th.sorted{background: none;}
+.flexigrid div.bDiv table{border-color:#4691d8;}
+.flexigrid div.bDiv table a{ color:#000;}
+.flexigrid tr td.sorted{ background:#f3f6f9; border:0;}
+.flexigrid tr.erow td.sorted{background:#ccdff0;border:0;}
+.flexigrid tr.erow td{background: #f3f6f9;}
+.flexigrid div.bDiv tr.trSelected:hover td, 
+.flexigrid div.bDiv tr.trSelected:hover td.sorted,
+.flexigrid div.bDiv tr.trOver.trSelected td.sorted, 
+.flexigrid div.bDiv tr.trOver.trSelected td,
+.flexigrid tr.trSelected td.sorted,.flexigrid tr.trSelected td { background:#ccdff0;border:0;}
+.flexigrid div.bDiv tr:hover td, 
+.flexigrid div.bDiv tr:hover td.sorted,
+.flexigrid div.bDiv tr.trOver td.sorted, 
+.flexigrid div.bDiv tr.trOver td { background:#ccdff0;border:0;}
+.flexigrid div.bDiv table,.flexigrid div.nDiv table,.flexigrid div.hDiv table { border-collapse:collapse; border:0;}
+.flexigrid div.bDiv table td,.flexigrid div.hDiv table td,.flexigrid div.nDiv table td {border:0;}
+.flexigrid div.btnseparator{ border:0;}
+.flexigrid div.hDivBox th{ border-right:1px solid #4691d8;}
+
+/*弹出层控件样式修改
+---------------------------------------------*/
+.epsDialog { border:1px solid #fdec9c;}/*描边边框*/
+.epsDialog h3 { background:#9bd4e9 url(../img/tableTh_bg.gif) repeat-x left top; color:#000;}/*弹出标题背景*/
+.epsDialog .epsDialogContent { background-color:#cce2f8;}/*弹出层边框*/
+.epsDialog .epsDialogText { background-color:#fff;}/*内容背景*/
+.epsDialog h5 { color:#e9000a; font:bold 1.2em/1.5em "宋体";}/*内容标题*/
+	
+/*tabs*/
+.ui-widget{ font-size:1em;}
+.ui-tabs{ padding:0; margin-bottom:10px; zoom:1;}
+.ui-widget-content{border-color:#c4d9ef;}
+.ui-corner-all{border-radius:0;}
+.ui-widget-header{background:#fcfcfc url(img/cols_h2_bg.gif) repeat-x bottom; color:#00579e; padding:0 0 0 2px; border-bottom:1px solid #c4d9ef;}
+.ui-tabs .ui-tabs-nav li a{padding:2px 10px;}
+.ui-state-default, .ui-widget-content .ui-state-default{border-color:#c9d7f4; background:none;}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited{ font-weight:bold;}
+.ui-state-active, .ui-widget-content .ui-state-active{background:#fff; border-color:#c9d7f4;}
+
+/*---treeEditNav---*/
+/*.treeEditNav { }
+.treeEditNav ul{ overflow:hidden;}
+.treeEditNav li { float:left; width:auto;}
+.treeEditNav a { display:block; height:23px;line-height:23px;font-size:12px; font-weight:normal; text-decoration:none; color:#2F414E; padding-left:20px;}
+.treeEditNav a span { padding:0;}
+.treeEditNav a:hover{ background:none;}
+.treeEditNav a:hover span { background:none;}
+.treeEditNav .operation a{height:23px; background:none;}
+.treeEditNav .operation a span{height:23px; background:none;}*/
+.detail .treeEditNav {}
+.detail .treeEditNav li{ width:auto;}
+.treeEditNav .add,.treeEditNav .edit,.treeEditNav .del{ background-position:0 center;}
+.treeEditNav a{ white-space:nowrap;}
+.treeEditNav a:hover{ background:none;}
+.treeEditNav a:hover span{ background:none;}
+.treeEditNav a span{ padding:0;}
+
+/*demo_table.css*/
+table.frontTableList td{border-width:0;}
+
+/*分页样式*/
+.paging_full_numbers{ width:100%; overflow:hidden; margin:5px 0;}
+.dataTables_paginate{ float:none;}

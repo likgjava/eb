@@ -1,0 +1,113 @@
+﻿/* CSS Document */
+
+/*头部样式*/
+.branding{ height:70px;}
+.branding img{ /*width:80px; height:60px;*/ padding:3px 0;}
+.header{margin-bottom:10px;}
+/*主导航*/
+.sysNavMain{background:url(img/sysNavMain_bg.gif) repeat-x left bottom;  height:113px; position:relative; margin-top:-45px;}
+.sysNavMain li{height:33px; padding-right:20px; text-align:center; line-height:33px; display:inline-block; *float:left;}
+.sysNavMain li.selected{ background:url(img/sysNavMain_s.gif) no-repeat;}
+.sysNavMain li.selected a{ display:block; width:113px;}
+.sysNavMain ul{ text-align:center; *margin-left:210px;}
+.sysNavMain ul ul{ padding:0; *margin-left:10px; position:absolute; left:0; right:0; top:35px; height:80px; _top:33px; width:982px; text-align:center;}
+.sysNavMain li a{ font-size:1.3em; font-weight:bold; color:#000; display:block;}
+.sysNavMain li a:hover{ color:#fc560d;}
+.sysNavMain li.selected a{ color:#fff;}
+.sysNavMain li.selected  li a{ background:url(img/sysNavMain_a.png) no-repeat center top;}
+.sysNavMain li.selected  li a span{ display:block; height:45px;}
+.sysNavMain li.selected  li a img{ text-align:center;}
+.sysNavMain li.selected li a:hover,.sysNavMain li.selected li.selected a{background:url(img/sysNavMain_h.png) no-repeat center top;}
+.sysNavMain li li{ width:auto; padding-right:0;}
+.sysNavMain li.selected li a{ width:auto; font-size:1em; font-weight:normal;}
+.sysNavMain li.selected li.selected { background:none;}
+.sysNavMain li.selected li.selected a{ font-weight:bold;}
+
+/*三级菜单*/
+.menuList{ background:url(img/menuTop.png) no-repeat left top; padding-top:10px; overflow:hidden;}
+.menuList ul{background:url(img/menuBottom.gif) no-repeat left bottom; padding-bottom:10px;}
+.menuList li{background:url(img/menu_li.png) repeat-y; padding-left:15px; padding:3px 3px 3px 15px;}
+.menuList li.selected{ background:url(img/menu_selected.png) no-repeat;}
+.menuList a{ display:block;}
+.hidden{ display:none;}/*隐藏菜单*/
+
+/*用户详情、机构用户详情*/
+.userDetailsBox,.agencyBox{ position:relative; background:#f9fdff; border:1px solid #c4d9ef; height:138px; font-size:1em;  color:#666;}
+.userDetailsBox .userPic,.agencyBox .userPic{ position:absolute; left:10px; top:9px; height:120px; width:120px; text-align:center; border-right:1px solid #c4d9ef; padding-right:10px;}
+.userDetailsBox .userPic img,.agencyBox .userPic img{ border:1px solid #e9f6fb; width:120px; height:120px; overflow:hidden;}
+.userDetailsBox h3{ position:absolute; top:9px; left:160px;}
+
+.userDetailsBox h4,.agencyBox h4{ color:#0078af; font-size:1.4em;}
+.userDetailsBox h4{ position:absolute; top:40px; left:160px;}
+.agencyBox h4{ position:absolute; top:5px; left:160px;}
+.userDetailsBox h4 em,.agencyBox h4 em{ font-size:0.8em;}
+
+.userDetailsBox .userDetails{ padding-top:70px; padding-left:160px; margin-right:10px;}
+.agencyBox .userDetails{ padding-top:28px; padding-bottom:5px; padding-left:160px; margin-right:10px;}
+.userDetailsBox .userDetails label,.agencyBox .userDetails label{ font-weight:bold;}
+.lastLoginTime{ font-weight:normal;}/*上一次登录时间*/
+
+/*突出显示层*/
+.hotLayer{ border:1px solid #f1d38a; background:#ffffdc; height:76px;}
+.hotLayer ul{ padding:2px 10px; overflow:hidden;}
+.hotLayer li{ float:left; width:33%;}
+.hotLayer li a{ display:block;}
+
+/*操作列表*/
+.operationList{ width:238px; height:140px;}
+.operationList h3{ padding:0 10px;} 
+.operationList p{ padding:0 10px;}
+.operationList ul{ padding:8px 17px;}
+.operationList li{ margin-bottom:5px; width:203px; overflow:hidden;}
+.operationList a{width:203px; display:block; padding-left:70px; color:#fff; font-weight:bold; font-size:1.3em;}
+.operationList a:hover{ color:#fff;}
+.operationList,.addPlan,.sent,.create,.release,.check{ background:url(img/operationList_bg.gif) no-repeat;}
+.operationList{ background-position:0 0;}
+.addPlan{ background-position:0 -150px; height:38px; line-height:38px; }/*新增采购计划*/
+.addPlan:hover{ background-position:0 -290px; }
+.sent{ background-position:0 -198px; height:38px; line-height:38px; }/*发送采购需求*/
+.sent:hover{ background-position:0 -338px;}
+.create{ background-position:0 -244px;height:38px; line-height:38px; }/*创建竞价项目*/
+.create:hover{ background-position:0 -384px;}
+
+.release{ background-position:0 -430px; height:50px; line-height:55px; margin-top:5px;}/*发布供应信息*/
+.release:hover{ background-position:0 -550px;}
+.check{ background-position:0 -490px; height:50px; line-height:55px; margin-top:10px;}/*查看销售统计*/
+.check:hover{ background-position:0 -610px;}
+
+/*待办任务*/
+.pointInfo{border:1px solid #c4d9ef; font-size:1.2em; line-height:30px; height:98px;}
+.pointInfo ul{ padding:15px 10px;}
+.pointInfo li{ border-bottom:1px dotted #c4d9ef;}
+.pointInfo li.last{ border:none;}
+.pointInfo label{ font-weight:bold;}
+
+/*数据统计、短信通*/
+.statDataBox,.smsBox{ background:url(img/statDataBox_bg.png) no-repeat; height:100px;}
+.statDataBox h3{ padding:0 10px; font-weight:normal;}
+.statDataBox ul{ padding:8px 10px; font-size:0.9em; line-height:20px;}
+.statDataBox em{color:#fc560d;}
+
+.smsBox{ position:relative;}
+.smsBox h3{ padding-left:10px;}
+.smsBox .monthly{ position:absolute; left:60px; top:0;}
+.smsBox p{ margin:5px 10px; text-indent:2em; line-height:20px;}
+.smsBox .subscribe{ position:absolute; top:4px; right:10px;  }
+.smsBox .subscribe a{ color:#fff; background:url(img/subscribe.gif) no-repeat; width:40px; height:16px; line-height:16px; text-align:center; display:block;}
+
+.smsBox .subscribe a:hover{ background-position:0 -26px;}
+
+/*图表列表*/
+.chartList{ overflow:hidden;}
+.chartList li{ float:left; padding:10px 0 10px 10px;}
+
+/*企业统计概况列表*/
+#company{height:100px;}
+.companyList{ overflow:hidden;}
+.companyList li{ float:left; padding:10px;}
+.companyList a{ font-size:1.2em; font-weight:bold; color:#666; display:block;}
+
+#table{ margin:10px;}
+
+/*发布的项目、最新加盟供应商*/
+#sendProject,#supplierJoin{ height:290px;}

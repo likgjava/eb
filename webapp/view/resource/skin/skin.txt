@@ -1,0 +1,15 @@
+﻿({
+		"themes": [
+			
+		    {
+			name: 'skin05',
+			desc: '天空蓝',
+			title: '框架式，自适应宽高',
+			defaultTheme: 'true',
+			menuSub: '',
+			autoHeight: 'true',
+			path: '../resource/skin/skin05/css/main.css'
+		    }
+	   
+        ]
+})

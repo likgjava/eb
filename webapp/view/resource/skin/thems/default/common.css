@@ -1,0 +1,89 @@
+﻿/* CSS Document */
+
+/*公共栏目样式*/
+.cols{border-width:1px; border-style:solid; overflow:hidden; position:relative;  border-color:#C4D9EF;  }
+.cols h2{ background:url(img/cols_h2_bg.gif) repeat-x; height:24px; padding-left:10px; font-size:1.2em; border-width:0 0 1px 0;border-style:solid;  border-bottom-color:#C4D9EF;  color:#00579e;}
+.cols .hotLabels{ position:absolute; left:100px; top:0; font-size:0.9em;}
+.cols .hotLabels,.cols .hotLabels a{ color:#666;}
+.cols .hotLabels a:hover{ color:#000;}
+.cols .more{ background:url(img/more.gif) no-repeat right center; position:absolute; top:0; right:0px; padding-right:14px;}
+.titleUp{ background:url(img/titleUp.png) no-repeat; padding-left:25px; display:inline-block; height:24px;}
+.titleDown{ background:url(img/titleDown.png) no-repeat; padding-left:25px; display:inline-block; height:24px;}
+
+/*推荐供应商-分页*/
+.cols .pageBox{ position:absolute; top:-2px; right:100px;}
+.cols .pageBox a{ display:inline-block; width:40px; padding-bottom:1px; text-align:center; white-space:nowrap;}
+.cols .pageBox .selected,.cols .pageBox a:hover{ background:url(img/page_s.png) no-repeat center bottom; color:#fff;}
+
+/*--新闻列表样式--*/
+.newsList{ margin:10px; zoom:1;}
+.newsList li{ border-width:0 0 1px 0; border-style:dotted; overflow:hidden; padding-left:10px; position:relative; border-bottom-color:#ccc; background:url(img/li_bg.gif) no-repeat left center;}
+.newsList li .date,.newsList li .amount{ position:absolute; right:0; top:0; color:#666;}
+.newsList li.last{ border-bottom:0;}
+.newsList li em{ color:#fc560d;}
+
+/*重磅推荐*/
+.recommendArea{overflow:hidden; border-width:1px; border-style:solid;border-color:#f1d38a; background:url(img/rec_h2_bg.png) no-repeat right top;}
+/*招标信息*/
+.infoList{ font-size:0.9em; margin:10px;}
+.infoList ul ul { padding:0; overflow:hidden; }
+.infoList li{ border-bottom:1px dotted #ccc; padding-top:2px; padding-bottom:2px;position:relative;}
+.infoList li li{ border:none; float:left; margin-right:10px;  white-space:nowrap;}
+.infoList li .btnBoxR{ position:absolute; right:0; bottom:2px; }
+.infoList li.last{ border:none;}
+.infoList li em{color:#fc560d;}
+
+/*采购公告*/
+.announcementBox{ position:relative; border-bottom-width:1px; border-bottom-style: dotted; border-color:#ccc;overflow:hidden; margin:10px;}
+.announcementBox ul{ overflow:hidden; padding-top:0; padding-right:70px;}
+.announcementBox h3{ font-size:1.2em;}
+.announcementBox .announcementBtn{ position:absolute; top:10px;right:10px; width:60px; text-align:center;}
+.announcementBox .announcementBtn a{ margin-bottom:2px;}
+.announcementBox li{ float:left; width:49%;}
+.announcementBox li.spread{ width:100%; overflow:hidden;}
+.announcementBox li label{ float:left;}
+.announcementBox li em{ color:#fc560d;}
+.last{ border:0;}
+
+/*热门新闻、推荐供应商*/
+.hotAreaNews{line-height:20px; position:relative; margin:10px; height:60px;}
+.hotAreaNews h3{position:absolute; top:0; left:70px;}
+.hotAreaNews .hotImg{ position: absolute; left:0; top:0; width:60px; height:60px; overflow:hidden; margin-right:10px;}
+.hotAreaNews .hotDetails{ position: absolute; top:20px; right:0; left:70px;}
+/*项目进度*/
+.projectProgress{height:18px; overflow:hidden;}
+.projectProgress ul{ margin:0;}
+.projectProgress li{ float:left; font-size:0.8em; width:88px; height:18px; line-height:18px; text-align:center; overflow:hidden;}
+.projectProgress,.projectProgress li.selected,.projectProgress li.fist,.projectProgress li.center,.projectProgress li.last{ background: url(img/projectProgress.gif) no-repeat;} 
+.projectProgress{ background-position:0 0;}
+.projectProgress li.selected{ background-position:-88px -22px;}/*当前状态*/
+.projectProgress li.fist{ background-position:0 -44px; color:#fff;}/*最前*/
+.projectProgress li.center{ background-position:-88px -44px; color:#fff;}/*中间*/
+.projectProgress li.last{ background-position:-264px -44px; color:#fff;}/*最后*/
+/*帮助、指南*/
+.operationsGuide { border:2px solid #C4D9EF; height: 110px; margin-bottom:30px; background:#edf6fd;}
+.operationsGuide h3{ line-height:30px;padding-left:0px;color:#00579e;}
+.operationsGuide a{ color:#666;}
+.operationsGuide div{ float:left;}
+.operationsGuide .callCenter {border-right: 2px solid #C4D9EF;background:#fff; height:110px;margin-right: 35px;padding-left: 10px;width:320px; position:relative; }
+.operationsGuide .callCenter ul{ position:absolute; top:20px; right:10px; left:185px; _left:180px; overflow:hidden;}
+.operationsGuide .callCenter li{ float:left;width:65px; text-align:center;}
+.operationsGuide .guide {width:179px;}
+.operationsGuide .joinUs{ width:230px;}
+.operationsGuide .joinUs li{ float:left; width:50%;}
+
+/*内容标题*/
+#conTitle{ overflow:hidden; }
+#conTitle .navCurrent { margin-bottom:10px; color:#999; background:#f4f9fd; overflow:hidden; height:26px; line-height:26px; border-bottom:1px solid #c4d9ef; font-weight:bold; padding-left:10px;}
+#conTitle .navCurrent a { color:#000; display:block; float:left;  background:url(img/navCurrent_link.gif) no-repeat right center; padding-right:20px; margin-right:3px; text-decoration:none;}
+#conTitle .navCurrent a:hover { text-decoration:underline; color:#009;}
+#conTitle h3 { display:none; font:1em/1.5em "宋体"; color:#127998; padding-left:8px;}
+#conTitle .loader { font-weight:normal; color:#666;}
+
+.star{ background: url(img/starF.png) no-repeat left center;  display:inline-block; width:92px; text-indent:-9999px;}
+/*搜索*/
+.simpleSearch{background: url(img/toggle_bg.gif) no-repeat scroll center bottom transparent; height: 45px;}
+.simpleSearch ul {margin-top: 15px;}
+.simpleSearch li{float: left; margin-right: 10px;}
+/*分页*/
+.flipPage{ margin:5px 0;}

@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/*--初始化样式--*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, input, p, blockquote, th, td, form, iframe { margin:0; padding:0;}
+h1, h2, h3, h4, h5, h6 { font-size:100%;}
+ol, ul { list-style:none;}
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+img { border:0;}
+caption, th { text-align:left;}
+q:before, q:after { content:'';}
+html { width:100%; height:100%; background:#fff;}
+body { font:63% Verdana, Geneva, "宋体", sans-serif;}
+a { outline:none;}
+button { cursor:pointer;}
+iframe { filter:chroma(color=#ffffff);}
+
+/*基础样式*/
+body{ font-size:0.8em; line-height:24px;color:#333;}
+a{text-decoration:none;color:#0058a0;}
+a:hover{ color:#fc560d;}
+button{ line-height:normal; margin:0; padding:0;}
+
+/*--grid--*/
+.gridBox { overflow:hidden; width:982px; margin-bottom:10px;}
+.grid16_1,.grid16_2,.grid16_3,.grid16_4,.grid16_5,.grid16_6,.grid16_7,.grid16_8,.grid16_9,.grid16_10,.grid16_11,.grid16_12,.grid16_13,.grid16_14,.grid16_15,.grid16_16 { display:block; float:left; margin-right:10px; overflow:hidden;}
+.grid16_1{ width:52px;}
+.grid16_2{ width:114px;}
+.grid16_3{ width:176px;}
+.grid16_4{ width:238px;}
+.grid16_5{ width:300px;}
+.grid16_6{ width:362px;}
+.grid16_7{ width:424px;}
+.grid16_8{ width:486px;}
+.grid16_9{ width:548px;}
+.grid16_10{ width:610px;}
+.grid16_11{ width:672px;}
+.grid16_12{ width:734px;}
+.grid16_13{ width:796px;}
+.grid16_14{ width:858px;}
+.grid16_15{ width:920px;}
+.grid16_16{ width:982px; margin:0;}
+.alpha{ margin-left:0;}
+.omega{ margin-right:0;}

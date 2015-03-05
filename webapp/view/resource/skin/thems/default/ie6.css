@@ -1,0 +1,44 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*--浏览器兼容提示--*/
+.userTips{ background:#feebc3; padding:10px 0; text-align:center; border:1px dotted #fdbf90; width:980px; margin:auto;}
+
+/*热门新闻*/
+.hotArea{ _width:92px;}
+.infoList li{_width:100%;}
+.infoList li li{ _width:auto;}
+.brandList li{ _margin-bottom:0;}
+.expertsInfo{ display:inline;}
+.zoneSaw h2{ display:inline;}
+.navMain li{ padding:0 6px 0 4px;}
+.announcementBox h3{ clear:both;}
+.cols{ zoom:1;}
+/*PNG图片透明*/
+.recommendArea,.sysNavMain a,img,.projectProgress li{ behavior: url(view/resource/skin/thems/default/iepngfix/iepngfix.htc);}
+/*商品分类*/
+.SubCategoryBox ul.expand{ _height:120px; zoom:1;}
+/*底部*/
+.footer{ position:relative; clear:both;}
+/*在线客服*/
+#container{width:100%;}
+#container #sidebar-sugg{ position:absolute; right:2px; top:0;}
+/*搜索*/
+.conSearch{_height:40px;}
+.treeContentDiv{ float:none; overflow:hidden;}/*ie6*/
+/*系统菜单*/
+.sysNavMain li li{ width:80px;}
+.sysNavMain li.selected li.selected a{ font-weight:normal;}
+/*精品商城*/
+.jpjc_cp{zoom:1;}
+.jc_aa .jc_jiage{ width:280px;}
+.jc_wenzi{width:280px;}
+/*左列为图片展示区*/
+.imgAndForm ul{ float:left;}
+/*treeEditNav*/
+.detail .treeEditNav li{_width:50px;}
+.ui-tabs{ position:relative;}/*修复商品详情tabs上移问题*/
+.containerTableStyle{overflow : auto;}/*修复IE6下无滚动条*/
+
+
+

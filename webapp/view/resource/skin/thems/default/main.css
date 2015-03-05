@@ -1,0 +1,22 @@
+/* CSS Document */
+@import url(../base/css/core.css);/*基础样式*/
+@import url(../../../common/plug_in.css);/*控件默认样式*/
+@import url(../../base/css/form.css);/*表单样式*/
+@import url(../../base/css/button.css);/*按钮样式*/
+@import url(../../base/css/table.css);/*表格样式*/
+@import url(../../base/css/tips.css);/*提示样式*/
+@import url(../../base/css/file.css);/*文件样式*/
+@import url(../../base/css/list.css);/*列表样式*/
+@import url(../../base/css/common.css);/*公共样式*/
+
+@import url(frameStyle.css);/*主框架外观样式*/
+@import url(common.css);/*公共样式*/
+@import url(plugInEdit.css);/*自定义控件样式*/
+
+@import url(../../sysicon/sysicon.css);/*图标样式*/
+
+
+
+
+
+

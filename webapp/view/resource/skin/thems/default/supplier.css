@@ -1,0 +1,46 @@
+/* CSS Document */
+
+/*供应商焦点样式*/
+.imgPlayer{ height:230px; width:672px;}
+
+/*为什么选择阳光易购*/
+.recommendArea,.advantage{ height:220px;}
+.advantage{ border-width:1px; border-style:solid; padding:5px 10px; font-size:1.2em; background:#f6fbff; border-color:#C4D9EF; color:#0059A2;}
+.advantage h2{ font-size:1.2em; margin-bottom:10px;color:#f17d01;}
+.mostImportant{ font-size:1.3em; margin:10px 0;}
+.sRegistered,.sLogin,.sLearnMore{ background:url(img/s_learnMore.png) no-repeat; display:inline-block; text-indent:-9999px; width:90px; height:29px;}/*供应商库-免费注册、马上登录、了解更多*/
+.sRegistered{ background-position:0 0; }
+.sLogin{ background-position:-90px 0; }
+.sLearnMore{ background-position:-180px 0; }
+.sRegistered:hover{ background-position:0 -32px; }
+.sLogin:hover{ background-position:-90px -32px; }
+.sLearnMore:hover{ background-position:-180px -32px; }
+
+/*推荐供应商、供应商资讯*/
+.recSuppliers,.supplierInfo{ height:280px;}
+/*供应商列表*/
+.sipplierShowList{ overflow:hidden; margin:10px; zoom:1;}
+.sipplierShowList li{ position:relative; width:207px; margin-right:10px; margin-bottom:5px; float:left; overflow:hidden;}
+.sipplierShowList li.omega{ margin-right:0;}
+.sipplierShowList li .hotImg{ position:absolute; top:0; left:40px; width:127px; height:127px;overflow:hidden;}
+.sipplierShowList li h3{ padding-top:130px; text-align:center;}
+.sipplierShowList .hotPrice{ text-align:left; color:#666; }
+.sipplierShowList li .btnBoxR{ position:absolute; right:0; bottom:2px;}
+/*品目分类*/
+.industryClassBox{ overflow:hidden;}
+.industryClassBox h3{ font-size:1.6em; padding:5px 10px; text-align:center; background:#f6fbff; border-bottom:1px solid #bedded;}
+
+.categoryItem{ overflow:hidden; width:670px;  background:#f6fbff; border-bottom:1px solid #bedded; line-height:26px; }
+.categoryItem h4 {float:left;width:23px;}
+.categoryItem h4 a {display:inline-block; width:23px; text-align:center; font-size:1.2em; color:#000; }
+.categoryItem h4 span {display:inline-block;width:20px;cursor:pointer;}
+
+.categoryContent { margin-left:23px; background:#fff; overflow:hidden; padding:10px;border-left:1px solid #bedded; min-height:110px;}
+.subcategoryList li { overflow:hidden; border-bottom:1px dashed #e5e5e5; }
+.subcategoryList li.last{ border-bottom:0;}
+.subcategoryList h5 {float:left;display:inline; padding-right:7px;margin-right:3px;font-size:14px;font-weight:700;}
+.subcategoryList div {display:inline;padding-left:3px; overflow:hidden;}
+.subcategoryList div a { padding-right:10px; white-space:nowrap;}
+.subcategoryList div a:link, .subcategoryList div a:visited {color:#666;}
+.subcategoryList div a:hover{color:#fc560d;}
+
