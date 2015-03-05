@@ -1,0 +1,32 @@
+
+div .fronAjaxPager .pages{/*The ul element of the pager*/
+	height:30px; line-height:20px; margin:10px;float:right;
+}
+ div .fronAjaxPager .pages ul {margain-right:600px;}
+div .fronAjaxPager .pages li{border:0; float:left;}
+div .fronAjaxPager .pages li a	{border:1px solid #cbc6c6; padding:2px;}
+div .fronAjaxPager .pageButton{/*The buttons of the pager (1, 2, 3...)*/
+	margin:5px;
+}
+	
+div .fronAjaxPager .activeButton{/*The button which is active*/ 
+	 margin-top:5px; 
+	
+}
+div .fronAjaxPager .activeButton a{background:#ffd595; }
+	
+div .fronAjaxPager .firstButton{/*The first button*/
+	
+}
+
+div .fronAjaxPager .lastButton{/*The last button*/
+
+}
+
+div .fronAjaxPager .goButton{/*The go button*/
+	
+}
+
+div .fronAjaxPager .backButton{/*The back button*/
+
+}
