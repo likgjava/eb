@@ -1,0 +1,347 @@
+﻿@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: base 基础样式
+Design: OTiger
+Email: fanhy@gpcsoft.com
+Remark: 通用样式文件。
+--------------------------------------------------------------------------------------------------------- */
+/*隐藏元素*/
+.eleHide { display:none;}
+
+h3,h4,h5,h6 { padding:2px 0;}
+
+/*链接样式*/
+a{text-decoration:none;}
+a:hover{ color:#ea410a; text-decoration:underline; cursor:hand;}
+/*--------------
+	页面搜索
+----------------*/
+.conSearch { border:1px solid #6dabbe; padding:10px; -moz-border-radius:5px;　-webkit-border-radius:5px;　border-radius:5px; position:relative; margin:10px auto;}
+	.conSearch h4 { font:bold 1em/1.5em "宋体"; padding:0 5px; position:absolute; top:-10px; left:8px; background:#fff;}
+	.conSearch ul { overflow:hidden;}
+	.conSearch li { float:left; line-height:30px; white-space:nowrap;}
+	.conSearch label { display:inline-block; text-align:right; padding-left:10px; width:7em;}
+	.conSearch .operationBtnDiv { text-align:left; padding:0; padding-left:5px;}
+	.conSearch .operationBtnDiv button { background:url(../img/icon/sysIconBtn/sibMagnifier.png) no-repeat left; padding-left:25px; line-height:normal;margin-top:-12px;}
+	.conSearch .hightSearchBtn { clear:both; padding-left:8em;}
+	.conSearch .hightSearch { display:none;}
+	
+@charset "utf-8";
+/*项目驱动头部*/
+.projectHead{background:#eff5fe; padding:5px 10px; border:#99bbe8 1px solid; zoom:1;}
+.projectInfo{overflow:hidden; line-height:30px; height:30px; }
+.projectInfo h5{ float:left; margin-right:10px; background:none;}
+.projectInfo li{ float:left; padding:0 10px;}
+.projectInfo strong{ font-weight:normal; color:red;}
+
+/*===项目驱动===*/
+#projectTitle {line-height:30px; padding:0 10px; font-size:14px;}
+#projectInfo { display:none}/*此样式尽量在页面添加eleHide样式代替*/
+#projectNav { background:#fff; padding:10px;}
+#projectNav ul {position:relative; z-index:2;height:35px;}
+#projectNav ul ul{ height:auto;}
+#projectNav li { float:left; padding-bottom:20px; width:6em; background:url(../img/projectNav.png) no-repeat center -532px; text-align:center; cursor:pointer; position:relative; z-index:2;}
+#projectNav li.navtitle{ background:none; width:2em; *width:3em;}
+#projectNav li.navtitle p{ background:none; border:0; border-right:1px dotted #ccc;padding:0; width:80px;line-height:15px;}
+
+/*提示说明*/
+.projectTips{background:#ffffcc; padding:10px;clear:both; margin-top:5px;}
+
+/*已完成图标*/
+#projectNav li.pCompletedF { background-position:center -35px;}/*头部*/
+#projectNav li.pCompletedC { background-position:center -185px;}/*中间*/
+#projectNav li.pCompletedE { background-position:center -335px;}/*尾部*/
+
+/*进行中图标*/
+#projectNav li.pGoingF { background-position:center 15px; margin-left:50px}/*头部*/
+#projectNav li.pGoingC { background-position:center -135px;}/*中间*/
+#projectNav li.pGoingE { background-position:center -285px;}/*尾部*/
+
+/*未完成图标*/
+#projectNav li.pFirst {background-position:center -489px;}/*头部*/
+#projectNav li.pEnd {background-position:center -579px;}/*尾部*/
+
+#projectNav li ul { display:none; width:9em; text-align:left; position:absolute; top:33px; left:-1em;  background:#fff; border:2px solid #7b9ebf; }
+#projectNav li:hover a { color:#000;}
+#projectNav li:hover li { color:#000; border-bottom:#ddd 1px solid;}
+#projectNav li:hover li:hover { background:#f9f9f9; color:#000;}
+#projectNav li ul ul { top:0; left:9em;}
+#projectNav li li { float:none; padding:5px; text-align:left; background-image:none; width:auto;}
+#projectNav li span { background:url(../../sysicon/16/bullet_arrow_down.png) no-repeat right; display:block; padding-right:15px;}
+#projectNav li li span { background:url(../../sysicon/16/bullet_arrow_right.gif) no-repeat right;}
+#projectNav a { display:block; color:#315e88; text-decoration:none;hide-focus:expression( this.hideFocus=true ); outline:none;}
+#projectNav a:hover { color:#fff;}	
+
+/*已完成的子任务*/
+#projectNav li ul li.completed{ background:#ccffcc;}
+#projectNav li ul li.completed:hover{ background:#ccffcc;}
+
+/*未开始的子任务*/
+#projectNav li ul li.notstarted{ background:#f2f2f2;}
+#projectNav li ul li.notstarted:hover{background:#f2f2f2;}
+
+/*进行中的子任务*/
+#projectNav li ul li.onGoing{ background:#ffffcc;}
+#projectNav li ul li.onGoing:hover{background:#ffffcc;}
+
+/*多行排序*/
+#projectNav #projectNav1 { z-index:10;}
+#projectNav #projectNav2 { z-index:9;}
+#projectNav #projectNav3 { z-index:8;}
+#projectNav #projectNav4 { z-index:7;}
+#projectNav #projectNav5 { z-index:6;}
+#projectNav #projectNav6 { z-index:5;}
+#projectNav #projectNav7 { z-index:4;}
+#projectNav #projectNav8 { z-index:3;}
+#projectNav #projectNav9 { z-index:2;}
+#projectNav #projectNav10 { z-index:1;}
+
+/*项目驱动主要内容容器*/
+#projectContent{ margin:10px 0; overflow:hidden;}
+
+/*项目驱动辅助导航*/
+#projectSub {width:130px; border:#99bbe8 1px solid;float:left; line-height:22px;}
+#projectSub h5{ background:url(../img/mDiv.gif) repeat-x; height:23px; line-height:23px;border-bottom:#ccc 1px solid; }
+/*UL*/
+#projectSub ul { background:#eff5fe;}
+#projectSub ul ul { display:none; height:auto;}
+#projectSub li.selected ul { display:block;}
+/*LI*/	
+#projectSub li {line-height:24px;text-indent:2em;border-bottom:#ccc 1px dotted;}
+#projectSub li.selected { font-weight:bold; background:url(../img/navCurrent_link.gif) no-repeat 8px center; }
+/*A*/
+#projectSub a { display:block;hide-focus:expression( this.hideFocus=true ); outline:none; text-decoration:none; color:#000;}
+#projectSub li.selected a{ color:#cc0000;}
+#projectSub a:hover{ color:#cc0000;}
+#projectMain .BtnDiv{ text-align:right; padding:0 10px; border:#ccc solid 1px; height:22px;background:url(../img/mDiv.gif) repeat-x; line-height:22px; border-bottom:none;}
+#projectMain{ margin-left:142px;}
+
+/*--------------项目驱动-垂直----------------*/
+#projectNavV  {border:1px solid #99bbe8;width:100px;}
+#projectNavV h5 {border-bottom:1px solid #ccc; background:f5f5f5;}
+#projectNavV ul{ padding:5px;}
+#projectNavV ul li {text-indent:12px; line-height:22px;}
+#projectNavV ul li.now {background:url(../img/now.gif) no-repeat scroll left center transparent;}
+#projectNavV a:hover,#projectNavV ul li.now a {color:#E17806;}
+#projectNavV ul li.future {background:url(../img/future.gif) no-repeat scroll left center transparent;}
+
+/*
+ * jQuery UI Progressbar 1.8.6
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Progressbar#theming
+ */
+.ui-progressbar { height:2em; text-align: left; }
+.ui-progressbar .ui-progressbar-value {margin: -1px; height:100%; }
+		/*项目驱动导航*/
+		#projectSub {width:130px; border:#ccc 1px solid;float:left;}
+			/*UL*/
+			#projectSub ul {}
+			#projectSub ul ul { display:none; height:auto;}
+				#projectSub li.selected ul { display:block;}
+			/*LI*/	
+			#projectSub li { background:#e9f1f6 url(../../sysicon/16/add.png) no-repeat 95% 4px;line-height:24px;}
+			#projectSub li.selected {background:#ebf6ff; text-align:center; }
+			#projectSub li.selected li { background:#fff url(../../sysicon/16/page.png) no-repeat 10px center; text-indent:10px; text-align:left;}
+			#projectSub li.selected li.selected {background:#fff url(../img/tick.png) no-repeat 10px center;}
+			/*用于项目工作计划的二级菜单 Created on 2011-4-18 16:26 by zhouzhanghe */
+			#projectSub li.selected li.notstart {background:#f2f2f2;}
+			#projectSub li.selected li.notstart a {color:#333; background:url(../img/down_g.png) no-repeat 6px center;}
+			#projectSub li.selected li.ongoing {background:#ffff73;}
+			#projectSub li.selected li.ongoing  a{background:url(../img/onGoing.png) no-repeat 6px center; font-weight:bold; color:#d25504;}
+			#projectSub li.selected li.finish {background:#ccffcc;}
+			#projectSub li.selected li.finish a{background:url(../img/tick.png) no-repeat 6px center; color:green;}
+			#projectSub li.warning a{background: url(../img/error.png) no-repeat 8px center; border-bottom:none;}/*异常处理*/
+			#projectSub li.package a{background: url(../img/package.png) no-repeat 8px center; border-bottom:none;}/*项目备案*/
+			/*A*/
+			#projectSub a { display:block;padding-left:1em; hide-focus:expression( this.hideFocus=true ); outline:none; text-decoration:none; color:#000;}
+			#projectSub li.selected a { color:#000;}
+			#projectSub li.selected li a { padding-left:2em; font-weight:normal; color:#315e88}
+			
+			#projectSub li.selected li.selected a {}
+			
+			#projectMain .BtnDiv{ text-align:right; padding:0 10px; border:#ccc solid 1px; height:25px;background:#ebf6ff; line-height:22px;margin-bottom:4px;}/*操作按钮右对齐*/
+			/*用于项目工作计划的三级菜单 Created on 2011-4-18 16:26 by zhouzhanghe */
+			#projectMain div.BtnDiv a.notstart { background-image:url(../../sysicon/projectPlan/001_21.gif);padding-right:15px;color:#000;text-decoration: none; cursor: default;}
+			#projectMain div.BtnDiv a.ongoing { background-image:url(../../sysicon/projectPlan/1.png);padding-right:15px;}
+			#projectMain div.BtnDiv a.finish { background-image:url(../../sysicon/projectPlan/001_06.gif);padding-right:15px;}
+			#projectMain div.BtnDiv a.selected { background-image:url(../../sysicon/16/page_go.png);padding-right:15px;}
+	
+			#projectMain{ margin-left:142px;}
+			
+			/*待办任务-by liuly*/
+			.toDoTasks{background:#fafdff url(../img/account_info_bg.png) repeat-x left bottom; width:150px;border:#accdf4 1px solid; border-bottom:none; line-height:24px; position:fixed; z-index:999; bottom:35px; right:0px;}
+			.toDoTasks ul{}
+			.toDoTasks h5{ font-size:15px;line-height:28px;font-weight:bold;l4px; text-indent:10px; height:28px;background: url(../../skin05/img/1_03.gif) repeat-x;}
+			.toDoTasks li{border-bottom:#8dadcb 0px solid;}
+			.toDoTasks li a{ padding-left:30px;background:#f3f9fd; display:block;font-size:12px;}
+			.toDoTasks li a:hover,.toDoTasks li a.selected{background:#fff url(../img/tableTh_bg.gif) repeat-x left bottom;}
+			.toDoTasks .close{text-indent:-9999px; position:absolute; top:3px; right:2px;}
+		
+/*--------------
+	工作记录
+----------------*/
+.operationLog { border:1px solid #bfdbe4; background:#fff url(../img/tableTh_bg.gif) repeat-x;}
+	.operationLog h5 { margin:0; padding-left:5px; height:25px; line-height:25px; border:0; color:#315e88;}
+	.operationLog h5 span { display:inline-block;}
+	.operationLog .logTitle { display:none; background:#cde9f0; font-weight:bold; border-top:1px solid #bfdbe4; line-height:25px;}
+	.operationLog .logContent { display:none; background:#eff9fb; }
+	.logTitle span,.logContent span { display:inline-block; padding:3px; text-align:center; vertical-align:top;}
+	.operationLog li { border-bottom:2px solid #fff;}
+	.operationLog .reply { clear:both; display:block; background:#f4fdff; margin:2px 0 0 110px;}
+	.operationLog .schedule { width:100px;}/*项目进度*/
+	.operationLog .time { width:120px;}/*操作时间*/
+	.operationLog .organization { width:9em; text-align:left;}/*所属机构*/
+	.operationLog .department { width:6em;}/*所属部门*/
+	.operationLog .name { width:5em;}/*操作人员*/
+	.operationLog .telephone { width:100px;}/*联系电话*/
+	.operationLog .workingInfo { width:220px; text-align:left;}/*工作信息－留言或备注*/
+	.operationLog .replyInfo { width:20%; text-align:left;}/*回复信息*/
+	.operationLog .functionBtnDiv { padding:0 3px; text-align:left;}/*操作容器*/
+/*--------------
+	操作空间
+----------------*/
+.operationDiv { padding:5px; border:1px solid #bfdbe4;}
+	.operationDiv legend { font:bold 1em/1.5em "宋体"; padding:0 5px; margin-bottom:10px; color:#315e88;}
+/*--------------
+	页面结构
+----------------*/
+.frameMainSub { overflow:hidden;}
+	.frameMain {overflow:auto; float:left; border:1px solid #7dbac7;}
+	.frameSub,
+	.frameSupp {overflow:hidden; border:1px solid #7dbac7;}
+	.frameMain > *,.frameSub > *,.frameSupp > * {margin:5px 0;}
+	.frameSub{ margin-right:0; margin-left:4px;}
+	
+	/*修改.frameMs12/.frameMs21比例为3：7*/
+	.frameMs12 .frameMain { width:30%;}
+	.frameMs12 .frameSub { margin-left:31%;}
+	.frameMs21 .frameMain { width:70%;}
+	.frameMs21 .frameSub { margin-left:71%;}
+	.frameMs11 .frameMain { width:50%;}
+	.frameMs11 .frameSub { margin-left:51%;}	
+	
+	.frameMs121 .frameMain { width:50%; margin-left:25%; float:none;}
+	.frameMs121 .frameSub { width:24%; float:left;}
+	.frameMs121 .frameSupp { width:24%; float:right;}
+	
+	/*新增比例为7：3 by-liuly*/
+	.frameMs73 .frameMain { width:60%; border:0;}
+	.frameMs73 .frameSub { margin-left:61%; border:0;}
+	.noBorder{ border:0;}
+	.frameMs73 .frameMain > *,.frameMs73 .frameSub {}
+    
+	.frameMsChange .frameMain { width:45%}
+	.frameMsChange .frameSub { float:right; width:45%}
+	.frameMsChange .frameOperation { margin:0 0 0 45%; width:10%;*width:8%; line-height:1.5em; text-align:center;}
+	/*增加《带操作功能布局》功能按钮样式，原按钮在窗口缩小时会变型，在按钮文字小时会排成一列。 by lijx*/
+	/*增加margin:3px 0;按钮之间空隙。 by lijx*/
+	.frameMsChange .frameOperation button{ width:70%;margin:3px 0;}
+	
+.frameParallel { overflow:hidden;}
+	.framePaCon { float:left; border:1px solid #7dbac7;}
+	.framePaCon > * { margin:5px;}
+	
+	.frame2Pa .framePaCon { width:49.5%;}
+	.frame2Pa div:first-child + div { float:right;}
+	
+	.frame3Pa .framePaCon { width:33%;} 
+	.frameParallel div:first-child { margin-right:1px;}
+	.frameParallel div:first-child + div { margin-right:1px;}
+	
+/*--------------
+	树
+----------------*/
+/*treeBtn by lijx*/
+
+.treeBtn { overflow:hidden;}/*清除li浮动*/
+.treeBtn li { float:left;}/* 左浮动列表，使之并列 */
+.treeBtn li a { display:block; overflow:hidden;}/* 1.转换为块对象，因为内联对象不可以包含块对象span。2.清除span浮动。 */
+.treeBtn li a span { cursor:pointer;}/* 设置光标为手形 */
+
+.treeBtn a span { width:20px; height:16px; overflow:hidden; display:block; float:left; background:url(../img/icons.gif) no-repeat; margin:0 3px 0 0 }/* 负边距用于特殊情况，尽量少用 */
+
+.treeBtn a.upMove span { background-position:0px 0px; }
+.treeBtn a.downMove span { background-position:0px -16px; }
+.treeBtn a.open span { background-position:0px -32px; }
+.treeBtn a.close span { background-position:0px -48px; }
+.treeBtn a.ok span { background-position:0px -64px; }
+.treeBtn a.refresh span { background-position:0px -80px; }
+.treeBtn a.authorize span { background-position:0px -96px; }
+.treeBtn a.unAuthorize span { background-position:0px -112px; }
+.treeBtn a.add span { background-position:0px -128px; }
+.treeBtn a.del span { background-position:0px -144px; }
+.treeBtn a.undo span { background-position:0px -160px; }
+.treeBtn a.redo span { background-position:0px -176px; }
+.treeBtn a.smallOpen span { background-position:0px -192px; }
+.treeBtn a.smallClose span { background-position:0px -208px; }
+.treeBtn a.base span { background-position:0px -224px; }
+
+/*电子监督*/
+#electronicMonitoring {}
+#electronicMonitoring li{ border:#708795 1px solid; width:auto; float:left; margin-right:10px; margin-bottom:10px; padding:3px 5px 3px 24px; background:#f3faff url(../../sysicon/16/resultset_next.png) no-repeat 5px center;}
+#electronicMonitoring li span{ padding:0 5px;}
+#electronicMonitoring li a span{ display:none;}
+#electronicMonitoring a{text-decoration:none; color:#4e84b8;}
+#electronicMonitoring a.modify{ background:url(../../sysicon/16/pencil.png) no-repeat 5px center; padding-left:24px;}
+#electronicMonitoring a.delete{ background:url(../../sysicon/16/cross.png) no-repeat 5px center; padding-left:24px;}
+
+/*我的桌面*/
+.infocenter {border:1px solid #ccc;padding: 10px;position: relative;margin-bottom:10px;}
+
+/*角色信息*/
+.infocenter .info {line-height: 23px;}
+.infocenter .info .sstrong {font-family: 'Microsoft Yahei', 'Arial', sans-serif;font-size: 21px;line-height: 1em;}
+.infocenter .info a{ margin-right:10px;}
+/*我的桌面提示公告*/
+.infocenter .notice {border: 1px solid #C4D6DA; background:#f0f6f9; height:50px; margin:5px 0; padding:5px;}
+.infocenter .notice h5{ float:left; margin-right:10px;}
+.infocenter .notice li{ float:left;}
+
+/*图表控件*/
+.chartDiv{ border:#ccc 1px solid; overflow:hidden;}
+
+/* 星级评分 by-liuly 20110302 */
+.shop-rating { height: 25px; overflow: hidden;  zoom: 1; padding: 2px 0px;  position: relative;}
+.shop-rating span { height: 23px;display: block; line-height: 23px;float: left;}
+.shop-rating li{ display:inline; _position:static;}
+.shop-rating span.title { width: 125px;text-align: right; margin-right: 5px;}
+.shop-rating ul { float: left;	margin:0;padding:0}
+.shop-rating .result { margin-left: 10px;padding-top: 2px;}
+.shop-rating .result span {color: #ff6d02;}
+.shop-rating .result em {color: #f60;  font-family: arial;  font-weight: bold;}
+.shop-rating .result strong {color: #666666;font-weight: normal;}
+.rating-level,
+.rating-levelview,
+.rating-level a { background: url(../../base/img/star_v1.gif) no-repeat scroll 1000px 1000px;}
+.rating-level {background-position: 0px 0px;width: 250px; height: 23px; position: relative;float: left;}
+.rating-levelview {background-position: 0px 0px;width: 250px; height: 23px; position: relative;z-index: 1;}
+
+.rating-level a {line-height: 23px;height: 23px;position: absolute;top: 0px;left: 0px;text-indent: -999em;*zoom: 1;outline: none;}
+.rating-level a.aa1-star {width:10%;z-index: 11;}
+.rating-level a.aa2-stars {width:20%;z-index: 10;}
+.rating-level a.aa3-stars {width:30%;z-index: 9;}
+.rating-level a.aa4-stars {width:40%; z-index: 8;}
+.rating-level a.aa5-stars {width:50%;z-index: 7;}
+.rating-level a.aa6-stars {width:60%;z-index: 6;}
+.rating-level a.aa7-stars {width:70%;z-index: 5;}
+.rating-level a.aa8-stars {width:80%;z-index: 4;}
+.rating-level a.aa9-stars {width:90%;z-index: 3;}
+.rating-level a.aa10-stars {width:100%;z-index: 2;}
+
+.rating-level .current-rating, .rating-level a:hover{background-position:0 -28px;}
+.rating-level a.aa1-star:hover,
+.rating-level a.aa2-stars:hover,
+.rating-level a.aa3-stars:hover,
+.rating-level a.aa4-stars:hover,
+.rating-level a.aa5-stars:hover,
+.rating-level a.aa1-star.current-rating,
+.rating-level a.aa2-stars.current-rating,
+.rating-level a.aa3-stars.current-rating,
+.rating-level a.aa4-stars.current-rating,
+.rating-level a.aa5-stars.current-rating{background-position:0 -116px;}

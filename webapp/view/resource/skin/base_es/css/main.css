@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: elegantLakeBlue 优雅湖蓝
+Design: OTiger
+Email: fanhy@gpcsoft.com
+Remark: 皮肤主题主样式表文件，用于引用组装相应主题下的其他样式表文件。
+--------------------------------------------------------------------------------------------------------- */
+/* 基础样式引用 开始 */
+
+@import url(../../base/css/init.css);/*格式化样式表文件，用于初始化浏览器标签默认样式，以达到统一视觉效果的目的。*/
+
+@import url(../../base/css/common.css);/*通用样式表文件，用于设置常用、通用的样式。*/
+
+@import url(../../base/css/list.css);/*列表样式，用于设置列表样式。*/
+
+@import url(../../base/css/button.css);/*按钮样式表，用于设置系统功能按钮样式。*/
+
+@import url(../../base/css/icon.css);/*图标样式表，用于设置系统应用图标样式。*/
+
+@import url(../../base/css/file.css);/*文件样式表，用于设置公告文件样式。*/
+
+/* 基础样式引用 结束 */
+
+/* 自定样式 开始 */
+
+@import url(frameStyle.css);/*框架页面样式表，用于设置主框架外观样式。*/
+
+@import url(layout.css);/*结构样式表，用于设置功能页各种应用结构。*/
+
+@import url(form.css);/*表单样式表，用于设置系统表单样式。*/
+
+@import url(table.css);/*表格样式表，用于设置系统表格样式。*/
+
+@import url(tips.css);/*提示样式表，用于设置系统提示样式。*/
+
+@import url(baseEdit.css);/*基础样式修改，用于修改系统基础样式样式。*/
+
+@import url(plugInEdit.css);/*控件修改样式表，用于修改系统控件默认样式。*/
+
+@import url(supplierAgreement.css);/*外网用例样式。*/
+
+
+
+/* 自定样式 结束 */
+
+/*用例样式，仅用于演示DEMO 开始*/
+@import url(../../base/css/ECPsDemo.css);
+/*用例样式，仅用于演示DEMO 结束*/
+
+
+
+
+

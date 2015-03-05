@@ -1,0 +1,22 @@
+﻿@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: base 基础样式
+Design: OTiger
+Email: fanhy@gpcsoft.com
+Remark: 提示样式表，用于设置系统提示样式。
+--------------------------------------------------------------------------------------------------------- */
+/*提示、说明，用于用户操作提示*/
+.userTips { padding:5px; background:#FFC; color:#C00; border-bottom:1px dashed #6dabbe; margin-bottom:5px;}
+	#sysContainer .userTips { min-height:128px; line-height:2em; border:1px dashed #6dabbe; font-size:14px; background:#FFC url(../img/icon/tips_error.png) no-repeat 10px 10px; padding:20px 10px 10px 140px;}
+.sysCaption { padding:10px; background:#f7fdff; color:#666; margin-bottom:5px;}
+	.sysCaption li { line-height:2em; list-style:inside disc;}
+	.sysCaption p { text-indent:2em;}
+
+/*强调、提示、突出文字内容*/
+em,.eleEm { font-weight:bold;}/*强调*/
+strong,eleStrong { font-weight:bolder; color:#C00;}/*着重强调，比em语气更重*/
+.highlight { color:#F00;}/*高亮 红色*/
+.greenHighlight { color:#090;}/*高亮 绿色*/
+.grayHighlight{ color:gray;}/*高亮 灰色*/

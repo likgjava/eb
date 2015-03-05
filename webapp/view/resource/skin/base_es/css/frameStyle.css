@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: elegantLakeBlue 优雅湖蓝
+Design: OTiger
+Email: fanhy@gpcsoft.com
+Remark: 框架页面样式表，用于设置主框架外观样式。
+--------------------------------------------------------------------------------------------------------- */
+/*内容容器*/
+body { font:12px Verdana, Geneva, "宋体",sans-serif;}
+#sysContainer { position:relative;}
+	/*----全屏变换----*/
+	#sysContainer.fullScreen #sysBranding { height:25px;}
+	#sysContainer.fullScreen #sysBranding h1 { background:url(../img/ECPsbase_logo_s.gif) no-repeat; width:124px; height:25px;}
+	#sysContainer.fullScreen #sysBranding .versionSys { position:absolute;display:none; top:4px; left:85px; font:0.8em Verdana, Geneva, sans-serif}
+	#sysContainer.fullScreen #contentSub,
+	#sysContainer.fullScreen #navMain { display:none;}
+	
+	/*----导航变换----*/
+	#sysContainer.noSub #contentSub { display:none;}
+	#sysContainer.noSub #contentMain { margin-left:0;}
+	
+	/*----系统标识----*/
+	#sysBranding { height:55px; background:url(../img/sysBranding_bg.gif) repeat-x; border-bottom:3px solid #ffba00;}
+		#sysBranding h1 { background:url(../img/ECPsbase_logo.gif) no-repeat; width:246px; height:55px;}
+			#sysBranding h1 span { display:none;}
+		#sysBranding .company {}
+		#sysBranding .versionSys { position:absolute; top:20px; left:150px; color:#e51b24;display:none;}
+		#sysBranding .dataSys { display:none;}
+		#sysBranding .sysSlogan { display:none;}
+		
+	/*----系统主导航----*/
+	#navMain { overflow:hidden; position:absolute; top:34px; left:250px; font:1.3em "宋体";}
+		#navMain li { float:left; margin-right:1em;}
+		#navMain a { color:#315e88; text-decoration:none; hide-focus:expression( this.hideFocus=true ); outline:none;}
+		#navMain a:hover { color:#e51b24;}
+		#navMain li.selected { border-bottom:5px solid #ffba00;}
+		#navMain li.selected a { font-weight:bold; color:#e51b24;}
+		
+	/*----登录信息----*/
+	#loginInfo { position:absolute; top:5px; right:265px; color:#e1eff2;}
+		#loginInfo p { display:inline;}
+		
+	/*----系统工具----*/
+	#sysTools { position:absolute; top:0; right:5px; z-index:20; width:230px; height:24px; background:url(../img/sysTools_bgR.gif) no-repeat top right;}
+	#sysTools ul { height:22px; background:url(../img/sysTools_bgL.gif) no-repeat top left; padding:2px 0 0 10px;}
+	#sysTools li { float:left; margin-left:5px;}
+	#sysTools #screenControl { padding-right:10px; background:url(../img/ECPsbase_sysToolsSeparator.gif) no-repeat right;}
+	
+	/*工具图标*/
+	#sysTools span { display:block; float:left; width:18px; height:18px; background:url(../img/icon/sysTools_icon.gif) no-repeat -18px 0; text-indent:-9999px; overflow:hidden; cursor:pointer;}
+		#sysTools #navSubControl span {}
+		#sysTools #navSubControl.show span { background-position:-36px 0;}
+		#sysTools #screenControl span { background-position:-54px 0;}
+		#sysTools #myDesktop span { background-position:-72px 0;}
+		#sysTools #optionHistory span { background-position:-90px 0;}
+		#sysTools #interfaceControl span { background-position:-108px 0;}
+		#sysTools #refreshBtn span { background-position:-126px 0;}
+		#sysTools #exitBtn span { background-position:-144px 0;}
+		#sysTools #helpBtn span { background-position:-160px 0;}
+		
+		#sysTools #navSubControl span:hover { background-position:-18px -18px;}
+		#sysTools #navSubControl.show span:hover { background-position:-36px -18px;}
+		
+		#sysTools #screenControl span:hover { background-position:-54px -18px;}
+		#sysTools #myDesktop span:hover { background-position:-72px -18px;}
+		#sysTools #optionHistory span:hover { background-position:-90px -18px;}
+		#sysTools #interfaceControl:hover span:hover { background-position:-108px -18px;}
+		#sysTools #refreshBtn span:hover { background-position:-126px -18px;}
+		#sysTools #exitBtn span:hover { background-position:-144px -18px;}
+		#sysTools #helpBtn span:hover { background-position:-160px -18px;}
+		
+/*--------*/
+	#sysContent { overflow:hidden; padding:5px; border-bottom:1px solid #6dabbe;}
+		/*导航菜单*/
+		#contentSub { float:left; width:160px; padding:10px 1px 10px 1px; background:#c5e7ee; border:1px solid #6dabbe; font:bold 1.2em/26px "宋体"; font-size:1.2em; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;}
+			/*UL*/
+			#contentSub ul { background:#dcf1f6;}
+			#contentSub ul ul { display:none; height:auto;}
+				#contentSub li.selected ul { display:block; border-bottom:1px solid #65c3dc;}
+			/*LI*/	
+			#contentSub li { background:url(../img/navSub_2Menu_bg.gif) repeat-x; border-top:1px solid #e6f5f9;}
+			#contentSub li.selected { background-image:url(../img/navSub_2Menu_bg_selected.gif);}
+			#contentSub li.selected li { background:#e6f5f9; border-bottom:1px dotted #fff;}
+			#contentSub li.selected li.selected { border-bottom:1px solid #ffba00;}
+			/*A*/
+			#contentSub a { display:block; height:26px; padding-left:1em; hide-focus:expression( this.hideFocus=true ); outline:none; text-decoration:none; color:#315e88; background: url(../img/icon/navSub_dot.gif) no-repeat 5px 8px;}
+			#contentSub li.selected a { color:#e80000; background-position:5px -15px;}
+			#contentSub li.selected li a { padding-left:2em; background: url(../img/icon/navSub_dot.gif) no-repeat 20px 8px; font-weight:normal; color:#315e88}
+			
+			#contentSub li.selected li.selected a { color:#e80000; background-color:#eef9fb; background-position:right -15px;}
+		
+		/*页面内容*/
+		#contentMain { margin-left:170px;}
+		#contentSupp { display:none;}/*无内容*/		
+		
+/*--------*/
+	#sysInfo { text-align:right; padding:10px; color:#999;}
+		#sysInfo a { text-decoration:none; color:#999; margin:0 5px;}
+		#sysInfo a:hover { color:#f00; text-decoration:underline;}
+	
+/*装饰扩展*/
+#extraDiv { display:none;}/*无内容*/
+	#extraDiv1 {}
+	#extraDiv2 {}
+	#extraDiv3 {}
+	#extraDiv4 {}
+	#extraDiv5 {}
+	#extraDiv6 {}
+
+
+

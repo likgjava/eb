@@ -1,0 +1,108 @@
+﻿@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: elegantLakeBlue 优雅湖蓝
+Design: OTiger
+Email: fanhy@gpcsoft.com
+Remark: 控件修改样式表，用于修改系统控件默认样式。
+--------------------------------------------------------------------------------------------------------- */
+/*flexigrid表格控件样式修改
+-------------------------------------------------------------------*/
+/*输入框修复*/
+.flexigrid input[type="text"],.flexigrid input[type="password"] { width:auto;}
+.flexigrid select { width:auto;}
+/*树列表行高修复*/
+.flexigrid div.bDiv .gridTree td div{ padding-top:0; padding-bottom:0; }
+.flexigrid  div.bDiv td div .treeGridIcon { height:25px;}
+
+.flexigrid { background:#fff; }
+.flexigrid div.btnseparator { border-left:1px solid #bfdbe4; border-right:1px solid #f4fdff; }/*分隔线*/
+
+.flexigrid tr td.sorted { background:#e8f4f7; border-bottom: 1px solid #e8f4f7;}
+.flexigrid tr.erow td { background:#f0f8fa;}
+.flexigrid tr.erow td.sorted { background:#d9eaef; border-bottom: 1px solid #d9eaef;}
+
+/*标题栏*/
+.flexigrid div.mDiv { height:25px; background:#fff url(../img/tableTh_bg.gif) repeat-x; color:#000; border:1px solid #bfdbe4; border-bottom:1px solid #e6f5f9; }
+/*工具条*/	
+.flexigrid div.tDiv { background:#def0f5 url(../img/tableTools_bg.gif) repeat-x left bottom; border:1px solid #bfdbe4; border-bottom:1px solid #f4fdff; border-top:0; }
+.flexigrid div.fbutton:hover, .flexigrid div.fbutton.fbOver { border: 1px solid #bfdbe4; }/*按钮外边*/
+.flexigrid div.fbutton:hover div, .flexigrid div.fbutton.fbOver div { border: 1px solid #f4fdff; }/*按钮内边*/
+/*下拉菜单*/
+.flexigrid div.nDiv { background:#fff; border:1px solid #6dabbe; padding:1px; }
+	.flexigrid div.nDiv table { border:0; background:#f7fdff; margin:0; }
+	.flexigrid div.nDiv tr:hover td, .flexigrid div.nDiv tr.ndcolover td { background:#6dabbe; color:#fff; border: 1px solid #a8d8eb; }
+	.flexigrid div.nDiv td { border:0; padding:5px;}
+	.flexigrid div.nDiv td.ndcol1, .flexigrid div.nDiv td.ndcol2, .flexigrid div.nDiv tr:hover td.ndcol1, .flexigrid div.nDiv tr.ndcolover td.ndcol1, .flexigrid div.nDiv tr:hover td.ndcol2, .flexigrid div.nDiv tr.ndcolover td.ndcol2 { border:0; }
+.flexigrid div.nBtn { background:#e6f5f9; width:22px; height:22px; margin-top:0; border:1px solid #bfdbe4;}/*下拉按钮*/
+	.flexigrid div.nBtn div { width:20px; height:20px; border:1px solid #f4fdff;}
+	.flexigrid div.nBtn.srtd { background: url(../img/navSub_2Menu_bg_selected.gif) repeat-x left -1px;}
+/*thead*/	
+.flexigrid div.hDiv {  background:#e6f5f9; border:1px solid #bfdbe4; border-top:0; border-bottom:1px solid #bfdbe4;}
+.flexigrid div.hDiv table { border-right: 1px solid #f4fdff;}
+	.flexigrid div.hDiv th {font-weight:bold; color:#315e88;}
+	.flexigrid div.hDiv th.thOver div, .flexigrid div.hDiv th.sorted.thOver div { border:0; color:#e80000;}
+	.flexigrid div.hDiv th, .flexigrid  div.bDiv td { border-left:1px solid #f4fdff;border-right:1px solid #bfdbe4;}
+	.flexigrid div.hDiv th.sorted { background: url(../img/navSub_2Menu_bg_selected.gif) repeat-x left -3px; color:#e80000; font-weight:bold;}
+	.flexigrid div.hDiv th div.sdesc { background: url(../img/dnupDot.gif) no-repeat center -27px;}	
+	.flexigrid div.hDiv th div.sasc { background: url(../img/dnupDot.gif) no-repeat center top;}
+/*tBody*/
+.flexigrid div.bDiv { border-color:#bfdbe4}
+	.flexigrid div.bDiv table { border-bottom:1px solid #e6f5f9; line-height:25px;}
+	.flexigrid div.bDiv table button { line-height:normal;}
+	.flexigrid div.bDiv tr:hover td a { color:#fff;}
+	.flexigrid div.bDiv tr.trSelected:hover td a { color:#c00;}
+	/*悬停行*/
+	.flexigrid div.bDiv tr:hover td, 
+	.flexigrid div.bDiv tr:hover td.sorted,
+	.flexigrid div.bDiv tr.trOver td.sorted, 
+	.flexigrid div.bDiv tr.trOver td { background:#7fbcc9; color:#fff;}
+	/*选中行*/
+	.flexigrid div.bDiv tr.trSelected:hover td, 
+	.flexigrid div.bDiv tr.trSelected:hover td.sorted,
+	.flexigrid div.bDiv tr.trOver.trSelected td.sorted, 
+	.flexigrid div.bDiv tr.trOver.trSelected td {background:#cde9f0; color:#c00; border-color:#cde9f0;  border-bottom:1px dotted #ffba00;}
+	.flexigrid tr.trSelected td.sorted, 
+	.flexigrid tr.trSelected td { background:#fffbce; color:#c00; border-color:#fffbce;  border-bottom:1px dotted #ffba00;}
+
+/*tFoot*/
+.flexigrid div.pDiv { border-color:#bfdbe4; background:#def0f5 url(../img/tableTools_bg.gif) repeat-x left bottom;}
+.flexigrid div.vGrip { border-color:#bfdbe4; border-top:1px solid #e6f5f9; background:#7ebbc8 url(../img/tableTools_bg.gif) repeat-x left bottom;}
+.flexigrid div.vGrip span { border-color:#6dabbe}
+
+
+/*弹出层控件样式修改
+---------------------------------------------*/
+.epsDialog { border:1px solid #a5d3dd; }/*弹出标题*/
+.epsDialog h3 { background:#7ebbc8 url(../img/epsDialog_title_bg.gif) repeat-x; }
+.epsDialog .epsDialogContent { background-color:#7fbcc9; }/*弹出层边框*/
+.epsDialog .epsDialogText { background-color:#fff; }/*内容背景*/
+.epsDialog h5 { color:#315e88; font:bold 1.2em/1.5em "宋体"; }/*内容标题*/
+
+/*Tab标签页样式修改
+---------------------------------------------*/
+/*容器*/
+.ui-tabs { border:0; padding:0; overflow:hidden;}
+/*标签*/
+.ui-tabs .ui-tabs-nav { background:none; padding:0 0 0 5px;}
+	.ui-tabs .ui-tabs-nav li { margin:0 2px -1px 0; border-color:#6dabbe; background:url(../img/navSub_2Menu_bg.gif) repeat-x;}
+	.ui-tabs .ui-tabs-nav li a { height:15px; padding:3px 8px;}
+	.ui-tabs .ui-tabs-nav li span{}
+	/*当前标签*/
+	.ui-tabs .ui-tabs-nav li.ui-tabs-selected { background:#fff; border-bottom:1px solid #fff;}
+	/*更多标签*/
+	.ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { background:#dcf1f6;}
+	/*内容*/
+	.ui-tabs .ui-tabs-panel{ border:1px solid #6dabbe; padding:10px 5px;}
+
+/*树*/
+
+.containerTableStyle {position:static;}/*修补树在IE7出现的浮动*/
+
+/*修复树编辑按钮 by lijx*/
+.treeEditNav ul{background:none;}
+.treeEditNav ul li{border-bottom:none;width:auto;}
+/*修复树控件在ie6下正常显示滚动条 by-liuly*/
+#editTree{zoom:1;}
+

@@ -1,0 +1,17 @@
+﻿@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: base 基础样式
+Design: OTiger
+Email: fanhy@gpcsoft.com
+Remark: 用例样式，仅用于演示DEMO。
+--------------------------------------------------------------------------------------------------------- */
+/*系统图标列表*/
+.sysIconList { border-bottom:1px dotted #ccc; margin-bottom:5px; padding-bottom:5px; overflow:hidden; zoom:1;}
+	.sysIconList li { float:left; border-right:1px dotted #ccc; width:160px; margin:0 5px 5px 0; list-style:none; }
+    .sysIconList span{ margin:10px;}
+
+
+
+

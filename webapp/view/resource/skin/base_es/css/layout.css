@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: elegantLakeBlue 优雅湖蓝
+Design: OTiger
+Email: fanhy@gpcsoft.com
+Remark: 结构样式表，用于设置功能页各种应用结构样式。
+--------------------------------------------------------------------------------------------------------- */
+/*----全屏变换----*/
+#sysContainer.fullScreen #conTitle { border:0; padding:0; overflow:hidden;}
+#sysContainer.fullScreen #conTitle h3 { display:block; position:absolute; top:3px; left:160px; padding:3px 10px; background:#ffba00; color:#fff;}
+#sysContainer.fullScreen #conBody { padding:0;}
+#sysContainer.fullScreen .pageTools { position:absolute; top:2px; left:240px;}
+
+/*内容标题*/
+#conTitle {}
+	#conTitle .navCurrent { color:#999; border-bottom:1px dotted #f1f1f1; overflow:hidden;}
+	#conTitle .navCurrent a { color:#ccc; display:block; float:left; background:url(../img/navCurrent_link.gif) no-repeat right center; padding-right:20px; margin-right:3px; text-decoration:none;}
+		#conTitle .navCurrent a:hover { text-decoration:underline; color:#009;}
+	#conTitle h3 { display:none; font:1em/1.5em "宋体"; color:#127998; padding-left:8px; background: url(../img/icon/navSub_dot.gif) no-repeat left -18px;}
+	#conTitle .loader { font-weight:normal; color:#666;}
+/*内容容器*/
+#conBody { padding:5px 0;}
+	/*页面工具*/
+	.pageTools { position:absolute; top:76px; right:10px; overflow:hidden; z-index:0; width:auto; display:none;}
+		.pageTools li { height:20px; line-height:20px; padding:0 5px; float:left; background:#e8f6f9 url(../img/pageTools_bg.gif) repeat-x; border:1px solid #6dabbe; margin-left:3px;}
+		.pageTools a { display:block; float:left; text-decoration:none; color:#127998;}
+			.pageTools a:hover { color:#F00;}
+	
+	/*栏目容器*/
+	.partContainers { overflow:hidden; margin:3px 0;}	
+	.partContainers h4 { color:#315e88; font:bold 1.2em/1.5em "宋体";}
+	.partContainers h5 { color:#e80000; font:bold 1em/1.5em "宋体";}
+
+/*下拉菜单*/
+.listMenu { background:#f7fdff; border:1px solid #6dabbe; padding:1px;}
+	.listMenu a { display:block; padding:2px 8px; font:1em/1.5em "宋体"; color:#315e88; text-decoration:none; white-space:nowrap; hide-focus:expression( this.hideFocus=true ); outline:none;}
+	.listMenu a:hover,
+	.listMenu li.selected a:hover{ background:#6dabbe; color:#fff;}
+	.listMenu li.selected a { background:#cde9f0; color:#900;}
+	

@@ -1,0 +1,31 @@
+﻿@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: base 基础样式
+Design: OTiger
+Email: fanhy@gpcsoft.com
+Remark: 图标样式表，用于系统图标样式。
+--------------------------------------------------------------------------------------------------------- */
+/*系统图标选择样式*/
+.sysOptionsIcon { border-bottom:1px dotted #127998; margin-bottom:5px; padding-bottom:5px; overflow:hidden; zoom:1; text-align:center;}
+	.sysOptionsIcon li { float:left; width:70px; height:75px; padding:5px 5px 0 5px; margin:0 5px 5px 0; background:url(../img/options_bg.gif) no-repeat; cursor:pointer;}
+	.sysOptionsIcon li:hover { background-position:left -80px;}
+	.sysOptionsIcon img { width:70px; height:55px;}
+	.sysOptionsIcon span { display:inline-block; width:70px; line-height:22px; padding-top:55px; background:url(../img/icon/optionsIcon_null.gif) no-repeat left top;}
+	#changeThemeZone span { padding:0; background:none; line-height:17px;}
+	/*图标设置*/
+	.sysOptionsIcon #screenStandard span { background-image:url(../img/icon/optionsIcon_screenStandard.gif);}
+	.sysOptionsIcon #screenFull span { background-image:url(../img/icon/optionsIcon_screenFull.gif);}
+	.sysOptionsIcon #navSubHide span { background-image:url(../img/icon/optionsIcon_navSubHide.gif);}
+	.sysOptionsIcon #navSubShow span { background-image:url(../img/icon/optionsIcon_navSubShow.gif);}
+	.sysOptionsIcon #fontBase span { background-image:url(../img/icon/optionsIcon_fontBase.gif);}
+	.sysOptionsIcon #fontLarge span  { background-image:url(../img/icon/optionsIcon_fontLarge.gif);}
+	
+	/*详情开关图标*/
+	.detailsSwitch { margin-left:5px; display:inline-block; background:url(../../sysicon/16/bullet_arrow_down.png) no-repeat right center; font-weight:normal; padding-right:16px; cursor:pointer; color:#c00;}
+	.detailsSwitch.collapsable { background-image:url(../../sysicon/16/bullet_arrow_up.png);}
+
+
+
+
