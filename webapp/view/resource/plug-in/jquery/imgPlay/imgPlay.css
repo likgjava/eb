@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* 
+Label: imgPlay
+Design: OTiger
+Email: fanhy@gpcsoft.com
+--------------------------------------------------------------------------------------------------------- */
+.imgPlayer { position:relative; border:1px solid #C4D9EF; overflow:hidden;}/* 设定控件外观 */
+.imgPlayer img { border:0px; }/* 设定图片大小 */
+.imgPlayer ul, .imgPlayer ul li { padding:0px; margin:0px; list-style:none; overflow:hidden;}
+.imgPlayer a { text-decoration:none; color:#fff; font:bold 12px/1.5em Verdana, Geneva, "宋体", sans-serif;}
+.imgPlayer a:hover { text-decoration:none; color:#fff;}
+/* 说明文字 */
+.imgPlayer li a span {position:absolute; bottom:0;left:0;width:100%; background:#000; height:26px; line-height:26px; padding:0 5px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; filter:alpha(opacity=60); -moz-opacity:0.6; opacity:0.6;}
+/* 焦点导航 */
+.playerNav { position:absolute; bottom:0; right:0; z-index:20; text-align:right; height:17px; padding:18px 0 3px 0;}
+.playerNav a {display:inline-block; background:url(../../../skin/thems/default/img/img_a.png) no-repeat center; margin-right:3px; text-align:center; font:10px/12px Verdana, Geneva, sans-serif; width:18px; height:16px; padding-top:3px;color:#000;}
+.playerNav a:hover, .playerNav a.hover { background:url(../../../skin/thems/default/img/img_h.png) no-repeat top; color:#a8471c;}
+

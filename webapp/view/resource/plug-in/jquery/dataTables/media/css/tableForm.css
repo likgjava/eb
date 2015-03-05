@@ -1,0 +1,25 @@
+/*
+表单样式
+ */
+ 
+ /*=========================搜索输入框的样式==========================*/
+.hidden{ display:none}
+.money input{ width:50px; border:#CCC 1px solid; }
+.money span{ padding-left:2px; padding-right:2px;}
+.keyword label{letter-spacing:4px;}
+.keyword input{ width:118px; border:#CCC 1px solid; }
+ 
+  /*=========================搜索列表样式==========================*/
+#list-search{ position:relative;padding-top:10px; height:auto; background:#F9F9F9 url(../images/bj_list-search.png) repeat-x top left; float:left;width:100%}
+#list-search ul{ width:auto; float:left; margin:10px 8px;background:url(../images/bj_list-search-ul.png) no-repeat right top; padding-right:10px}
+#list-search li{ color:#333; width:100%; clear:both; background:none}
+#list-search li label{ float:left;}
+#list-search li ul{display: inline; float:none; background-image:none}
+#list-search .searchOperation ul{float:none; background-image:none}
+#list-search li ul li{ width:80px; float:left; clear:none;}
+#list-search li ul li label{ float:none}
+#list-search .outlineSearch{}
+#list-search .outlineSearch li{ line-height:35px;}
+#list-search .operationBtn{ position:absolute; right:10px; bottom:10px; width:auto}
+#list-search .packUp ,#list-search .open{ position:absolute; top:10px; right:10px; padding:10px; padding-right:18px;width:auto; background:url(../images/bg_open.gif) no-repeat center right;}
+#list-search .packUp{ background-image:url(../images/bg_packUp.gif)}

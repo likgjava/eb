@@ -1,0 +1,533 @@
+/*
+ *  File:         demo_table.css
+ *  CVS:          $Id$
+ *  Description:  CSS descriptions for DataTables demo pages
+ *  Author:       Allan Jardine
+ *  Created:      Tue May 12 06:47:22 BST 2009
+ *  Modified:     $Date$ by $Author$
+ *  Language:     CSS
+ *  Project:      DataTables
+ *
+ *  Copyright 2009 Allan Jardine. All Rights Reserved.
+ *
+ * ***************************************************************************
+ */
+
+.dataTables_wrapper {
+	font-size: 12px;
+	position: relative;	
+	min-height: auto;
+	clear: both;
+	_height: 230px;
+	zoom: 1; /* Feeling sorry for IE */
+}
+
+.dataTables_processing {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 250px;
+	height: 30px;
+	margin-left: -125px;
+	margin-top: -15px;
+	padding: 12px 0 2px 0;
+	border: 1px solid #ddd;
+	text-align: center;
+	color: #999;
+	font-size: 14px;
+	background-color: white;
+}
+/*设置显示条目数量样式*/
+.dataTables_length {
+	width: 40%;
+	float: left;
+	line-height:34px;
+	margin-left:10px
+
+}
+/*查询数据样式*/
+.dataTables_filter {
+	width: 50%;
+	float: right;
+	text-align: right;
+	line-height:34px;
+	margin-right:10px
+	
+	
+}
+
+.dataTables_info {
+	width: 60%;
+	padding-top:4px;
+	margin-left:10px;	
+}
+
+.dataTables_paginate {
+	width: 44px;
+	* width: 50px;
+	float: right;
+	text-align: right;
+}
+
+/* Pagination nested */
+.paginate_disabled_previous, .paginate_enabled_previous, .paginate_disabled_next, .paginate_enabled_next {
+	height: 19px;
+	width: 19px;
+	margin-left: 3px;
+	float: left;
+}
+
+.paginate_disabled_previous {
+	background-image: url('../images/back_disabled.jpg');
+}
+
+.paginate_enabled_previous {
+	background-image: url('../images/back_enabled.jpg');
+}
+
+.paginate_disabled_next {
+	background-image: url('../images/forward_disabled.jpg');
+}
+
+.paginate_enabled_next {
+	background-image: url('../images/forward_enabled.jpg');
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables frontTableList
+ */
+table.frontTableList {
+	margin: 0 auto;
+	width: 100%;
+	clear: both;
+	padding:0;
+	border-collapse:collapse;
+	margin-top:10px;
+	border:0;
+	line-height:25px;
+}
+table.frontTableList thead{background:none repeat scroll 0 0 #FFFFFF;border-bottom:2px solid #F27B04;	}
+table.frontTableList thead th {
+	color:#444;
+	border:0;
+	border-bottom: 2px solid #0086C4;/*F27B04 change by yucy*/
+	font-size: 13px;
+	cursor: pointer;
+	text-align:center;
+	* cursor: hand;
+	padding-bottom:2px;
+}
+
+table.frontTableList tr{
+	
+}
+
+table.frontTableList tfoot th {
+	padding: 3px 10px;
+	border: 1px solid #ececec;
+	font-weight: bold;
+}
+
+table.frontTableList tr.heading2 td {
+	border:0;
+	border-bottom: 1px solid #ececec;
+}
+
+table.frontTableList td {
+	padding: 3px 10px;
+	border:0;
+	border-bottom: 1px solid #ececec;
+	
+}
+
+table.frontTableList td  a{
+	color:#005AA0;
+	padding-right:2px;
+	padding-left:2px;
+}
+
+table.frontTableList td.center {
+	text-align: center;
+}
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables sorting
+ */
+
+.sorting_asc {
+
+	background: url('../images/sort_asc.png') no-repeat center right;
+	border:0;
+}
+
+.sorting_desc {
+
+	background: url('../images/sort_desc.png') no-repeat center right;border:0;
+}
+
+.sorting_1 {
+	border:0;
+}
+
+.sorting_asc_disabled {
+	background: url('../images/sort_asc_disabled.png') no-repeat center right;border:0;
+}
+
+.sorting_desc_disabled {
+	background: url('../images/sort_desc_disabled.png') no-repeat center right;border:0;
+}
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables row classes
+ */
+table.frontTableList tr.odd.gradeA {
+	background-color: #ddffdd;
+}
+
+table.frontTableList tr.even.gradeA {
+	background-color: #eeffee;
+}
+/*奇数行样弄1�7�1�7/
+table.frontTableList tr.odd.gradeA {
+	background-color: #FBFBFB;
+}
+/*偶数行样弄1�7�1�7/
+table.frontTableList tr.even.gradeA {
+	background-color: #F7F7F7;
+}
+
+table.frontTableList tr.odd.gradeC {
+	background-color: #ddddff;
+}
+
+table.frontTableList tr.even.gradeC {
+	background-color: #eeeeff;
+}
+
+table.frontTableList tr.odd.gradeX {
+	background-color: #ffdddd;
+}
+
+table.frontTableList tr.even.gradeX {
+	background-color: #ffeeee;
+}
+
+table.frontTableList tr.odd.gradeU {
+	background-color: #ddd;
+}
+
+table.frontTableList tr.even.gradeU {
+	background-color: #eee;
+}
+
+
+tr.odd {
+	
+	background-color: #fff;
+}
+
+tr.even {
+	
+	background-color: #f9f9f9;
+}
+
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Misc
+ */
+.top, .bottom {
+	padding: 15px;
+	background-color: #F5F5F5;
+	border: 1px solid #CCCCCC;
+}
+
+.top .dataTables_info {
+	float: none;
+}
+
+.clear {
+	clear: both;
+}
+
+.dataTables_empty {
+	text-align: center;
+}
+
+tfoot input {
+	margin: 0.5em 0;
+	width: 100%;
+	color: #444;
+}
+
+tfoot input.search_init {
+	color: #999;
+}
+
+td.group {
+	background-color: #d1cfd0;
+	border-bottom: 2px solid #A19B9E;
+	border-top: 2px solid #A19B9E;
+}
+
+td.details {
+	background-color: #d1cfd0;
+	border: 2px solid #A19B9E;
+}
+
+
+.example_alt_pagination div.dataTables_info {
+	width: 40%;
+}
+
+.paging_full_numbers {
+	width: 600px;
+	height: 22px;
+	line-height: 21px;
+	
+}
+
+.paging_full_numbers span.paginate_button,
+ 	.paging_full_numbers span.paginate_active {
+	border: 1px solid #CCCCCC;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 2px 5px;
+	margin: 0 3px;
+	cursor: pointer;
+	*cursor: hand;
+}
+/*页码样式：默认样弄1�7�1�7/
+.paging_full_numbers span.paginate_button {
+	background-color: #FFF;
+	color:#3366CC;
+	
+}
+.paging_full_numbers span.disable_paginate_button {
+	background-color: #FFF;
+	border: 1px solid #CCCCCC;
+	color:#CCCCCC;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 2px 5px;
+	margin: 0 3px;
+	cursor: pointer;
+	*cursor: pointer;
+	display:none;
+	
+}
+/*页码样式：鼠标经迄1�7�1�7/
+.paging_full_numbers span.paginate_button:hover {
+	background-color: #FFF;
+	border: 1px solid  #FD6D01;
+}
+/*页码样式：中样式*/
+.paging_full_numbers span.paginate_active {
+	background-color: #FFEDE1;
+	border: 1px solid  #FD6D01;
+}
+
+table.frontTableList tr.even.row_selected td {
+	background-color: #f7ffc4;
+}
+
+table.frontTableList tr.odd.row_selected td {
+	background-color: #f7ffc4;
+}
+
+
+/*
+ * Sorting classes for columns
+ */
+/* For the standard odd/even */
+tr.odd td.sorting_1 {
+	background-color: #F7F7F7;
+}
+
+tr.odd td.sorting_2 {
+	background-color: #F9F9F9;
+}
+
+tr.odd td.sorting_3 {
+	background-color: #F9F9F9;
+}
+
+tr.even td.sorting_1 {
+	background-color: #F3F3F3;
+}
+
+tr.even td.sorting_2 {
+	background-color: #F5F5F5;
+}
+
+tr.even td.sorting_3 {
+	background-color: #F5F5F5;
+}
+
+
+/* For the Conditional-CSS grading rows */
+/*
+ 	Colour calculations (based off the main row colours)
+  Level 1:
+		dd > c4
+		ee > d5
+	Level 2:
+	  dd > d1
+	  ee > e2
+ */
+ /*选中列，奇数*/
+tr.odd.gradeA td.sorting_1 {
+	background-color: #6FC6FF;
+	border-bottom:#FFF solid 1px;
+}
+
+tr.odd.gradeA td.sorting_2 {
+	background-color: ;
+}
+
+tr.odd.gradeA td.sorting_3 {
+	background-color: #d1ffd1;
+}
+ /*选中列，偶数*/
+tr.even.gradeA td.sorting_1 {
+	background-color: #A1D8FC;
+	border-bottom:#FFF solid 1px;
+}
+
+tr.even.gradeA td.sorting_2 {
+	background-color: #e2ffe2;
+}
+
+tr.even.gradeA td.sorting_3 {
+	background-color: #e2ffe2;
+}
+
+tr.odd.gradeC td.sorting_1 {
+	background-color: #c4c4ff;
+}
+
+tr.odd.gradeC td.sorting_2 {
+	background-color: #d1d1ff;
+}
+
+tr.odd.gradeC td.sorting_3 {
+	background-color: #d1d1ff;
+}
+
+tr.even.gradeC td.sorting_1 {
+	background-color: #d5d5ff;
+}
+
+tr.even.gradeC td.sorting_2 {
+	background-color: #e2e2ff;
+}
+
+tr.even.gradeC td.sorting_3 {
+	background-color: #e2e2ff;
+}
+
+tr.odd.gradeX td.sorting_1 {
+	background-color: #ffc4c4;
+}
+
+tr.odd.gradeX td.sorting_2 {
+	background-color: #ffd1d1;
+}
+
+tr.odd.gradeX td.sorting_3 {
+	background-color: #ffd1d1;
+}
+
+tr.even.gradeX td.sorting_1 {
+	background-color: #ffd5d5;
+}
+
+tr.even.gradeX td.sorting_2 {
+	background-color: #ffe2e2;
+}
+
+tr.even.gradeX td.sorting_3 {
+	background-color: #ffe2e2;
+}
+
+tr.odd.gradeU td.sorting_1 {
+	background-color: #c4c4c4;
+}
+
+tr.odd.gradeU td.sorting_2 {
+	background-color: #d1d1d1;
+}
+
+tr.odd.gradeU td.sorting_3 {
+	background-color: #d1d1d1;
+}
+
+tr.even.gradeU td.sorting_1 {
+	background-color: #d5d5d5;
+}
+
+tr.even.gradeU td.sorting_2 {
+	background-color: #e2e2e2;
+}
+
+tr.even.gradeU td.sorting_3 {
+	background-color: #e2e2e2;
+}
+
+
+/*
+ * Row ing example
+ */
+.ex_ #example tbody tr.even:hover, #example tbody tr.even td.ed {
+	background-color: #ECFFB3;
+}
+
+.ex_ #example tbody tr.odd:hover, #example tbody tr.odd td.ed {
+	background-color: #E6FF99;
+}
+
+
+/*
+ * KeyTable
+ */
+table.KeyTable td {
+	border: 3px solid transparent;
+}
+
+table.KeyTable td.focus {
+	border: 3px solid #3366FF;
+}
+
+table.frontTableList tr.gradeA {
+	background-color: #eeffee;
+}
+
+table.frontTableList tr.gradeC {
+	background-color: #ddddff;
+}
+
+table.frontTableList tr.gradeX {
+	background-color: #ffdddd;
+}
+
+table.frontTableList tr.gradeU {
+	background-color: #ddd;
+}
+
+div.box {
+	height: 100px;
+	padding: 10px;
+	overflow: auto;
+	border: 1px solid #8080FF;
+	background-color: #E5E5FF;
+}
+

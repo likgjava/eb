@@ -1,0 +1,43 @@
+
+.widget-placeholder {
+  color: #000;
+  margin: 1em;
+  
+}
+
+.widget {
+  margin: 1em;
+  border: #ebebeb solid 1px;
+  
+}
+
+  .widget-header {
+    color: #000;
+    padding: 1em;
+    background-color: #ebebeb;
+    
+  }
+
+.widget-header strong{float: left;width:auto;font-size:12px;font-weight:bold;color: #333333; margin-top:-8px}
+
+.widget-header span{float: right;margin-left:0;border: none; margin-top:-8px;}
+.widget-header span img{opacity:0.5;filter: alpha(opacity=40);}
+.widget-header span a:hover img{opacity:1;filter: alpha(opacity=100);}
+
+    .widget-menu {
+       
+    }
+      .widget-menu a {
+        margin-right: 0 0 0 0.5em;
+      }
+
+  .widget-editbox {
+    color: #000;
+    margin: 0em;
+    padding: 0em;
+    background-color: white;
+  }
+
+  .widget-content {
+    padding: 0.5em;
+  }
