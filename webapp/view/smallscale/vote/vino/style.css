@@ -1,0 +1,98 @@
+@charset "GB2312";
+/* CSS Document */
+body{margin:0 auto;padding:0 auto;font-size:12px;text-align:center;line-height:180%;}
+
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{border:none;}
+
+
+#banner{width:1000px;height:384px;margin:0 auto;}
+#nav{width:1000px;height:51px;margin:0 auto 5px auto;}
+#nav .nav_111{float:left;list-style:none;}
+
+
+#main_01{width:960px;height:189px;margin:0 auto 5px auto;background:url(images/main_img_01.jpg) no-repeat;text-align:left;padding-top:65px;padding-left:20px;padding-right:20px;font-size:16px;font-weight:100;color:#333;line-height:220%;}
+#main_01 span a{color:#f00;text-decoration:none;}
+
+
+.main_02{width:1000px;height:50px;text-align:left;margin:0 auto;}
+
+.main_03{width:998px;border:1px solid #F6CB7D;padding-top:15px;margin-bottom:5px;margin:0 auto 5px auto;}
+
+
+
+.main_04{width:1000px;height:199px;margin-bottom:5px;margin:0 auto 5px auto;}
+
+.main_04_left{width:251px;height:199px;float:left;margin-right:5px;}
+.main_04_right{width:744px;height:199px;float:left;}
+
+.main_04_right_01{width:744px;height:50px}
+.main_04_right_02{width:742px;height:100px;border:1px solid #F6CB7D; padding-top:47px;}
+
+.main_04_right_02_im{float:left;padding-left:12px!important;margin-left:12px;}
+
+
+#main_05{width:1000px;height:122px;margin-bottom:5px;margin:0 auto 5px auto;}
+
+
+.main_06{width:1000px;margin:0 auto 5px auto;}
+.main_06_left{width:404px;float:left;margin-right:5px;}
+.main_06_right{width:591px;float:left;}
+.main_06_left_01{width:404px;background:url(images/main_bg_01.jpg) repeat-x;height:50px;text-align:left;}
+.main_06_left_02{width:402px;border:1px solid #F6CB7D;}
+.main_06_right_01{width:591px;background:url(images/main_bg_01.jpg) repeat-x;height:50px;text-align:left;}
+.main_06_right_02{width:589px;border:1px solid #F6CB7D;}
+
+
+.main_06_im{padding:10px 0 10px 12px;float:left;}
+
+
+.cypp{width:191px;float:left;padding-left:20px!important;margin-left:20px;}
+.cypp dl dt{width:189px;height:147px;border:1px solid #ccc;padding-top:1px;margin-bottom:5px;}
+.cypp dl dd{padding:0;margin:0;}
+
+
+.zhuanjia{width:130px;float:left;padding-left:15px!important;margin-left:15px;}
+.zhuanjia dl{text-indent:-24px;}
+.zhuanjia dl dd{padding:0;margin:0;font-size:14px;}
+.tupian{float:left;}
+.gengduo a{line-height:50px;float:right;margin-right:10px;font-size:14px;font-weight:600;color:#333;text-decoration:none;}
+.gengduo a:hover{text-decoration:underline;}
+
+#bottom{width:1000px;height:200px; vertical-align:middle;font-size:14px;font-weight:100;color:#333;padding-top:15px;line-height:200%;margin:0 auto 5px auto;}
+
+
+
+
+/*------------------------------------------------------------------活动介绍------------------------------------------------------------------------------*/
+.hdjs_main{width:1000px;margin:0 auto 5px auto;}
+.hdjs_main_left{width:265px;border:1px solid #F6CB7D;float:left;margin-right:5px;height:1594px;}
+.hdjs_main_right{width:690px;border:1px solid #F6CB7D;float:left;padding-top:15px;padding-left:20px;padding-right:15px;text-align:left;font-size:16px;font-weight:100;font-family:"宋体";color:#333;line-height:250%;height:1579px;overflow-y:scroll;}
+.hdjs_main_right span{font-size:24px;font-weight:600;color:#D10218;}
+
+
+.tpjg{width:191px;margin-top:15px;border-bottom:1px dashed #F6CB7D;margin:0 auto 10px auto;}
+.tpjg dl dt{width:189px;height:147px;border:1px solid #ccc;padding-top:1px;margin-bottom:5px;}
+.tpjg dl dd{padding:0;margin:0;text-align:left;padding-left:40px;}
+
+
+.sub_bg{width:96px;height:42px;background:url(images/sub_bg.jpg) no-repeat;font-size:14px;font-weight:600;color:#333;line-height:42px;border:none;}
+
+
+
+/*--------------------------------------------------添加修改内容------------------------------------------------------*/
+
+.xg_word_01{font-size:12px;font-weight:100;color:#FF0000;}
+.xg_btn_01{width:90px;height:35px;border:0;background:url(images/main_btn_bg01.jpg) no-repeat;font-size:14px;}
+.xg_fanye{width:620px;height:50px;line-height:50px;text-align:right;padding-right:20px;}
+.xg_img{float:left;}
+.xg_wenzi{float:left;margin-left:15px;width:440px;text-align:left;}
+
+
+
+
+
+
+
+

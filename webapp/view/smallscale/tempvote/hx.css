@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+
+.hxConBody{ width:958px;  background:#f3f3f3; overflow:hidden; padding-bottom:10px; border:1px solid #ddd;}
+.hxConBody .parentTable{ width:99%; margin:0 auto; background:#fff;border:1px solid #e6e6e6 ;border:1px solid #e6e6e6; border-right:0px; border-bottom:0px;}
+.hxConBody .parentTable td{ height:30px; border:0px; border-bottom:1px solid #e6e6e6;  border-right:1px solid #e6e6e6;  text-align:center;}
+.hxConBody .parentTable th{ font-size:14px; text-align:center; vertical-align:middle;  background:#f08900; border:0px; border-bottom:1px solid #e6e6e6;  border-right:1px solid #e6e6e6; color:#fff;}
+.hxConBody .parentTable .t1 h1{ height:50px; font-size:24px; line-height:50px; font-family:"微软雅黑"; font-weight:normal;}
+
+.hxConBody .btn{ text-align:center; width:90px; height:35px; line-height:35px; margin:10px auto 0px; font-weight:bold; color:#903; display:block; font-size:16px;}
+
+
+
+
+.hxThroughAd{}
+.hxSub{ width:210px; overflow:hidden;}
+.hxSub h2{ color:#fff; height:29px; line-height:30px; padding-left:10px; font-size:14px; font-weight:bold; border:1px solid #fff;  background: url(menuBg.jpg) repeat-x; }
+.hxSub h3{ height:20px; line-height:20px; padding-left:10px; font-size:14px; font-weight:bold; color:#666; background:#f3f3f3; border:1px solid #fff; border-top:1px solid #ddd;}
+.hxSub  .hxSubCol{ border:1px solid #ddd; border-top:0px; }
+.hxSub  .hxSubCol2{ margin-top:10px;}
+.hxSub  .hxSubCol ul li{ border-top:1px solid #ddd; padding:5px 0px 5px 0px; text-align:center;}
+.hxSub   .hxSubCol2 ul li{ padding-left:10px; text-align:left;}
+.hxSub  .hxSubCol ul li img{ display:block; width:170px; margin:0 auto;}
+.hxSub  .hxSubCol ul{ margin-bottom:5px; padding:10px 0px;}
+
+
+
+
+.hxBody{width:750px; overflow:hidden;}
+.hxBody .hxBodyCol{ overflow:hidden; width:738px; margin:0 auto; margin-left:10px; padding-bottom:15px; border:1px solid #ddd; border-bottom:0px;}
+.hxBody .lastCol{  border-bottom:1px solid #ddd;}
+.hxBody .lastCol div{ padding-left:12px;}
+.hxBody .lastCol img{ width:227px; height:131px;}
+.hxBody .lastCol h4{ display:block; width:95px; float:left; }
+.hxBody .lastCol ul{ float:left;  text-align:center; margin-right:13px; height:200px;} 
+.hxBody .hxBodyCol h2{color:#fff; height:27px; line-height:30px; padding-left:10px; font-size:14px; font-weight:bold; border-bottom:1px solid #ddd;  margin-bottom:5px; background: url(menuBg.jpg) repeat-x;}
+
+
+.hxBody .hxBodyCol p{ padding:5px 10px; text-indent:2em; line-height:20px; font-size:14px; color:#313131;}
+.hxBody .hxBodyCol .lastP{  text-align:center; padding-left:400px; font-size:14px;}
+.hxBody .hxBodyCol .btn{ height:26px;  line-height:26px; text-align:center; font-size:14px; font-weight:bold; margin:0px; padding:0px 0px; display:inline; margin-left:10px;}
+
+.adheader{ height:256px; width:960px; margin:0px auto 10px; padding-top:2px;}
+.lc{ width: 938px; overflow:hidden; text-align:center; padding-left:10px;}
+.lct{ margin-left:70px;}
+.lc ul li{ float:left; padding:5px 25px 5px 10px; font-size:14px; font-weight:bold; color:#C33; background:url(icon.jpg) right no-repeat;}
+.lc ul .nobg{ background:none;}
