@@ -1,0 +1,74 @@
+﻿@charset "utf-8";
+
+body { background-:#fff; color:#303A43; float:left; font-size:12px;height:auto; margin:0; width:100%;}
+img { border:medium none; margin:0;}
+
+.all { float:left; height:auto;position:relative; width:100%;}
+.come_title { background-color:#DCE4EA; height:35px; line-height:35px; margin:10px 10px 0 10px; padding-left:10px;}
+.k_all6 { background-color:#EBEFF2; border-bottom:1px solid #A0A0A0; height:auto; padding:15px 2%; margin:0 10px;}
+
+.prodtail{background-color:#EBEFF2; height:23px; background:url(../img/hallLogo.png) no-repeat scroll 10px 2px #EBEFF2;}
+.prodtail .ti{line-height:23px;padding-left:180px;}
+
+.prodtail2{padding-left:50px; height:70px;}
+.prodtail2 .pti{font-weight:bold; height:50px; line-height:50px; font-size:18px; color:rgb(102, 102, 102);}
+.prodtail2 .pot{width:450px;float:left;}
+
+.prodtail3{float:right;padding-right:50px;}
+
+.prodtail4{width:250px;float:right;}
+.prodtail4 .ptime{font-size:14px; font-weight:bold;color:#E56700}
+
+.app-box {float:left;margin-top:-35px;}
+.app-box .app-icon-a {display:block;text-align:center;width:64px;color:#000;}
+.app-box .app-icon {background-repeat:no-repeat;display:block;font-size:0;height:36px;line-height:0;margin:0 auto;overflow:hidden;width:36px;}
+.app-box .app-icon-a:link, .app-box .app-icon-a:visited, .app-box .app-icon-a:hover {color:#000;cursor:pointer;text-decoration:none;}
+
+.ys_bf { background-color:#EBEFF2; border:1px dashed #999999; color:#333333; padding:10px;}
+.ys_bf .reqdtail{background-color:#FFFCED;overflow:hidden;border:1px solid #FFBF7A;line-height:20px;}
+.ys_bf .reqnum{padding-left:2em; width:500px;float:left;}
+.ys_bf .reqmin{float:left;width:200px;font-size:14px;color:#FF7300}
+.ys_bf .reqopen{float:right;margin-right:10px;}
+
+.tongji_ys_bf { background:#F7F7F7; border-width:1px 0; border-style:solid; border-color:#ddd; color:#333; padding:5px 5px 0 5px;}
+
+.bk { background:#FFF; border-collapse:collapse;}
+.bk td { border:1px solid #C9E0FE; line-height:24px; padding-left:10px;padding-right:5px;}
+.bk th{border:1px solid #C9E0FE; height:30px; line-height:30px; text-align:center; font-weight:bold;}
+.bk td{padding-left:5px; padding-right:5px;}
+.thickbox { color:#666; text-decoration:none;}
+
+/*聊天窗口*/
+.tdog-popup{ background:#BAE2EF; height:410px; overflow:hidden; position:absolute; z-index:1000; border:1px solid #516166; border-radius:3px 3px 3px 3px; box-shadow:0 1px 2px 1px #CCCCCC;}
+.tdog-popup-head{background:url(../img/head.png) repeat-x scroll 0 1px #EDF8FB; border-radius:3px 3px 3px 3px; cursor:move; display:block;height:26px; position:relative; padding-left:20px;}
+.tdog-popup-tools{ position:absolute; right:0; top:4px;}
+.tdog-popup-tools span {background:url(../img/close.png) no-repeat scroll -59px 0 transparent; cursor:pointer; display:inline-block; height:15px; margin-right:4px; width:15px;}
+.tdog-popup-main{ overflow:hidden;}
+.tdog-popup-talkleftouter{ float:left; width:300px;}
+.tdog-popup-talkright{ background:#fff; height:375px; margin-left:305px; margin-right:5px; overflow:auto;}
+.tdog-popup-talkhistory{ background:#fff; padding:10px; height:200px; overflow:auto;}
+.tdog-popup-talkbar{ padding:5px; text-align:right;}
+.tdog-popup-talkinput{}
+.tdog-popup-talkinput textarea { width:295px; height:100px;}
+.tdog-popup-talkfoot{ text-align:right; padding:5px 0;}
+.tdog-popup-talkfoot .tdog-popup-sendbut{background:url(../img/sendMSG.png) no-repeat scroll 0 -61px transparent; cursor:pointer; display:inline-block; height:18px; line-height:18px; overflow:hidden; position:relative; vertical-align:middle; width:59px; text-align:center;}
+
+.chatRecord,.chatRole { margin:5px;}
+#tstart .tdog-popup .tdog-popup-userinfo .tdog-userinfo-username {font-weight:bold; margin-top:5px;}
+
+.chatNew {background:url(../img/chat.gif) no-repeat left center;}/*聊天*/
+
+/*删除线*/
+.delete-line {text-decoration:line-through;}
+/*警告*/
+.eleWarning { color:#C00;}
+
+/*聊天记录*/
+.chatRecord{ display:none;}
+.dateLine{ border-bottom:1px dotted #ccc; font-weight:bold;}
+.me dt{ color:#014769;}
+.buddy dt{ color:#4A7202;}
+
+
+#supplierList{ display:block;}
+
