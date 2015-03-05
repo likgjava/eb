@@ -1,0 +1,856 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>阳光易购-中国权威的电子采购与招标第三方公共服务平台</title>
+<meta name="description" content="阳光易购（ebid360.com）是中国最权威的电子采购与招标服务平台，拥有上百万的商家、上千万的商品及专家资源，具备方便、快捷、安全的在线电子采购系统，竭诚为客户提供专业的招标与采购、B2C网上购物及专业的技术咨询服务。" />
+<meta name="keywords" content="阳光易购，采购，电子采购，竞价采购，采购代理，招标，电子招标，招标公告，招标代理，投标代理，求购信息，供应信息，采购单位，供应商，招投标专家，采购专家，精品商城，团购，b2b，电子商务，行业资讯，商务服务"/>
+<!-- bffZa3s-4QsAPUGz6JRHhj1BucY  -->
+<link rel="stylesheet" type="text/css" href="/view/resource/common/plug_in.css"/>
+<link rel="stylesheet" type="text/css" href="/view/resource/skin/sysicon/sysicon.css"/>
+<link rel="stylesheet" type="text/css" href="/view/resource/plug-in/jquery/dataTables/media/css/demo_page.css"/>
+<link rel="stylesheet" type="text/css" href="/view/resource/plug-in/jquery/dataTables/media/css/demo_table.css"/>
+<link rel="stylesheet" type="text/css" href="/view/resource/plug-in/jquery/dataTables/media/css/tableForm.css"/>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.js'></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.ui.js'></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/jquery.wresize.js" ></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.autoHeight.js'></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.form.js'></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.jPrintArea.js'></script>
+<script type="text/javascript" src="/view/resource/plug-in/FusionChart/JSClass/FusionCharts.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/FusionChart/JSClass/FusionChartsExportComponent.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/flexigrid/flexigrid.js"></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/dataTables/media/js/jquery.dataTables.js'></script>
+<script type="text/javascript" src="/view/resource/plug-in/dhtmlxTree/dhtmlxcommon.js"></script>  
+<script type="text/javascript" src="/view/resource/plug-in/dhtmlxTree/dhtmlxtree.js"></script>
+<script type="text/javascript" src='/view/resource/plug-in/extjs/ext-all.js'></script>
+<SCRIPT type="text/javascript" src="/view/resource/plug-in/jquery/autocomplete/jquery.autocomplete.js"></SCRIPT>
+<script type="text/javascript" src="/view/resource/scripts/jquery/epsValidate/jquery.validate.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/select/jQuery.CascadingSelect.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/select/jQuery.FillOptions.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/select/jquery.dxCombobox.js"></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/progressbar/jquery.progressbar.js'></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/jquery.bxGallery.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/FCKeditor/fckeditor.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/ajaxpager/jquery.ajaxpager.js"></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/imgPlay/imgPlay.js'></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.scrollto.js'></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.qtip-1.0.0-rc3.js'></script>
+<script type="text/javascript" src='/view/resource/scripts/jquery/epsDatepicker/epsDatepicker.js'></script>
+<script type="text/javascript" src="/view/resource/scripts/jquery/epsDialog/epsDialog.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/jquery/epsContentMenu/epsContentMenu.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/json/json-eps.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/obj2str.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/dateUtil.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/select.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/listTree.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/treeUtil.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/tabSet.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/otherUtils.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/loadPage.js" ></script>
+<script type="text/javascript" src="/view/resource/scripts/util/sysTools.js" ></script>
+<script type="text/javascript" src="/view/resource/scripts/util/date.js" ></script>
+<script type="text/javascript" src="/view/resource/scripts/util/changeSkin.js" ></script>
+<script type="text/javascript" src="/view/resource/scripts/util/sysInfo.js" ></script>
+<script type="text/javascript" src="/view/resource/scripts/util/evaluate.js"></script>
+<!--JS-->
+<script type="text/javascript" src='/view/srplatform/portal/include/common.js'></script>
+<script type="text/javascript" src="/view/srplatform/portal/index.js"></script>
+</head>
+<body>
+<!--浏览器检测 开始-->
+<!--[if IE 6]>
+<div class="userTips">
+	<p>尊敬的用户，您好！您使用的浏览器版本过低，请升级到较高版本，以获得更好的安全性及操作、视觉体验。<a href="http://www.microsoft.com/china/windows/internet-explorer/worldwide-sites.aspx" title="点击下载IE8浏览器安装文件">下载IE8浏览器</a></p>
+</div>
+<![endif]-->
+<noscript>
+<div class="userTips">
+  <p>尊敬的用户，您好！您使用的浏览器不支持或禁用JavaScript脚本。请使用支持JavaScript脚本的浏览器或启用浏览器JavaScript脚本功能。</p>
+  <p>如有任何疑问或需要帮助，请<a href="http://www.gpcsoft.com" target="_blank" title="珠海政采软件技术有限公司 技术支持">与我们联系</a>。</p>
+</div>
+</noscript>
+<!--浏览器检测 结束-->
+<!--页面容器 开始-->
+<div id="container"> 
+  <!--头部容器 开始-->
+  <div class="header">
+<!--CSS-->
+<link rel="stylesheet" type="text/css" href="/view/resource/skin/thems/default/main.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src='/view/resource/skin/thems/default/iepngfix/iepngfix_tilebg.js'></script>
+<link href="/view/resource/skin/thems/default/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!-- 页面参数 -->
+<input type="hidden" id="initPath" value="" />
+<input type="hidden" id="returnUrl" value="" />
+<input type="hidden" id="hrefUrl" value=""/>
+<input type="hidden" id="roleType" value="null" />
+<input type="hidden" id="globleOrg" value="null" />
+<input type="hidden" id="currentTab" value="0"/>
+<!--网站导航 开始-->
+<div class="siteNav">
+	<!--用户信息 开始-->
+	<p class="userInfo">
+			您好，欢迎来阳光易购！<a href="javascript:void(0);" name="toLogin">登录</a> <a title="免费注册成为会员享受更多服务" href="javascript:void(0);" name="toRegistration">免费注册</a>
+	</p>
+	<!--用户信息 结束-->
+	<!--快捷菜单 开始-->
+	<ul class="quickMenu" id="quickMenu">
+		<li class="shoppingBox"><a href="javascript:common.goinToShopCart();" title="我的购物车" class="shoppingCart"><span>购物车</span><em id="shoppingCartGoodsTotal">0</em> 件</a></li>
+<li><a href="javascript:void(0);" title="我要推广" class="promotion" id="toPromoterA">我要推广</a></li>
+<li class="omega"><a href="javascript:void(0);" name="helpcenter" title="客服中心" class="phone" id="view/staticpags/customer/customer.html">客服中心</a></li>
+<script>
+//跳转到我要推广
+$('#toPromoterA').click(function(){
+	var targetUrl = $('#initPath').val()+"/PromoterRegisterController.do?method=toRegistPromoter";
+	window.open( $('#initPath').val()+"/IndexViewController.do?method=index&sysContentUrl="+targetUrl );
+	return false;
+})
+</script>
+	</ul>
+	<!--快捷菜单 结束-->
+</div>
+<!--网站导航 结束--> 
+<!--网站基础信息 开始-->
+<div class="branding">
+	<a target="_self" href="/"><h1>阳光易购</h1></a>
+	<p class="hotline "><label>咨询热线</label><em>010-88356236</em></p>
+</div>
+<!--网站基础信息 结束--> 
+<!--主导航菜单 开始-->
+	<ul class="navMain">
+		<li class="selected"><a id="goToIndex" href="javascript:void(0);" title="首页">首页</a></li>
+		<li><a id="goToBidding" href="javascript:void(0);" title="电子招标">电子招标</a></li>
+		<li><a id="goToBargain" href="javascript:void(0);" title="电子采购">电子采购</a></li>
+		<li><a id="goToGoods" href="javascript:void(0);" title="商品库">商品库</a></li>
+		<li><a id="goToSupplier" href="javascript:void(0);" title="供应商库">供应商库</a></li>
+		<li><a id="goToGoodsMall" href="javascript:void(0);" title="精品商城">精品商城</a></li>
+	</ul>
+<!--主导航菜单 结束-->
+<!--统计数据 开始-->
+	<ul class="statData">
+		<li><label for="purUnits">认证采购单位：</label><em id="purUnits">9573</em> 家</li>
+		<li><label for="suppliers">认证供应商：</label><em id="suppliers">19510</em> 家</li>
+<li><label for="totalTransactions">交易总额：</label><em id="totalTransactions">15.03</em> 亿元</li>
+	</ul>
+<!--统计数据 结束-->
+<!--网站搜索 开始-->
+<div class="search">
+	<input type="hidden" id="searchType" value="1"  />
+	<ul class="searchTabs">
+		<li class="selected"><a href="javascript:void(0);" onclick="keyWordTypeChange(this,'1');">找商品</a></li>
+		<li><a href="javascript:void(0);" onclick="keyWordTypeChange(this,'2');">找公告</a></li>
+		<li><a href="javascript:void(0);" onclick="keyWordTypeChange(this,'3');">找供应商</a></li>
+		<li><a href="javascript:void(0);" onclick="keyWordTypeChange(this,'4');">找专家</a></li>
+	</ul>
+	<div class="searchPanel">
+		<input type="text" id="keyWords" style="width:360px;"/>
+		<button onclick="keyWordSearch();return false;">搜索</button>
+	</div>
+	<!-- 热门标签 开始 -->
+	<input type="hidden" id="hotTagsMaxResult" value="" />
+	<input type="hidden" id="hotTagsType" value="" />
+	<p class="searchHot" id="hotTagsListP">
+		<label>热门搜索：</label>
+	</p>
+	<!-- 热门标签 结束 -->
+</div>
+<!--网站搜索 结束-->
+<script>
+var gpcsoftDate = new Date("2011","10","1","17","31","54");//设定 当前 服 器时间 
+$(document).ready(function(){
+	//判断是否登录
+	if(common.isLogin(false)){
+		$("#numberAreaXY").show();
+		$("#numberAreaZT").show();
+	}
+	//获取热门标签
+	var maxResults = ($('#hotTagsMaxResult').val()=='' ? 5 : $('#hotTagsMaxResult').val());
+	var tagsType = ($('#hotTagsType').val()=='' ? '01' : $('#hotTagsType').val());
+	$.getJSON($('#initPath').val()+"/IndexViewController.do?method=getHotTagsList",{'maxResults':maxResults,'tagsType':tagsType},function(json){
+		if(json.failure){if(json.result)alert(json.result);return;}
+		$.each(json.hotTagsList, function(index,hotTag){
+			var tagsDscr = (hotTag.tagsDscr==null ? hotTag.tagsName : hotTag.tagsDscr);
+			var oper = ' <a href="javascript:void(0);" name="gTag" title="'+tagsDscr+'" onclick="keyWordSearch(\''+hotTag.tagsName+'\');return false;">'+hotTag.tagsName+'</a> ';
+			$('#hotTagsListP').append(oper);
+		});
+	});
+	//获取购物车信息
+	getCartInfo();
+	//监听搜索框的回车事件
+	$('#keyWords').keypress(function(event){
+		if(event.keyCode == 13){
+			keyWordSearch();
+			return false;
+		}
+	});
+});
+</script>
+  </div>
+  <!--CSS-->
+  <link rel="stylesheet" type="text/css" href="/view/resource/skin/thems/default/index.css" />
+  <!--头部容器 结束-->
+  <!--是否加载主页所有信息 开始-->
+  <!--主要内容容器 开始-->
+  <div id="sysContent" class="page"> 
+    <!--资讯、焦点、最新竞价 开始-->
+    <div class="gridBox">
+      <!--资讯开始-->
+      <div class='grid16_4'>
+        <div class="cols">
+          <h2>通知通告</h2>
+			<div class="hotAreaNews">
+			<h3>
+				<a href="javascript:void(0)" id="/xygh/view/staticpags/notice/ff8080813176735601319260b8971b81.html" class="cmsHref_index" title="门禁考勤机采购项目成交通告">门禁考勤机采购项目…</a>
+			</h3>
+			<p class="hotImg"><img src="cms/newscontent/contentupload/image/2011-08/1fb73f09_ccbb_4807_81e3_f10ed1560d33.jpg"/></p> 
+		    <p class="hotDetails">门禁考勤机采购项目成交通告门禁考勤机采购…</p>
+			</div>
+			<ul class="newsList">
+				<li><a href="javascript:void(0)" id="/xygh/view/staticpags/notice/ff8080813140dc4701314f6b0be51244.html" class="cmsHref_index" title="笔记本电脑采购项目成交通告">笔记本电脑采购项目成交通...</a><span class="date">07-22</span></li>
+				<li><a href="javascript:void(0)" id="/xygh/view/staticpags/notice/ff8080813078a9560130868180100384.html" class="cmsHref_index" title="稻香村粽子采购项目成交通告">稻香村粽子采购项目成交通...</a><span class="date">06-13</span></li>
+				<li><a href="javascript:void(0)" id="/xygh/view/staticpags/notice/ff8080813043eecc013044037efc0149.html" class="cmsHref_index" title="联想一体电脑采购项目成交通告">联想一体电脑采购项目成交...</a><span class="date">05-31</span></li>
+				<li><a href="javascript:void(0)" id="/xygh/view/staticpags/notice/ff8080812fbfbecc012fd2868ece0734.html" class="cmsHref_index" title="锡盘、奖牌、证书、水晶奖杯采购项目成交通告">锡盘、奖牌、证书、水晶奖...</a><span class="date">05-09</span></li>
+				<li><a href="javascript:void(0)" id="/xygh/view/staticpags/notice/ff8080812fb4297b012fb99cf8c402fa.html" class="cmsHref_index" title="联想一体电脑机采购项目成交通告">联想一体电脑机采购项目成...</a><span class="date">05-04</span></li>
+			</ul>
+			<div class="more"><a href="javascript:void(0);" id="/xygh/view/staticpags/zjszjq/zjszjq.html" class="cmsHref_index right">更多</a></div>
+        </div>
+      </div>
+      <!--资讯结束-->
+      <!-- 跑马灯  开始 -->
+      <div class='grid16_8'>
+        <div class="focus">
+<style>
+	.imgPlayUl{
+		width: 484px;
+		height:242px;
+	}
+	.imgPlayUl img{
+		width: 484px;
+		height:242px;
+	}
+	.imgPlayUl li{
+		width: 484px;
+		height:242px;
+	}
+	.playerNav{ background:none repeat scroll 0 0 ;}
+</style>
+<ul id="focus" class="imgPlayUl">
+		<li>
+			<a href="http://www.ebid360.com/OrgShopController.do?method=toOrgShopIndexView&orgInfoId=ff808081304e848f013053629bba095d" target="_blank"><img src="http://localhost:8080/img/upload/3800e3d2-88c7-4dfb-82b8-a6f019ad5544" /><span></span></a>
+		</li>
+		<li>
+			<a href="http://www.军魂酒业.cn/Product/ProductList.aspx" target="_blank"><img src="http://localhost:8080/img/upload/b9545dbb-2bfc-4ce2-a572-a9f03b55f16e" /><span></span></a>
+		</li>
+		<li>
+			<a href="http://www.lzhb.com.cn/" target="_blank"><img src="http://localhost:8080/img/upload/36b0bd35-cbb5-47ef-b349-d12c52e54d71" /><span></span></a>
+		</li>
+		<li>
+			<a href="http://www.lzhb.com.cn/" target="_blank"><img src="http://localhost:8080/img/upload/37f7d83e-0249-4203-8450-e328492972d0" /><span></span></a>
+		</li>
+</ul>
+<script>
+$(document).ready(function(){
+	//跑马灯
+	$("#focus").imgPlay();
+});
+</script>
+        </div>
+      </div>
+      <!-- 跑马灯  结束 -->
+      <div class='grid16_4 omega'>
+        <!--重磅推荐 开始-->
+        <div class="recommendArea" id="recommendProjectIndexDiv"></div>
+        <!--重磅推荐 结束-->
+        <!--登录、注册  开始-->
+        <div id="loginRegDiv">
+	<div class="userLoginBox">
+		<a href="javascript:void(0);" onclick="common.goToLogin();return false;" title="请点击登录" class="userLogin"><span>用户登录</span></a><a href="javascript:void(0);" onclick="common.goToRegistration();return false;" title="点击可免费注册" class="freeRegister"><span>免费注册</span></a>
+	</div>
+        </div>
+        <!--登录、注册  结束-->
+      </div>
+    </div>
+    <!--资讯、焦点、最新竞价 结束-->
+    <!--名企专区、广告位 开始-->
+    <div class="gridBox">
+      <div class='grid16_12'>
+<div class="zoneSaw">
+	<h2><img src="/view/resource/images/zone_saw_h.jpg" alt="知名企业采购平台" /></h2>
+	<div class="zone_saw_logos">
+		<ul>
+			<li class="li_1"><a target="_blank" href="http://www.cdb.com.cn/"><img src="/view/resource/images/cdb.jpg" alt="国家开发银行" /></a></li>
+			<li class="li_2"><a target="_blank" href="http://www.ghepc.com/"><img src="/view/resource/images/sh.jpg" alt="神华国华电力"/></a></li>
+			<li class="li_3"><a target="_blank" href="http://www.cecic.com.cn/"><img src="/view/resource/images/zj.jpg" alt="中国节能"/></a></li>
+			<li class="li_4"><a target="_blank" href="http://www.55tuan.com/"><img src="/view/resource/images/ww.jpg" alt="窝窝团"/></a></li>
+			<li class="li_1" style="border-bottom:none;"><a target="_blank" href="http://www.gpcsoft.com/"><img src="/view/resource/images/zc.jpg" alt="政采科技"/></a></li>
+			<li class="li_2" style="border-bottom:none;"><a target="_blank" href="http://www.gxzb.com.cn/"><img src="/view/resource/images/gx.jpg" alt="国信招标集团"/></a></li>
+			<li class="li_5"><a target="_blank" href="http://www.capdi.com/"><img src="/view/resource/images/zh.jpg" alt="中国航空规划建设发展有限公司"/></a></li>
+		</ul>
+	</div>
+</div>
+      </div>
+      <!--首页右1广告位开始-->
+      <div class='grid16_4 omega'><div>
+	<a href="http://www.paihang360.com" target="_blank"><img src="http://localhost:8080/img/upload/b6225645-082b-431d-82bf-1d0e73295852" width="238" height="70"/></a>
+</div></div>
+      <!--首页右1广告位结束-->
+    </div>
+    <!--名企专区、广告位 结束-->
+    <!--招标、采购、精品团购 开始-->
+    <div class="gridBox">
+      <!--招标、采购项目  开始-->
+<!--招标项目开始-->
+<div class='grid16_6'>
+	<div id="bidding" class="cols groupBuy ebidTabs">
+		<h2><span class="titleDown">招标</span></h2>
+		<ul>
+			<li><a href="#biddingIn">正在进行</a></li>
+			<li><a href="#biddingDeal" id="biddingDealTab">已经成交</a></li>
+		</ul>
+		<!-- 正在进行 -->
+		<div id="biddingIn" class="infoList">
+			<ul>
+				<li>
+					<h3>
+						<a href="javascript:void(0);" title="gkh-采购十台笔记本-招标项目测试" onclick="common.goToBulletinDetail('402885dd332402440133240a3417000b','01');">
+							gkh-采购十台笔记本-招标项目测试
+						</a>
+					</h3>
+					<ul>
+						<li>采购方式：<em>公开招标</em></li>
+						<li class="time">报名截止时间：<em>10-23 09:15</em></li>
+						<li>采购区域：<em>北京市,市辖区,海淀区</em></li>
+					</ul>
+					<div class="btnBoxR">
+								<a href="javascript:void(0);" class="bigBtn" onclick="common.goToBulletinDetail('402885dd332402440133240a3417000b','01');">去报名</a>
+					</div>
+				</li>
+				<li>
+					<h3>
+						<a href="javascript:void(0);" title="招标测试001" onclick="common.goToBulletinDetail('402885dd33149145013315aae8500350','01');">
+							招标测试001
+						</a>
+					</h3>
+					<ul>
+						<li>采购方式：<em>公开招标</em></li>
+						<li class="time">报名截止时间：<em>10-19 14:16</em></li>
+						<li>采购区域：<em>北京市,市辖区,海淀区</em></li>
+					</ul>
+					<div class="btnBoxR">
+								<a href="javascript:void(0);" class="bigBtn" onclick="common.goToBulletinDetail('402885dd33149145013315aae8500350','01');">去报名</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--已经成交-->
+		<div id="biddingDeal" class="infoList">
+			<ul>
+				<li>
+					<h3>
+						<a href="javascript:void(0);" title="国家开发银行2011年第一批服务器类设备（存储升级）" onclick="common.goToBulletinDetail('ff8080812fe93117012ff83ca0e60601','01');">
+							国家开发银行2011年第一批服务器类设备（存…
+						</a>
+					</h3>
+					<ul>
+						<li>采购方式：<em>公开招标</em></li>
+						<li>项目编号：<em>GXTC-1116010</em></li>
+						<li>采购区域：<em>北京市,市辖区,海淀区</em></li>
+					</ul>
+					<div class="btnBoxR"><a href="javascript:void(0);" class="bigBtn" onclick="common.goToBulletinDetail('ff8080812fe93117012ff83ca0e60601','01');">去看看</a></div>
+				</li>
+				<li>
+					<h3>
+						<a href="javascript:void(0);" title="国家开发银行2011年第一批服务器类设备（中端存储）" onclick="common.goToBulletinDetail('ff8080812fe93117012ff83b79fe05fb','01');">
+							国家开发银行2011年第一批服务器类设备（中…
+						</a>
+					</h3>
+					<ul>
+						<li>采购方式：<em>公开招标</em></li>
+						<li>项目编号：<em>GXTC-1116011</em></li>
+						<li>采购区域：<em>北京市,市辖区,海淀区</em></li>
+					</ul>
+					<div class="btnBoxR"><a href="javascript:void(0);" class="bigBtn" onclick="common.goToBulletinDetail('ff8080812fe93117012ff83b79fe05fb','01');">去看看</a></div>
+				</li>
+				<li>
+					<h3>
+						<a href="javascript:void(0);" title="国家开发银行2011年第一批服务器类设备（PC服务器）" onclick="common.goToBulletinDetail('ff8080812fe93117012ff83a33cc05f5','01');">
+							国家开发银行2011年第一批服务器类设备（P…
+						</a>
+					</h3>
+					<ul>
+						<li>采购方式：<em>公开招标</em></li>
+						<li>项目编号：<em>GXTC-1116007</em></li>
+						<li>采购区域：<em>北京市,市辖区,海淀区</em></li>
+					</ul>
+					<div class="btnBoxR"><a href="javascript:void(0);" class="bigBtn" onclick="common.goToBulletinDetail('ff8080812fe93117012ff83a33cc05f5','01');">去看看</a></div>
+				</li>
+			</ul>
+		</div>
+		<div class="more"><a title="点击查看更多" href="/ProjectShowController.do?method=toShowBiddingProjectList&rp=21&page=1" target="_blank">更多</a></div>
+	</div>
+</div>
+<!--招标项目结束-->
+<!--采购项目开始 -->
+<div class='grid16_6'>
+	<div id="purchasing" class="cols groupBuy ebidTabs">
+		<h2><span class="titleUp">采购</span></h2>
+		<ul>
+			<li><a href="#purchasingIn">正在进行</a></li>
+			<li><a href="#purchasingDeal" id="purchasingDealTab">已经成交</a></li>
+		</ul>
+		<!-- 正在进行 -->
+		<div id="purchasingIn" class="infoList">
+			<ul>
+				<li>
+					<h3>
+						<a href="javascript:void(0);" title="竞价样式测试002" onclick="common.goToBulletinDetail('402885e63343d62d013343f3569d0014','12');">
+							竞价样式测试002
+						</a>
+					</h3>
+					<ul>
+						<li>采购方式：<em>竞价</em></li>
+						<li class="time">报名截止时间：<em>11-05 13:52</em></li>
+						<li>采购区域：<em>北京市,市辖区,西城区</em></li>
+					</ul>
+					<div class="btnBoxR">
+								<a href="javascript:void(0);" class="bigBtn" onclick="common.goToBulletinDetail('402885e63343d62d013343f3569d0014','12');">去报名</a>
+					</div>
+				</li>
+				<li>
+					<h3>
+						<a href="javascript:void(0);" title="竞价样式测试001" onclick="common.goToBulletinDetail('402885e63343d62d013343ec3a5d0005','12');">
+							竞价样式测试001
+						</a>
+					</h3>
+					<ul>
+						<li>采购方式：<em>竞价</em></li>
+						<li class="time">报名截止时间：<em>11-05 13:47</em></li>
+						<li>采购区域：<em>北京市,市辖区,西城区</em></li>
+					</ul>
+					<div class="btnBoxR">
+								<a href="javascript:void(0);" class="bigBtn" onclick="common.goToBulletinDetail('402885e63343d62d013343ec3a5d0005','12');">去报名</a>
+					</div>
+				</li>
+				<li>
+					<h3>
+						<a href="javascript:void(0);" title="gkh竞价项目测试001" onclick="common.goToBulletinDetail('402885dd3319b50601331a288650000b','12');">
+							gkh竞价项目测试001
+						</a>
+					</h3>
+					<ul>
+						<li>采购方式：<em>竞价</em></li>
+						<li class="time">报名截止时间：<em>11-05 11:09</em></li>
+						<li>采购区域：<em>北京市,市辖区,西城区</em></li>
+					</ul>
+					<div class="btnBoxR">
+								<a href="javascript:void(0);" class="bigBtn" onclick="common.goToBulletinDetail('402885dd3319b50601331a288650000b','12');">去报名</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--已经成交-->
+		<div id="purchasingDeal" class="infoList">
+			<ul>
+				<li>
+					<h3>
+						<a href="javascript:void(0);" title="交换机D-Link DES-1252 和路由器H3C ER5200采购公告" onclick="common.goToBulletinDetail('ff80808132811a91013289f9fdef149e','12');">
+							交换机D-Link DES-1252 和路由…
+						</a>
+					</h3>
+					<ul>
+						<li>采购方式：<em>竞价</em></li>
+						<li>项目编号：<em>P-20110921-002</em></li>
+						<li>采购区域：<em>北京市,市辖区,海淀区</em></li>
+					</ul>
+					<div class="btnBoxR"><a href="javascript:void(0);" class="bigBtn" onclick="common.goToBulletinDetail('ff80808132811a91013289f9fdef149e','12');">去看看</a></div>
+				</li>
+				<li>
+					<h3>
+						<a href="javascript:void(0);" title="ACER的19寸宽屏显示器 V193WEbmde采购公告" onclick="common.goToBulletinDetail('ff80808132811a9101329033d20d471b','12');">
+							ACER的19寸宽屏显示器 V193WEbm…
+						</a>
+					</h3>
+					<ul>
+						<li>采购方式：<em>竞价</em></li>
+						<li>项目编号：<em>P-20110922-002</em></li>
+						<li>采购区域：<em>北京市,市辖区,海淀区</em></li>
+					</ul>
+					<div class="btnBoxR"><a href="javascript:void(0);" class="bigBtn" onclick="common.goToBulletinDetail('ff80808132811a9101329033d20d471b','12');">去看看</a></div>
+				</li>
+				<li>
+					<h3>
+						<a href="javascript:void(0);" title="联想ThinkPad E40（0579A14） 笔记本电脑采购公告" onclick="common.goToBulletinDetail('ff80808132811a91013284d283080411','12');">
+							联想ThinkPad E40（0579A14…
+						</a>
+					</h3>
+					<ul>
+						<li>采购方式：<em>竞价</em></li>
+						<li>项目编号：<em>P-20110920-002</em></li>
+						<li>采购区域：<em>北京市,市辖区,海淀区</em></li>
+					</ul>
+					<div class="btnBoxR"><a href="javascript:void(0);" class="bigBtn" onclick="common.goToBulletinDetail('ff80808132811a91013284d283080411','12');">去看看</a></div>
+				</li>
+			</ul>
+		</div>
+		<div class="more"><a title="点击查看更多" href="/ProjectShowController.do?method=toShowBargainProjectList&rp=21&page=1" target="_blank">更多</a></div>
+	</div>
+</div>
+<!--采购项目结束 -->
+<script type="text/javascript">
+$(document).ready(function(){
+	//初始化Tab
+	$('#bidding').tabs();
+	$('#purchasing').tabs();
+	$('#biddingDealTab').click();
+	//$('#purchasingDealTab').click();
+});
+</script>
+      <!--招标、采购项目  结束-->
+      <!-- 精品团购  开始 -->
+      <div class='grid16_4 omega'>
+<!-- 精品团购  开始 -->
+<div class="cols groupBuy">
+	<h2>精品团购</h2>
+	<ul class="hotGoodsList">
+		<li>
+			<h3><a href="javascript:void(0);" title="圣经密码图书" onclick="GroupBuyingIndex.toGroupBuyerFormView('ff80808131ff33bb0132002808920107');">圣经密码图书</a></h3>
+			<p class="hotImg"><img style="width: 100px; height: 100px;" src="http://localhost:8080/img/upload/112c7737-d876-437d-8773-d116d8c00da2" /></p>
+			<p class="hotDetails">圣经密码 [平装] ~ 迈可.卓思…</p>
+			<p class="hotPrice"><em>￥15</em> <del>￥28</del></p>
+			<p class="signUp"><a href="javascript:void(0);" class="bigBtn" onclick="GroupBuyingIndex.toGroupBuyerFormView('ff80808131ff33bb0132002808920107');">我要团购</a></p>
+		</li>
+		<li>
+			<h3><a href="javascript:void(0);" title="黄山曙光" onclick="GroupBuyingIndex.toGroupBuyerFormView('ff80808130db80a70130dbb3747b004e');">黄山曙光</a></h3>
+			<p class="hotImg"><img style="width: 100px; height: 100px;" src="http://localhost:8080/img/upload/251fe416-9167-4bc3-85bf-545a160e2b66" /></p>
+			<p class="hotDetails">黄山曙光</p>
+			<p class="hotPrice"><em>￥1,500</em> <del>￥2,000</del></p>
+			<p class="signUp"><a href="javascript:void(0);" class="bigBtn" onclick="GroupBuyingIndex.toGroupBuyerFormView('ff80808130db80a70130dbb3747b004e');">我要团购</a></p>
+		</li>
+	</ul>
+	<div class="more"><a title="点击查看更多" href="/GroupBuyingShowController.do?method=toShowGroupBuyingIndexView" target="_blank">更多</a></div>
+</div>
+<!-- 精品团购  结束 -->
+<script type="text/javascript">
+/** 首页精品团购页面 */
+var GroupBuyingIndex = {};
+//跳转到下订单页面
+GroupBuyingIndex.toGroupBuyerFormView = function(groupBuyingId){
+	window.open($('#initPath').val()+"/GroupBuyerController.do?method=toCreateOrUpdateView&groupBuyingId="+groupBuyingId);
+}
+</script>
+      </div>
+      <!-- 精品团购  结束 -->
+    </div>
+    <!--招标、采购、精品团购 结束-->
+    <!--首页中1、右2广告位开始-->
+    <div class="gridBox">
+      <div class="ad_b_90 float_l"><div>
+	<a href="http://www.dcgou.com/static4/page_dcgou/jfhl/index.html" target="_blank"><img src="http://localhost:8080/img/upload/97f776aa-fbef-44ff-8e42-e17f109536d9" width="734" height="90"/></a>
+</div></div>
+      <div class="ad_s_90 float_r"><div>
+	<a href="http://www.togo815.com/" target="_blank"><img src="http://localhost:8080/img/upload/7820f031-aff0-4fc0-85e0-e06c59639a09" width="238" height="90"/></a>
+</div></div>
+    </div>
+    <!--首页中1、右2广告位结束-->
+    <!--商品展示 开始-->
+    <div class="gridBox">
+      <div class="cols goodsShowBox">
+        <h2>商品展示</h2>
+        <div class='brandBox'>
+          <!--首页左部广告位开始-->
+            <div class="brandAdv"><div>
+	<a href="http://www.chinabidding.com.cn/zbw/index.jsp" target="_blank"><img src="http://localhost:8080/img/upload/fe547d11-8f22-441c-89ff-73b58ef202f5" width="210" height="90"/></a>
+</div></div>
+          <!--首页左部广告位结束-->
+          <!-- 推荐品牌  开始 -->
+<ul class='brandList'>
+  <li><a title="美的" href="/GoodsShowController.do?method=toGoodsByBrandList&rp=20&page=1&brandId=ff808081304e1c5a01304e5cad31009d" target="_blank"><img style="width: 100px; height: 75px;" src="http://localhost:8080/img/upload/42120624-2086-471c-b290-cd72aa80cbab" /></a></li>
+  <li><a title="ASUS（华硕）" href="/GoodsShowController.do?method=toGoodsByBrandList&rp=20&page=1&brandId=2c9087922c15f17a012c1b1fb31308b7" target="_blank"><img style="width: 100px; height: 75px;" src="http://localhost:8080/img/upload/6a4d2e4d-af63-4752-a474-54e92cbd2d15" /></a></li>
+  <li><a title="海尔" href="/GoodsShowController.do?method=toGoodsByBrandList&rp=20&page=1&brandId=ff80808130d5857c0130da01e75c04e8" target="_blank"><img style="width: 100px; height: 75px;" src="http://localhost:8080/img/upload/c63598d2-fc21-430c-9960-08324927d8ef" /></a></li>
+  <li><a title="DELL（戴尔）" href="/GoodsShowController.do?method=toGoodsByBrandList&rp=20&page=1&brandId=ff8080812f4e78d5012f52e3a0af0a9f" target="_blank"><img style="width: 100px; height: 75px;" src="http://localhost:8080/img/upload/bbab0574-f08f-4621-8104-b2e25a68176a" /></a></li>
+  <li><a title="中国红瓷器" href="/GoodsShowController.do?method=toGoodsByBrandList&rp=20&page=1&brandId=ff8080812f44ac00012f47b0dcda038e" target="_blank"><img style="width: 100px; height: 75px;" src="http://localhost:8080/img/upload/f359d069-86e2-4e04-91d8-200fd8352fc3" /></a></li>
+  <li><a title="亿时空" href="/GoodsShowController.do?method=toGoodsByBrandList&rp=20&page=1&brandId=ff8080812f7ae5ba012f7b602a6e010f" target="_blank"><img style="width: 100px; height: 75px;" src="http://localhost:8080/img/upload/bdb3e616-2ffb-48a0-8772-5afcbe8292e0" /></a></li>
+  <li><a title="华为" href="/GoodsShowController.do?method=toGoodsByBrandList&rp=20&page=1&brandId=ff8080812f4e78d5012f52eca3de0ada" target="_blank"><img style="width: 100px; height: 75px;" src="http://localhost:8080/img/upload/2d1f210c-8ae0-46be-a132-07f273e45eba" /></a></li>
+  <li><a title="思科" href="/GoodsShowController.do?method=toGoodsByBrandList&rp=20&page=1&brandId=ff8080812f9cf3c5012fb3fadbd205a6" target="_blank"><img style="width: 100px; height: 75px;" src="http://localhost:8080/img/upload/67b806de-bc41-491b-8fdb-76e53c36b436" /></a></li>
+</ul>
+          <!-- 推荐品牌  结束 -->
+        </div>
+        <!-- 推荐商品  开始 -->
+<script type="text/javascript">
+showWellGoodsDetail = function(objId) {
+	if(!objId){
+		window.open( $('#initPath').val()+"/GoodsShowController.do?method=toGoodsList&rp=20&page=1");
+	}else{
+		common.geToGoodsDetail( objId );
+	}
+}
+</script>
+<div class='goodsShowList'>
+	<ul class="verticalShowList">
+	     <li >
+	        <h3><a href="javascript:void(0);" onclick="showWellGoodsDetail('ff80808130c14db40130cf29cdb80507');return false;" title="德昌顺 2011年特级黄茶 女士抗衰老 黄芽茶叶">
+    				德昌顺 2011年特级黄茶 女士抗衰老 黄…
+	        </a></h3>
+	        <p class="hotImg"><a href="javascript:void(0);" onclick="showWellGoodsDetail('ff80808130c14db40130cf29cdb80507');return false;"><img style="width: 120px; height: 120px;" src="http://localhost:8080/img/upload/3ade543f-575f-4486-b8b0-8c47e099bba3" /></a></p>
+	        <p class="hotPrice"><em>￥88.00</em></p>
+	     </li>
+	     <li >
+	        <h3><a href="javascript:void(0);" onclick="showWellGoodsDetail('ff80808130c14db40130cf94d10e0637');return false;" title="本草拾遗黄茶叶 特二级正山 霍山黄芽 寿州黄芽 ">
+    				本草拾遗黄茶叶 特二级正山 霍山黄芽 寿州…
+	        </a></h3>
+	        <p class="hotImg"><a href="javascript:void(0);" onclick="showWellGoodsDetail('ff80808130c14db40130cf94d10e0637');return false;"><img style="width: 120px; height: 120px;" src="http://localhost:8080/img/upload/6b04034b-11b7-4f0e-83e4-a1f1df486ba9" /></a></p>
+	        <p class="hotPrice"><em>￥52.00</em></p>
+	     </li>
+	     <li >
+	        <h3><a href="javascript:void(0);" onclick="showWellGoodsDetail('ff80808130c14db40130cf27197904e4');return false;" title="德昌顺 霍山黄芽茶叶">
+    				德昌顺 霍山黄芽茶叶
+	        </a></h3>
+	        <p class="hotImg"><a href="javascript:void(0);" onclick="showWellGoodsDetail('ff80808130c14db40130cf27197904e4');return false;"><img style="width: 120px; height: 120px;" src="http://localhost:8080/img/upload/bd1fe6dc-2bd8-4409-8a75-5eb4b4a02571" /></a></p>
+	        <p class="hotPrice"><em>￥168.00</em></p>
+	     </li>
+	     <li >
+	        <h3><a href="javascript:void(0);" onclick="showWellGoodsDetail('2c9087922cc48785012cc9b93d831074');return false;" title="OH5100无齿轮乘客电梯">
+    				OH5100无齿轮乘客电梯
+	        </a></h3>
+	        <p class="hotImg"><a href="javascript:void(0);" onclick="showWellGoodsDetail('2c9087922cc48785012cc9b93d831074');return false;"><img style="width: 120px; height: 120px;" src="http://localhost:8080/img/upload/6289f222-7756-45e6-a295-97de40b80372" /></a></p>
+	        <p class="hotPrice"><em>￥236,589.00</em></p>
+	     </li>
+	     <li class="omega">
+	        <h3><a href="javascript:void(0);" onclick="showWellGoodsDetail('2c9087922c9c160e012ca003a59701cb');return false;" title="金属屏蔽监视软电缆">
+    				金属屏蔽监视软电缆
+	        </a></h3>
+	        <p class="hotImg"><a href="javascript:void(0);" onclick="showWellGoodsDetail('2c9087922c9c160e012ca003a59701cb');return false;"><img style="width: 120px; height: 120px;" src="http://localhost:8080/img/upload/e870872e-e575-453f-8a2a-b3d4ff83d29a" /></a></p>
+	        <p class="hotPrice"><em>￥14.00</em></p>
+	     </li>
+	     <li >
+	        <h3><a href="javascript:void(0);" onclick="showWellGoodsDetail('2c9087922c86fb91012c96e5d971078c');return false;" title="市内通信电缆">
+    				市内通信电缆
+	        </a></h3>
+	        <p class="hotImg"><a href="javascript:void(0);" onclick="showWellGoodsDetail('2c9087922c86fb91012c96e5d971078c');return false;"><img style="width: 120px; height: 120px;" src="http://localhost:8080/img/upload/a3462542-547b-4ab6-b836-1679090ff2c9" /></a></p>
+	        <p class="hotPrice"><em>￥12.00</em></p>
+	     </li>
+	     <li >
+	        <h3><a href="javascript:void(0);" onclick="showWellGoodsDetail('ff808081304e1c5a01304e6a914800c8');return false;" title="美的燃气热水器JSQ20-10JB 数码恒温">
+    				美的燃气热水器JSQ20-10JB 数码恒温
+	        </a></h3>
+	        <p class="hotImg"><a href="javascript:void(0);" onclick="showWellGoodsDetail('ff808081304e1c5a01304e6a914800c8');return false;"><img style="width: 120px; height: 120px;" src="http://localhost:8080/img/upload/264abde4-f2fb-44d7-bfb6-76ec74f6bcc1" /></a></p>
+	        <p class="hotPrice"><em>￥1,048.00</em></p>
+	     </li>
+	     <li >
+	        <h3><a href="javascript:void(0);" onclick="showWellGoodsDetail('ff808081304e1c5a01304e63ac5200c1');return false;" title="美的 NDK20-10D 取暖器 对衡式电暖气2000W 电暖器">
+    				美的 NDK20-10D 取暖器 对衡式电…
+	        </a></h3>
+	        <p class="hotImg"><a href="javascript:void(0);" onclick="showWellGoodsDetail('ff808081304e1c5a01304e63ac5200c1');return false;"><img style="width: 120px; height: 120px;" src="http://localhost:8080/img/upload/6d8e1370-6e3e-42a9-b770-d738368ddea6" /></a></p>
+	        <p class="hotPrice"><em>￥890.00</em></p>
+	     </li>
+	     <li >
+	        <h3><a href="javascript:void(0);" onclick="showWellGoodsDetail('ff808081304e1c5a01304e61ce8c00b7');return false;" title="美的F169-50J(H)速热热水器2010新款">
+    				美的F169-50J(H)速热热水器201…
+	        </a></h3>
+	        <p class="hotImg"><a href="javascript:void(0);" onclick="showWellGoodsDetail('ff808081304e1c5a01304e61ce8c00b7');return false;"><img style="width: 120px; height: 120px;" src="http://localhost:8080/img/upload/e4cd706f-2a91-415a-9b18-50971d38071a" /></a></p>
+	        <p class="hotPrice"><em>￥2,250.00</em></p>
+	     </li>
+	     <li class="omega">
+	        <h3><a href="javascript:void(0);" onclick="showWellGoodsDetail('ff808081304e1c5a01304e613c6e00b2');return false;" title="美的取暖器 美的 NTY18-09A 电暖器">
+    				美的取暖器 美的 NTY18-09A 电暖器
+	        </a></h3>
+	        <p class="hotImg"><a href="javascript:void(0);" onclick="showWellGoodsDetail('ff808081304e1c5a01304e613c6e00b2');return false;"><img style="width: 120px; height: 120px;" src="http://localhost:8080/img/upload/a7e112ca-6ea1-48b0-9d18-08178394cc39" /></a></p>
+	        <p class="hotPrice"><em>￥1,179.00</em></p>
+	     </li>
+	</ul>
+</div>
+<div class="more"><a href="javascript:void(0);" onclick="showWellGoodsDetail();" title="更多">更多</a></div>
+        <!-- 推荐商品  结束 -->
+      </div>
+    </div>
+    <!--商品展示 结束-->
+    <!--供应商、采购单位 开始-->
+    <div class="gridBox">
+      <div class="grid16_8">
+<div class="cols">
+	<h2><span class="titleDown">供应商</span></h2>
+	<div class="hotAreaNews">
+		<h3><a href="javascript:void(0);" onclick="common.goToOrgShop('ff808081304e848f013053629bba095d');return false;">泸州老窖集团有限责任公司</a></h3>
+		<p class="hotImg"><img style="width: 60px; height: 60px;" src="http://localhost:8080/img/upload/e78561fb-d728-46b3-966c-20f5f82e5603" /></p>
+		<p class="hotDetails">泸州酒业，始于秦汉，兴于唐宋，盛于明清，发展在新中国，与之一脉相承的泸州老窖集团是享誉海内外的百年老字号名酒企业，是在…</p>
+	</div>
+	<ul class="newsList">
+		<li>
+			<span>[批发和零售业]</span>
+			<a href="javascript:void(0);" onclick="common.goToOrgShop('ff8080813008ca47013015783e7e01e5');">
+				北京乐诚天际商贸有限公司
+			</a>
+		</li>
+		<li>
+			<span>[其他行业]</span>
+			<a href="javascript:void(0);" onclick="common.goToOrgShop('ff8080813008ca4701300cb02ab401b1');">
+				北京蓝科时代信息技术开发有限公司
+			</a>
+		</li>
+		<li>
+			<span>[居民服务和其他服务业]</span>
+			<a href="javascript:void(0);" onclick="common.goToOrgShop('ff8080813008ca4701301f90b96205b5');">
+				香港富通达国际物流有限公司
+			</a>
+		</li>
+		<li>
+			<span>[电力、燃气及水的生产和供应业]</span>
+			<a href="javascript:void(0);" onclick="common.goToOrgShop('ff8080813006049101300630f4b10081');">
+				北京佳讯飞鸿电气股份有限公司
+			</a>
+		</li>
+	</ul>
+	<div class="more"><a href="/SupplierShowController.do?method=toSupplierList&rp=20&page=1&districtLevel=1" target="_blank" title="更多">更多</a></div>
+</div>
+      </div>
+      <div class="grid16_8 omega">
+<div class="cols">
+	<h2><span class="titleUp">采购单位</span></h2>
+	<div class="hotAreaNews">
+		<h3><a onclick="common.geToBuyerDetail('ff8080812fe93117012ff7f2fe0a049b');" href="javascript:void(0);">国家开发银行股份有限公司</a></h3>
+		<p class="hotImg"><img style="width: 60px; height: 60px;" src="http://localhost:8080/img/upload/3c0e5737-2952-40d1-84ae-eb1e54b8cfa7" /></p>
+		<p class="hotDetails">国开行2010年认真贯彻国家宏观经济政策，发挥开发性金融与中长期投融资的优势和作用，一方面致力于基础设施建设、产业调整…</p>
+	</div>
+	<ul class="newsList">
+		<li>
+			<span>[租赁和商务服务业]</span>
+			<a onclick="common.geToBuyerDetail('ff8080813118359201311d83ac210c41');" href="javascript:void(0);">国信招标集团有限公司</a>
+			<span class="date" title="已采购金额">￥100.00 万元</span>
+		</li>
+		<li>
+			<span>[信息传输、计算机服务和软件业]</span>
+			<a onclick="common.geToBuyerDetail('2c9087922c1f7a0c012c28ff190e0078');" href="javascript:void(0);">北京国信创新科技有限公司</a>
+			<span class="date" title="已采购金额">￥50.00 万元</span>
+		</li>
+		<li>
+			<span>[信息传输、计算机服务和软件业]</span>
+			<a onclick="common.geToBuyerDetail('2c9087922c1089e8012c149383cd009a');" href="javascript:void(0);">北京九合互联科技有限公司</a>
+			<span class="date" title="已采购金额">￥32.01 万元</span>
+		</li>
+		<li>
+			<span>[信息传输、计算机服务和软件业]</span>
+			<a onclick="common.geToBuyerDetail('4c9087922c57b06f012c5e2ceea50674');" href="javascript:void(0);">珠海政采软件技术有限公司</a>
+			<span class="date" title="已采购金额">￥15.00 万元</span>
+		</li>
+		<li>
+			<span>[信息传输、计算机服务和软件业]</span>
+			<a onclick="common.geToBuyerDetail('ff80808131c418af0131cb6c95f20073');" href="javascript:void(0);">北京窝窝世界信息技术有限公司</a>
+			<span class="date" title="已采购金额">￥0.00 万元</span>
+		</li>
+	</ul>
+	<div class="more"><a target="_blank" href="/BuyerShowController.do?method=toBuyerList&rp=21&page=1&districtLevel=1" title="更多">更多</a></div>
+</div>
+      </div>
+    </div>
+    <!--供应商、采购单位 结束-->
+    <!--首页中2、右3广告位开始-->
+    <div class="gridBox">
+      <div class="ad_b_90 float_l"><div>
+	<a href="http://www.paihang360.com/zt/jiusc2011/jiusheng.jsp" target="_blank"><img src="http://localhost:8080/img/upload/25751abd-ef37-448f-ba15-d7a7e035b437" width="734" height="90"/></a>
+</div></div>
+      <div class="ad_s_90 float_r"><div>
+	<a href="http://www.youptuan.com" target="_blank"><img src="http://localhost:8080/img/upload/8e235e63-f2b7-4a0e-9617-e11640faf530" width="238" height="90"/></a>
+</div></div>
+    </div>
+    <!--首页中2、右3广告位结束-->
+    <!--企业bbs开始-->
+	<div class="gridBox">
+	<div class="cols">
+		<h2>企业社区</h2>
+      <div class="twoCol_fist7 itemize" id="recommendCommunity"></div>
+    </div>
+    </div>
+    <!--企业bbs结束-->
+    <!--推荐专家、广告位 开始-->
+    <div class="gridBox">
+      <!-- 推荐专家  开始 -->
+      <div class="grid16_12" id="recommendExp"></div>
+      <!-- 推荐专家  结束 -->
+      <!--首页右4、右5、右6广告位开始-->
+      <div class="grid16_4 omega">
+        <div class="ad_s_80 division"><div>
+	<a href="http://www.ebid360.com/GroupBuyingShowController.do?method=toShowGroupBuyingIndexView" target="_blank"><img src="http://localhost:8080/img/upload/e1da825f-beb2-4eae-9679-cecf59b9a046" width="238" height="80"/></a>
+</div></div>
+        <div class="ad_s_80 division"><div>
+	<a href="http://www.chinabidding.com.cn/cblcn/ZhuanTi/gaotie" target="_blank"><img src="http://localhost:8080/img/upload/67a839e9-9153-4802-a7c1-cc0650a5986a" width="238" height="80"/></a>
+</div></div>
+        <div class="ad_s_80 division"><div>
+	<a href="http://www.sbiao360.com/cms/user/zt/dongche/index.html" target="_blank"><img src="http://localhost:8080/img/upload/19840860-cfc2-475b-acc9-994d3d9ff8df" width="238" height="80"/></a>
+</div></div>
+      </div>
+      <!--首页右4、右5、右6广告位结束-->
+    </div>
+    <!--推荐专家、广告位 结束-->
+    <!--帮助信息 开始-->
+    <div class="operationsGuide">
+<div id="helpLeaderSysInfo"></div>
+<script>
+$(document).ready(function(){
+	//加载客服热线，客户意见等
+	$("#helpLeaderSysInfo").loadPage($('#initPath').val()+"/view/staticpags/load/helpLeaderSysInfo.jsp");
+});
+</script>
+    </div>
+    <!--帮助信息 结束--> 
+  </div>
+  <!--主要内容容器 结束--> 
+  <!--不加载主页所有的信息 -->
+  <!--是否加载主页所有信息 结束-->
+  <!--底部容器 开始-->
+  <div class="footer">
+<script>
+/*加载系统信息*/
+$.sysInfo_load();
+</script>
+<p class="footerNav">
+					<a href="javascript:void(0)" title="广告服务" class="cmsHref_blank" id="/view/staticpags/foot/ff8080812ea2d882012ec2bea7970fab.jsp">广告服务</a> 
+				<a href="javascript:void(0)" title="合作伙伴" class="cmsHref_blank" id="/view/staticpags/foot/ff8080812ea2d882012ec2becd4e0fad.jsp">合作伙伴</a> 
+				<a href="javascript:void(0)" title="网站地图" class="cmsHref_blank" id="/view/staticpags/foot/ff8080812ea2d882012ec2bf09fd0faf.jsp">网站地图</a> 
+				<a href="javascript:void(0)" title="版权说明" class="cmsHref_blank" id="/view/staticpags/foot/ff8080812ea2d882012ec2bf5afd0fb3.jsp">版权说明</a> 
+				<a href="javascript:void(0)" title="人才招聘" class="cmsHref_blank" id="/view/staticpags/foot/ff8080813249c676013260cb447d1dd2.jsp">人才招聘</a> 
+				<a href="javascript:void(0)" title="友情链接" class="cmsHref_blank" id="/view/staticpags/foot/ff8080813249c676013260ce5a151eb7.jsp">友情链接</a> 
+				<a href="javascript:void(0)" title="帮助中心" class="cmsHref_blank" id="/view/staticpags/foot/ff8080813249c6760132612b3a2e274e.jsp">帮助中心</a> 
+</p>
+<p>
+	<a target="_blank" href="http://www.chinabidding.com.cn/" title="国信创新"><img src="/view/resource/images/ebid360.png" /></a>
+	<a target="_blank" href="http://www.gpcsoft.com/" title="政采软件"><img src="/view/resource/images/gpcsoft.gif" /></a>
+</p>
+<p class="copyright">Copyright &copy; 2005-2015 阳光易购电子采购与招标第三方公共服务平台</p>
+<div align="center"> 
+	<!-- 统计数目 -->
+	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fa3d11dd1ee43acba6fa29feffdca5f79' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</div>
+  </div>
+  <!--底部容器 结束-->
+  <!--在线客服开始-->
+<div id="sidebar-sugg">
+	<div class="s-main">
+		<a href="http://www9.kf99.com/kf99/kf99.jsp?siteid=guoxinshangtong&style=1&language=&lytype=0&charset=GBK&kflist=off&kf=&zdkf_type=1&referer=http://www.ebid360.com/&keyword=&tpl=crystal_blue" target="_blank">
+        	我需要帮助，请访问<font style="color: red;">在线客服</font>
+		</a>
+	</div>
+</div>
+  <!--在线客服结束-->
+</div>
+<!--页面容器 结束-->
+<!--扩展用容器，用于与内容无关的装饰性扩展-->
+<div id="extraDiv">
+	<div id="extraDiv1"></div>
+	<div id="extraDiv2"></div>
+	<div id="extraDiv3"></div>
+	<div id="extraDiv4"></div>
+	<div id="extraDiv5"></div>
+	<div id="extraDiv6"></div>
+	<input type="hidden" id="contentSubUrl" name="contentSubUrl" value="null"/>
+	<input type="hidden" id="contentMainUrl" name="contentMainUrl" value="null"/>
+	<input type="hidden" id="contentSuppUrl" name="contentSuppUrl" value="null"/>
+	<input type="hidden" id="sysContentUrl" name="sysContentUrl" value="null"/>
+	<input type="hidden" id="viewUrl" value="null" />
+</div>
+</body>
+</html>

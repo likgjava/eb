@@ -1,0 +1,655 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>供应商 - 阳光易购电子采购与招标平台</title>
+<meta name="description" content="拥有海量的公司信息，每天有大量公司前来注册。为您提供详细的公司介绍、联系人资料、联系方式等公司信息。加入阳光易购电子采购平台，您立即可以成为其中一员！查找公司信息产品、需求以及提高您公司的知名度，为您提供全方位的满意服务。" />
+<meta name="keywords" content="交通运输，机械电子电器，能源化工，冶金矿产原材料，建筑装饰，电气机械及器材，仪器仪表，办公用品，网络通讯，数码，房地产，水利桥梁，环保，农林牧渔，轻工纺织食品，出版印刷，商业服务"/>
+<link rel="stylesheet" type="text/css" href="/view/resource/common/plug_in.css"/>
+<link rel="stylesheet" type="text/css" href="/view/resource/skin/sysicon/sysicon.css"/>
+<link rel="stylesheet" type="text/css" href="/view/resource/plug-in/jquery/dataTables/media/css/demo_page.css"/>
+<link rel="stylesheet" type="text/css" href="/view/resource/plug-in/jquery/dataTables/media/css/demo_table.css"/>
+<link rel="stylesheet" type="text/css" href="/view/resource/plug-in/jquery/dataTables/media/css/tableForm.css"/>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.js'></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.ui.js'></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/jquery.wresize.js" ></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.autoHeight.js'></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.form.js'></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.jPrintArea.js'></script>
+<script type="text/javascript" src="/view/resource/plug-in/FusionChart/JSClass/FusionCharts.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/FusionChart/JSClass/FusionChartsExportComponent.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/flexigrid/flexigrid.js"></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/dataTables/media/js/jquery.dataTables.js'></script>
+<script type="text/javascript" src="/view/resource/plug-in/dhtmlxTree/dhtmlxcommon.js"></script>  
+<script type="text/javascript" src="/view/resource/plug-in/dhtmlxTree/dhtmlxtree.js"></script>
+<script type="text/javascript" src='/view/resource/plug-in/extjs/ext-all.js'></script>
+<SCRIPT type="text/javascript" src="/view/resource/plug-in/jquery/autocomplete/jquery.autocomplete.js"></SCRIPT>
+<script type="text/javascript" src="/view/resource/scripts/jquery/epsValidate/jquery.validate.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/select/jQuery.CascadingSelect.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/select/jQuery.FillOptions.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/select/jquery.dxCombobox.js"></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/progressbar/jquery.progressbar.js'></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/jquery.bxGallery.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/FCKeditor/fckeditor.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/ajaxpager/jquery.ajaxpager.js"></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/imgPlay/imgPlay.js'></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.scrollto.js'></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.qtip-1.0.0-rc3.js'></script>
+<script type="text/javascript" src='/view/resource/scripts/jquery/epsDatepicker/epsDatepicker.js'></script>
+<script type="text/javascript" src="/view/resource/scripts/jquery/epsDialog/epsDialog.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/jquery/epsContentMenu/epsContentMenu.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/json/json-eps.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/obj2str.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/dateUtil.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/select.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/listTree.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/treeUtil.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/tabSet.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/otherUtils.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/loadPage.js" ></script>
+<script type="text/javascript" src="/view/resource/scripts/util/sysTools.js" ></script>
+<script type="text/javascript" src="/view/resource/scripts/util/date.js" ></script>
+<script type="text/javascript" src="/view/resource/scripts/util/changeSkin.js" ></script>
+<script type="text/javascript" src="/view/resource/scripts/util/sysInfo.js" ></script>
+<script type="text/javascript" src="/view/resource/scripts/util/evaluate.js"></script>
+<!--JS-->
+<script type="text/javascript" src='/view/srplatform/portal/include/common.js'></script>
+<script type="text/javascript" src="/view/bizplatform/suppliers/showsupplier/show_supplier_index.js"></script>
+</head>
+<body>
+<!--页面容器 开始-->
+<div id="container"> 
+  <!--头部容器 开始-->
+  <div class="header">
+<!--CSS-->
+<link rel="stylesheet" type="text/css" href="/view/resource/skin/thems/default/main.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src='/view/resource/skin/thems/default/iepngfix/iepngfix_tilebg.js'></script>
+<link href="/view/resource/skin/thems/default/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!-- 页面参数 -->
+<input type="hidden" id="initPath" value="" />
+<input type="hidden" id="returnUrl" value="" />
+<input type="hidden" id="hrefUrl" value=""/>
+<input type="hidden" id="roleType" value="null" />
+<input type="hidden" id="globleOrg" value="null" />
+<input type="hidden" id="currentTab" value="0"/>
+<!--网站导航 开始-->
+<div class="siteNav">
+	<!--用户信息 开始-->
+	<p class="userInfo">
+			您好，欢迎来阳光易购！<a href="javascript:void(0);" name="toLogin">登录</a> <a title="免费注册成为会员享受更多服务" href="javascript:void(0);" name="toRegistration">免费注册</a>
+	</p>
+	<!--用户信息 结束-->
+	<!--快捷菜单 开始-->
+	<ul class="quickMenu" id="quickMenu">
+		<li class="shoppingBox"><a href="javascript:common.goinToShopCart();" title="我的购物车" class="shoppingCart"><span>购物车</span><em id="shoppingCartGoodsTotal">0</em> 件</a></li>
+<li><a href="javascript:void(0);" title="我要推广" class="promotion" id="toPromoterA">我要推广</a></li>
+<li class="omega"><a href="javascript:void(0);" name="helpcenter" title="客服中心" class="phone" id="view/staticpags/customer/customer.html">客服中心</a></li>
+<script>
+//跳转到我要推广
+$('#toPromoterA').click(function(){
+	var targetUrl = $('#initPath').val()+"/PromoterRegisterController.do?method=toRegistPromoter";
+	window.open( $('#initPath').val()+"/IndexViewController.do?method=index&sysContentUrl="+targetUrl );
+	return false;
+})
+</script>
+	</ul>
+	<!--快捷菜单 结束-->
+</div>
+<!--网站导航 结束--> 
+<!--网站基础信息 开始-->
+<div class="branding">
+	<a target="_self" href="/"><h1>阳光易购</h1></a>
+	<p class="hotline "><label>咨询热线</label><em>010-88356236</em></p>
+</div>
+<!--网站基础信息 结束--> 
+<!--主导航菜单 开始-->
+	<ul class="navMain">
+		<li class="selected"><a id="goToIndex" href="javascript:void(0);" title="首页">首页</a></li>
+		<li><a id="goToBidding" href="javascript:void(0);" title="电子招标">电子招标</a></li>
+		<li><a id="goToBargain" href="javascript:void(0);" title="电子采购">电子采购</a></li>
+		<li><a id="goToGoods" href="javascript:void(0);" title="商品库">商品库</a></li>
+		<li><a id="goToSupplier" href="javascript:void(0);" title="供应商库">供应商库</a></li>
+		<li><a id="goToGoodsMall" href="javascript:void(0);" title="精品商城">精品商城</a></li>
+	</ul>
+<!--主导航菜单 结束-->
+<!--统计数据 开始-->
+	<ul class="statData">
+		<li><label for="purUnits">认证采购单位：</label><em id="purUnits"></em> 家</li>
+		<li><label for="suppliers">认证供应商：</label><em id="suppliers"></em> 家</li>
+<li><label for="totalTransactions">交易总额：</label><em id="totalTransactions">15.03</em> 亿元</li>
+	</ul>
+<!--统计数据 结束-->
+<!--网站搜索 开始-->
+<div class="search">
+	<input type="hidden" id="searchType" value="1"  />
+	<ul class="searchTabs">
+		<li class="selected"><a href="javascript:void(0);" onclick="keyWordTypeChange(this,'1');">找商品</a></li>
+		<li><a href="javascript:void(0);" onclick="keyWordTypeChange(this,'2');">找公告</a></li>
+		<li><a href="javascript:void(0);" onclick="keyWordTypeChange(this,'3');">找供应商</a></li>
+		<li><a href="javascript:void(0);" onclick="keyWordTypeChange(this,'4');">找专家</a></li>
+	</ul>
+	<div class="searchPanel">
+		<input type="text" id="keyWords" style="width:360px;"/>
+		<button onclick="keyWordSearch();return false;">搜索</button>
+	</div>
+	<!-- 热门标签 开始 -->
+	<input type="hidden" id="hotTagsMaxResult" value="" />
+	<input type="hidden" id="hotTagsType" value="02" />
+	<p class="searchHot" id="hotTagsListP">
+		<label>热门搜索：</label>
+	</p>
+	<!-- 热门标签 结束 -->
+</div>
+<!--网站搜索 结束-->
+<script>
+var gpcsoftDate = new Date("2011","10","1","17","32","5");//设定 当前 服 器时间 
+$(document).ready(function(){
+	//判断是否登录
+	if(common.isLogin(false)){
+		$("#numberAreaXY").show();
+		$("#numberAreaZT").show();
+	}
+	//获取热门标签
+	var maxResults = ($('#hotTagsMaxResult').val()=='' ? 5 : $('#hotTagsMaxResult').val());
+	var tagsType = ($('#hotTagsType').val()=='' ? '01' : $('#hotTagsType').val());
+	$.getJSON($('#initPath').val()+"/IndexViewController.do?method=getHotTagsList",{'maxResults':maxResults,'tagsType':tagsType},function(json){
+		if(json.failure){if(json.result)alert(json.result);return;}
+		$.each(json.hotTagsList, function(index,hotTag){
+			var tagsDscr = (hotTag.tagsDscr==null ? hotTag.tagsName : hotTag.tagsDscr);
+			var oper = ' <a href="javascript:void(0);" name="gTag" title="'+tagsDscr+'" onclick="keyWordSearch(\''+hotTag.tagsName+'\');return false;">'+hotTag.tagsName+'</a> ';
+			$('#hotTagsListP').append(oper);
+		});
+	});
+	//获取购物车信息
+	getCartInfo();
+	//监听搜索框的回车事件
+	$('#keyWords').keypress(function(event){
+		if(event.keyCode == 13){
+			keyWordSearch();
+			return false;
+		}
+	});
+});
+</script>
+  </div>
+  <!--CSS-->
+  <link rel="stylesheet" type="text/css" href="/view/resource/skin/thems/default/supplier.css" />
+  <!--头部容器 结束--> 
+  <!--主要内容容器 开始-->
+  <div id="sysContent" class="page">
+    <!--登录容器开始-->
+    <div class="gridBox"> 
+      <!--滚动图片开始-->
+      <div class='grid16_11'>
+        <div class="supplierFocus">
+<style>
+	.imgPlayUl{
+		width: 672px;
+		height:230px;
+	}
+	.imgPlayUl img{
+		width: 672px;
+		height:230px;
+	}
+	.imgPlayUl li{
+		width: 672px;
+		height:230px;
+	}
+	.playerNav{ background:none repeat scroll 0 0 ;}
+</style>
+<ul id="focus" class="imgPlayUl">
+		<li>
+			<a href="http://www.lontime.net/" target="_blank"><img src="http://localhost:8080/img/upload/1d39977d-8cb5-487f-994e-5d3714248694" /><span></span></a>
+		</li>
+		<li>
+			<a href="http://www.军魂酒业.cn/Product/ProductList.aspx" target="_blank"><img src="http://localhost:8080/img/upload/2f9520ad-1898-44c9-b6ad-d89190a02142" /><span></span></a>
+		</li>
+</ul>
+<script>
+$(document).ready(function(){
+	//跑马灯
+	$("#focus").imgPlay();
+});
+</script>
+        </div>
+      </div>
+      <!--滚动图片结束-->
+      <!--选择阳光易购原因开始-->
+      <div class="grid16_5 omega"> 
+        <div class="advantage">
+          <h2>海量供应商信息、资质、案例查询</h2>
+          <ul>
+            <li>1.加入行业供应商库，供采购人查询</li>
+            <li>2.企业资质、案例、产品信息发布</li>
+            <li>3.快速参加竞价、议价项目</li>
+          </ul>
+        </div>
+      </div>
+      <!--选择阳光易购原因结束-->
+    </div>
+    <!--登录容器结束-->
+    <!--推荐供应商容器开始-->
+    <div class="gridBox"> 
+      <!--推荐供应商开始-->
+      <div class='grid16_11'>
+<!--推荐供应商 开始-->
+<div class="cols recSuppliers">
+	<h2>推荐供应商</h2>
+	<ul class="sipplierShowList" id="recommendSupplierList">
+		<li name="page0.0" class=" ">
+			<h3>
+				<a href="javascript:void(0);" onclick="common.goToOrgShop('ff808081304e848f013053629bba095d');" title="泸州老窖集团有限责任公司">
+	        		泸州老窖集团有限责任公司
+	        	</a>
+	        </h3>
+			<p class="hotImg"><a href="javascript:void(0);" onclick="common.goToOrgShop('ff808081304e848f013053629bba095d');"><img style="width: 127px; height: 127px;" src="http://localhost:8080/img/upload/e78561fb-d728-46b3-966c-20f5f82e5603"></a></p>
+			<p class="hotPrice" style="height: 48px;">经营：酒类</p>
+			<p><span  class="star" title="星级">三星</span></p>
+			<p class="btnBoxR"><a class="collection" title="加入收藏" href="javascript:void(0);" onclick="common.addFavorites('ff808081304e848f013053629bba095d','泸州老窖集团有限责任公司','02');return false;">加入收藏</a></p>
+		</li>
+		<li name="page0.3333333333333333" class=" ">
+			<h3>
+				<a href="javascript:void(0);" onclick="common.goToOrgShop('ff8080813008ca47013015783e7e01e5');" title="北京乐诚天际商贸有限公司">
+	        		北京乐诚天际商贸有限公司
+	        	</a>
+	        </h3>
+			<p class="hotImg"><a href="javascript:void(0);" onclick="common.goToOrgShop('ff8080813008ca47013015783e7e01e5');"><img style="width: 127px; height: 127px;" src="http://localhost:8080/img/upload/b65463d1-075e-4e0e-b414-1ca8c1e133dd"></a></p>
+			<p class="hotPrice" style="height: 48px;">经营：米面油,休闲食品,保健食品,蛋肉类及制品,食用菌,水…</p>
+			<p><span  class="star" title="星级">三星</span></p>
+			<p class="btnBoxR"><a class="collection" title="加入收藏" href="javascript:void(0);" onclick="common.addFavorites('ff8080813008ca47013015783e7e01e5','北京乐诚天际商贸有限公司','02');return false;">加入收藏</a></p>
+		</li>
+		<li name="page0.6666666666666666" class=" omega">
+			<h3>
+				<a href="javascript:void(0);" onclick="common.goToOrgShop('ff8080813008ca4701300cb02ab401b1');" title="北京蓝科时代信息技术开发有限公司">
+	        		北京蓝科时代信息技术开发…
+	        	</a>
+	        </h3>
+			<p class="hotImg"><a href="javascript:void(0);" onclick="common.goToOrgShop('ff8080813008ca4701300cb02ab401b1');"><img style="width: 127px; height: 127px;" src="http://localhost:8080/img/upload/cd6c0133-e87e-458b-9619-b7a48e743a4f"></a></p>
+			<p class="hotPrice" style="height: 48px;">经营：小型计算机/计算机零配件,PC服务器,大型计算机,中…</p>
+			<p><span  class="star" title="星级">三星</span></p>
+			<p class="btnBoxR"><a class="collection" title="加入收藏" href="javascript:void(0);" onclick="common.addFavorites('ff8080813008ca4701300cb02ab401b1','北京蓝科时代信息技术开发有限公司','02');return false;">加入收藏</a></p>
+		</li>
+		<li name="page1.0" class="hidden ">
+			<h3>
+				<a href="javascript:void(0);" onclick="common.goToOrgShop('ff8080813008ca4701301f90b96205b5');" title="香港富通达国际物流有限公司">
+	        		香港富通达国际物流有限公司
+	        	</a>
+	        </h3>
+			<p class="hotImg"><a href="javascript:void(0);" onclick="common.goToOrgShop('ff8080813008ca4701301f90b96205b5');"><img style="width: 127px; height: 127px;" src="http://localhost:8080/img/upload/e9253071-159a-4dcf-939c-4cc9154ba142"></a></p>
+			<p class="hotPrice" style="height: 48px;">经营：文化、娱乐与体育服务</p>
+			<p><span  class="star" title="星级">三星</span></p>
+			<p class="btnBoxR"><a class="collection" title="加入收藏" href="javascript:void(0);" onclick="common.addFavorites('ff8080813008ca4701301f90b96205b5','香港富通达国际物流有限公司','02');return false;">加入收藏</a></p>
+		</li>
+		<li name="page1.3333333333333333" class="hidden ">
+			<h3>
+				<a href="javascript:void(0);" onclick="common.goToOrgShop('ff8080813006049101300630f4b10081');" title="北京佳讯飞鸿电气股份有限公司">
+	        		北京佳讯飞鸿电气股份有限…
+	        	</a>
+	        </h3>
+			<p class="hotImg"><a href="javascript:void(0);" onclick="common.goToOrgShop('ff8080813006049101300630f4b10081');"><img style="width: 127px; height: 127px;" src="http://localhost:8080/img/upload/7fa7c6dd-4fd0-44e8-a6f6-a3f72d736111"></a></p>
+			<p class="hotPrice" style="height: 48px;">经营：PCPC服务器及零配件,中端存储,磁带库及零配件,P…</p>
+			<p><span  class="star" title="星级">三星</span></p>
+			<p class="btnBoxR"><a class="collection" title="加入收藏" href="javascript:void(0);" onclick="common.addFavorites('ff8080813006049101300630f4b10081','北京佳讯飞鸿电气股份有限公司','02');return false;">加入收藏</a></p>
+		</li>
+	</ul>
+	<div class="pageBox">
+		<a href="javascript:void(0);" onclick="RecommendSupplierList.showPage(this,0);" class="selected">1</a>
+		<a href="javascript:void(0);" onclick="RecommendSupplierList.showPage(this,1);">2</a>
+		<a href="javascript:void(0);" onclick="RecommendSupplierList.showPage(this,2);">3</a>
+		<a href="javascript:void(0);" onclick="RecommendSupplierList.showPage(this,3);">4</a>
+	</div>
+	<div class="more"><a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('');">更多</a></div>
+</div>
+<!--推荐供应商 结束-->
+<script>
+RecommendSupplierList = {};
+//换页
+RecommendSupplierList.showPage = function(domE, num){
+	$('#recommendSupplierList').find('li').hide();
+	$('#recommendSupplierList').find('li[name^=page'+num+']').show();
+	$(domE).siblings().removeClass('selected');
+	$(domE).addClass('selected');
+}
+</script>
+      </div>
+      <!--推荐供应商结束--> 
+      <!--供应商最新资讯开始-->
+      <div class='grid16_5 omega'>
+<div class="cols supplierInfo">
+	<h2>供应商最新资讯</h2>
+	<ul class="newsList">
+					<li ><a href="javascript:void(0)" id="/view/staticpags/supplierzx/ff8080813225280f013227b339620033.jsp" class="cmsHref_blank">惠普连续四个季度跌出中国PC市...</a></li>
+			<li ><a href="javascript:void(0)" id="/view/staticpags/supplierzx/ff8080813225280f013227b1b9a30031.jsp" class="cmsHref_blank">三星显示器部门高层裁员10％ ...</a></li>
+			<li ><a href="javascript:void(0)" id="/view/staticpags/supplierzx/ff8080813225280f013227afddee002f.jsp" class="cmsHref_blank">中小企业资金吃紧 水泥龙头或加...</a></li>
+			<li ><a href="javascript:void(0)" id="/view/staticpags/supplierzx/ff8080813225280f013227accd39002d.jsp" class="cmsHref_blank">太子奶重整平均清偿率9.57%...</a></li>
+			<li ><a href="javascript:void(0)" id="/view/staticpags/supplierzx/ff8080813225280f013227a286810026.jsp" class="cmsHref_blank">太子奶破产重整计划出炉 20亿...</a></li>
+			<li ><a href="javascript:void(0)" id="/view/staticpags/supplierzx/ff8080813225280f013227a173060025.jsp" class="cmsHref_blank">诺基亚中国单方面裁员170人被...</a></li>
+			<li ><a href="javascript:void(0)" id="/view/staticpags/supplierzx/ff8080813225280f013227a0e6f30024.jsp" class="cmsHref_blank">路线或涉禁区 华润雪花勇闯可可...</a></li>
+			<li class="last"><a href="javascript:void(0)" id="/view/staticpags/supplierzx/ff8080813225280f0132279e1e890021.jsp" class="cmsHref_blank">五粮液与茅台争头把交椅限货提价</a></li>
+	</ul>
+	<div class="more"><a href="javascript:void(0);" id="/view/staticpags/supplierzx/supplierzx.jsp" class="cmsHref_blank right">更多</a></div>
+</div>
+      </div>
+      <!--供应商最新资讯结束--> 
+    </div>
+    <!--推荐供应商容器结束-->
+    <!--行业分类容器开始-->
+    <div class="gridBox"> 
+      <!--行业分类开始-->
+      <div class='grid16_11'>
+<div class="cols">
+	<h2>品目分类 </h2>
+	<div class="industryClassBox">
+		<div class="categoryItem">
+			<h4><a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A');">货物类</a></h4>
+			<div class="categoryContent">
+				<ul class="subcategoryList">
+					<li>
+						<h5><a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A01');">消费品</a></h5>
+						<div>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0101');">家用电器</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0102');">办公用品</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0103');">办公自动化设备</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0104');">IT、通讯及信息技术</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0105');">食品饮料烟草</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0106');">纺织服装皮革</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0107');">家居行业</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0108');">运动、休闲</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0109');">纸业</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0110');">医药</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0111');">安全防护用品</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0112');">工艺礼品</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0113');">其他消费品</a>
+						</div>
+					</li>
+					<li>
+						<h5><a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A02');">机电设备</a></h5>
+						<div>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0201');">机械设备</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0202');">电子</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0203');">电气器材</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0204');">仪器仪表</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0205');">五金</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0206');">医药设备</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0207');">电力器材</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0208');">交通运输</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0209');">安全防护器材</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0210');">环保设备</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0211');">传媒、广电器材</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0212');">食品饮料烟草设备</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0213');">印刷设备</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0214');">通讯设备</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0215');">其他设备</a>
+						</div>
+					</li>
+					<li>
+						<h5><a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A03');">原材料</a></h5>
+						<div>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0301');">化工材料</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0302');">能源材料</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0303');">冶金矿产</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0304');">包装</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0305');">建筑材料</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0306');">医药材料</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0307');">纺织皮革原料</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0308');">农产品</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0309');">橡胶塑胶</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0310');">印刷材料</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('A0311');">纸业材料</a>
+						</div>
+					</li>
+                </ul>
+              </div>
+		</div>
+		<div class="categoryItem">
+			<h4><a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B');">工程类</a></h4>
+			<div class="categoryContent">
+				<ul class="subcategoryList">
+					<li>
+						<h5><a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B01');">建筑工程</a></h5>
+						<div>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0101');">民用建筑工程</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0102');">工业建筑工程</a>
+						</div>
+					</li>
+					<li>
+						<h5><a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B02');">土木工程</a></h5>
+						<div>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0201');">道路工程</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0202');">轨道工程</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0203');">桥涵工程</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0204');">隧道工程</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0205');">水工工程</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0206');">矿山工程</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0207');">架线与管道工程</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0208');">环保绿化工程</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0209');">其他土木工程</a>
+						</div>
+					</li>
+					<li>
+						<h5><a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B03');">机电工程</a></h5>
+						<div>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0301');">机械设备安装工程</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0302');">静设备与工艺金属结构工程</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0303');">电气工程</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0304');">自动化控制仪表工程</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0305');">建筑智能化工程</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0306');">管道工程</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0307');">消防工程</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0308');">净化工程</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0309');">通风与空调工程</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0310');">设备及管道防腐蚀绝热工程</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0311');">炉窑工程</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0312');">电子与信息通信工程</a>
+						</div>
+					</li>
+					<li>
+						<h5><a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B04');">其他工程</a></h5>
+						<div>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('B0401');">修缮、装饰工程</a>
+						</div>
+					</li>
+                </ul>
+              </div>
+		</div>
+		<div class="categoryItem">
+			<h4><a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C');">服务类</a></h4>
+			<div class="categoryContent">
+				<ul class="subcategoryList">
+					<li>
+						<h5><a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C01');">商业服务</a></h5>
+						<div>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0101');">专业服务</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0102');">地质勘查</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0103');">工程咨询管理</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0104');">经济管理</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0105');">计算机相关服务</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0106');">研究与开发服务</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0107');">房地产服务</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0108');">租赁服务</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0109');">销售服务</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0110');">金融服务</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0111');">旅游相关服务</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0112');">其他商业服务</a>
+						</div>
+					</li>
+					<li>
+						<h5><a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C02');">通信服务</a></h5>
+						<div>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0201');">邮政服务</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0202');">快件服务</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0203');">电讯服务</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0204');">视听服务</a>
+						</div>
+					</li>
+					<li>
+						<h5><a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C03');">社会服务</a></h5>
+						<div>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0301');">教育服务</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0302');">环境服务</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0303');">健康服务</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0304');">文化、娱乐与体育服务</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0305');">其他社会服务</a>
+						</div>
+					</li>
+					<li>
+						<h5><a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C04');">运输服务</a></h5>
+						<div>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0401');">海运服务</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0402');">内河航运</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0403');">空运服务</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0404');">空间运输</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0405');">铁路运输服务</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0406');">公路运输服务</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0407');">管道运输</a>
+							<a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('C0408');">所有辅助性服务</a>
+						</div>
+					</li>
+                </ul>
+              </div>
+		</div>
+	</div>
+</div>
+      </div>
+      <!--行业分类结束--> 
+      <!--最新加盟供应商开始-->
+      <div class='grid16_5 omega'>
+<div class="cols">
+	<h2>最新加盟供应商</h2>
+	<ul>
+		<li class="hotAreaNews">
+			<h3>
+				<a href="javascript:void(0);" onclick="common.goToOrgShop('402885dd3314914501331604f5f6037a');" title="gys222">
+	        		gys222
+	        	</a>
+	        </h3>
+			<p class="hotImg"><a href="javascript:void(0);" onclick="common.goToOrgShop('402885dd3314914501331604f5f6037a');"><img style="width: 60px; height: 60px;" src="http://localhost:8080/img/upload/255396dc-ac1b-4a7b-85ec-c7c1e9c8ff46"></a></p>
+			<p class="hotDetails">经营范围：笔记本电脑</p>
+		</li>
+		<li class="hotAreaNews">
+			<h3>
+				<a href="javascript:void(0);" onclick="common.goToOrgShop('402885dd33105814013310f94ad90029');" title="cgr001">
+	        		cgr001
+	        	</a>
+	        </h3>
+			<p class="hotImg"><a href="javascript:void(0);" onclick="common.goToOrgShop('402885dd33105814013310f94ad90029');"><img style="width: 60px; height: 60px;" src="http://localhost:8080/img/upload/fd1db430-54ba-42b2-9487-13ba4aa7cfe2"></a></p>
+			<p class="hotDetails">经营范围：台式电脑,笔记本电脑</p>
+		</li>
+		<li class="hotAreaNews">
+			<h3>
+				<a href="javascript:void(0);" onclick="common.goToOrgShop('402885dd33105814013310aac5f50019');" title="gys111">
+	        		gys111
+	        	</a>
+	        </h3>
+			<p class="hotImg"><a href="javascript:void(0);" onclick="common.goToOrgShop('402885dd33105814013310aac5f50019');"><img style="width: 60px; height: 60px;" src="D:/Projects/myWorkSpace/xygh-PD12/webapp/view/resource/images/404.gif"></a></p>
+			<p class="hotDetails">经营范围：台式电脑,笔记本电脑</p>
+		</li>
+		<li class="hotAreaNews">
+			<h3>
+				<a href="javascript:void(0);" onclick="common.goToOrgShop('ff80808132e20dea0132fbd619d546d7');" title="深圳安捷隆电子有限公司">
+	        		深圳安捷隆电子有限公司
+	        	</a>
+	        </h3>
+			<p class="hotImg"><a href="javascript:void(0);" onclick="common.goToOrgShop('ff80808132e20dea0132fbd619d546d7');"><img style="width: 60px; height: 60px;" src="D:/Projects/myWorkSpace/xygh-PD12/webapp/view/resource/images/404.gif"></a></p>
+			<p class="hotDetails">经营范围：商务礼品,礼品</p>
+		</li>
+		<li class="hotAreaNews">
+			<h3>
+				<a href="javascript:void(0);" onclick="common.goToOrgShop('ff80808132e20dea0132fbcd72c14691');" title="北京银思朗能源技术有限公司">
+	        		北京银思朗能源技术有限公司
+	        	</a>
+	        </h3>
+			<p class="hotImg"><a href="javascript:void(0);" onclick="common.goToOrgShop('ff80808132e20dea0132fbcd72c14691');"><img style="width: 60px; height: 60px;" src="D:/Projects/myWorkSpace/xygh-PD12/webapp/view/resource/images/404.gif"></a></p>
+			<p class="hotDetails">经营范围：台式电脑,笔记本电脑,打印机,传真机,复印机</p>
+		</li>
+		<li class="hotAreaNews">
+			<h3>
+				<a href="javascript:void(0);" onclick="common.goToOrgShop('ff80808132e20dea0132fb54a5424538');" title="上海如庆电子科技有限公司">
+	        		上海如庆电子科技有限公司
+	        	</a>
+	        </h3>
+			<p class="hotImg"><a href="javascript:void(0);" onclick="common.goToOrgShop('ff80808132e20dea0132fb54a5424538');"><img style="width: 60px; height: 60px;" src="D:/Projects/myWorkSpace/xygh-PD12/webapp/view/resource/images/404.gif"></a></p>
+			<p class="hotDetails">经营范围：电工仪表,电子测量仪器,试验机,工业自动化仪器,光学…</p>
+		</li>
+		<li class="hotAreaNews">
+			<h3>
+				<a href="javascript:void(0);" onclick="common.goToOrgShop('ff80808132e20dea0132f744d7ef3aec');" title="沧州天瑞工矿设备配套有限公司">
+	        		沧州天瑞工矿设备配套有限…
+	        	</a>
+	        </h3>
+			<p class="hotImg"><a href="javascript:void(0);" onclick="common.goToOrgShop('ff80808132e20dea0132f744d7ef3aec');"><img style="width: 60px; height: 60px;" src="D:/Projects/myWorkSpace/xygh-PD12/webapp/view/resource/images/404.gif"></a></p>
+			<p class="hotDetails">经营范围：试验机</p>
+		</li>
+		<li class="hotAreaNews">
+			<h3>
+				<a href="javascript:void(0);" onclick="common.goToOrgShop('ff80808132e20dea0132f129451424d2');" title="北京兄联科技有限公司">
+	        		北京兄联科技有限公司
+	        	</a>
+	        </h3>
+			<p class="hotImg"><a href="javascript:void(0);" onclick="common.goToOrgShop('ff80808132e20dea0132f129451424d2');"><img style="width: 60px; height: 60px;" src="D:/Projects/myWorkSpace/xygh-PD12/webapp/view/resource/images/404.gif"></a></p>
+			<p class="hotDetails">经营范围：计算机咨询服务,软件执行服务,数据处理服务,数据库服…</p>
+		</li>
+	</ul>
+	<div class="more"><a href="javascript:void(0);" onclick="ShowSupplierIndex.toSupplierList('');">更多</a></div>
+</div>
+      </div>
+      <!--最新加盟供应商结束--> 
+    </div>
+    <!--行业分类容器结束-->
+    <!--帮助信息 开始-->
+    <div class="operationsGuide">
+<div id="helpLeaderSysInfo"></div>
+<script>
+$(document).ready(function(){
+	//加载客服热线，客户意见等
+	$("#helpLeaderSysInfo").loadPage($('#initPath').val()+"/view/staticpags/load/helpLeaderSysInfo.jsp");
+});
+</script>
+    </div>
+    <!--帮助信息 结束--> 
+  </div>
+  <!--主要内容容器 结束--> 
+  <!--底部容器 开始-->
+  <div class="footer">
+<script>
+/*加载系统信息*/
+$.sysInfo_load();
+</script>
+<p class="footerNav">
+					<a href="javascript:void(0)" title="广告服务" class="cmsHref_blank" id="/view/staticpags/foot/ff8080812ea2d882012ec2bea7970fab.jsp">广告服务</a> 
+				<a href="javascript:void(0)" title="合作伙伴" class="cmsHref_blank" id="/view/staticpags/foot/ff8080812ea2d882012ec2becd4e0fad.jsp">合作伙伴</a> 
+				<a href="javascript:void(0)" title="网站地图" class="cmsHref_blank" id="/view/staticpags/foot/ff8080812ea2d882012ec2bf09fd0faf.jsp">网站地图</a> 
+				<a href="javascript:void(0)" title="版权说明" class="cmsHref_blank" id="/view/staticpags/foot/ff8080812ea2d882012ec2bf5afd0fb3.jsp">版权说明</a> 
+				<a href="javascript:void(0)" title="人才招聘" class="cmsHref_blank" id="/view/staticpags/foot/ff8080813249c676013260cb447d1dd2.jsp">人才招聘</a> 
+				<a href="javascript:void(0)" title="友情链接" class="cmsHref_blank" id="/view/staticpags/foot/ff8080813249c676013260ce5a151eb7.jsp">友情链接</a> 
+				<a href="javascript:void(0)" title="帮助中心" class="cmsHref_blank" id="/view/staticpags/foot/ff8080813249c6760132612b3a2e274e.jsp">帮助中心</a> 
+</p>
+<p>
+	<a target="_blank" href="http://www.chinabidding.com.cn/" title="国信创新"><img src="/view/resource/images/ebid360.png" /></a>
+	<a target="_blank" href="http://www.gpcsoft.com/" title="政采软件"><img src="/view/resource/images/gpcsoft.gif" /></a>
+</p>
+<p class="copyright">Copyright &copy; 2005-2015 阳光易购电子采购与招标第三方公共服务平台</p>
+<div align="center"> 
+	<!-- 统计数目 -->
+	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fa3d11dd1ee43acba6fa29feffdca5f79' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</div>
+  </div>
+  <!--底部容器 结束-->
+  <!--在线客服开始-->
+<div id="sidebar-sugg">
+	<div class="s-main">
+		<a href="http://www9.kf99.com/kf99/kf99.jsp?siteid=guoxinshangtong&style=1&language=&lytype=0&charset=GBK&kflist=off&kf=&zdkf_type=1&referer=http://www.ebid360.com/&keyword=&tpl=crystal_blue" target="_blank">
+        	我需要帮助，请访问<font style="color: red;">在线客服</font>
+		</a>
+	</div>
+</div>
+  <!--在线客服结束-->
+</div>
+<!--页面容器 结束-->
+</body>
+</html>

@@ -1,0 +1,570 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>电子采购 - 阳光易购电子采购与招标平台</title>
+<meta name="description" content="为您提供免费发布采购需求、采购项目、最新求购信息，帮助您第一时间发布您的求购信息，为您搜集最合适的供应商，通过竞价议价的方式让您达到降低采购成本、提高采购产品质量的最终目标。" />
+<meta name="keywords" content="采购，电子采购，竞价采购，政府采购，企业采购，求购信息，供应信息，商务服务，项目合作"/>
+<link rel="stylesheet" type="text/css" href="/view/resource/common/plug_in.css"/>
+<link rel="stylesheet" type="text/css" href="/view/resource/skin/sysicon/sysicon.css"/>
+<link rel="stylesheet" type="text/css" href="/view/resource/plug-in/jquery/dataTables/media/css/demo_page.css"/>
+<link rel="stylesheet" type="text/css" href="/view/resource/plug-in/jquery/dataTables/media/css/demo_table.css"/>
+<link rel="stylesheet" type="text/css" href="/view/resource/plug-in/jquery/dataTables/media/css/tableForm.css"/>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.js'></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.ui.js'></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/jquery.wresize.js" ></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.autoHeight.js'></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.form.js'></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.jPrintArea.js'></script>
+<script type="text/javascript" src="/view/resource/plug-in/FusionChart/JSClass/FusionCharts.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/FusionChart/JSClass/FusionChartsExportComponent.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/flexigrid/flexigrid.js"></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/dataTables/media/js/jquery.dataTables.js'></script>
+<script type="text/javascript" src="/view/resource/plug-in/dhtmlxTree/dhtmlxcommon.js"></script>  
+<script type="text/javascript" src="/view/resource/plug-in/dhtmlxTree/dhtmlxtree.js"></script>
+<script type="text/javascript" src='/view/resource/plug-in/extjs/ext-all.js'></script>
+<SCRIPT type="text/javascript" src="/view/resource/plug-in/jquery/autocomplete/jquery.autocomplete.js"></SCRIPT>
+<script type="text/javascript" src="/view/resource/scripts/jquery/epsValidate/jquery.validate.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/select/jQuery.CascadingSelect.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/select/jQuery.FillOptions.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/select/jquery.dxCombobox.js"></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/progressbar/jquery.progressbar.js'></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/jquery.bxGallery.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/FCKeditor/fckeditor.js"></script>
+<script type="text/javascript" src="/view/resource/plug-in/jquery/ajaxpager/jquery.ajaxpager.js"></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/imgPlay/imgPlay.js'></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.scrollto.js'></script>
+<script type="text/javascript" src='/view/resource/plug-in/jquery/jquery.qtip-1.0.0-rc3.js'></script>
+<script type="text/javascript" src='/view/resource/scripts/jquery/epsDatepicker/epsDatepicker.js'></script>
+<script type="text/javascript" src="/view/resource/scripts/jquery/epsDialog/epsDialog.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/jquery/epsContentMenu/epsContentMenu.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/json/json-eps.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/obj2str.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/dateUtil.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/select.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/listTree.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/treeUtil.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/tabSet.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/otherUtils.js"></script>
+<script type="text/javascript" src="/view/resource/scripts/util/loadPage.js" ></script>
+<script type="text/javascript" src="/view/resource/scripts/util/sysTools.js" ></script>
+<script type="text/javascript" src="/view/resource/scripts/util/date.js" ></script>
+<script type="text/javascript" src="/view/resource/scripts/util/changeSkin.js" ></script>
+<script type="text/javascript" src="/view/resource/scripts/util/sysInfo.js" ></script>
+<script type="text/javascript" src="/view/resource/scripts/util/evaluate.js"></script>
+<!--JS-->
+<script type="text/javascript" src='/view/srplatform/portal/include/common.js'></script>
+<script type="text/javascript" src="/view/agreement/showbulletin/show_bargain_index.js"></script>
+</head>
+<body>
+<!--页面容器 开始-->
+<div id="container"> 
+  <!--头部容器 开始-->
+  <div class="header">
+<!--CSS-->
+<link rel="stylesheet" type="text/css" href="/view/resource/skin/thems/default/main.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src='/view/resource/skin/thems/default/iepngfix/iepngfix_tilebg.js'></script>
+<link href="/view/resource/skin/thems/default/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!-- 页面参数 -->
+<input type="hidden" id="initPath" value="" />
+<input type="hidden" id="returnUrl" value="" />
+<input type="hidden" id="hrefUrl" value=""/>
+<input type="hidden" id="roleType" value="null" />
+<input type="hidden" id="globleOrg" value="null" />
+<input type="hidden" id="currentTab" value="0"/>
+<!--网站导航 开始-->
+<div class="siteNav">
+	<!--用户信息 开始-->
+	<p class="userInfo">
+			您好，欢迎来阳光易购！<a href="javascript:void(0);" name="toLogin">登录</a> <a title="免费注册成为会员享受更多服务" href="javascript:void(0);" name="toRegistration">免费注册</a>
+	</p>
+	<!--用户信息 结束-->
+	<!--快捷菜单 开始-->
+	<ul class="quickMenu" id="quickMenu">
+		<li class="shoppingBox"><a href="javascript:common.goinToShopCart();" title="我的购物车" class="shoppingCart"><span>购物车</span><em id="shoppingCartGoodsTotal">0</em> 件</a></li>
+<li><a href="javascript:void(0);" title="我要推广" class="promotion" id="toPromoterA">我要推广</a></li>
+<li class="omega"><a href="javascript:void(0);" name="helpcenter" title="客服中心" class="phone" id="view/staticpags/customer/customer.html">客服中心</a></li>
+<script>
+//跳转到我要推广
+$('#toPromoterA').click(function(){
+	var targetUrl = $('#initPath').val()+"/PromoterRegisterController.do?method=toRegistPromoter";
+	window.open( $('#initPath').val()+"/IndexViewController.do?method=index&sysContentUrl="+targetUrl );
+	return false;
+})
+</script>
+	</ul>
+	<!--快捷菜单 结束-->
+</div>
+<!--网站导航 结束--> 
+<!--网站基础信息 开始-->
+<div class="branding">
+	<a target="_self" href="/"><h1>阳光易购</h1></a>
+	<p class="hotline "><label>咨询热线</label><em>010-88356236</em></p>
+</div>
+<!--网站基础信息 结束--> 
+<!--主导航菜单 开始-->
+	<ul class="navMain">
+		<li class="selected"><a id="goToIndex" href="javascript:void(0);" title="首页">首页</a></li>
+		<li><a id="goToBidding" href="javascript:void(0);" title="电子招标">电子招标</a></li>
+		<li><a id="goToBargain" href="javascript:void(0);" title="电子采购">电子采购</a></li>
+		<li><a id="goToGoods" href="javascript:void(0);" title="商品库">商品库</a></li>
+		<li><a id="goToSupplier" href="javascript:void(0);" title="供应商库">供应商库</a></li>
+		<li><a id="goToGoodsMall" href="javascript:void(0);" title="精品商城">精品商城</a></li>
+	</ul>
+<!--主导航菜单 结束-->
+<!--统计数据 开始-->
+	<ul class="statData">
+		<li><label for="purUnits">认证采购单位：</label><em id="purUnits"></em> 家</li>
+		<li><label for="suppliers">认证供应商：</label><em id="suppliers"></em> 家</li>
+<li><label for="totalTransactions">交易总额：</label><em id="totalTransactions">15.03</em> 亿元</li>
+	</ul>
+<!--统计数据 结束-->
+<!--网站搜索 开始-->
+<div class="search">
+	<input type="hidden" id="searchType" value="1"  />
+	<ul class="searchTabs">
+		<li class="selected"><a href="javascript:void(0);" onclick="keyWordTypeChange(this,'1');">找商品</a></li>
+		<li><a href="javascript:void(0);" onclick="keyWordTypeChange(this,'2');">找公告</a></li>
+		<li><a href="javascript:void(0);" onclick="keyWordTypeChange(this,'3');">找供应商</a></li>
+		<li><a href="javascript:void(0);" onclick="keyWordTypeChange(this,'4');">找专家</a></li>
+	</ul>
+	<div class="searchPanel">
+		<input type="text" id="keyWords" style="width:360px;"/>
+		<button onclick="keyWordSearch();return false;">搜索</button>
+	</div>
+	<!-- 热门标签 开始 -->
+	<input type="hidden" id="hotTagsMaxResult" value="" />
+	<input type="hidden" id="hotTagsType" value="" />
+	<p class="searchHot" id="hotTagsListP">
+		<label>热门搜索：</label>
+	</p>
+	<!-- 热门标签 结束 -->
+</div>
+<!--网站搜索 结束-->
+<script>
+var gpcsoftDate = new Date("2011","10","1","17","31","59");//设定 当前 服 器时间 
+$(document).ready(function(){
+	//判断是否登录
+	if(common.isLogin(false)){
+		$("#numberAreaXY").show();
+		$("#numberAreaZT").show();
+	}
+	//获取热门标签
+	var maxResults = ($('#hotTagsMaxResult').val()=='' ? 5 : $('#hotTagsMaxResult').val());
+	var tagsType = ($('#hotTagsType').val()=='' ? '01' : $('#hotTagsType').val());
+	$.getJSON($('#initPath').val()+"/IndexViewController.do?method=getHotTagsList",{'maxResults':maxResults,'tagsType':tagsType},function(json){
+		if(json.failure){if(json.result)alert(json.result);return;}
+		$.each(json.hotTagsList, function(index,hotTag){
+			var tagsDscr = (hotTag.tagsDscr==null ? hotTag.tagsName : hotTag.tagsDscr);
+			var oper = ' <a href="javascript:void(0);" name="gTag" title="'+tagsDscr+'" onclick="keyWordSearch(\''+hotTag.tagsName+'\');return false;">'+hotTag.tagsName+'</a> ';
+			$('#hotTagsListP').append(oper);
+		});
+	});
+	//获取购物车信息
+	getCartInfo();
+	//监听搜索框的回车事件
+	$('#keyWords').keypress(function(event){
+		if(event.keyCode == 13){
+			keyWordSearch();
+			return false;
+		}
+	});
+});
+</script>
+  </div>
+  <!--CSS-->
+  <link rel="stylesheet" type="text/css" href="/view/resource/skin/thems/default/dzcg.css"/>
+  <!--头部容器 结束-->
+  <!--主要内容容器 开始-->
+  <div class="page" id="sysContent">
+  <!--重点推荐开始-->
+  <div class="gridBox">
+    <div class='grid16_11'>
+      <div class="recommendArea headlinesArea" id="recommendBargainProjectDiv"></div>
+    </div>
+    <!--选择阳光易购原开始-->
+    <div class='grid16_5 omega'>
+      <div class="advantage">
+          <h2>如何进行“电子采购”？</h2>
+          <ul>
+            <li>1、采购人创建竞价项目</li>
+            <li>2、供应商在线报名</li>
+            <li>3、供应商在线报价</li>
+            <li>4、采购人在线监控报价</li>
+            <li>5、采购人确定成交供应商</li>
+            <li>6、采购人创建订单，签订合同</li>
+            <li>7、发布结果公告</li>
+          </ul>
+        </div>
+    </div>
+    <!--选择阳光易购原因结束-->
+  </div>
+  <!--重点推荐结束-->
+  <!--竞价、最近成交项目开始-->
+  <div class="gridBox">
+    <!--竞价开始-->
+    <div class='grid16_11'>
+<div class="cols sameHeigh">
+	<h2>竞价</h2>
+	<ul>
+		<li>
+			<div class="announcementBox">
+				<h3>
+					<a href="javascript:void(0);" title="竞价样式测试002" onclick="common.goToBulletinDetail('402885e63343d62d013343f3569d0014','12');">
+						竞价样式测试002
+					</a>
+				</h3>
+				<ul>
+					<li>项目编号：<em>P-20111027-002</em></li>
+					<li>采购方式：<em>竞价</em></li>
+					<li>采购单位：国家开发银行股份有限公司</li>
+					<li>报名截止时间：<em>2011-11-05 13:52</em> </li>
+					<li class="spread"> 项目规则：
+								多次报价
+					</li>
+				</ul>
+				<div class="announcementBtn">
+					<a class="good" href="javascript:void(0);" onclick="ShowBargainIndex.shareBulletin('402885e63343d62d013343f3569d0014');"><span>推荐</span></a>
+					<a class="collection" href="javascript:void(0);" onclick="ShowBargainIndex.addFavorites('402885e63343d62d013343f3569d0014');"><span>收藏</span></a>
+				         	<a href="javascript:void(0);" class="bigBtn" onclick="common.goToBulletinDetail('402885e63343d62d013343f3569d0014','12');">去报名</a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="announcementBox">
+				<h3>
+					<a href="javascript:void(0);" title="竞价样式测试001" onclick="common.goToBulletinDetail('402885e63343d62d013343ec3a5d0005','12');">
+						竞价样式测试001
+					</a>
+				</h3>
+				<ul>
+					<li>项目编号：<em>P-20111027-001</em></li>
+					<li>采购方式：<em>竞价</em></li>
+					<li>采购单位：国家开发银行股份有限公司</li>
+					<li>报名截止时间：<em>2011-11-05 13:47</em> </li>
+					<li class="spread"> 项目规则：
+								多次报价
+					</li>
+				</ul>
+				<div class="announcementBtn">
+					<a class="good" href="javascript:void(0);" onclick="ShowBargainIndex.shareBulletin('402885e63343d62d013343ec3a5d0005');"><span>推荐</span></a>
+					<a class="collection" href="javascript:void(0);" onclick="ShowBargainIndex.addFavorites('402885e63343d62d013343ec3a5d0005');"><span>收藏</span></a>
+				         	<a href="javascript:void(0);" class="bigBtn" onclick="common.goToBulletinDetail('402885e63343d62d013343ec3a5d0005','12');">去报名</a>
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="announcementBox">
+				<h3>
+					<a href="javascript:void(0);" title="gkh竞价项目测试001" onclick="common.goToBulletinDetail('402885dd3319b50601331a288650000b','12');">
+						gkh竞价项目测试001
+					</a>
+				</h3>
+				<ul>
+					<li>项目编号：<em>P-20111019-001</em></li>
+					<li>采购方式：<em>竞价</em></li>
+					<li>采购单位：国家开发银行股份有限公司</li>
+					<li>报名截止时间：<em>2011-11-05 11:09</em> </li>
+					<li class="spread"> 项目规则：
+								多次报价
+					</li>
+				</ul>
+				<div class="announcementBtn">
+					<a class="good" href="javascript:void(0);" onclick="ShowBargainIndex.shareBulletin('402885dd3319b50601331a288650000b');"><span>推荐</span></a>
+					<a class="collection" href="javascript:void(0);" onclick="ShowBargainIndex.addFavorites('402885dd3319b50601331a288650000b');"><span>收藏</span></a>
+				         	<a href="javascript:void(0);" class="bigBtn" onclick="common.goToBulletinDetail('402885dd3319b50601331a288650000b','12');">去报名</a>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<div class="more"><a title="点击查看更多" href="javascript:void(0);" onclick="ShowBargainIndex.toBargainProjectListView();">更多</a></div>
+</div>
+    </div>
+    <!--竞价  结束-->
+    <!--最近成交项目开始-->
+    <div class='grid16_5 omega'>
+<div class="cols sameHeigh">
+	<h2>最近成交项目</h2>
+	<ul class="newsList">
+		<li>
+			<a href="javascript:void(0);" title="交换机D-Link DES-1252 和路由器H3C ER5200采购公告" onclick="common.goToBulletinDetail('ff80808132811a91013289f9fdef149e','12');">
+				交换机D-Link DES-1252 …
+			</a><br/>
+			<span>采购方式:竞价</span>&nbsp;&nbsp;
+			<span>项目编号:P-20110921-002</span>
+		</li>
+		<li>
+			<a href="javascript:void(0);" title="ACER的19寸宽屏显示器 V193WEbmde采购公告" onclick="common.goToBulletinDetail('ff80808132811a9101329033d20d471b','12');">
+				ACER的19寸宽屏显示器 V193W…
+			</a><br/>
+			<span>采购方式:竞价</span>&nbsp;&nbsp;
+			<span>项目编号:P-20110922-002</span>
+		</li>
+		<li>
+			<a href="javascript:void(0);" title="联想ThinkPad E40（0579A14） 笔记本电脑采购公告" onclick="common.goToBulletinDetail('ff80808132811a91013284d283080411','12');">
+				联想ThinkPad E40（0579…
+			</a><br/>
+			<span>采购方式:竞价</span>&nbsp;&nbsp;
+			<span>项目编号:P-20110920-002</span>
+		</li>
+		<li>
+			<a href="javascript:void(0);" title="防水、地暖改造、外墙立面装修、园林景观设计" onclick="common.goToBulletinDetail('ff80808131d684ce0131d686015f004b','12');">
+				防水、地暖改造、外墙立面装修、园林景观…
+			</a><br/>
+			<span>采购方式:竞价</span>&nbsp;&nbsp;
+			<span>项目编号:P-20110817-007</span>
+		</li>
+		<li>
+			<a href="javascript:void(0);" title="联想扬天S300商用一体电脑采购公告" onclick="common.goToBulletinDetail('ff808081323e393a0132469539f1048c','12');">
+				联想扬天S300商用一体电脑采购公告
+			</a><br/>
+			<span>采购方式:竞价</span>&nbsp;&nbsp;
+			<span>项目编号:P-20110908-001</span>
+		</li>
+		<li>
+			<a href="javascript:void(0);" title="采购办公用笔记本电脑 9台" onclick="common.goToBulletinDetail('ff80808130db80a70130f2a066e40a65','12');">
+				采购办公用笔记本电脑 9台
+			</a><br/>
+			<span>采购方式:竞价</span>&nbsp;&nbsp;
+			<span>项目编号:P-20110704-001</span>
+		</li>
+	</ul>
+	<div class="more"><a href="javascript:void(0);" onclick="ShowBargainIndex.toBargainProjectListView();">更多</a></div>
+</div>
+    </div>
+    <!--最近成交项目结束-->
+  </div>
+  <!--竞价、最近成交项目结束-->
+  <!--需求、热销商品开始-->
+  <div class="gridBox">
+    <!--需求开始-->
+    <div class='grid16_11'>
+<div class="cols">
+	<h2>需求</h2>
+	<div class="demandList eInfoList">
+		<h3><a href="javascript:void(0);" onclick="RequirementList.showMoreRequirement('A01');">消费品</a></h3>
+		<h4>&nbsp;
+		</h4>
+		<ul>
+			<li >
+				<h5>
+					<a id="ff8080813249c676013260669a101645" href="/RequirementShowController.do?method=getRequirementInfo&objId=ff8080813249c676013260669a101645" target="_blank" title="求购橱柜配件">
+					求购橱柜配件
+					</a>
+				</h5>
+				<ul>
+					<li>地区：<em>北京市,市辖区,海淀区</em></li>
+					<li>截止时间：<em>12-12</em></li>
+				</ul>
+			</li>
+			<li class="omega">
+				<h5>
+					<a id="ff8080813249c67601326061f4e4161d" href="/RequirementShowController.do?method=getRequirementInfo&objId=ff8080813249c67601326061f4e4161d" target="_blank" title="求购数码复印机 e-358">
+					求购数码复印机 e-358
+					</a>
+				</h5>
+				<ul>
+					<li>地区：<em>北京市,市辖区,海淀区</em></li>
+					<li>截止时间：<em>12-12</em></li>
+				</ul>
+			</li>
+			<li >
+				<h5>
+					<a id="ff8080813249c6760132606029ff1607" href="/RequirementShowController.do?method=getRequirementInfo&objId=ff8080813249c6760132606029ff1607" target="_blank" title="求购护膝">
+					求购护膝
+					</a>
+				</h5>
+				<ul>
+					<li>地区：<em>北京市,市辖区,海淀区</em></li>
+					<li>截止时间：<em>12-12</em></li>
+				</ul>
+			</li>
+			<li class="omega">
+				<h5>
+					<a id="ff80808131d1eaa60131d1f6afd60002" href="/RequirementShowController.do?method=getRequirementInfo&objId=ff80808131d1eaa60131d1f6afd60002" target="_blank" title="采购热敏打印纸">
+					采购热敏打印纸
+					</a>
+				</h5>
+				<ul>
+					<li>地区：<em>北京市,市辖区,海淀区</em></li>
+					<li>截止时间：<em>08-23</em></li>
+				</ul>
+			</li>
+		</ul>
+		<h3><a href="javascript:void(0);" onclick="RequirementList.showMoreRequirement('A02');">机电设备</a></h3>
+		<h4>&nbsp;
+				<a href="javascript:void(0);" onclick="RequirementList.showMoreRequirement('A0202');">电子</a>
+		</h4>
+		<ul>
+			<li >
+				<h5>
+					<a id="402885e63343d62d01334402a7250022" href="/RequirementShowController.do?method=getRequirementInfo&objId=402885e63343d62d01334402a7250022" target="_blank" title="采购需求样式测试001">
+					采购需求样式测试001
+					</a>
+				</h5>
+				<ul>
+					<li>地区：<em>西藏自治区,拉萨市,林周县</em></li>
+					<li>截止时间：<em>01-25</em></li>
+				</ul>
+			</li>
+			<li class="omega">
+				<h5>
+					<a id="ff8080813249c67601326065280a1631" href="/RequirementShowController.do?method=getRequirementInfo&objId=ff8080813249c67601326065280a1631" target="_blank" title="求购食品搅拌机">
+					求购食品搅拌机
+					</a>
+				</h5>
+				<ul>
+					<li>地区：<em>北京市,市辖区,海淀区</em></li>
+					<li>截止时间：<em>12-12</em></li>
+				</ul>
+			</li>
+			<li >
+				<h5>
+					<a id="ff8080813249c676013260636bd7161f" href="/RequirementShowController.do?method=getRequirementInfo&objId=ff8080813249c676013260636bd7161f" target="_blank" title="求购120幕墙明框">
+					求购120幕墙明框
+					</a>
+				</h5>
+				<ul>
+					<li>地区：<em>北京市,市辖区,海淀区</em></li>
+					<li>截止时间：<em>12-12</em></li>
+				</ul>
+			</li>
+			<li class="omega">
+				<h5>
+					<a id="ff80808131518b2a01316ac3cf3f05f9" href="/RequirementShowController.do?method=getRequirementInfo&objId=ff80808131518b2a01316ac3cf3f05f9" target="_blank" title="管路接头">
+					管路接头
+					</a>
+				</h5>
+				<ul>
+					<li>地区：<em>湖南省,长沙市,岳麓区</em></li>
+					<li>截止时间：<em>08-26</em></li>
+				</ul>
+			</li>
+		</ul>
+		<h3><a href="javascript:void(0);" onclick="RequirementList.showMoreRequirement('C01');">商业服务</a></h3>
+		<h4>&nbsp;
+		</h4>
+		<ul>
+		</ul>
+	</div>
+	<div class="more"> <a href="javascript:void(0);" onclick="RequirementList.showMoreRequirement();">更多</a> </div>
+</div>
+<script type="text/javascript">
+/**电子采购首页-采购需求页面 */
+var RequirementList = {};
+//显示更多采购需求
+RequirementList.showMoreRequirement = function(categoryCode) {
+	var targetUrl = $('#initPath').val()+"/RequirementShowController.do?method=toRequirementList&rp=21&page=1&districtLevel=1";
+	if(categoryCode != null){
+		targetUrl += '&categoryCode=' + categoryCode;
+	}
+	window.open( targetUrl );	
+}
+</script>
+    </div>
+    <!--需求结束-->
+    <!--热销商品开始-->
+    <div class='grid16_5 omega'>
+<div class="cols">
+	<h2>热销商品</h2>
+	<ul class="verticalShowListM">
+		<li>
+			<h3>
+				<a href="javascript:void(0);" onclick="common.geToGoodsDetail('ff80808130c14db40130cf29cdb80507');" title="德昌顺 2011年特级黄茶 女士抗衰老 黄芽茶叶">
+	    				德昌顺 2011年特级黄茶 女士抗衰老…
+	        	</a>
+	        </h3>
+			<p class="hotImg"><a href="javascript:void(0);" onclick="common.geToGoodsDetail('ff80808130c14db40130cf29cdb80507');"><img style="width: 132px; height: 132px;" src="http://localhost:8080/img/upload/3ade543f-575f-4486-b8b0-8c47e099bba3" /></a></p>
+			<p class="hotPrice"><em>￥88.00</em></p>
+		</li>
+		<li>
+			<h3>
+				<a href="javascript:void(0);" onclick="common.geToGoodsDetail('ff80808130c14db40130cf94d10e0637');" title="本草拾遗黄茶叶 特二级正山 霍山黄芽 寿州黄芽 ">
+	    				本草拾遗黄茶叶 特二级正山 霍山黄芽 …
+	        	</a>
+	        </h3>
+			<p class="hotImg"><a href="javascript:void(0);" onclick="common.geToGoodsDetail('ff80808130c14db40130cf94d10e0637');"><img style="width: 132px; height: 132px;" src="http://localhost:8080/img/upload/6b04034b-11b7-4f0e-83e4-a1f1df486ba9" /></a></p>
+			<p class="hotPrice"><em>￥52.00</em></p>
+		</li>
+		<li>
+			<h3>
+				<a href="javascript:void(0);" onclick="common.geToGoodsDetail('ff80808130c14db40130cf27197904e4');" title="德昌顺 霍山黄芽茶叶">
+	    				德昌顺 霍山黄芽茶叶
+	        	</a>
+	        </h3>
+			<p class="hotImg"><a href="javascript:void(0);" onclick="common.geToGoodsDetail('ff80808130c14db40130cf27197904e4');"><img style="width: 132px; height: 132px;" src="http://localhost:8080/img/upload/bd1fe6dc-2bd8-4409-8a75-5eb4b4a02571" /></a></p>
+			<p class="hotPrice"><em>￥168.00</em></p>
+		</li>
+		<li>
+			<h3>
+				<a href="javascript:void(0);" onclick="common.geToGoodsDetail('2c9087922cc48785012cc9b93d831074');" title="OH5100无齿轮乘客电梯">
+	    				OH5100无齿轮乘客电梯
+	        	</a>
+	        </h3>
+			<p class="hotImg"><a href="javascript:void(0);" onclick="common.geToGoodsDetail('2c9087922cc48785012cc9b93d831074');"><img style="width: 132px; height: 132px;" src="http://localhost:8080/img/upload/6289f222-7756-45e6-a295-97de40b80372" /></a></p>
+			<p class="hotPrice"><em>￥236,589.00</em></p>
+		</li>
+	</ul>
+	<div class="more"><a href="GoodsShowController.do?method=toGoodsList&rp=20&page=1" target="_blank">更多</a></div>
+</div>
+    </div>
+    <!--热销商品结束-->
+  </div>
+  <!--需求、热销商品结束-->
+  <!--帮助信息 开始-->
+  <div class="operationsGuide">
+<div id="helpLeaderSysInfo"></div>
+<script>
+$(document).ready(function(){
+	//加载客服热线，客户意见等
+	$("#helpLeaderSysInfo").loadPage($('#initPath').val()+"/view/staticpags/load/helpLeaderSysInfo.jsp");
+});
+</script>
+  </div>
+  <!--帮助信息 结束--> 
+  </div>
+  <!--主要内容容器 结束--> 
+  <!--底部容器 开始-->
+  <div class="footer">
+<script>
+/*加载系统信息*/
+$.sysInfo_load();
+</script>
+<p class="footerNav">
+					<a href="javascript:void(0)" title="广告服务" class="cmsHref_blank" id="/view/staticpags/foot/ff8080812ea2d882012ec2bea7970fab.jsp">广告服务</a> 
+				<a href="javascript:void(0)" title="合作伙伴" class="cmsHref_blank" id="/view/staticpags/foot/ff8080812ea2d882012ec2becd4e0fad.jsp">合作伙伴</a> 
+				<a href="javascript:void(0)" title="网站地图" class="cmsHref_blank" id="/view/staticpags/foot/ff8080812ea2d882012ec2bf09fd0faf.jsp">网站地图</a> 
+				<a href="javascript:void(0)" title="版权说明" class="cmsHref_blank" id="/view/staticpags/foot/ff8080812ea2d882012ec2bf5afd0fb3.jsp">版权说明</a> 
+				<a href="javascript:void(0)" title="人才招聘" class="cmsHref_blank" id="/view/staticpags/foot/ff8080813249c676013260cb447d1dd2.jsp">人才招聘</a> 
+				<a href="javascript:void(0)" title="友情链接" class="cmsHref_blank" id="/view/staticpags/foot/ff8080813249c676013260ce5a151eb7.jsp">友情链接</a> 
+				<a href="javascript:void(0)" title="帮助中心" class="cmsHref_blank" id="/view/staticpags/foot/ff8080813249c6760132612b3a2e274e.jsp">帮助中心</a> 
+</p>
+<p>
+	<a target="_blank" href="http://www.chinabidding.com.cn/" title="国信创新"><img src="/view/resource/images/ebid360.png" /></a>
+	<a target="_blank" href="http://www.gpcsoft.com/" title="政采软件"><img src="/view/resource/images/gpcsoft.gif" /></a>
+</p>
+<p class="copyright">Copyright &copy; 2005-2015 阳光易购电子采购与招标第三方公共服务平台</p>
+<div align="center"> 
+	<!-- 统计数目 -->
+	<script type="text/javascript">
+		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fa3d11dd1ee43acba6fa29feffdca5f79' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+</div>
+  </div>
+  <!--底部容器 结束-->
+  <!--在线客服开始-->
+<div id="sidebar-sugg">
+	<div class="s-main">
+		<a href="http://www9.kf99.com/kf99/kf99.jsp?siteid=guoxinshangtong&style=1&language=&lytype=0&charset=GBK&kflist=off&kf=&zdkf_type=1&referer=http://www.ebid360.com/&keyword=&tpl=crystal_blue" target="_blank">
+        	我需要帮助，请访问<font style="color: red;">在线客服</font>
+		</a>
+	</div>
+</div>
+  <!--在线客服结束-->
+</div>
+<!--页面容器 结束-->
+</body>
+</html>

@@ -1,0 +1,192 @@
+@charset "utf-8";
+/* 
+Label: EPs2008 
+Version: 2.0
+Design: OTiger
+Email: fanhy@gpcsoft.com
+Remark: 外网页面框架样式（页头、页尾及框架等共用样），本样式表不单独使用。
+--------------------------------------------------------------------------------------------------------- */
+
+/*公用样式
+--------------------------------------------------------------------------------------------------------- */
+body { width:100%; height:100%; font:12px/18px Arial,"宋体" }
+#container { width:970px; background:url(images/portal_bodyBg.gif) repeat-y; margin:0 auto; position:relative}
+a { text-decoration:none; color:#000}
+a:hover { color:#c00}
+
+
+/*页头样式
+--------------------------------------------------------------------------------------------------------- */
+#pageHead { width:960px; margin:0 5px; position:relative; z-index:8}
+#pageHead h1 { height:120px}
+	/*主导航*/
+	#navMain { width:950px; height:29px; background:url(images/portal_pageTitleBg.gif) repeat-x; font:bold 12px Verdana; padding:6px 0 0 10px}
+		#navMain li { float:left; position:relative}
+		#navMain li a { display:inline-block; text-decoration:none; color:#fff; line-height:20px; padding:0 8px}		
+	/*当前信息*/
+	#nowInfo { width:218px; text-align:center; border:1px solid #ccc; background:#f9f9f9; height:18px; position:absolute; top:155px; left:5px}
+	#nowInfo span { margin:5px; color:#333}
+	/*更换皮肤*/
+	#changeSkin { display:none; position:absolute; top:0; right:-15px}
+	#changeSkin h2 a { display:block; width:15px; height:15px; text-indent:-9999px; /*background: url(images/icon/icon_skin.gif) no-repeat;*/ _overflow:hidden}/*[IE6]|_overflow:hidden|Fix pic */
+	#changeSkin .list { width:auto; background:#fff; border:1px solid #ccc; padding:5px; position:absolute; top:15px; left:0}
+	#changeSkin .list a { display:block; margin-bottom:5px; text-indent:23px; height:14px; width:100px; word-spacing:normal; color:#000;background:url(../../images/icon/icon_chooseBlue.gif) no-repeat 5px 2px; _overflow:hidden}/*[IE6]|_overflow:hidden|Fix pic */
+	#changeSkin .list a:hover { color:#f00; background-color:#ffc; background-position:5px -12px}	
+
+/*页面主体
+--------------------------------------------------------------------------------------------------------- */	
+#pageBody { clear:both; width:950px; _height:400px; min-height:400px; padding:0 10px; position:relative}
+	/*公告栏目*/
+	#noticeColumn { width:490px; margin:0 auto}
+		#noticeNews,#noticeStock,#noticePreTender,#noticeTender,#noticeClarify,#eCatalog,#newSupplier {}
+		.biddingInfoColumn { background:url(images/portal_columnTitle_bg.gif) repeat-x;clear:both}
+
+		
+
+/*页脚
+--------------------------------------------------------------------------------------------------------- */
+#pageFooter { clear:both; text-align:center; margin:0 auto; _height:10px; padding:10px}/*[IE6]|_height:10px|Fix Height */
+	#navSupp { clear:both;  border-bottom:3px solid #cc0000}
+		#navSupp a { display:inline-block; text-decoration:none; color:#333; border-left:1px solid #cc0000; padding:0 5px}
+		#navSupp a:hover { color:#900; text-decoration:underline}
+	#copyright {}
+
+
+	
+	/*专家注册*/
+	#expertRegister { background:url(images/SpecialistRegistration_bg.jpg) no-repeat; width:940px; margin:5px auto; min-height:500px; _height:500px; position:relative}
+	#expertRegister h2 { margin:20px 0 0 20px; background:url(images/specialistRegistrationHelp.png) no-repeat; width:264px; height:80px; text-indent:-9999px}
+	#expertRegister h3{ margin-left:90px; color:#00c; font:bold 24px "黑体"}
+	#expertRegister h4{ color:#00c; font:18px "黑体"; border-bottom:3px solid #00c; margin:20px 0}
+	#expertRegister .expertRegisterContent { margin:10px 90px; border:3px dashed #ccc; padding:20px; font:14px/25px "宋体"}
+	#expertRegister .expertRegisterContent ol { margin-left:4em; list-style: outside decimal }
+	
+	#expertRegister h3.expertRegister { margin-left:90px; background:url(images/specialistRegistrationFlow.png) no-repeat; width:240px; height:36px; text-indent:-9999px}
+	.expertRegisterHelpList { margin-left:90px; font:18px/40px "黑体"}
+	.expertRegisterHelpList li { margin-bottom:20px}
+		.expertRegisterHelpList li a { display:block; width:760px; height:40px; background:url(images/specialistRegistrationStep.png) no-repeat; text-indent:120px}
+		.expertRegisterHelpList li.step2 a { background-position:0% -40px}
+		.expertRegisterHelpList li.step3 a { background-position:0% -80px}
+		.expertRegisterHelpList li.step4 a { background-position:0% -120px}
+		
+		#expertRegister .registerOperation { margin-top:20px}
+		#expertRegister .registerOperationStep02 { text-align:center}
+		#expertRegister .registerOperation a { width:127px; height:122px; overflow:hidden; text-indent:0; display:inline-block}
+		#expertRegister .registerOperation a span { display:block; text-indent:-9999px}
+		
+		#expertRegister .registerOperation a#readAgreement { background:url(images/specialistRegistrationStep02_01.png) no-repeat }
+		#expertRegister .registerOperation a#fillInfo { background:url(images/specialistRegistrationStep02_02.png) no-repeat }
+		#expertRegister .registerOperation a#fillLogin { background:url(images/specialistRegistrationStep02_04.png) no-repeat}
+		#expertRegister .registerOperation a#finish { background:url(images/specialistRegistrationStep02_03.png) no-repeat }
+		#expertRegister .registerOperation span.next { display:inline-block; width:64px; height:122px; overflow:hidden; background:url(images/specialistRegistrationStep02_next.png) no-repeat 0 center; margin:0 10px; text-indent:-9999px}
+	
+	/*注册帮助导航*/
+	#expertRegisterNav { position:absolute; top:20px; left:300px}
+	#expertRegisterNav a { display:inline-block; width:40px; height:40px; background:url(images/helpNav.png) no-repeat}
+	#expertRegisterNav a span { display:block; text-indent:-9999px}
+	#expertRegisterNav a:hover { background-position:0% -40px}
+	#expertRegisterNav a.current {  background-position:0% -80px}
+	/*第一步*/
+	#expertRegisterNav a#operation_01 { background-position:-51px 0%}
+	#expertRegisterNav a#operation_01:hover { background-position:-51px -40px}
+	#expertRegisterNav a#operation_01.current { background-position:-51px -80px}
+	/*第二步*/
+	#expertRegisterNav a#operation_02 { background-position:-102px 0%}
+	#expertRegisterNav a#operation_02:hover { background-position:-102px -40px}
+	#expertRegisterNav a#operation_02.current { background-position:-102px -80px}
+	/*第三步*/
+	#expertRegisterNav a#operation_03 { background-position:-153px 0%}
+	#expertRegisterNav a#operation_03:hover { background-position:-153px -40px}
+	#expertRegisterNav a#operation_03.current { background-position:-153px -80px}
+
+	
+	/*注册页面*/
+	.suppliers { position:relative}
+	.suppliers h3 { height:57px; margin-top:20px; border-bottom:3px solid #ccc; text-indent:-9999px; background:url(images/expertRegist_man.gif) no-repeat}
+	.suppliers ol {position:absolute;top:-8px;left:200px}
+	.suppliers ol li { float:left}
+	.suppliers ol li span { display:block; width:120px; height:58px; text-indent:-9999px; background:url(images/expertRegist_step.gif) no-repeat}
+	.suppliers ol li span#step01.finish { background-position:0% -58px}
+	
+	.suppliers ol li span.next { width:45px; background-position:-120px 0%}
+	.suppliers ol li span.next.finish { background-position:-120px -58px}
+	
+	.suppliers ol li span#step02 { background-position:-165px 0%}
+	.suppliers ol li span#step02.finish { background-position:-165px -58px}
+	
+	.suppliers ol li span#step03 { background-position:-285px 0%}
+	.suppliers ol li span#step03.finish { background-position:-285px -58px}
+	
+	.suppliers ol li span#step04 { background-position:-395px 0%}
+	.suppliers ol li span#step04.finish { background-position:-395px -58px}
+	
+	/*注册页面*/
+	.expertRegisterTitle { position:relative}
+	.expertRegisterTitle h3 { height:57px; margin-top:20px; border-bottom:3px solid #ccc; text-indent:-9999px; background:url(images/expertRegist_title.gif) no-repeat}
+	.expertRegisterTitle ol {position:absolute;top:-8px;left:200px}
+	.expertRegisterTitle ol li { float:left}
+	.expertRegisterTitle ol li span { display:block; width:120px; height:58px; text-indent:-9999px; background:url(images/expertRegist_step.gif) no-repeat}
+	.expertRegisterTitle ol li span#step01.finish { background-position:0% -58px}
+	
+	.expertRegisterTitle ol li span.next { width:45px; background-position:-120px 0%}
+	.expertRegisterTitle ol li span.next.finish { background-position:-120px -58px}
+	
+	.expertRegisterTitle ol li span#step02 { background-position:-165px 0%}
+	.expertRegisterTitle ol li span#step02.finish { background-position:-165px -58px}
+	
+	.expertRegisterTitle ol li span#step03 { background-position:-285px 0%}
+	.expertRegisterTitle ol li span#step03.finish { background-position:-285px -58px}
+	
+	.expertRegisterTitle ol li span#step04 { background-position:-395px 0%}
+	.expertRegisterTitle ol li span#step04.finish { background-position:-395px -58px}
+	
+	#registerHelpButton { position:absolute; top:10px; right:10px}
+	#registerHelpButton a { display:block; width:73px; height:39px; background:url(images/expertRegist_help.gif) no-repeat}
+	#registerHelpButton span { display:none}
+	
+	/*数据表格全局控制*/
+table { width:100%; _width:99%; margin-bottom:5px; border-collapse:collapse; border-top:1px solid #D5D5D5; border-left:1px solid #ccc; font-family: Verdana, "宋体"; line-height: 20px; }
+	td,th { border-right:1px solid #D5D5D5; border-bottom:1px solid #D5D5D5; vertical-align:middle; padding:3px}
+		#editTree td,#editTree th { padding:0; border:0}/*修复树插件间隔*/
+	td { background:#fff}
+	th { height:18px; font-weight: normal; vertical-align:text-top;border-botton:1px solid #fff; background:#F6F6F6}
+	caption { text-align:left; background:#FFFFE6; color:#333; padding:3px; border-top:1px solid #C6C6C6}
+	caption.unit { text-align:right}
+
+  /*数据输入表单样式，用于填写资料，默认为四列宽*/
+  .tableInput th { width:20%; text-align:right}
+  .tableInput td { width:80%}
+		.tableInput th label {padding:0 5px; white-space:nowrap;}		
+		.loginConfirm{line-height: 25px;text-align: center;}
+		
+.searchIcon{
+	background-image: url(images/bg_newWin.gif);
+	background-position: right 1px;
+	background-repeat: no-repeat;
+	cursor: hand;
+}
+	/*密码修改*/
+	.modifyPassword { position:relative}
+	.modifyPassword h3 { height:57px; margin-top:20px; border-bottom:3px solid #ccc; text-indent:-9999px; background:url(images/expertPassword_man.gif) no-repeat}
+	.modifyPassword ol {position:absolute;top:-8px;left:200px}
+	.modifyPassword ol li { float:left}
+	.modifyPassword ol li span { display:block; width:120px; height:58px; text-indent:-9999px; background:url(images/expertPassword_step.gif) no-repeat}
+	.modifyPassword ol li span#step01.finish { background-position:0% -58px}
+	
+	.modifyPassword ol li span.next { width:45px; background-position:-120px 0%}
+	.modifyPassword ol li span.next.finish { background-position:-120px -58px}
+	
+	.modifyPassword ol li span#step02 { background-position:-165px 0%}
+	.modifyPassword ol li span#step02.finish { background-position:-165px -58px}
+	
+	.modifyPassword ol li span#step03 { background-position:-285px 0%}
+	.modifyPassword ol li span#step03.finish { background-position:-285px -58px}
+	
+	.modifyPassword ol li span#step04 { background-position:-395px 0%}
+	.modifyPassword ol li span#step04.finish { background-position:-395px -58px}
+	
+	
+.reg_tip{
+	color:gray;
+	font-style: italic;
+}

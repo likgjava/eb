@@ -1,0 +1,52 @@
+﻿({
+		"result": [
+		    {
+				name: '接受任务',
+				url: 'ProjectController.do?method=checkRoleForToProjectGenView&projectId=',
+				status: '02'
+		    },
+		    {
+				name: '分析任务',
+				url: 'ProjectController.do?method=checkRoleForToProjectGenView&projectId=',
+				status: '02'
+		    },
+		    {
+				name: '制定计划',
+				url: 'OppugnRequisitionController.do?method=toList&projectId=',
+				status: '01',
+				children: [
+					{
+						name: '准备计划',
+						url: 'ProjectController.do?method=checkRoleForToProjectGenView&projectId=',
+						status: '02'
+				    },
+				    {
+						name: '设计计划',
+						url: 'OppugnRequisitionController.do?method=toList&projectId=',
+						status: '01',
+						children: [
+							{
+								name: '概要设计',
+								url: 'BulletinController.do?method=toPurOrPublicityBulletin&projectId=',
+								status: '02'
+						    },
+						    {
+								name: '详细设计',
+								url: 'ExpertruleController.do?method=getExpertRuleByProjectId&projectId=',
+								status: '01',
+						    }
+					    ]
+				    }
+			    ]
+		    },
+		    {
+				name: '签订合同',
+				url: 'BidController.do?method=toBidResultPage&projectId='
+		    },
+		    {
+				name: '合同履约',
+				url: 'OpenBidRecordController.do?method=toOpenBidRecordResult&projectId=',
+				status: '01'
+		    }
+        ]
+})
