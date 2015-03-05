@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Remark: 公共样式表，用于设置系统公共样式。
+--------------------------------------------------------------------------------------------------------- */
+/*----全屏变换----*/
+#sysContainer.fullScreen #sysBranding { height:25px;}
+#sysContainer.fullScreen #sysBranding h1 { background:url(../img/sysLogo_s.png) no-repeat; width:92px; height:25px;}
+#sysContainer.fullScreen #sysBranding .versionSys { position:absolute;display:none; top:4px; left:85px; font:0.8em Verdana, Geneva, sans-serif;}
+#sysContainer.fullScreen #contentSub,
+#sysContainer.fullScreen #navMain { display:none;}
+#sysContainer.fullScreen #sysTools{ position:absolute; top:8px; right:10px;}
+/*----导航变换----*/
+#sysContainer.noSub #contentSub {}
+#sysContainer.noSub #contentMain { margin-left:0;}
+/*----全屏变换----*/
+#sysContainer.fullScreen #conTitle { border:0; padding:0; overflow:hidden;}
+#sysContainer.fullScreen #conTitle h3 { display:block; position:absolute; top:5px; left:160px; height:25px; line-height:25px;border:1px solid #0664a3; border-bottom:none; background:url(../img/navMain_bg_selected.png) repeat-x left top; color:#00499d;}
+#sysContainer.fullScreen #conBody { padding:0;}
+#sysContainer.fullScreen .pageTools { position:absolute; top:2px; left:240px;}
+
+/*提示、说明，用于用户操作提示*/
+.userTips { padding:5px; background:#FFC; color:#C00; border:1px dashed #ccc;}
+	#sysContainer .userTips { min-height:128px; line-height:2em; border:1px dashed #ccc; font-size:14px; background:#FFC url(../../base/img/icon/tips_error.png) no-repeat 10px 10px; padding:20px 10px 10px 140px;}
+.sysCaption { padding:10px; background:#f5f5f5; color:#666; margin-bottom:5px;}
+	.sysCaption li { line-height:2em; list-style:inside disc;}
+	.sysCaption p { text-indent:2em;}
+
+/*强调、提示、突出文字内容*/
+em,.eleEm { font-weight:bold;}/*强调*/
+strong,eleStrong { font-weight:bolder; color:#C00;}/*着重强调，比em语气更重*/
+.highlight { color:#F00;}/*高亮 红色*/
+.greenHighlight { color:#090;}/*高亮 绿色*/
+.grayHighlight{ color:gray;}/*高亮 灰色*/
+
+/*---无边框样式---*/
+.noBorder { border:0;}

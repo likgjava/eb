@@ -1,0 +1,57 @@
+﻿@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: skyBlue 天空蓝
+Design: OTiger
+Email: liuly@gpcsoft.com
+Remark: 登录样式，用于登录页面。
+--------------------------------------------------------------------------------------------------------- */
+/*格式化样式表文件，用于初始化浏览器标签默认样式，以达到统一视觉效果的目的。*/
+@import url(../../base/css/init.css);
+/*按钮样式表，用于设置系统功能按钮样式。*/
+@import url(../../base/css/button.css);
+
+body { width:100%; height:100%;color:#fff; font:14px/1.5em Verdana, Geneva, "宋体",sans-serif;background:url(../img/login_bg.png) repeat-x;}
+#sysContainer {background:url(../img/login_c.png) no-repeat right top;}
+	#sysBranding { border-bottom:3px solid #e51b24; background:url() no-repeat 25%; }
+	#sysBranding h1 { height:75px; margin:0 auto; background:url(../img/ECPs_loginTitle.png) no-repeat center; text-indent:-9999px; overflow:hidden;}
+	#sysBranding p { display:none;}
+		/* 换肤列表 */
+		.changeSkinList { position:absolute; top:55px; left:20px; height:18px; padding-left:25px; background:url(../img/icon/changeSkin_titleBg.png) no-repeat left bottom; z-index:100;}
+		.changeSkinList li { float:left; border:1px solid #b8dbe5; width:16px; height:16px; overflow:hidden; margin-right:3px; cursor: pointer;}
+		.changeSkinList li img { width:16px; height:16px;}
+	
+	#userLogin { width:600px; margin:0 auto;border:1px solid #9ebad4;padding:0; background:#fff; margin-top:20px; border-top:0;}
+		/*Tab 样式修改*/
+		#userLogin .ui-tabs-nav{ background:url(../img/pageTurn.png) repeat-x left top;height:32px;}
+		#userLogin .ui-tabs-nav li { color:#ccc; border:1px solid #9ebad4; padding:0; height:25px;background:#f0f0f0 url(../img/hDiv_bg.gif) repeat-x left top; padding-top:3px;}
+		#userLogin .ui-tabs-nav li.ui-tabs-selected { background:#fff;}
+		#userLogin .ui-tabs-nav li.ui-tabs-selected a { color:#0055a5;}
+		#userLogin .ui-tabs-nav li a { padding:0; width:90px; height:20px; text-align:center; line-height:20px; color:#878686; overflow:hidden;}
+		#userLogin .ui-tabs-panel { color:#fff; border:0; padding:20px; padding-top:40px;}
+		
+		/*登录内容*/
+		#userLogin h3 { color:#0055a5; background:url(../../sysicon/16/asterisk_orange.png) no-repeat left center; text-indent:18px;}
+		#userLogin .loginBox { margin-bottom:10px; color:#000;}
+		#userLogin .loginBox li { margin-bottom:10px;}
+		#userLogin .conOperation { border-bottom:1px dotted #0055a5;text-align:center;}
+		.securityRemind,.remind { margin-top:20px; color:#878686;}
+		.loginBox li label{ width:180px; text-align:right; display:inline-block;}
+		.loginBox a.securityRemind a,.remind a { margin:0 5px; color:#0055a5;}
+		.loginBox li input.valiCode{}
+		
+	#sysInfo { height:64px; width:570px; margin:10px auto; line-height:24px; text-align:center; background:url(../img/ECPs_loginLogo.png) no-repeat right; color:#666;}
+		#sysInfo a { color:#666; margin:0 5px;}
+		#sysInfo a:hover { color:#F00;}
+
+	/*登录按钮*/
+	.conOperation button,.conOperation .linkButton{
+		background:url("../img/largeBtn_bgL.png") no-repeat scroll left center transparent;
+		margin-right:25px;
+	}
+	.conOperation .linkButton{padding-left:10px;}
+	.conOperation button.gray,.conOperation .linkButton.gray{background:url("../img/largeBtn_bgL_gray.png") no-repeat scroll left center transparent;}
+	.conOperation button span,.conOperation .linkButton span{background:url("../img/largeBtn_bgR.png") no-repeat scroll right center transparent;letter-spacing:0.5em;width:35px;padding-left:5px;}
+	.conOperation button.gray span,.conOperation .linkButton.gray span{background:url("../img/largeBtn_bgR_gray.png") no-repeat scroll right center transparent}
+

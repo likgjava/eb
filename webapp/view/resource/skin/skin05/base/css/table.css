@@ -1,0 +1,36 @@
+﻿@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Remark: 数据表单样式
+--------------------------------------------------------------------------------------------------------- */
+table.tableList{ border-collapse:collapse; width:100%; overflow:hidden;}
+table.tableList caption{background:#c9dbf2 url(../img/mDiv.gif) repeat-x; border:1px solid #99bbe8; border-bottom:0; height:23px; line-height:23px;text-indent:1em; font-weight:bold;}
+table.tableList th,table.tableList td{border:#99bbe8 1px solid; padding:2px;}
+table.tableList th{ background:#dfe8f6; text-align:center; vertical-align:middle;}
+table.tableList td{ white-space:nowrap;}
+table.tableList tfoot{background:#dfe8f6;}
+table.tableList .unit{color:red;}/*单位*/
+
+.pageTurnTable { border:#99bbe8 1px solid; border-top:0;}
+
+/*=======文字居中=======*/
+table .choose, table .serialNumber, table .time, table .state, table .name, table .sex, table .position, table .type, table .telephone,table .dateType { text-align:center}
+/*=======文字靠右=======*/
+table .amount,table .total { text-align:right }
+/*=======列宽样式=======*/
+table .choose { width:30px }/*选择*/
+table .number { }/*编号*/
+table .serialNumber { width:30px }/*序号*/
+table .time { width:110px; }/*日期时间*/ 
+table .state {}/*状态*/  
+table .operation { }/*操作*/
+table .name { width:60px; }/*姓名*/
+table .sex { width:40px }/*姓别*/
+table .position { }/*职务*/	
+table .type { }/*类型*/	
+table .telephone { width:110px; }/*电话*/
+table .amount { }/*金额*/
+table .date { }/*较长数据*/
+table .dateType {}/*大小、数量、单位、重量、非编号的数字*/
+table .total {}/*合计*/
+table .remark{}/*备注*/

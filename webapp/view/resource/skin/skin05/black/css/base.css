@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+ *------目录------
+ *初始化标签
+ *主框架结构及外观样式
+ *操作区结构样式
+ *页面结构样式
+ *网格化样式（宽度控制）
+ */
+
+/* 
+Label: ECP - e-Concentration Procurement
+Remark: 用于初始化浏览器标签默认样式
+--------------------------------------------------------------------------------------------------------- */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, input, p, blockquote, th, td, form, iframe { margin:0; padding:0;}
+h1, h2, h3, h4, h5, h6 { font-size:100%;}
+ol, ul { list-style:none;}
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+img { border:0;}
+caption, th { text-align:left;}
+q:before, q:after { content:'';}
+html { width:100%; height:100%; background:#fff;}
+body { font:12px Verdana, Geneva, "微软雅黑", "宋体", sans-serif;}
+a { outline:none;}
+button { cursor:pointer;}
+iframe { filter:chroma(color=#ffffff);}
+/* 
+Label: ECP - E Concentration Procurement
+Remark: 设置主框架结构及外观样式。
+--------------------------------------------------------------------------------------------------------- */
+#sysContainer,#navMain,#sysContent{ overflow:hidden;}
+#sysContainer{position:relative;}/*页面容器*/
+	/*标识*/
+	#sysBranding{ background:#000; padding:5px; margin-bottom:5px; color:#fff;}
+	#sysBranding h1{ font-size:14px;}
+	#sysBranding p{ font-size:.8em;}
+	/*导航*/
+	#navMain{ position:absolute; top:26px; _top:20px; left:170px;}
+	#navMain li{ float:left; margin-right:10px;}
+	#navMain a { display:inline-block; padding:0 10px; color:#fff; font-size:14px; font-weight:bold; text-decoration:none; height:30px; line-height:30px;}
+	#navMain a:hover{ background:#cc0000;}
+	#navMain li.selected a{ background:#fff; color:#000;}
+	/*登录信息*/
+	#loginInfo{ position:absolute; right:10px; top:2px;  background:#ccc; padding:1px 0 1px 10px;}
+	#loginInfo p{ float:left; margin-right:10px;}
+	#loginInfo button{ background:none; border:none;}
+	/*窗口工具*/
+	#sysTools{position:absolute; top:30px; right:10px; color:#fff;}
+	#sysTools li { float:left;}
+	#sysTools li span { display:inline-block; padding:0 5px; cursor:pointer;}
+	#sysTools li span:hover { background:#c00;}
+	
+		/*边栏容器*/
+		#contentSub{width:160px; float:left; background:#f1f1f1; margin:0 5px; display:inline;}
+		#contentSub ul ul { padding-left:1em; display:none;}
+		#contentSub .selected ul { display:block;}
+		#contentSub a { display:block; padding:3px 10px; color:#000; text-decoration:none;}
+		#contentSub a:hover { background:#ffc;}
+		#contentSub ul ul { border-top:1px solid #ccc; border-bottom:1px solid #ccc; background:#ddd;}
+		#contentSub li.selected a { color:#c00;}
+		#contentSub li.selected li a { color:#000;}
+		#contentSub li.selected li.selected a { background:#666; color:#fff;}
+		/*主要容器*/
+		#contentMain{ margin-left:170px; margin-right:5px;}
+		/*补充容器*/
+		#contentSupp { display:none;}
+		/*信息栏*/
+		#sysInfo{ background:#ddd; padding:5px; text-align:center; margin-top:5px;}
+/* 
+Label: ECP - E Concentration Procurement
+Remark: 设置操作区结构样式。
+--------------------------------------------------------------------------------------------------------- */
+#conTitle{ background:#f1f1f1; padding:3px 10px;}
+.navCurrent{ display:none;}
+#conTitle h3{ color:#cc0000;}
+/*主要内容*/
+#conBody{ overflow:auto; _position:relative;}/*修复IE6下此容器内元素浮动BUG*/
+	.partContainers{ margin-bottom:10px;}
+	.partContainers h4,.partContainers h5{ border-bottom:#ccc 1px dotted; padding:2px 10px;}
+	.partContainers h4{ margin-bottom:5px;}
+	.partContainers h5{background:#ddd; margin-bottom:}
+/* 
+Label: ECP - E Concentration Procurement
+Remark: 页面结构样式
+--------------------------------------------------------------------------------------------------------- */
+/*并列结构*/
+.frameParallel { overflow:hidden; margin:10px 0;}
+.framePaCon { float:left; border:1px solid #ccc; overflow:auto;}
+.framePaCon > * { margin:5px;}
+/*二列结构*/
+	.frame2Pa .framePaCon { width:49.5%; _width:49%;}
+.frame2Pa div:first-child + div { float:right; margin-right:1px;}
+/*三列结构*/
+	.frame3Pa .framePaCon { width:33%; _width:32.5%;}
+.frameParallel div:first-child { margin-right:1px;}
+.frameParallel div:first-child + div { margin-right:1px;}
+/*主从结构*/
+.frameMainSub { margin:10px 0;overflow:hidden; zoom:1; _position:relative;}
+.frameMain { float:left; border:#ddd 1px solid; overflow:auto; _height:auto;}
+.frameSub, .frameSupp { border:#ddd 1px solid;_overflow:auto; _height:auto; zoom:1;}
+/*12比例布局*/
+	.frameMs12 .frameMain { width:30%;}
+.frameMs12 .frameSub { margin-left:31%; }
+/*21比例布局*/
+	.frameMs21 .frameMain { width:70%;}
+.frameMs21 .frameSub { margin-left:71%; _width:28.5%;}
+/*11比例布局*/
+	.frameMs11 .frameMain { width:50%;}
+.frameMs11 .frameSub { margin-left:51%;_width:48.5%;}
+/*121比例布局*/
+	.frameMs121 .frameMain { width:50%; margin-left:24.6%; float:none;}
+.frameMs121 .frameSub { width:24%; float:left;}
+.frameMs121 .frameSupp { width:24%; float:right;}
+/*带操作功能布局*/
+	.frameMsChange .frameMain { width:45%;}
+.frameMsChange .frameSub { float:right; width:45%;}
+.frameMsChange .frameOperation { margin-left:45%; width:10%; *width:9%; text-align:center; _height:auto;}

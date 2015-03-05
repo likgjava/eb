@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Remark: 用例样式，仅用于演示DEMO。
+--------------------------------------------------------------------------------------------------------- */
+/*系统图标列表*/
+.sysIconList { overflow:hidden; zoom:1;}
+	.sysIconList li { float:left; width:200px; margin:10px 0; overflow:hidden;}
+

@@ -1,0 +1,160 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*
+ *------目录------
+ *初始化标签
+ *主框架结构及外观样式
+ *操作区结构样式
+ *页面结构样式
+ *网格化样式（宽度控制）
+ */
+
+/* 
+Label: ECP - e-Concentration Procurement
+Remark: 用于初始化浏览器标签默认样式
+--------------------------------------------------------------------------------------------------------- */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, input, p, blockquote, th, td, form, iframe { margin:0; padding:0;}
+h1, h2, h3, h4, h5, h6 { font-size:100%;}
+ol, ul { list-style:none;}
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+img { border:0;}
+caption, th { text-align:left;}
+q:before, q:after { content:'';}
+html { width:100%; height:100%; background:#fff;}
+body { font:12px Verdana, Geneva, "微软雅黑", "宋体", sans-serif;}
+a { outline:none;}
+button { cursor:pointer;}
+iframe { filter:chroma(color=#ffffff);}
+/* 
+Label: ECP - E Concentration Procurement
+Remark: 设置主框架结构及外观样式。
+--------------------------------------------------------------------------------------------------------- */
+/*清除容器内浮动、修复IE6、IE7子元素浮动消失Bug*/
+#sysContent, #sysBranding, #navMain, #sysTools, #sysContent { overflow:hidden; zoom:1;}
+/*修复IE6 双倍边距Bug*/
+#contentSub { display:inline;}
+/*防止部分浏览器容器Tab自动计算高度不足（如FF高度差3px），皮肤设计时需修改描边颜色为背景色*/
+#navMain li.selected a { border-bottom:4px solid #fff;}
+
+/*基础框架结构*/
+body { background:#e4eff0;}
+#sysContainer { position:relative; background: url(../img/sysBranding_bg.png) repeat-x;}
+#sysBranding { margin-bottom:5px; padding:0;}
+#navMain { position:absolute; top:26px; left:216px;}
+#navMain li { float:left; height:25px;}
+#navMain a { display:inline-block; padding:3px 10px;}
+#loginInfo { position:absolute; bottom:5px;right:10px;}
+#loginInfo p { float:left;}
+#loginInfo span { padding:0 5px;}
+#sysTools { position:absolute; top:20px;right:10px;}
+#sysTools li { float:left;}
+#sysTools li span { display:inline-block; padding:0 5px; cursor:pointer;}
+#contentSub { width:160px; float:left; margin-left:5px;}
+#contentSub ul ul { padding-left:1em; display:none;}
+#contentSub .selected ul { display:block;}
+#contentMain {margin-left:208px;}
+#contentSupp { display:none;}
+#sysInfo { margin-top:5px;}
+/*sysBranding 标识样式*/
+#sysBranding { color:#ccc; background:url(../img/sysSlogan_bg.png) no-repeat right top;}
+#sysBranding h1 {width:188px; height:51px; text-indent:-9999px; background:url(../img/sysLogo.png) no-repeat;}
+#sysBranding p { display:none;}
+/*navMain 导航样式*/
+#navMain { font-size:1.2em;}
+#navMain a { padding:0 8px; line-height:25px; color:#fff; text-decoration:none;}
+#navMain a:hover {border:1px solid #0664a3; background:url(../img/navMain_bg_hover.png) repeat-x;}
+#navMain li.selected a {border:1px solid #0664a3; background:url(../img/navMain_bg_selected.png) repeat-x left top; color:#0b2c47;}
+/*loginInfo 登录信息*/
+#loginInfo button { border:0; background-color:transparent;}/*修改按钮样式为链接*/
+#loginInfo button.sysicon{*min-width:70px;}
+/*sysTools 窗口工具*/
+/*工具图标*/
+#sysTools li{height:18px; width:18px; margin:0 5px; text-indent:-9999px;}
+ /*边栏菜单控制*/
+  #sysTools #navSubControl{background:url(../img/icon/sysTools_icon3_02.gif) no-repeat 0 0;}
+  #sysTools #navSubControl:hover{background-position:0 -18px;}
+  /*全屏控制*/
+  #sysTools #screenControl{background:url(../img/icon/sysTools_icon3_04.gif) no-repeat 0 0; padding-right:0;}
+  #sysTools #screenControl:hover{background-position:0 -18px;}
+  /*我的桌面*/
+  #sysTools #myDesktop{background:url(../img/icon/sysTools_icon3_05.gif) no-repeat 0 0;}
+  #sysTools #myDesktop:hover{background-position:0 -18px;}
+  /*历史记录*/
+  #sysTools #optionHistory{background:url(../img/icon/sysTools_icon3_06.gif) no-repeat 0 0;}
+  #sysTools #optionHistory:hover{background-position:0 -18px;}
+  /*换肤设置*/
+  #sysTools #interfaceControl{background:url(../img/icon/sysTools_icon3_07.gif) no-repeat 0 0;}
+  #sysTools #interfaceControl:hover{background-position:0 -18px;}
+  /*刷新*/
+  #sysTools #refreshBtn{background:url(../img/icon/sysTools_icon3_08.gif) no-repeat 0 0;}
+  #sysTools #refreshBtn:hover{background-position:0 -18px;}
+  /*退出*/
+  #sysTools #exitBtn{background:url(../img/icon/sysTools_icon3_09.gif) no-repeat 0 0;}
+  #sysTools #exitBtn:hover{background-position:0 -18px;}
+  /*帮助*/
+  #sysTools #helpBtn{background:url(../img/icon/sysTools_icon3_10.gif) no-repeat 0 0;}
+  #sysTools #helpBtn:hover{background-position:0 -18px;}
+/*contentSub 边栏容器*/
+#contentSub {width:199px; border:1px solid #8dadcb; background:#fff; margin-left:2px;}
+/*折叠菜单样式*/
+#contentSub li,#contentSub a:hover {background:url(../img/navSub_bg.png) no-repeat right top;}
+#contentSub ul ul {background:none; padding:0; border:none;}
+#contentSub a {display:block; text-decoration:none; text-indent:2.2em; line-height:26px; padding:0; color:#0b2c47;}
+#contentSub a:hover{ background:none;color:#c00; font-weight:bold;}
+#contentSub li li a:hover{ background:#dfe8f6;}
+#contentSub li.selected a { color:#0b2c47;}
+#contentSub li.selected li.selected a{ background:none; color:#387fc3; font-weight:normal;}
+#contentSub a,#contentSub li.selected a,#contentSub a:hover {padding:0;background:url(../img/navSub_bg.png) no-repeat right top;}
+#contentSub li.selected li a{ background:#fff; font-weight:normal;}
+#contentSub li.selected a,#contentSub li.selected a:hover {background-position:right -26px; font-weight:bold;}
+#contentSub li.selected li.selected a { background:#dfe8f6 url(../img/navCurrent_link.gif) no-repeat right center;}
+/*sysInfo 信息栏*/
+#sysInfo { background:#b4d4eb; color:#27525a; border-top:#8dadcb 1px solid; border-bottom:#8dadcb 1px solid; padding:5px;}
+/* 
+Label: ECP - E Concentration Procurement
+Remark: 设置操作区结构样式。
+--------------------------------------------------------------------------------------------------------- */
+#conTitle {margin-bottom:2px;}
+.navCurrent { display:none;}/*隐藏容器*/
+h3 { font-size:1.2em; margin-bottom:3px; height:25px; line-height:25px; text-indent:1em;color:#00499d;}
+#conBody { overflow:auto;*position:relative; background:#fff; padding:0 5px;}/*修复IE7IE6下此容器内元素浮动BUG*/
+.partContainers { margin-bottom:10px; overflow:hidden;}
+.partContainers h4, .partContainers h5 { height:25px; line-height:25px; text-indent:1em; font-size:1em;}
+.partContainers h4 { margin-bottom:3px; border-bottom:2px dotted #99bbe8;}
+.partContainers h5 {background:#dfe8f6;}
+/* 
+Label: ECP - E Concentration Procurement
+Remark: 页面结构样式
+--------------------------------------------------------------------------------------------------------- */
+/*并列结构*/
+.frameParallel { overflow:hidden; margin:10px 0;}
+.framePaCon { float:left; border:1px solid #8dadcb; overflow:auto;}
+.framePaCon > * { margin:5px;}
+/*二列结构*/
+	.frame2Pa .framePaCon { width:49.5%;}
+.frame2Pa div:first-child + div { float:right; margin-right:1px;}
+/*三列结构*/
+	.frame3Pa .framePaCon { width:33%;}
+.frameParallel div:first-child { margin-right:1px;}
+.frameParallel div:first-child + div { margin-right:1px;}
+/*主从结构*/
+.frameMainSub { margin:10px 0;overflow:hidden; zoom:1;}
+.frameMain { float:left; border:#8dadcb 1px solid; overflow:auto;}
+.frameSub, .frameSupp { border:#8dadcb 1px solid;zoom:1;}
+/*12比例布局*/
+	.frameMs12 .frameMain { width:30%;}
+.frameMs12 .frameSub { margin-left:31%; }
+/*21比例布局*/
+	.frameMs21 .frameMain { width:70%;}
+.frameMs21 .frameSub { margin-left:71%;}
+/*11比例布局*/
+	.frameMs11 .frameMain { width:50%;}
+.frameMs11 .frameSub { margin-left:51%;}
+/*121比例布局*/
+	.frameMs121 .frameMain { width:50%; margin-left:24.6%; float:none;}
+.frameMs121 .frameSub { width:24%; float:left;}
+.frameMs121 .frameSupp { width:24%; float:right;}
+/*带操作功能布局*/
+	.frameMsChange .frameMain { width:45%;}
+.frameMsChange .frameSub { float:right; width:45%;}
+.frameMsChange .frameOperation { margin-left:45%; width:10%; *width:9%; text-align:center;}

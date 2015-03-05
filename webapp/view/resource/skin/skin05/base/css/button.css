@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Remark: 用于设置系统功能按钮样式。
+--------------------------------------------------------------------------------------------------------- */
+.functionBtnDiv, .operationBtnDiv, .conOperation { line-height:normal; }
+.operationBtnDiv, .conOperation { text-align:center; padding:5px 0; }
+
+/*初始化样式*/
+button { vertical-align:middle;}
+.functionBtnDiv button, .operationBtnDiv button, .conOperation button { border:0; overflow:visible; padding:0; }
+.functionBtnDiv button, .operationBtnDiv button, .conOperation button,  .linkButton { padding-left:8px; margin:0 2px; vertical-align:middle; }
+.functionBtnDiv button span, .operationBtnDiv button span, .conOperation button span,  .linkButton span { padding-right:8px; display:inline-block; height:24px; white-space:nowrap; font:12px/24px Arial, Helvetica, "宋体", sans-serif; cursor:pointer; }
+.linkButton { display:inline-block; text-decoration:none; color:#000; }
+/*无容器按钮*/
+.linkButton { background:url(../../base/img/normBtn_bgL.png) no-repeat left; vertical-align:middle; }
+.linkButton span { background:url(../../base/img/normBtn_bgR.png) no-repeat right; }
+/*图标按钮*/
+button.sysicon {border:none;background-color:transparent; vertical-align:middle; text-indent:0px;padding-left: 8px;margin-left:8px;min-width:18px;}
+button.sysicon span {padding-left:10px; vertical-align:middle;}
+button.sysicon.noText {padding:0;}
+/*功能按钮容器内按钮样式*/
+.functionBtnDiv button, .functionBtnDiv .linkButton { background:url(../../base/img/smallBtn_bgL.png) no-repeat left; }
+.functionBtnDiv button span, .functionBtnDiv .linkButton span { background:url(../../base/img/smallBtn_bgR.png) no-repeat right; }
+/*操作按钮容器内按钮样式*/
+.operationBtnDiv button, .operationBtnDiv .linkButton { background:url(../../base/img/normBtn_bgL.png) no-repeat left; }
+.operationBtnDiv button span, .operationBtnDiv .linkButton span { background:url(../../base/img/normBtn_bgR.png) no-repeat right; }
+/*功能页页面操作容器内按钮样式*/
+.conOperation button, .conOperation .linkButton { background:url(../../base/img/largeBtn_bgL.png) no-repeat left; }
+.conOperation button span, .conOperation .linkButton span { background:url(../../base/img/largeBtn_bgR.png) no-repeat right; }
+

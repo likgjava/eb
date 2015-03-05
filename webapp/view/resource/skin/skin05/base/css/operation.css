@@ -1,0 +1,24 @@
+@charset "utf-8";
+/*===工作记录===*/
+.operationLog { border:1px solid #99bbe8;}
+.operationLog h5 { text-indent:10px; height:23px; line-height:23px; background:url(../img/mDiv.gif) repeat-x;}
+.operationLog h5 span { display:inline-block;}
+.operationLog .logTitle { display:none; background:#dfe8f6; font-weight:bold;border-top:1px solid #99bbe8;line-height:25px;}
+.operationLog .logContent { display:none;}
+.logTitle span,.logContent span { display:inline-block; padding:3px; text-align:center; vertical-align:top;}
+.operationLog li { background:#eff5fe; border-top:1px solid #ddd; line-height:22px; }
+.operationLog .reply { clear:both;border-top:1px solid #ddd; border-left:1px solid #ddd;background:#fff; display:block;  margin:0 0 0 110px; }
+.operationLog .schedule { width:100px;}/*项目进度*/
+.operationLog .time { width:120px;}/*操作时间*/
+.operationLog .organization { width:9em; text-align:left;}/*所属机构*/
+.operationLog .department { width:6em;}/*所属部门*/
+.operationLog .name { width:5em;}/*操作人员*/
+.operationLog .telephone { width:100px;}/*联系电话*/
+.operationLog .workingInfo { width:220px; text-align:left;}/*工作信息－留言或备注*/
+.operationLog .replyInfo { width:20%; text-align:left;}/*回复信息*/
+.operationLog .functionBtnDiv { padding:0 3px; text-align:left;}/*操作容器*/
+
+/*---操作空间---*/
+.operationDiv { padding:5px; border:1px solid #999;}
+.operationDiv legend { padding:0 5px; margin-bottom:10px;}
+

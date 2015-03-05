@@ -1,0 +1,203 @@
+﻿@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: skyBlue 天空蓝
+Design: OTiger
+Email: liuly@gpcsoft.com
+Remark: 控件修改样式表，用于修改系统控件默认样式。
+--------------------------------------------------------------------------------------------------------- */
+/*flexigrid表格控件样式修改
+-------------------------------------------------------------------*/
+/*输入框修复*/
+.flexigrid input[type="text"],.flexigrid input[type="password"] { width:auto;}
+.flexigrid select { width:auto;}
+/*树列表行高修复*/
+.flexigrid div.bDiv .gridTree td div{ padding-top:0; padding-bottom:0; }
+.flexigrid  div.bDiv td div .treeGridIcon { height:25px;}
+/*tBody*/
+	.flexigrid div.bDiv table { border-bottom:1px solid #ccc;}
+
+/*弹出层控件样式修改
+---------------------------------------------*/
+.epsDialog { border:1px solid #1272ab;}/*描边边框*/
+.epsDialog h3 { background:url(../img/navMain_bg_hover.png) repeat-x; color:#fff;font-size:12px;padding-left:30px;}/*弹出层标题*/
+.epsDialog .epsDialogContent { background-color:#178dc3;}/*弹出层边框*/
+.epsDialog .epsDialogText { background-color:#fff;}/*内容背景*/
+.epsDialog h5 { color:#27525a;}/*内容标题*/
+
+.epsDialog .epsDialogLogoIcon{left:8px;position:absolute;top:5px;width:24px;z-index:88;}
+.epsDialog .epsDialogLogoIcon span{background:url("../img/epsDialogLogo.png") no-repeat scroll 0 0 transparent;padding-right:16px;}
+
+
+/*Tab标签页样式修改
+---------------------------------------------*/
+/*默认样式*/
+/*容器*/
+.ui-tabs{ border:0; padding:0; overflow:hidden;}
+.ui-widget-content{background:none;}
+/*标签*/
+.ui-tabs .ui-tabs-nav{ background:none; padding:0;}
+	.ui-tabs .ui-tabs-nav li{ margin:0 2px -1px 0; border-color:#ccc; background:url(../img/tabs_bg.gif) repeat-x left -1px; height:18px;opacity:0.5;}
+	.ui-tabs .ui-tabs-nav li a{ height:15px; padding:2px 10px;}
+	.ui-tabs .ui-tabs-nav li span{}
+	/*当前标签*/
+	.ui-tabs .ui-tabs-nav li.ui-tabs-selected { background:#fff; border-bottom:1px solid #fff; font-weight:bold;opacity:1;}
+	/*更多标签*/
+	.ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a{ background:#dcf1f6;}
+	/*内容*/
+	.ui-tabs .ui-tabs-panel{ border:1px solid #ccc; padding:10px 5px;background-color:#FFFFFF; overflow-x:auto}
+
+
+/*灰度样式 使用.picTab*/
+/*容器*/
+.picTab.ui-tabs{ border:0; padding:0; overflow:hidden; margin:4px;}
+.picTab.ui-widget-content{background:none;}
+/*标签*/
+.picTab.ui-tabs .ui-tabs-nav{ background:url("../img/tabBg.png") repeat-x scroll 0 0 #505050; padding:0;-moz-border-radius:0;height:46px;}
+	.picTab.ui-tabs .ui-tabs-nav li{background:none repeat-x scroll left -1px transparent;min-width:86px; height:46px;opacity:0.5;border:none;}
+	.picTab.ui-tabs .ui-tabs-nav li a{color:#ccc;font-weight:bold;padding:0.5em 1em;}
+	.picTab.ui-tabs .ui-tabs-nav li span{}
+	/*当前标签*/
+	.picTab.ui-tabs .ui-tabs-nav li.ui-tabs-selected { background:url("../img/tabSel.png") no-repeat scroll center top transparent;font-weight:bold;opacity:1;margin:0 5px;}
+	.picTab.ui-tabs .ui-tabs-nav li.ui-tabs-selected a {color:red;width:60px;padding-top:10px;}
+	/*更多标签*/
+	.picTab.ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a{ background:#dcf1f6;}
+	/*内容*/
+	.picTab.ui-tabs .ui-tabs-panel{ border:1px solid #ccc;border-top:none; padding:10px 5px;background-color:#FFFFFF}
+	.picTab.ui-tabs .ui-tabs-panel h5{color:#555;background-color:#c6e5f9;font-weight:bold;margin:-10px 0 0 -6px;width:110%;border-bottom:1px solid #ccc;}
+	.picTab.ui-tabs .ui-tabs-panel h5 span{padding-left:10px;}
+
+
+/*树*/
+.containerTableStyle {position:static;}/*修补树在IE7出现的浮动*/
+
+/*修复树编辑按钮 by lijx*/
+.treeEditNav{ background:none; border:0; margin-top:3px; position:absolute; top:0; right:10px; height:26px; line-height:26px;}
+.treeEditNav ul{background:none;}
+.treeEditNav ul li{width:auto;border:0; height:20px; line-height:20px;}
+.treeEditNav li{ background:none}
+.treeEditNav a:hover{ background:none;}
+.treeEditNav a:hover span{ background:none;}
+.treeEditNav .operation a{ background:none;}
+.treeEditNav .operation a span{ background:none;}
+
+/*统一图标*/
+.treeEditNav .add{background:url(../img/icon/add.png) no-repeat scroll 0 0 transparent;}	
+.treeEditNav .del{background:url(../img/icon/delete.png) no-repeat scroll 0 0 transparent;}
+.treeEditNav .edit{background:url(../img/icon/modify.png) no-repeat scroll 0 0 transparent;}	
+.treeEditNav .search{background:url(../img/icon/search.png) no-repeat scroll 0 0 transparent;}	
+.treeEditNav .save{background:url(../img/icon/save.png) no-repeat scroll 0 0 transparent;}	
+.treeEditNav .read{background:url(../img/icon/read.png) no-repeat scroll 0 0 transparent;}	
+.treeEditNav .enable{background:url(../img/icon/enable.png) no-repeat scroll 0 0 transparent;}	
+.treeEditNav .disable{background:url(../img/icon/disable.png) no-repeat scroll 0 0 transparent;}	
+.treeEditNav .stop{background:url(../img/icon/stop.png) no-repeat scroll 0 0 transparent;}	
+.treeEditNav .date{background:url(../img/icon/date.png) no-repeat scroll 0 0 transparent;}	
+.treeEditNav .flash{background:url(../img/icon/flash.png) no-repeat scroll 0 0 transparent;}	
+.treeEditNav .info{background:url(../img/icon/info.png) no-repeat scroll 0 0 transparent;}	
+.treeEditNav .print{background:url(../img/icon/print.png) no-repeat scroll 0 0 transparent;}
+.treeEditNav .tool{background:url(../img/icon/tool.png) no-repeat scroll 0 0 transparent;}
+.treeEditNav .setting{background:url(../img/icon/setting.png) no-repeat scroll 0 0 transparent;}	
+.treeEditNav .warn{background:url(../img/icon/warn.png) no-repeat scroll 0 0 transparent;}	
+.treeEditNav .audit{background:url(../img/icon/verify.png) no-repeat scroll 0 0 transparent;}	
+.treeEditNav .import{background:url(../img/icon/addLotSupplier.png) no-repeat scroll 0 0 transparent;}			
+.treeEditNav .copyInfo{background:url(../img/icon/copyInfo.png) no-repeat scroll 0 0 transparent;}			
+.treeEditNav .publish{background:url(../img/icon/publish.png) no-repeat scroll 0 0 transparent;}		
+.treeEditNav .look{background:url(../img/icon/look.png) no-repeat scroll 0 0 transparent;}		
+.treeEditNav .download{background:url(../img/icon/download.png) no-repeat scroll 0 0 transparent;}		
+.treeEditNav .lock{background:url(../img/icon/lock.png) no-repeat scroll 0 0 transparent;}		
+.treeEditNav .lockEdit{background:url(../img/icon/lockEdit.png) no-repeat scroll 0 0 transparent;}		
+.treeEditNav .pageExcel{background:url(../img/icon/pageExcel.png) no-repeat scroll 0 0 transparent;}		
+.treeEditNav .resetPwd{background:url(../img/icon/resetPwd.png) no-repeat scroll 0 0 transparent;}		
+.treeEditNav .tableGo{background:url(../img/icon/tableGo.png) no-repeat scroll 0 0 transparent;}
+
+
+/*grid表格样式*/
+/*.flexigrid div.tDiv{ border-color:#9ebad4;}
+.flexigrid { margin:4px 0;}
+.flexigrid div.mDiv{background:#e1edf4 url(../img/tdiv_bg.gif) repeat-x top; border:#9ebad4 1px solid; border-bottom:0;}
+.flexigrid div.vGrip{ border-color:#9ebad4;}
+.flexigrid div.fbutton:hover, .flexigrid div.fbutton.fbOver{padding: 0px; border:1px solid #9ebad4; background: url(../img/fbutton_bg.gif) repeat-x top;}
+.flexigrid div.hDiv{background:url(../img/hDiv_bg.gif) repeat-x bottom; border-bottom:1px solid #ededed; border-top:1px solid #9ebad4; border-color:#9ebad4;}
+.flexigrid div.bDiv{ border-color:#9ebad4;}
+.flexigrid div.hDiv th.sorted{ background:#d9e8fb url(../img/wbg.gif) repeat-x;}
+.flexigrid div.pDiv{ background:#e1edf4 url(../img/tdiv_bg.gif) repeat-x top;}
+.flexigrid tr td.sorted{ background:none;}
+.flexigrid tr.erow td.sorted{background:#fafafa;}
+.flexigrid tr.erow td{background: #fafafa;}
+.flexigrid div.bDiv a{ color:#000;}
+.flexigrid div.bDiv tr.trSelected:hover td, 
+.flexigrid div.bDiv tr.trSelected:hover td.sorted,
+.flexigrid div.bDiv tr.trOver.trSelected td.sorted, 
+.flexigrid div.bDiv tr.trOver.trSelected td,
+.flexigrid tr.trSelected td.sorted, 
+.flexigrid tr.trSelected td { background:#ebfdff; border:1px solid #ededed;}
+.flexigrid div.bDiv tr:hover td, 
+.flexigrid div.bDiv tr:hover td.sorted,
+.flexigrid div.bDiv tr.trOver td.sorted, 
+.flexigrid div.bDiv tr.trOver td { background:#d9e9f5; border:1px solid #ededed;}
+.flexigrid div.bDiv table td,.flexigrid div.hDiv table td,.flexigrid div.nDiv table td { border:1px solid #ededed;}
+.flexigrid div.hDiv th, .flexigrid  div.bDiv td 
+	{text-align: left;border-right: 1px solid #ededed;border-left: 1px solid #ededed; overflow:hidden; vertical-align: top !important;}*/
+.flexigrid {border-color:#9ebad4; border-top:#9ebad4 1px solid;  margin-bottom:4px;}
+.flexigrid table{ border-collapse:collapse; }
+.flexigrid div.tDiv{background:#e1edf4 url(../img/tdiv_bg.gif) repeat-x top; border-color:#9ebad4;}
+.flexigrid div.tDiv div.tDiv2{float:right;height:25px;}
+.flexigrid div.mDiv{position:absolute;overflow:hidden;width:40%;z-index:1;background:url(../img/icon/application_view_columns.png) no-repeat 5px center transparent;border:none;}
+.flexigrid div.mDiv div.ftitle{margin-left:20px;}
+.flexigrid div.mDiv div.ptogtitle{display:none;}
+.flexigrid div.btnseparator{ display:none;}
+.flexigrid div.fbutton{ white-space:nowrap;}
+.flexigrid div.vGrip{ border-color:#9ebad4;}
+.flexigrid div.fbutton:hover, .flexigrid div.fbutton.fbOver{padding: 0px; border:1px solid #9ebad4; background: url(../img/fbutton_bg.gif) repeat-x top;}
+.flexigrid div.hDiv{background:url(../img/hDiv_bg.gif) repeat-x bottom; border-bottom:1px solid #ededed; border-top:1px solid #9ebad4; border-color:#9ebad4;}
+.flexigrid div.bDiv{ border-color:#9ebad4;}
+.flexigrid div.hDiv th.sorted{ background:#d9e8fb url(../img/wbg.gif) repeat-x;}
+.flexigrid div.pDiv{ background:#e1edf4 url(../img/tdiv_bg.gif) repeat-x top;}
+.flexigrid tr td.sorted{ background:none;}
+.flexigrid tr.erow td.sorted{background:#fafafa;}
+.flexigrid tr.erow td{background: #fafafa;}
+.flexigrid div.bDiv a{ color:#085092 ; padding:10px; white-space:nowrap;}
+.flexigrid div.bDiv tr.trSelected:hover td, 
+.flexigrid div.bDiv tr.trSelected:hover td.sorted,
+.flexigrid div.bDiv tr.trOver.trSelected td.sorted, 
+.flexigrid div.bDiv tr.trOver.trSelected td,
+.flexigrid tr.trSelected td.sorted, 
+.flexigrid tr.trSelected td { background:#ebfdff; border:1px solid #ededed;}
+.flexigrid div.bDiv tr:hover td, 
+.flexigrid div.bDiv tr:hover td.sorted,
+.flexigrid div.bDiv tr.trOver td.sorted, 
+.flexigrid div.bDiv tr.trOver td { background:#d9e9f5; border:1px solid #ededed; color:#000;}
+.flexigrid div.bDiv table,.flexigrid div.nDiv table,.flexigrid div.hDiv table { border-collapse:collapse;}
+.flexigrid div.bDiv table td,.flexigrid div.hDiv table td,.flexigrid div.nDiv table td { border:1px solid #ededed;}
+.flexigrid div.hDiv th, .flexigrid  div.bDiv td {text-align: left;border-right: 1px solid #ededed;border-left: 1px solid #ededed; overflow:hidden; vertical-align: top !important;}
+.flexigrid div.bDiv tr:hover td a, 
+.flexigrid div.bDiv tr:hover td.sorted a,
+.flexigrid div.bDiv tr.trOver td.sorted a, 
+.flexigrid div.bDiv tr.trOver td a{ color:#000;}
+	
+/*桌面任务*/
+.widget{-moz-box-shadow:0 0 3px #000;margin-bottom:10px;margin:1em 0.5em;}
+.widget-header{background-color:#379CDC;}
+.widget-header strong{color:#013E7F;text-shadow:0 0 5px white;}
+.widget-place{width:50%;*width:49%;margin-left:0;}
+.widget-content{line-height:22px;}
+
+
+/*其它项目*/
+.otherTabs{position:relative; margin-top:10px;overflow:hidden;}
+.otherTabs .otherPoject{position:absolute; top:0; right:0; }
+.otherTabs .otherPoject li{ float:left; margin:0 10px;}
+.otherTabs .ui-tabs-nav li{ margin-top:3px;}
+.otherTabs .ui-tabs-nav li{ height:22px; line-height:22px;}
+
+/*右键菜单*/
+/*
+.epsContentMenu{background:url("../img/bgTop.png") no-repeat scroll left top transparent;padding-top:10px;width:129px;border:medium none;}
+.epsContentMenu ul{background:url("../img/bgBottom.png") no-repeat scroll left bottom transparent;padding:0 0 10px 0;}
+.epsContentMenu ul li{background:url("../img/bgBody.png") no-repeat scroll left center transparent;clear:both;margin:0;padding:5px 0 0 6px;}
+.epsContentMenu ul li span{margin:0 10px 0 0;}*/
+.epsContentMenu ul li:hover{background:url("../img/bgBodyHover.png") no-repeat scroll left center transparent;}
+
+/*editTree*/
+.editTree{ max-height:200px; overflow:auto; _height:200px;}

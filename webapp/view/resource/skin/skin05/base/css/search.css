@@ -1,0 +1,14 @@
+﻿@charset "utf-8";
+/*===页面搜索===*/
+.conSearch { border:1px solid #99bbe8; margin:10px 0; position:relative; zoom:1;}
+.conSearch h4 { font:bold 1em/1.5em "宋体"; padding:0 5px; position:absolute;left:8px; top:-8px; background:#fff; height:20px; border:none; text-indent:0;}
+.conSearch ul { overflow:hidden; padding-top:10px;}
+.conSearch li { float:left; line-height:30px; width:25%; overflow:hidden;}
+.conSearch label { display:inline-block; text-align:right; width:7em;}
+.conSearch input{ width:5em;}
+.conSearch .operationBtnDiv { text-align:left; padding:0;}
+.conSearch .operationBtnDiv button { background:url(../../base/img/icon/sysIconBtn/sibMagnifier.png) no-repeat left; padding-left:25px; line-height:normal;}
+.conSearch .hightSearchBtn { clear:both; text-align:center; border-top:#ddd 1px dotted; height:30px; line-height:30px; width:100%;}
+.conSearch .hightSearch { display:none;}
+.conSearch input.sysicon { padding-right:0;}
+.conSearch .siSearch{ padding-left:0;}

@@ -1,0 +1,9 @@
+@charset "utf-8";
+/*维护专业分类详情*/
+.detail{ position:relative; border:none;}
+.detail h4{ background:#f5f5f5;}
+.detail .treeEditNav{ position:absolute; top:0; right:0;}
+.detail .treeEditNav li{ float:left; width:auto; margin-right:10px;}
+.detail .treeEditNav .edit{ background:url(../../sysicon/16/dialog-operate_r4_c2.png) no-repeat left center; padding-left:18px;}
+.detail .treeEditNav .del{ background:url(../../sysicon/16/dialog-operate_r1_c2.png) no-repeat left center; padding-left:18px;}
+.detail .treeEditNav .add{ background:url(../../sysicon/16/dialog_add.png) no-repeat left center; padding-left:18px;}

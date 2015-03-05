@@ -1,0 +1,67 @@
+﻿@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: skyBlue 天空蓝
+Design: OTiger
+Email: liuly@gpcsoft.com
+Remark: 结构样式表，用于设置功能页各种应用结构样式。
+--------------------------------------------------------------------------------------------------------- */
+/*----全屏变换----*/
+#sysContainer.fullScreen #conTitle {}
+#sysContainer.fullScreen #conTitle h3,#sysContainer.noSub #conTitle h3 { display:none;}
+#sysContainer.fullScreen #conTitle h3 span,#sysContainer.noSub #conTitle h3 span { width:8em; text-align:center; display:inline-block; height:22px; padding-right:10px; background:url(../img/sysToolsSeparator.gif) no-repeat left 2px;}
+#sysContainer.fullScreen #conBody,#sysContainer.noSub #conBody { padding:0; margin-left:2px;margin-right:2px;}
+#sysContainer.fullScreen #conBody .contentTools { top:42px;}
+#sysContainer.fullScreen .pageTools,#sysContainer.noSub .pageTools { position:absolute; top:0px; right:auto; padding-left:15px; left:320px; background:url(../img/pageTools_bg_s.gif) no-repeat right top; *left:auto; *right:0; *background:url(../img/pageTools_bg.gif) no-repeat left top; *padding-left:8px;}/*IE7 修复*/
+#sysContainer.fullScreen .pageTools ul,#sysContainer.noSub .pageTools ul { background:none; padding-right:25px;}
+#sysContainer.fullScreen .pageTools a,#sysContainer.noSub .pageTools a { color:#a5cdd4; height:18px; line-height:18px;}
+#sysContainer.fullScreen .pageTools a:hover,#sysContainer.noSub .pageTools a:hover { color:#006;}
+
+/*主体容器*/
+#contentMain{border:#8dadcb 1px solid;background-color:#fff;}
+
+/*内容标题*/
+#conTitle {border-bottom:1px dotted #ccc;overflow:hidden;}
+
+/*
+	#conTitle .navCurrent { display:none}
+	#conTitle h3 { display:none;}
+	#conTitle .loader { font-weight:normal; color:#666;}
+*/
+	#conTitle .navCurrent { color:#666; overflow:hidden;height:26px; line-height:26px; font-weight:bold;text-indent:0.5em;}
+	#conTitle .navCurrent a { color:#085092; display:block; float:left;  background:url(../img/navCurrent_link.gif) no-repeat right center; padding-right:20px; margin-right:3px; text-decoration:none;}
+	#conTitle .navCurrent a.loadingPageTitle{ background:url() no-repeat right center; }/*取消导航最后链接的箭头图标 by lijx*/
+		#conTitle .navCurrent a:hover { text-decoration:underline; color:#f55;}
+	#conTitle h3 { display:none; font:1em/1.5em "宋体"; color:#127998; padding-left:8px; background: url(../img/icon/navSub_dot.gif) no-repeat left -18px;}
+	#conTitle .loader { font-weight:normal; color:#666;}
+
+/*内容容器*/
+#conBody { overflow:auto; *position:relative;background:#fff; padding:5px;}/*IE7 修复*/
+	
+	/*内容页面工具条*/
+	#conBody .contentTools{position:fixed;top:60px;right:0;margin-right:10px;}
+
+	/*页面工具*/
+	.pageTools { background:url(../img/pageTools_bg.gif) no-repeat left top; padding-left:8px; display:none;}
+		.pageTools ul { background:url(../img/pageTools_bg.gif) no-repeat right top; padding-right:10px; height:21px; overflow:hidden;}
+		.pageTools li { float:left; border-left:1px dotted #ccc;}
+			.pageTools li:hover { background:#e4f4f7 url(../img/pageTools_bg_hover.gif) repeat-x;}
+		.pageTools a { display:block; float:left; height:19px; margin-top:1px; padding-right:5px; text-decoration:none; color:#27525a; line-height:19px;}
+		.pageTools a:hover { color:#F00;}
+	
+	/*栏目容器*/
+	.partContainers h4 { font:bold 12px/1.5em "宋体"; text-indent:0.5em; margin-bottom:4px; background:none; line-height:1.5em; border-bottom:1px dotted #8dadcb; color:#125392;}
+	.partContainers h5{ text-indent:0.5em;font-weight:normal;}
+	.partContainers h6{ font-weight:normal;}
+	
+	.partContainers .conSearch ul{ background:none;}
+	.partContainers dl{ background:#fff;}
+	
+
+/*下拉菜单*/
+.listMenu { background:#27525a; border:1px solid #fff; padding:1px;}
+	.listMenu a { display:block; padding:2px 8px; font:1em/1.5em "宋体"; color:#fff; text-decoration:none; white-space:nowrap; hide-focus:expression( this.hideFocus=true ); outline:none;}
+	.listMenu a:hover { background:#6dabbe; color:#ff0;}
+	.listMenu li ul { display:none; padding-left:1em;}
+	.listMenu li:hover ul { display:block;}

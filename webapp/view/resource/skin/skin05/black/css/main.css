@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+/*===基础样式表===*/
+@import url(../../base/css/base.css);/*基础结构样式*/
+@import url(../../sysicon/sysicon.css);/*系统图标样式*/
+@import url(../../base/css/common.css);/*其他公共样式*/
+
+/*===常用样式表（请根据需要选择是否默认加载）===*/
+/*网格化宽度*/
+@import url(../../base/css/containerGrid.css);
+/*按钮样式*/
+@import url(../../base/css/button.css);
+/*文件样式*/
+/*@import url(../../base/css/file.css);*/
+/*表单样式*/
+/*@import url(../../base/css/form.css);*/
+/*列表样式*/
+/*@import url(../../base/css/list.css);*/
+/*新闻样式*/
+/*@import url(../../base/css/news.css);*/
+/*数据表样式*/
+/*@import url(../../base/css/table.css);*/
+/*工作记录样式*/
+/*@import url(../../base/css/operation.css);*/
+/*搜索样式*/
+/*@import url(../../base/css/search.css);*/
+/*项目驱动样式*/
+/*@import url(../../base/css/project.css);*/
+/*待办任务样式*/
+/*@import url(../../base/css/toDoTasks.css);*/
+/*电子监督样式*/
+/*@import url(../../base/css/electronicMonitoring.css);*/
+/*维护专业分类详情*/
+/*@import url(../../base/css/detailTreeEditNav.css);*/
+
+/*===常用控件样式表（请根据需要选择是否默认加载）===*/
+/*弹出层样式*/
+@import url(../../../scripts/jquery/epsDialog/epsDialog.css);
+/*tab样式*/
+/*@import url(../../../scripts/jquery/epsTabs/base/tabs.css);*/
+/*grid样式*/
+/*@import url(../../../plug-in/jquery/flexigrid/css/flexigrid/flexigrid.css);*/
+
+/*===用例样式，仅用于演示DEMO 开始===*/
+@import url(../../base/css/ECPsDemo.css);
+@import url(../../plug-in/highlight/style.css);
+
+
+
+
+
+

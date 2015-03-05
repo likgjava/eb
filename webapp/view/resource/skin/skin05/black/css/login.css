@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/*  用于初始化浏览器标签默认样式 */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, input, p, blockquote, th, td, form, iframe { margin:0; padding:0; }
+h1, h2, h3, h4, h5, h6 { font-size:100%; }
+ol, ul { list-style:none; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal; }
+img { border:0; }
+caption, th { text-align:left; }
+q:before, q:after { content:''; }
+html { width:100%; height:100%; background:#fff; }
+body { font:12px Verdana, Geneva,"微软雅黑","宋体", sans-serif;}
+a { outline:none;}
+button { cursor:pointer; }
+iframe { filter:chroma(color=#ffffff); }
+
+/*基础设置*/
+body { font:14px/1.5em Verdana, Geneva, "宋体",sans-serif;}
+#sysContainer { margin:0 auto; position:relative;}
+#sysBranding { background:#000; height:68px; border-bottom:#f00 2px solid; color:#fff; position:relative;}
+#sysBranding h1 {  line-height:68px; font-size:30px; text-align:center;}
+#sysBranding p { display:none;}
+			
+/* 换肤列表 */
+.changeSkinList { position:absolute; height:18px; bottom:10px;left:10px;  padding-left:25px; background:url(../../default/img/icon/changeSkin_titleBg.png) no-repeat left bottom; z-index:100;}
+.changeSkinList li { float:left; border:1px solid #b8dbe5; width:16px; height:16px; overflow:hidden; margin-right:3px; cursor: pointer;}
+.changeSkinList li img { width:16px; height:16px;}
+		
+/*Tab 样式修改*/
+#userLogin { _position:relative;}
+#userLogin .ui-tabs-nav{ background:#ddd; border-bottom:1px solid #ccc;}
+#userLogin .ui-tabs-nav li { color:#ccc; border:1px solid #ccc; padding:0; height:25px;background:#f0f0f0; padding-top:3px;}
+#userLogin .ui-tabs-nav li.ui-tabs-selected { background:#000;}
+#userLogin .ui-tabs-nav li.ui-tabs-selected a { color:#fff; border:none;}
+#userLogin .ui-tabs-nav li a { padding:0; width:90px; height:24px; text-align:center; line-height:24px;border-bottom:1px solid #ccc; color:#000; overflow:hidden;}
+#userLogin .ui-tabs-panel {border:0; padding:20px; padding-top:40px;}
+
+/*登录内容*/
+#userLogin {width:500px; margin:10px auto; min-height:500px; background:#f5f5f5;}
+#userLogin h3 {background:#ddd; text-indent:1em; line-height:30px;}
+#userLogin .loginBox { margin-left:60px; line-height:30px;}
+#userLogin .loginBox input{ width:200px;}
+#userLogin .conOperation { text-align:center;}
+#userLogin .conOperation button{ padding:0 10px; margin:10px;}
+
+/*注意事项*/
+.securityRemind,.remind { margin-top:20px; line-height:30px;}
+.securityRemind ul{ margin:10px 0;}
+.loginBox a,.remind a{ margin:0 5px; color:#005eac;}
+.loginBox a:hover,.remind a:hover{ color:#F00;}
+
+/*站点信息*/
+#sysInfo { border-top:#ccc 1px dotted; padding:5px 0; text-align:center; color:gray;}
+#sysInfo a {color:#005eac; margin:0 5px; text-decoration:none;}
+#sysInfo a:hover { color:#F00;}
+
+/*低版本浏览器提示*/
+.userTips{ background:#ffffcc; border:#ccc 1px dotted; padding:5px; text-align:center; color:#cc0000;}

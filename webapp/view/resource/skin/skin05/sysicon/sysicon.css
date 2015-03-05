@@ -1,0 +1,215 @@
+﻿@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: all
+Design: OTiger
+Email: fanhy@gpcsoft.com
+Remark: 图标样式表，用于设置系统默认应用图标样式，特殊表现由各皮肤主题修补。
+--------------------------------------------------------------------------------------------------------- */
+/*系统图标*/
+.sysicon { background-position:left center; background-repeat:no-repeat; text-align:left;height:16px; line-height:16px;padding-right:2px;display:inline-block;}
+	input.sysicon { background-position:right center; text-indent:0;padding-right:16px;}/*增加pdding-right修补输入框文字与图标的重叠 by lijx*/
+	/*常用图标*/
+	.siAccept {background:url(16/accept.png) no-repeat left center;padding-left:20px;}/*提交*/
+	.siUnacceptable { background-image:url(16/unacceptable.png);padding-left:20px;}
+	.siAdd { background-image:url(16/add.png);padding-left:20px;}
+
+	.sireduce { background-image:url(16/reduce.png);padding-left:20px;}
+	.siModify { background-image:url(16/modify.png);padding-left:20px; }
+
+	.siDelete { background-image:url(16/cross.png);padding-left:20px;}	
+	.siCancel { background-image:url(16/cancel.png);padding-left:20px;}
+	.siAnchor { background-image:url(16/anchor.png);padding-left:20px;}	
+	.siDisk { background-image:url(16/disk.png);padding-left:20px;}	
+	.siDate { background-image:url(16/date.png);padding-left:20px;}	
+	.siSearch { background-image:url(16/magnifier.png);padding-left:20px;}
+	.siReload { background-image:url(16/arrow_rotate_clockwise.png);padding-left:20px;}
+	.siPrinter { background-image:url(16/printer.png);padding-left:20px;}
+	.siSitemap { background-image:url(16/sitemap_color.png);padding-left:20px;}
+	.siInfo{ background-image:url(16/information.gif);padding-left:20px;}
+	.autoSearch{ background-image:url(16/find.png);padding-left:20px;}
+	.siSearch_view_tree { background-image:url(16/siSearch_tree.png);padding-left:20px;}
+	.siSearch_view_list { background-image:url(16/siSearch_list.png);padding-left:20px;}
+  .siDestroyed{ background-image:url(16/destroyed.png);padding-left:20px; }
+	
+	.siExit{background-image:url(16/dialog-operate_r1_c2.png);padding-left:20px;}
+	.siExitBtn{background-image:url(16/dialog-operate_r1_c1.png);padding-left:20px;}
+	.siUp{background-image:url(16/dialog-operate_r3_c2.png);padding-left:20px;}
+	.siLeft{background-image:url(16/siLeft.png);padding-left:20px;}
+	.siRight{background-image:url(16/siRight.png); padding-left:20px;}
+	.siUpBtn{background-image:url(16/dialog-operate_r3_c1.png);padding-left:20px;}
+	.siDown{background-image:url(16/dialog-operate_r2_c2.png);padding-left:20px;}
+	.siDownBtn{background-image:url(16/dialog-operate_r2_c1.png);padding-left:20px;}
+	.siEdit{background-image:url(16/dialog-operate_r4_c2.png);padding-left:20px;}
+	.siEditBtn{background-image:url(16/dialog-operate_r4_c1.png); padding-left:20px;}
+	.siExitGray{background-image:url(16/dialog-operate_r5_c1.png); padding-left:20px;}
+	.siUpGray{background-image:url(16/dialog-operate_r7_c1.png); padding-left:20px;}
+	.siDownGray{background-image:url(16/dialog-operate_r6_c1.png);  padding-left:20px;}/*向下箭头-灰*/
+	.siDown{background-image:url(16/dialog-operate_r2_c2.png);  padding-left:20px;}/*向下箭头-彩*/
+	.siEditGray{background-image:url(16/dialog-operate.png); padding-left:22px;}
+	.siSave{background-image:url(16/bullet_disk.png);padding-left:20px;}
+	.siSaveBtn{background-image:url(16/bullet_disk_btn.png); padding-left:20px;}
+	.siSaveGray{background-image:url(16/bullet_disk_gray.png); padding-left:20px;}
+
+	.offline{background:url(16/offline.gif) no-repeat left center;padding-left:20px;}/*线下*/
+	.notStarted{background:url(16/notStarted.gif) no-repeat left center;padding-left:20px;}/*未开始*/
+	.in{ background:url(16/in.gif) no-repeat left center;padding-left:20px;}/*进行中*/
+	.completed{background:url(16/completed.gif) no-repeat left center;padding-left:20px;}/*已完成*/
+     
+	.evaluation{background:url(16/star.png) no-repeat left center; padding-left:16px; }/*评价*/
+	.money_yen{background:url(16/money_yen.png) no-repeat left center; padding-left:16px; }/*价格*/
+	.Shelves{background:url(16/date.png) no-repeat left center; padding-left:16px; }/*上架时间*/
+	.showGoodsList{background:url(other/view_mode_10a.gif) no-repeat left center; padding-left:20px;  height:18px; line-height:18px;}/*列表显示*/
+	.showGoodsListS{background:url(other/view_mode_sel.gif) no-repeat left center; padding-left:20px;  height:18px; line-height:18px;}/*列表显示-当前选择状态下*/
+	.showGoodsPicS{background:url(other/view_mode_10a1.gif) no-repeat left center; padding-left:20px;  height:18px; line-height:18px;}/*大图显示-当前状态下*/
+	.showGoodsPic{background:url(other/view_mode_gray.gif) no-repeat left center; padding-left:20px;  height:18px; line-height:18px;}/*大图显示*/
+	/*商品评价*/
+	.score{background:url(other/star_g.png) no-repeat left center;height:26px; width:136px;}
+	.score span{ position:relative;}
+	.score span a{ position:absolute; left:146px;white-space:nowrap;}
+	.score span.a1{background:url(other/star_c.png) no-repeat left center;  line-height:26px;height:26px; width:13.6px; }
+	.score span.a2{background:url(other/star_c.png) no-repeat left center;  line-height:26px;height:26px; width:27.2px; }
+	.score span.a3{background:url(other/star_c.png) no-repeat left center;  line-height:26px;height:26px; width:40.8px; }
+	.score span.a4{background:url(other/star_c.png) no-repeat left center;  line-height:26px;height:26px; width:54.4px; }
+	.score span.a5{background:url(other/star_c.png) no-repeat left center;  line-height:26px;height:26px; width:68.0px; }
+	.score span.a6{background:url(other/star_c.png) no-repeat left center;  line-height:26px;height:26px; width:81.6px; }
+	.score span.a7{background:url(other/star_c.png) no-repeat left center;  line-height:26px;height:26px; width:95.2px; }
+	.score span.a8{background:url(other/star_c.png) no-repeat left center;  line-height:26px;height:26px; width:108.8px; }
+	.score span.a9{background:url(other/star_c.png) no-repeat left center;  line-height:26px;height:26px; width:122.4px; }
+	.score span.a10{background:url(other/star_c.png) no-repeat left center;  line-height:26px;height:26px; width:136px; }
+	
+	
+	/*应用程序*/
+	.siApplication { background-image:url(16/application.png);padding-left:20px;}
+	.siApplication_double { background-image:url(16/application_double.png);padding-left:20px;}
+	.siApplication_view_list { background-image:url(16/application_view_list.png);padding-left:20px;}
+	.siApp_side_tree { background-image:url(16/application_side_tree.png); background-repeat:no-repeat; padding-left:20px;}
+	.siApp_view_columns { background-image:url(16/application_view_columns.png);padding-left:20px;}
+	.siApp_cascade { background-image:url(16/application_cascade.png);padding-left:20px;}
+	.siApp_resetPwd{background-image:url(16/calculator_edit.gif);padding-left:20px;}
+	
+	.siApp_resetPwd{background-image:url(16/calculator_edit.png);padding-left:20px;}
+	.siAppxia{ background:url(16/dialog-operate_r2_c1.png);padding-left:20px;}
+	.siAppxiao{ font-size:0; color:#FFF;padding-left:20px;}
+	.siApp_view_columnss { background-image:url(16/dialog-operate_r2_c1.png);padding-left:20px;}
+	.siApp_view_columnsx { background-image:url(16/dialog-operate_r1_c1.png);padding-left:20px;}
+	.siApp_view_columnsa { background-image:url(16/dialog-operate_r3_c1.png);padding-left:20px;}
+	.siApp_view_columnsb { background-image:url(16/dialog-operate_r4_c1.png);padding-left:20px;}
+	.siApp_view_columnsh1 { background-image:url(16/dialog-operate_r5_c1.png);padding-left:20px;}
+	.siApp_view_columnshx { background-image:url(16/dialog-operate_r2_c2.png);padding-left:20px;}
+	.siApp_view_columnsc { background-image:url(16/dialog-operate_r1_c2.png);padding-left:20px;}
+	.siApp_view_columnsak { background-image:url(16/dialog-operate_r3_c2.png);padding-left:20px;}
+	.siApp_view_columnsg { background-image:url(16/dialog-operate_r4_c2.png);padding-left:20px;}
+	.siApp_view_columnsh2 { background-image:url(16/dialog-operate_r6_c1.png);padding-left:20px;}
+	.siApp_view_columnsh3 { background-image:url(16/dialog-operate_r7_c1.png);padding-left:20px;}
+	.siApp_view_columnsh4 { background-image:url(16/dialog-operate.png);padding-left:20px;}
+	.cog_go { background-image:url(16/cog_go.png);padding-left:20px;}
+	.cog_error{ background-image:url(16/cog_error.png);padding-left:20px;}
+	.cog_edit{ background-image:url(16/cog_edit.png);padding-left:20px;}
+	.cog_delete{ background-image:url(16/cog_delete.png);padding-left:20px;}
+	.cog_add{ background-image:url(16/cog_add.png);padding-left:20px;}
+	.cog{ background-image:url(16/cog.png);padding-left:20px;}
+	.report_word{ background-image:url(16/report_word.png);padding-left:20px;}
+	.report_user{ background-image:url(16/report_user.png);padding-left:20px;}
+	.report_picture{ background-image:url(16/report_picture.png);padding-left:20px;}
+	.report_magnify{background-image:url(16/report_magnify.png);padding-left:20px;}
+	.report_link{background-image:url(16/report_link.png);padding-left:20px;}
+	.report_key{background-image:url(16/report_key.png);padding-left:20px;}
+	/*.report_go{background-image:url(16/report_go.png);}*/
+	.report_go{ background:url(16/report_go.png) no-repeat left center;padding-left:20px; }/*审核*/
+	.report_edit{background-image:url(16/report_edit.png);padding-left:20px;}
+	.report_disk{background-image:url(16/report_disk.png);padding-left:20px;}
+	.report_delete{background-image:url(16/report_delete.png);padding-left:20px;}
+	.report_add{background-image:url(16/report_add.png);padding-left:20px;}
+	.report{background-image:url(16/report.png);padding-left:20px;}
+	.group{background-image:url(16/group.png);padding-left:20px;}
+	.group_add{background-image:url(16/group_add.png);padding-left:20px;}
+	.group_delete{background-image:url(16/group_delete.png);padding-left:20px;}
+	.group_edit{background-image:url(16/group_edit.png);padding-left:20px;}
+	.group_error{background-image:url(16/group_error.png);padding-left:20px;}
+	.group_gear{background-image:url(16/group_gear.png);padding-left:20px;}
+	.group_go{background-image:url(16/group_go.png);padding-left:20px;}
+	.group_key{background-image:url(16/group_key.png);padding-left:20px;}
+	.group_link{background-image:url(16/group_link.png);padding-left:20px;}
+	.ruby{background-image:url(16/ruby.png);padding-left:20px;}
+	.ruby_add{background-image:url(16/ruby_add.png);padding-left:20px;}
+	.ruby_delete{background-image:url(16/ruby_delete.png);padding-left:20px;}
+	.ruby_gear{background-image:url(16/ruby_gear.png);padding-left:20px;}
+	.ruby_get{background-image:url(16/ruby_get.png);padding-left:20px;}
+	.ruby_go{background-image:url(16/ruby_go.png);padding-left:20px;}
+	.ruby_key{background-image:url(16/ruby_key.png);padding-left:20px;}
+	.ruby_link{background-image:url(16/ruby_link.png);padding-left:20px;}
+	.ruby_put{background-image:url(16/ruby_put.png);padding-left:20px;}
+	.coins{background-image:url(16/coins.png);padding-left:20px;}
+	.coins_add{background-image:url(16/coins_add.png);padding-left:20px;}
+	.coins_delete{background-image:url(16/coins_delete.png);padding-left:20px;}
+	.plugin_link{background-image:url(16/plugin_link.png);padding-left:20px;}
+	.plugin_go{background-image:url(16/plugin_go.png);padding-left:20px;}
+	.plugin_error{background-image:url(16/plugin_error.png);padding-left:20px;}
+	.plugin_edit{background-image:url(16/plugin_edit.png);padding-left:20px;}
+	.plugin_disabled{background-image:url(16/plugin_disabled.png);padding-left:20px;}
+	.plugin_delete{background-image:url(16/plugin_delete.png);padding-left:20px;}
+	.plugin_add{background-image:url(16/plugin_add.png);padding-left:20px;}
+	.plugin{background-image:url(16/plugin.png);padding-left:20px;}
+	.award_star_silver_3{background-image:url(16/award_star_silver_3.png);padding-left:20px;}
+	.award_star_silver_2{ background-image:url(16/award_star_silver_2.png);padding-left:20px;}
+	.award_star_silver_1{background-image:url(16/award_star_silver_1.png);padding-left:20px;}
+	.award_star_gold_3{background-image:url(16/award_star_gold_3.png);padding-left:20px;}
+	.award_star_gold_2{background-image:url(16/award_star_gold_2.png);padding-left:20px;}
+	.award_star_gold_1{background-image:url(16/award_star_gold_1.png);padding-left:20px;}
+	.award_star_delete{background-image:url(16/award_star_delete.png);padding-left:20px;}
+	.award_star_bronze_3{background-image:url(16/award_star_bronze_3.png);padding-left:20px;}
+	.award_star_bronze_2{background-image:url(16/award_star_bronze_2.png);padding-left:20px;}
+	.award_star_bronze_1{background-image:url(16/award_star_bronze_1.png);padding-left:20px;}
+	.award_star_add{background-image:url(16/award_star_add.png);padding-left:20px;}
+	.folder{background-image:url(16/folder.png);padding-left:20px;}
+	.folder_close{background-image:url(16/folder_close.png);padding-left:20px;}
+	.woman{background-image:url(16/woman.png);padding-left:20px;}
+	.man{background-image:url(16/man.png);padding-left:20px;}
+	.womanGray{background-image:url(16/womanGray.png);padding-left:20px;}
+	.manGray{background-image:url(16/manGray.png);padding-left:20px;}
+
+	
+	
+	/*箭头图标*/
+	.siArrow_in { background-image:url(16/arrow_in.png);padding-left:20px;}
+	.siArrow_inout { background-image:url(16/arrow_inout.png);padding-left:20px;}
+	.siArrow_out { background-image:url(16/arrow_out.png);padding-left:20px;}
+	.siArrow_refresh { background-image:url(16/arrow_refresh.png);padding-left:20px;}
+	.siArrow_refresh_small { background-image:url(16/arrow_refresh_small.png);padding-left:20px;}
+	.siArrow_left { background-image:url(16/arrow_left.png);padding-left:20px;}
+	.siArrow_right { background-image:url(16/arrow_right.png);padding-left:20px;}
+	.siFirst { background-image:url(16/resultset_first.png);padding-left:20px;}
+	.siPrev { background-image:url(16/resultset_previous.png);padding-left:15px;}
+	.siNext { background-image:url(16/resultset_next.png);padding-left:10px;}
+	.siLast { background-image:url(16/resultset_last.png);padding-left:20px;}
+	.siBullet_arrow_down { background-image:url(16/bullet_arrow_down.png);padding-left:20px;}
+	.siBullet_arrow_up { background-image:url(16/bullet_arrow_up.png);padding-left:20px;}
+	.siBullet_arrow_left { background-image:url(16/bullet_arrow_left.png);padding-left:20px;}
+	.siBullet_arrow_right { background-image:url(16/bullet_arrow_right.png);padding-left:20px;}
+  .siControl_fastforward_right { background-image:url(16/control_fastforward_blue.png);padding-left:20px;}
+	.clickHere{ background-image:url(16/hand_move.gif);padding-left:20px;}
+
+
+/* 
+Label: ECP - E Concentration Procurement
+Remark: 图标样式表，用于系统图标样式。
+--------------------------------------------------------------------------------------------------------- */
+/*系统图标选择样式*/
+.sysOptionsIcon { border-bottom:1px dotted #127998; margin-bottom:5px; padding-bottom:5px; overflow:hidden; zoom:1; text-align:center;}
+	.sysOptionsIcon li { float:left; width:70px; height:75px; padding:5px 5px 0 5px; margin:0 5px 5px 0; background:url(../../base/img/options_bg.gif) no-repeat; cursor:pointer;}
+	.sysOptionsIcon li:hover { background-position:left -80px;}
+	.sysOptionsIcon img { width:70px; height:55px;}
+	.sysOptionsIcon span { display:inline-block; width:70px; line-height:22px; padding-top:55px; background:url(../../base/img/icon/optionsIcon_null.gif) no-repeat left top;}
+	#changeThemeZone span { padding:0; background:none; line-height:17px;}
+	/*图标设置*/
+	.sysOptionsIcon #screenStandard span { background-image:url(../base/img/icon/optionsIcon_screenStandard.gif);}
+	.sysOptionsIcon #screenFull span { background-image:url(../base/img/icon/optionsIcon_screenFull.gif);}
+	.sysOptionsIcon #navSubHide span { background-image:url(../base/img/icon/optionsIcon_navSubHide.gif);}
+	.sysOptionsIcon #navSubShow span { background-image:url(../base/img/icon/optionsIcon_navSubShow.gif);}
+	.sysOptionsIcon #fontBase span { background-image:url(../base/img/icon/optionsIcon_fontBase.gif);}
+	.sysOptionsIcon #fontLarge span  { background-image:url(../base/img/icon/optionsIcon_fontLarge.gif);}
+	/*详情开关图标*/
+	.detailsSwitch { margin-left:5px; display:inline-block; background:url(../sysicon/16/bullet_arrow_down.png) no-repeat right center; font-weight:normal; padding-right:16px; cursor:pointer; color:#c00;}
+	.detailsSwitch.collapsable { background-image:url(../sysicon/16/bullet_arrow_up.png);}

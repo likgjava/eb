@@ -1,0 +1,83 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*===基础样式表===*/
+@import url(../../base/css/base.css);/*基础结构样式*/
+@import url(../../sysicon/sysicon.css);/*系统图标样式*/
+@import url(../../base/css/common.css);/*其他公共样式*/
+
+/*===常用样式表（请根据需要选择是否默认加载）===*/
+/*网格化宽度*/
+@import url(../../base/css/containerGrid.css);
+/*按钮样式*/
+@import url(../../base/css/button.css);
+/*文件样式*/
+@import url(../../base/css/file.css);
+/*表单样式*/
+@import url(../../base/css/form.css);
+/*列表样式*/
+@import url(../../base/css/list.css);
+/*新闻样式*/
+@import url(../../base/css/news.css);
+/*数据表样式*/
+@import url(../../base/css/table.css);
+/*工作记录样式*/
+@import url(../../base/css/operation.css);
+/*搜索样式*/
+@import url(../../base/css/search.css);
+/*项目驱动样式*/
+@import url(../../base/css/project.css);
+/*待办任务样式*/
+@import url(../../base/css/toDoTasks.css);
+/*电子监督样式*/
+@import url(../../base/css/electronicMonitoring.css);
+/*维护专业分类详情*/
+@import url(../../base/css/detailTreeEditNav.css);
+
+/*===常用控件样式表（请根据需要选择是否默认加载）===*/
+/*弹出层样式*/
+@import url(../../../scripts/jquery/epsDialog/epsDialog.css);
+/*tab样式*/
+/*@import url(../../../scripts/jquery/epsTabs/base/tabs.css);*/
+/*grid样式*/
+/*@import url(../../../plug-in/jquery/flexigrid/css/flexigrid/flexigrid.css);*/
+
+/*===用例样式，仅用于演示DEMO 开始===*/
+@import url(../../base/css/ECPsDemo.css);
+@import url(../../plug-in/highlight/style.css);
+
+
+/*--------------IE6专属样式----------------------*/
+#loginInfo{ _top:6px; }
+#sysTools{_top:27px;}
+#navMain{_top:24px;}
+.partContainers h4, .partContainers h5 { _clear:both;}
+.frame2Pa .framePaCon{ _width:49%;}
+.frame3Pa .framePaCon{ _width:32.5%;}
+.frameMainSub{ _position:relative;}
+.frameMain{ _height:auto;}
+.frameSub, .frameSupp{_overflow:auto; _height:auto; }
+.frameMs21 .frameSub{ _width:28.5%;}
+.frameMs11 .frameSub{_width:48.5%;}
+.frameMsChange .frameOperation{_height:auto;}
+/*提示*/
+#sysContainer .userTips{ _height:200px; }
+/*IE6超出隐藏Bug_未完全解决*/
+#conTitle { _height:0;}
+.pageTools { _display:none;}
+.partContainers { _margin:3px 0;}
+ #conBody{width:98%;}
+/*翻页样式*/
+.pageTurn{_position:relative;}
+.pageTurnTable{ _margin-right:-17px;}
+table.tableList{ _margin-right:-20px;}
+
+/*附件上传*/
+.uploadFile {_float:left;}
+
+/*解决IE6下PNG透明问题*/
+#sysBranding h1{_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../resource/skin/base/img/sysLogo.png');
+_ background: none;}
+#loginInfo .siApp_resetPwd{_ background: none; _padding:0;}
+#loginInfo .siInfo{_ background: none; _padding:0;}
+
+

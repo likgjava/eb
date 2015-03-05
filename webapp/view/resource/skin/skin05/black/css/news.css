@@ -1,0 +1,29 @@
+@charset "utf-8";
+/*--------------
+	   新闻公告
+----------------*/
+@media projection, screen { 
+.frameNews { border:1px solid #ccc; padding:20px 10px; font:1.2em/2em "宋体"; }
+.frameNews table { border-top:1px solid #ccc;}
+.frameNews th, .frameNews td { border:1px solid #ccc;}
+}
+@media print {
+.frameNews { font:18px; font:18px/2em "宋体";}
+.frameNews table { border-top:1px solid #000; border-left:1px solid #000; }
+.frameNews th, .frameNews td { border-right:1px solid #000; border-bottom:1px solid #000; }
+.frameNews .operation,
+.frameNews .related { display:none}
+}
+.frameNews { width:720px; position:relative;}
+	.frameNews h1 { background:none; font:bold 2em/1.5em "宋体"; text-align:center;}
+	.frameNews .subtitle { font:bold 1em/1.5em "宋体"; text-align:center;}
+	.frameNews .source { font:0.9em/1.5em "宋体"; color:#666; text-align:center; margin:10px auto; border-bottom:1px solid #ccc}
+		.frameNews .source span { margin-right:5px;}
+	.frameNews p { text-indent:2em;}
+	.frameNews .abstract { padding:10px; border:1px solid #ccc; background:#f5f5f5;}
+	.frameNews .newspic { margin:10px auto; text-align:center; font-size:12px; color:#999;}
+	.frameNews .signature { text-align:center; color:#666; margin:5px auto;}
+	.frameNews .related { border:1px dotted #ccc; border-left:0; border-right:0; padding:5px; margin:10px auto;}
+	.frameNews .related h6 { font-size:1em; margin:0;}
+	.frameNews .operationBtnDiv { position:absolute; top:5px; left:5px;}
+

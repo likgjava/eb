@@ -1,0 +1,98 @@
+@charset "utf-8";
+/*项目驱动头部*/
+.projectHead{background:#eff5fe; padding:5px 10px; border:#99bbe8 1px solid; zoom:1;}
+.projectInfo{overflow:hidden; line-height:30px; height:30px; }
+.projectInfo h5{ float:left; margin-right:10px; background:none;}
+.projectInfo li{ float:left; padding:0 10px;}
+.projectInfo strong{ font-weight:normal; color:red;}
+
+/*===项目驱动===*/
+#projectTitle {line-height:30px; padding:0 10px; font-size:14px;}
+#projectInfo { display:none}/*此样式尽量在页面添加eleHide样式代替*/
+#projectNav { background:#fff; padding:10px;}
+#projectNav ul {position:relative; z-index:2;height:35px;}
+#projectNav ul ul{ height:auto;}
+#projectNav li { float:left; padding-bottom:20px; width:6em; background:url(../img/projectNav.png) no-repeat center -532px; text-align:center; cursor:pointer; position:relative; z-index:2;}
+#projectNav li.navtitle{ background:none; width:2em; *width:3em;}
+#projectNav li.navtitle p{ background:none; border:0; border-right:1px dotted #ccc;padding:0; width:50px;line-height:15px;}
+
+/*提示说明*/
+.projectTips{background:#ffffcc; padding:10px;clear:both; margin-top:5px;}
+
+/*已完成图标*/
+#projectNav li.pCompletedF { background-position:center -35px;}/*头部*/
+#projectNav li.pCompletedC { background-position:center -185px;}/*中间*/
+#projectNav li.pCompletedE { background-position:center -335px;}/*尾部*/
+
+/*进行中图标*/
+#projectNav li.pGoingF { background-position:center 15px;}/*头部*/
+#projectNav li.pGoingC { background-position:center -135px;}/*中间*/
+#projectNav li.pGoingE { background-position:center -285px;}/*尾部*/
+
+/*未完成图标*/
+#projectNav li.pFirst {background-position:center -489px;}/*头部*/
+#projectNav li.pEnd {background-position:center -579px;}/*尾部*/
+
+#projectNav li ul { display:none; width:8em; text-align:left; position:absolute; top:33px; left:3em;  background:#f5f5f5; border:1px solid #ddd; border-bottom:none;}
+#projectNav li:hover a { color:#000;}
+#projectNav li:hover li { color:#000; border-bottom:#ddd 1px solid;}
+#projectNav li:hover li:hover { background:#ddd; color:#000;}
+#projectNav li ul ul { top:0; left:8em;}
+#projectNav li li { float:none; padding:5px; text-align:left; background-image:none; width:auto;}
+#projectNav li span { background:url(../../sysicon/16/bullet_arrow_down.png) no-repeat right; display:block; padding-right:15px;}
+#projectNav li li span { background:url(../../sysicon/16/bullet_arrow_right.gif) no-repeat right;}
+#projectNav a { display:block; color:#315e88; text-decoration:none;hide-focus:expression( this.hideFocus=true ); outline:none;}
+#projectNav a:hover { color:#fff;}	
+
+/*已完成的子任务*/
+#projectNav li ul li.completed{ background:#00ff00;}
+#projectNav li ul li.completed:hover{background:#00ff00;}
+
+/*未开始的子任务*/
+#projectNav li ul li.notstarted{ background:#ccc;}
+#projectNav li ul li.notstarted:hover{background:#ccc;}
+
+/*进行中的子任务*/
+#projectNav li ul li.onGoing{ background:#ffff00;}
+#projectNav li ul li.onGoing:hover{background:#ffff00;}
+
+/*多行排序*/
+#projectNav #projectNav1 { z-index:10;}
+#projectNav #projectNav2 { z-index:9;}
+#projectNav #projectNav3 { z-index:8;}
+#projectNav #projectNav4 { z-index:7;}
+#projectNav #projectNav5 { z-index:6;}
+#projectNav #projectNav6 { z-index:5;}
+#projectNav #projectNav7 { z-index:4;}
+#projectNav #projectNav8 { z-index:3;}
+#projectNav #projectNav9 { z-index:2;}
+#projectNav #projectNav10 { z-index:1;}
+
+/*项目驱动主要内容容器*/
+#projectContent{ margin:10px 0; overflow:hidden;}
+
+/*项目驱动辅助导航*/
+#projectSub {width:130px; border:#99bbe8 1px solid;float:left; line-height:22px;}
+#projectSub h5{ background:url(../img/mDiv.gif) repeat-x; height:23px; line-height:23px;border-bottom:#ccc 1px solid; }
+/*UL*/
+#projectSub ul { background:#eff5fe;}
+#projectSub ul ul { display:none; height:auto;}
+#projectSub li.selected ul { display:block;}
+/*LI*/	
+#projectSub li {line-height:24px;text-indent:2em;border-bottom:#ccc 1px dotted;}
+#projectSub li.selected { font-weight:bold; background:url(../img/navCurrent_link.gif) no-repeat 8px center; }
+/*A*/
+#projectSub a { display:block;hide-focus:expression( this.hideFocus=true ); outline:none; text-decoration:none; color:#000;}
+#projectSub li.selected a{ color:#cc0000;}
+#projectSub a:hover{ color:#cc0000;}
+#projectMain .BtnDiv{ text-align:right; padding:0 10px; border:#ccc solid 1px; height:22px;background:url(../img/mDiv.gif) repeat-x; line-height:22px; border-bottom:none;}
+#projectMain{ margin-left:142px;}
+
+/*--------------项目驱动-垂直----------------*/
+#projectNavV  {border:1px solid #99bbe8;width:100px;}
+#projectNavV h5 {border-bottom:1px solid #ccc; background:f5f5f5;}
+#projectNavV ul{ padding:5px;}
+#projectNavV ul li {text-indent:12px; line-height:22px;}
+#projectNavV ul li.now {background:url(../img/now.gif) no-repeat scroll left center transparent;}
+#projectNavV a:hover,#projectNavV ul li.now a {color:#E17806;}
+#projectNavV ul li.future {background:url(../img/future.gif) no-repeat scroll left center transparent;}

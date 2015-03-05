@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Remark: 文件样式表，用于设置公告文件样式。
+--------------------------------------------------------------------------------------------------------- */
+/*--------------
+	标准文件文档
+----------------*/
+@media projection, screen { 
+.frameReport { padding:10px; zoom:1;font:1.2em/2em "宋体"; position:relative;}
+.frameReport table { border:#ccc 1px solid; border-collapse:collapse;}
+.frameReport th, .frameReport td { border:#ccc 1px solid;}
+.frameReport.frOverFlow { overflow:auto; height:380px;}
+}
+/*打印样式*/
+@media print {
+.frameReport table { border-top:1px solid #000; border-left:1px solid #000; }
+.frameReport th, .frameReport td { border-right:1px solid #000; border-bottom:1px solid #000; }
+.frameReport #conOperation { display:none }
+}
+.frameReport {background:#fff; font:20px/2em "仿宋", serif; overflow:hidden; color:#000; }
+/*副标题*/
+.frameReport .reportTitle { font:bold 1em/1.5em "宋体"; text-align:center; padding-bottom:10px; border-bottom:3px solid #F00;}
+/*称谓*/
+.frameReport .title { font:bold 1.1em "仿宋"; margin-top:40px; }
+/*正文*/
+.frameReport p { text-indent:2em;}
+/*各级标题*/
+.frameReport h1, .frameReport h2, .frameReport h3, .frameReport h4, .frameReport h5 { color:#000; background:none; border:0; }
+.frameReport h1, .frameReport h3 { font-family:"黑体"; }
+.frameReport h1 { text-align:center; font-size:1.5em; }
+.frameReport h2 { text-align:center; font-size:1em; font-weight:normal;}
+.frameReport h3 { font-size:1.1em; }
+.frameReport h4 { font-size:1em; }
+/*强调*/
+.frameReport .em { text-decoration:underline; margin:0 5px; }
+/*表格*/
+.frameReport table { width:90%; margin:5px 2em; border-collapse:collapse;}
+.frameReport td,.frameReport th { vertical-align:middle; padding:3px; background:#fff; line-height:1em; }
+.frameReport th { font-weight:bold;}
+/*署名*/
+.frameReport .signature { float:right; margin:40px 20px 20px 0; line-height:3em; font:bold 1em/2em "仿宋", serif; }
+.frameReport .signature ul { list-style:none; margin:0 }
+.frameReport .operationBtnDiv { position:absolute; top:5px; left:5px;}
+

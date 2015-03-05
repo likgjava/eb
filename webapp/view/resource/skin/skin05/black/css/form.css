@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Remark: 用于设置系统表单样式。
+--------------------------------------------------------------------------------------------------------- */
+/*基本设置*/
+input[type="text"],input[type="password"]{border:1px solid #ccc; padding-left:4px; }
+textarea { border:1px solid #ccc; font:1em "宋体"}
+
+/*增加多选样式 by lijx*/
+select.long2{ width:300px;}
+select[multiple].p2{ height:109px;}
+
+.formLayout { margin-bottom:10px; border:1px solid #ccc; zoom:1;}
+.formLayout h5 { background:#ddd;height:25px; line-height:25px; text-indent:.5em;}
+.formLayout h6 { text-indent:2em; border-bottom:1px dotted #ccc;}
+.formLayout ul {overflow:hidden;}
+.formLayout li { overflow:hidden;height:25px; line-height:25px; border-bottom:1px dotted #ddd;}
+	.formLayout li li { width:auto; border:0;}
+.formLayout label { display:block; float:left; height:100%;text-align:right; margin:0 5px 0 1px; font-weight:bold; color:#333;}
+.formLayout li span { display:inline-block; *display:inline; vertical-align:middle; padding-left:3px;}
+	.formLayout div label { display:inline; float:none; width:auto; height:auto; margin:0; font-weight:normal;vertical-align:middle;}
+	
+/*垂直居中*/	
+.formLayout select,.formLayout textarea {margin-top:2px;}
+input[type="radio"],input[type="checkbox"]{ vertical-align:middle;}
+
+/*分栏*/
+.form2Pa li, .form3Pa li { float:left;}
+.form2Pa li { width:49.5%;}
+.form2Pa label { width:14em;}
+.form3Pa li { width:33.3%;}
+.form3Pa label { width:8em;}
+/*提示信息及元素*/
+	/*只读项*/
+	.eleReadonly input, .eleReadonly textarea { border:0; background:none;}
+	/*必填项*/
+	.eleRequired { color:#F00;}
+	/*禁用项*/
+	.eleDisable input, .eleDisable textarea { border:0; background:none; height:20px;}
+	/*信息*/
+	.eleNote { color:#999;}
+	/*警告*/
+	.eleWarning { color:#C00;}
+	/*正确*/
+	.eleRight { color:#060;}
+	/*隐藏提示信息*/
+	.form3Pa .eleNote, .form3Pa .eleWarning, .form3Pa .eleRight { display:none; }
+	
+/*文本输入框*/
+.formLayout li.formTextarea { height:120px; clear:both;}
+.formLayout .formTextarea textarea { width:38%; height:100px; }
+.form2Pa .formTextarea,.form3Pa .formTextarea { width:100%;}
+.form2Pa .formTextarea textarea { width:65%; }
+.form3Pa .formTextarea textarea { width:82%; }
+
+/*整行数据*/
+.formLayout .fullLine {clear:both; height:auto;}
+.form2Pa .fullLine,.form3Pa .fullLine { width:100%;}
+.form2Pa .fullLine input[type="text"],.form2Pa .fullLine input[type="password"],
+.form3Pa .fullLine input[type="text"],.form3Pa .fullLine input[type="password"] { width:auto;}
+
+/*Table设置*/
+.formLayout table { width:100%; border-collapse:collapse; border-spacing:0;}
+.formLayout table label { display:inline; float:none; width:auto; height:auto; background:none; margin:0;}
+.formLayout th,
+.formLayout td { border:1px dotted #ddd;padding:5px; line-height:1.5em;}
+.formLayout th { text-align:right; vertical-align:top; width:18em;  padding:5px 0; font-weight:bold; color:#333;}
+.formLayout td { border-left:0;}
+	/*分栏*/
+	.form2Pa th { width:14em;}
+	.form3Pa th { width:10em;}
+	/*表中表*/
+	.formLayout table table { border:1px solid #ddd; margin:5px 0;}
+	.formLayout table table th { width:auto;}
+
+/*提交按钮容器*/
+.formLayout .operationBtnDiv,.formLayout .conOperation { background:#f5f5f5; text-align:center; padding:5px 0; zoom:1;}
+
+/*附件上传*/
+.uploadFile {_float:left; overflow:hidden; margin:5px 0;}
+.uploadFile ul{ overflow:hidden;}
+.uploadFile li{float:left; margin-right:10px;border:none;height:auto; width:auto; }
+	.uploadFile .sysicon { display:inline-block; width:18px; height:18px; text-indent:-9999px; overflow:hidden; cursor:pointer;}
+	.uploadFile .linkButton span { padding-right:8px;}
+
