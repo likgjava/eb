@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+.contentSub-three{width:211px; overflow:hidden;}
+.contentSub-three h1{ background:url(../img/h1Bg.png) no-repeat #09C; overflow:hidden; width:201px; height:31px; font-size:16px; font-weight:bold; line-height:31px; padding-left:10px; text-align:left;}
+.contentSub-three h1 span{ display:inline-block; float:left;}
+.contentSub-three h1 a{ padding-right:8px; padding-bottom:5px;}
+.contentSub-three h1 a:link{ float:right; display:inline-block; font-size:12px; font-weight:normal;}
+.contentSub-three h1 a:visited{ float:right; display:inline-block; font-size:12px; font-weight:normal;}
+.contentSub-three h1 a:hover,
+.contentSub-three h1 a:active{ float:right; display:inline-block; font-size:12px; font-weight:normal;}
+.contentSub-three div{ border:1px solid #e2c4b0; border-top:0px; padding-top:10px; padding-bottom:10px;}
+.contentSub-three div ul{margin-left:10px; padding-top:1px;}
+.contentSub-three div ul li{ background:url(../img/my_icon.gif) no-repeat 0px 5px; padding-left:8px; padding-bottom:3px; border-bottom:1px dotted #CCC; margin-top:10px; width:184px; overflow:hidden;}
+.contentSub-three div ul li a{ display:block;}
+.contentSub-three div ul li em{ color:#F00; margin:0 3px;}
+
+.contentMain-three{width:737px; float:right;  border:1px solid #e7e7e7; margin-left:10px; padding-bottom:20px;}
+.conBody-three h1{ font-size:16px; line-height:50px; height:50px; }
+.conBody-three h1 span{ color:#b8b8b8; font-size:12px; font-weight:normal; margin-left:10px; height:50px; line-height:50px;}
+.conBody-three  .project-number{ height:38px; border:1px solid #e7e7e7; background:#f7f7f7; line-height:38px; font-weight:bold; color:#005a9c; margin-left:15px; text-align:center; width:95%; margin:0px auto;}
+.conBody-three ul{ margin-left:15px; margin-top:10px; width:95%; margin:0px auto;}
+.conBody-three ul li{ padding-bottom:4px; padding-top:5px; border-bottom:1px dotted #aaccee;}
+.conBody-three  .project-number span{  color:#b8b8b8; font-size:12px; font-weight:normal; margin-left:10px; }
+.goods-table{border:1px solid #aaccee; border-left:0px; border-bottom:0px; margin-bottom:8px; margin-top:5px;}
+.goods-table td{ border-bottom:1px solid #aaccee; height:18px; padding:6px; border-left:1px solid #aaccee;}
+.goods-table-fristTr td{ background:#ebf4fb; text-align:center;}
+.jjBtn{ margin:30px 0px 30px 320px;  background:url(../img/jsBtn.jpg) no-repeat; width:109px; height:39px; border:0px; cursor:pointer;}
+
+.contentMain-public{ margin-left:0px; width:958px;}
+.conBody-public{width:960px;}
+.conBody-public  .public-table{ width:95%; margin:0 auto;}
+.conBody-public  .public-table th{ width:135px; font-weight:bold; height:30px; vertical-align:middle; text-align:left; border-right:1px solid #fff; padding-left:5px;}
+.conBody-public  .public-table td{ height:30px; vertical-align:middle; text-align:left; padding-left:8px;}
+.conBody-public ul li { clear:both;}
+.conBody-public ul li span{  width:120px; float:left; display:block; font-weight:bold;}
+.myjjBtn{ display:block; margin-left:400px; height:35px; width:106px; padding:0px; border:0px; background: url(../img/myjjBtn.png) no-repeat; text-align:center; font-size:14px; font-weight:bold; color:#fff; display:inline;}
+
+/* 酒店页面 */
+.contentMain-beer-three{ margin-left:0px; width:737px; }
+.conbody-beer-three  .goods-table{width: 100%;}
+.conbody-beer-three .project-number{margin-top: 10px;}
+.conbody-beer-three h2{font-size: 12px; font-weight: bold; color: #000;}
+.conbody-beer-three h1{ background:url(../img/beer-threeBg.png) repeat-x; height:26px; line-height:26px; font-weight:bold; color:000; border-bottom:1px solid #e4e4e4;}
+.conbody-beer-three h1 span{ font-weight:normal; color:#999; margin-left:10px;}
+.conbody-beer-three table{ width:95%; margin:10px auto;  border:1px solid #e4e4e4;}
+.conbody-beer-three  caption{ height:26px; background:#fafafa;  border:1px solid #e4e4e4; border-bottom:0px; font-weight:bold; color:#000; line-height:26px; padding-left:10px;}
+.conbody-beer-three  td{ height:30px; padding-left:10px;  border-right:1px solid #e4e4e4;}
+.conbody-beer-three  th{ width:120px; padding-left:10px; font-weight:bold;   }
+.conbody-beer-three .base2-table td{ border-right:}

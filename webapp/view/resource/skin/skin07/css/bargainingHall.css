@@ -1,0 +1,66 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/*页面容器*/
+body{background:url(../../agreement/img/body_bg.gif) repeat;margin:0;font-size:12px; font:Arial, Helvetica, sans-serif,"宋体";}
+li{ list-style:none;}
+
+/*主要内容*/
+.container{border:#efa008 1px solid;height:100%; margin:auto; position:relative;width:940px;}
+/*计时器*/
+.countdown{ position:absolute; top:3px; right:10px; line-height:24px; height:24px;}
+/*标题*/
+h1.yjt{color:#1a65ad; font-size:14px; font-weight:bold; margin:0; padding:0; padding-left:10px; background:#ffd792 url(../../agreement/img/tabs.gif) repeat-x left top; height:44px; line-height:44px; border-bottom:3px solid #be0000;}
+/*主体内容*/
+.webContent{background:#fff;}
+.webContent h4{background:url(../../agreement/img/caption_bg.gif) repeat-x;height:40px;line-height:40px;font-size:14px; }
+/*最低报价*/
+.minimumPrice{border-bottom:#f4cab0 1px solid; height:44px; line-height:44px; padding-left:200px;}
+.minimumPrice ul{}
+.minimumPrice ul li{ float:left; margin:0 10px; display:inline;}
+
+.hallElements { background:#CCC;}
+
+/*带下划线链接*/
+a.undLink { margin:0 10px; text-decoration:underline;}
+
+/*报价历史*/
+.priceHistory{border:#f4cab0 1px solid; width:200px; height:357px;}
+.priceHistory h4{background:url(../img/goodsContent_bg.gif) repeat-x left top;height:24px; line-height:24px; border-bottom:#f4cab0 1px solid; padding-left:10px;}
+.priceHistory ul{ margin:5px; border-bottom:#dfe2e4 1px dotted;}
+.priceHistory ul li{ height:24px; line-height:24px; }
+.priceHistory ul li.date{ font-weight:bold; font-size:11px;}
+
+/*信息发送*/
+.messaging {background:url(../img/sent_bg.gif) repeat-x; height:104px;border-top:#f4cab0 1px solid;position:relative;}
+.messaging label{ height:104px; line-height:104px; padding-left:10px; width:121px; display:block;text-align:right;}
+.messaging textarea{ vertical-align:middle; width:570px; height:78px;border:#f4cab0 1px solid; position:absolute; top:6px; left:130px;}
+.messaging button{background:url(../img/button_sent_bg.gif) no-repeat left top; width:202px; height:82px; border:none; vertical-align:middle;position:absolute; top:6px; right:20px;}
+.messaging button:hover{background:url(../img/button_sent_h_bg.gif) no-repeat left top;}
+
+#goodsclass{text-align:left;margin:0px;background:url(../img/goodsClass_bg.gif) repeat-y left top;width:760px; height:373px;}
+#goodsclass.nobg{ background:none;}
+#menu{clear:left;float:left;margin:0;padding-top:5px;width:122px;}
+#menu li{line-height:22px;width:121px;background:#fff url(../img/goodsContent_bg.gif) repeat-x left top;border:#f4cab0 1px solid;}
+#menu li:hover{background:#fae6da url(../img/goodsContent_bg.gif) repeat-x left bottom;}
+#menu a{color:#333;font-size:12px;text-decoration:none;display:block;text-align:left;padding-left: 15px;}
+#menu a:hover,#menu .on a{ display:block;color:#007734;font-weight: bold;}
+
+#goodsContent{float:left; clear:right;border:#f4cab0 1px solid; height:357px; margin-left:131px;background:url(../img/goodsContent_bg.gif) repeat-x left top; width:575px; margin:5px 0px;}
+#goodsContent.ltjl{ width:97%;}
+#goodsContent ul{list-style:none;padding:0}
+#goodsContent h3{border-bottom:#f4cab0 1px solid; height:26px; line-height:26px; font-size:12px; font-weight:normal; text-indent:30px;background:url(../img/goodsContent_h3_bg.gif) no-repeat 8px center;}
+
+.chat { margin-left:10px;}
+.chat ul{}
+.chat ul li{border-bottom:#dfe2e4 1px dotted; line-height:25px;}
+.chat ul li span.date { color:#979b9e;}
+.chat ul li.other { color:#418dd6;}
+
+.roomBtn {position:absolute;top:-20px;right:10px;}
+.roomBtn button {width:141px; height:58px; margin:20px 5px; border:none;}
+.roomBtn button span {display:none;}
+.endBargain,.exitBargainingRoom,.toQuote{ width:141px; height:58px; display:inline-block; border:none;}
+.exitBargainingRoom {background: url(../img/exitBargainingRoom.png) no-repeat;}/*退出议价厅*/
+.toQuote {background:url(../img/toQuote.png) no-repeat;}/*我要报价*/
+.endBargain{background:url(../img/endBargain.png) no-repeat;}/*结束议价*/
+.endBargain span,.exitBargainingRoom span,.toQuote span{ display:none;}

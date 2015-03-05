@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: sunshineBusiness 阳光商务
+Design: OTiger
+Email: fanhy@gpcsoft.com
+Remark: 结构样式表，用于设置功能页各种应用结构样式。
+--------------------------------------------------------------------------------------------------------- */
+/*----全屏变换----*/
+#sysContainer.fullScreen #conTitle {}
+#sysContainer.fullScreen #conTitle h3 { display:none;}
+#sysContainer.fullScreen .pageTools { height:22px; position:absolute; top:0; left:215px; background:url(../img/pageTools_bg_s.gif) repeat-x; border:0; *left:auto; *top:5px; *right:10px;}/*IE7 修复*/
+	#sysContainer.fullScreen .pageTools a { color:#fff; border:0; border-right:1px dotted #fdf3c0;}
+	#sysContainer.fullScreen .pageTools a:hover { color:#006;}
+#sysContainer.fullScreen #conBody {}
+
+/*内容标题*/
+    #conTitle{ margin-bottom:4px; overflow:hidden;}
+	#conTitle .navCurrent { color:#666; overflow:hidden;height:26px; line-height:26px;border-bottom:1px solid #a92f06; font-weight:bold;}
+	#conTitle .navCurrent a { color:#000; display:block; float:left;  background:url(../img/navCurrent_link.gif) no-repeat right center; padding-right:20px; margin-right:3px; text-decoration:none;}
+		#conTitle .navCurrent a:hover { text-decoration:underline; color:#009;}
+	#conTitle h3 { display:none; font:1em/1.5em "宋体"; color:#127998; padding-left:8px;}
+	#conTitle .loader { font-weight:normal; color:#666;}
+	
+/*内容容器*/
+#conBody {overflow:hidden; *position:relative;}/*IE7 修复*/
+	/*页面工具*/
+	.pageTools { background:url(../img/pageTools_bg.gif) repeat-x; height:20px; overflow:hidden; padding-left:8px; border:1px solid #fdd38a; border-bottom:0; display:none;}
+		.pageTools ul {}
+		.pageTools li { float:left;}
+			.pageTools li:hover { background:url(../img/pageTools_bg.gif) repeat-x left -20px;}
+		.pageTools a { display:block; float:left; height:20px; padding-right:5px; text-decoration:none; color:#27525a; line-height:20px;  border-left:1px solid #fdd38a; border-right:1px solid #fdf3c0;}
+		.pageTools a:hover { color:#F00;}
+	
+	/*栏目容器*/
+	.partContainers { overflow:hidden; margin-bottom:4px;}
+	.partContainers h4 { color:#a92f06; font:bold 1.2em/1.5em "宋体";height:22px; line-height:22px; margin-bottom:4px;}
+.partContainers h4 span{background:url(../img/gif-0054.gif) no-repeat 5px center;padding-left:24px;}
+	.partContainers h5 { color:#000;}
+
+/*下拉菜单*/
+.listMenu { background:#ffffd7; border:1px solid #ffbf81; padding:1px;}
+	.listMenu a { display:block; padding:2px 8px; font:1em/1.5em "宋体"; color:#900; text-decoration:none; white-space:nowrap; hide-focus:expression( this.hideFocus=true ); outline:none;}
+	.listMenu a:hover,
+	.listMenu li.selected a:hover{ background:#fde670; color:#f00;}

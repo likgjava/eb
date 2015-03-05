@@ -1,0 +1,164 @@
+﻿@charset "utf-8";
+
+body, button, input, select, textarea {font: tahoma,arial,宋体,sans-serif,"宋体";}
+.regContent { border:#a92f06 1px solid; width:958px; margin-bottom:10px; text-align:center;}
+.regContent img { margin:10px;}
+#contentMain.index1pa {width:960px; margin:auto;}
+/*主要内容*/
+#loginContentMain {width:960px;margin:0 auto;}
+/*--注册页面主要内容--*/
+.regMain {padding:10px;border:#d4d4d4 3px solid;text-align:center;}
+h3 {height:20px; font-size:14px;font-weight:bold;}
+h3.title {border-bottom:#999 1px dashed;padding-left:20px;background:url(../img/gif-0054.gif) left center no-repeat; padding-bottom:5px;margin :10px 0;}
+h3.finish {color:red;text-align:center;background:none;}
+h3.activation {background:url(images/user_accept.png) no-repeat left center;margin:auto;height:80px;width:450px;text-align:center;text-indent:60px;line-height:80px;color: #F00;border:none;}
+.eleRequired {color:#f00;padding:0 5px;}
+/*--专家注册步骤--*/
+.expertRegisterTitle {position:relative;}
+.expertRegisterTitle h3 {	height:30px;background:url(../img/expertRegist_title.gif) no-repeat;padding-left:55px;padding-top:25px;font-size:20px;color:#ca1212;*+margin-top:30px;}
+.expertRegisterTitle ol {list-style:none;position:absolute;top:-8px;right:0;}
+.expertRegisterTitle ol li {float:left;}
+.expertRegisterTitle ol li span {display:block;width:120px;height:58px;text-indent:-9999px;background:url(../img/expertRegist_step3.gif) no-repeat}
+.expertRegisterTitle ol li span#step01.finish {background-position:0% -58px}
+.expertRegisterTitle ol li span.next {width:35px;background-position:-120px 0%;}
+.expertRegisterTitle ol li span.next.finish {background-position:-120px -58px}
+.expertRegisterTitle ol li span#step02 {background-position:-155px 0%}
+.expertRegisterTitle ol li span#step02.finish {background-position:-155px -58px;}
+.expertRegisterTitle ol li span#step03 {background-position:-290px 0%}
+.expertRegisterTitle ol li span#step03.finish {background-position:-290px -58px}
+/*--角色选择步骤--*/
+.regGuide {position:relative;}
+.regGuide h3 {height:70px;line-height:70px;border-bottom:1px solid gray;background:url(../img/expertRegist_title.gif) no-repeat left center;padding-left:55px;_margin-top:20px;*+margin-top:30px;font-size:14px;color:#ca1212;}
+.regGuide ol {list-style:none;position:absolute;top:5px;_top:10px;right:0;}
+.regGuide ol li {float:left;border:0 none;}
+
+/*代理机构注册导航图*/
+.regGuide.agent ol li span{display:block;width:120px;height:58px;text-indent:-9999px;background:url(../img/agentRegist.gif) no-repeat;}
+
+/*专家注册导航图*/
+.regGuide.expert ol li span {display:block;	width:140px;height:58px;text-indent:-9999px;background:url(../img/expertRegist.gif) no-repeat;}
+
+/*采购人注册导航图*/
+.regGuide.buyer ol li span {display:block;width:120px;height:58px;text-indent:-9999px;background:url(../img/buyerRegist.gif) no-repeat;}
+
+/*供应商注册导航图*/
+.regGuide.supplier ol li span {display:block;width:120px;height:58px;text-indent:-9999px;background:url(../img/supplierRegist.gif) no-repeat;}
+
+.regGuide ol li span#step01.finish {background-position:0% -58px}
+.regGuide ol li span.next {width:35px;background-position:-120px 0%;}
+.regGuide ol li span.next.finish {background-position:-120px -58px}
+.regGuide ol li span#step02 {background-position:-155px 0%}
+.regGuide ol li span#step02.finish {background-position:-155px -58px;}
+.regGuide ol li span#step03 {background-position:-280px 0%}
+.regGuide ol li span#step03.finish {background-position:-280px -58px}
+.regGuide ol li span#step04 {background-position:-400px 0%}
+.regGuide ol li span#step04.finish {background-position:-400px -58px}
+.regGuide ol li span#step05 {background-position:-520px 0%}
+.regGuide ol li span#step05.finish {background-position:-520px -58px}
+
+.textCenter p {font-size:14px;line-height:25px;}
+
+#registerHelpButton {position:absolute;top:10px;right:10px}
+#registerHelpButton a {display:block;width:73px;height:39px;background:url(../img/expertRegist_help.gif) no-repeat}
+#registerHelpButton span {display:none}
+.pageSubmitBtnBox {text-align:center;margin:8px 0;}
+.pageSubmitBtnBox  button { margin-right:5px;_margin-right:5px;cursor:pointer;}
+button.agree, button.home, button.back, button.next,button.pubRequi,button.pubGoods {background:url(../img/a_bg.png) no-repeat;width:100px;height:26px;line-height:26px;color:#0c4c73;ont-weight:bold;text-decoration:none;text-align: center;letter-spacing:2px;border:none;}
+button.agree:hover, button.back:hover, button.next:hover, button.home:hover, button.back:hover, button.next:hover,button.pubRequi:hover,button.pubGoods:hover {background:url(../img/a_h_bg.png) no-repeat;}
+button.agree span {background:url(../img/accept.png) no-repeat 5px center;display:block;letter-spacing:2px;}
+button.back span {background:url(../img/back.png) no-repeat 3px center;display:block;}
+button.next span {background:url(../img/next.png) no-repeat 3px center;display:block;}
+button.home span {background:url(../img/home.gif) no-repeat 5px center;display:block;letter-spacing:normal;}
+button.pubRequi span {background:url(../img/goodsContent_h3_bg.gif) no-repeat 5px center;display:block;letter-spacing:normal;}
+button.pubGoods span {background:url(../img/goodsContent_h3_bg.gif) no-repeat 5px center;display:block;letter-spacing:normal;}
+
+.input_auto {width:98%;margin:auto;padding:10px;height:250px;}	
+  
+.tableList {margin:auto;width:98% margin-bottom:10px;border-collapse:collapse;}
+.tableList tr {}
+.tableList td { border:#c0c0c0 1px solid;padding:2px 5px; }
+.tableList th {background:#e7e7e7;text-align:right;width:40%; border:#c0c0c0 1px solid;padding:2px 5px; }
+
+div.content {padding: 3px;}
+div.content textarea{ border:0px;}
+	
+/*注册页面样式*/
+.registered{ background:url(../img/registered_bg.gif); text-align:center; height: 295px;padding-top: 1px;}
+.registered h4{background:url(../img/registered_h4_bg.gif) repeat-x; height:38px; line-height:38px; padding:0 10px; text-indent:-9999px;}
+.registered img{ margin:10px 0;}
+.registered ul{margin:138px 0px 0px 101px;  }
+.registered li{float: left; width: 125px; height: 40px; margin-right: 110px;}
+.registered #lastLi{margin-right: 0px;}
+.registered a:link{text-align:center;line-height:40px; display:inline-block;font-size: 16px;color:#333; font-weight: bold; width: 125px; height: 40px; background: url("../img/registeredBtnBg.png") no-repeat;}
+.registered a:visited{text-align:center;line-height:40px; display:inline-block;font-size: 16px;color:#333; font-weight: bold; width: 125px; height: 40px; background: url("../img/registeredBtnBg.png") no-repeat;}
+.registered a:active,
+.registered a:hover{display:inline-block;font-size: 16px; font-weight: bold; width: 125px; color:#333;height: 40px; background: url("../img/registeredBtnBg.png") no-repeat;}
+
+.applyGys{ background:url(../img/gys.png) no-repeat scroll 150px 0 transparent; text-align:center; height: 295px;padding-top: 1px;}
+.applyGys h4{background:url(../img/registered_h4_bg.gif) repeat-x; height:38px; line-height:38px; padding:0 10px; text-indent:-9999px;}
+.applyGys img{ margin:10px 0;}
+.applyGys ul{margin:138px 0px 0px 380px;  }
+.applyGys li{float: left; width: 125px; height: 40px; margin-right: 110px;}
+.applyGys #lastLi{margin-right: 0px;}
+.applyGys a:link{text-align:center;line-height:40px; display:inline-block;font-size: 16px;color:#333; font-weight: bold; width: 125px; height: 40px; background: url("../img/registeredBtnBg.png") no-repeat;}
+.applyGys a:visited{text-align:center;line-height:40px; display:inline-block;font-size: 16px;color:#333; font-weight: bold; width: 125px; height: 40px; background: url("../img/registeredBtnBg.png") no-repeat;}
+.applyGys a:active,
+.applyGys a:hover{display:inline-block;font-size: 16px; font-weight: bold; width: 125px; color:#333;height: 40px; background: url("../img/registeredBtnBg.png") no-repeat;}
+
+.applyCgr{ background:url(../img/cgr.png) no-repeat scroll 150px 0 transparent; text-align:center; height: 295px;padding-top: 1px;}
+.applyCgr h4{background:url(../img/registered_h4_bg.gif) repeat-x; height:38px; line-height:38px; padding:0 10px; text-indent:-9999px;}
+.applyCgr img{ margin:10px 0;}
+.applyCgr ul{margin:138px 0px 0px 380px;  }
+.applyCgr li{float: left; width: 125px; height: 40px; margin-right: 110px;}
+.applyCgr #lastLi{margin-right: 0px;}
+.applyCgr a:link{text-align:center;line-height:40px; display:inline-block;font-size: 16px;color:#333; font-weight: bold; width: 125px; height: 40px; background: url("../img/registeredBtnBg.png") no-repeat;}
+.applyCgr a:visited{text-align:center;line-height:40px; display:inline-block;font-size: 16px;color:#333; font-weight: bold; width: 125px; height: 40px; background: url("../img/registeredBtnBg.png") no-repeat;}
+.applyCgr a:active,
+.applyCgr a:hover{display:inline-block;font-size: 16px; font-weight: bold; width: 125px; color:#333;height: 40px; background: url("../img/registeredBtnBg.png") no-repeat;}
+
+.applyCs{ background:url(../img/gys.png) no-repeat scroll 150px 0 transparent; text-align:center; height: 295px;padding-top: 1px;}
+.applyCs h4{background:url(../img/registered_h4_bg.gif) repeat-x; height:38px; line-height:38px; padding:0 10px; text-indent:-9999px;}
+.applyCs img{ margin:10px 0;}
+.applyCs ul{margin:138px 0px 0px 380px;}
+.applyCs li{float: left; width: 125px; height: 40px; margin-right:110px;}
+.applyCs #lastLi{margin-right: 0px;}
+.applyCs a:link{text-align:center;line-height:40px; display:inline-block;font-size: 16px;color:#333; font-weight: bold; width: 125px; height: 40px; background: url("../img/registeredBtnBg.png") no-repeat;}
+.applyCs a:visited{text-align:center;line-height:40px; display:inline-block;font-size: 16px;color:#333; font-weight: bold; width: 125px; height: 40px; background: url("../img/registeredBtnBg.png") no-repeat;}
+.applyCs a:active,
+.applyCs a:hover{display:inline-block;font-size: 16px; font-weight: bold; width: 125px; color:#333;height: 40px; background: url("../img/registeredBtnBg.png") no-repeat;}
+
+.applyFws{ background:url(../img/gys.png) no-repeat scroll 150px 0 transparent; text-align:center; height: 295px;padding-top: 1px;}
+.applyFws h4{background:url(../img/registered_h4_bg.gif) repeat-x; height:38px; line-height:38px; padding:0 10px; text-indent:-9999px;}
+.applyFws img{ margin:10px 0;}
+.applyFws ul{margin:138px 0px 0px 380px;  }
+.applyFws li{float: left; width: 125px; height: 40px; margin-right: 110px;}
+.applyFws #lastLi{margin-right: 0px;}
+.applyFws a:link{text-align:center;line-height:40px; display:inline-block;font-size: 16px;color:#333; font-weight: bold; width: 125px; height: 40px; background: url("../img/registeredBtnBg.png") no-repeat;}
+.applyFws a:visited{text-align:center;line-height:40px; display:inline-block;font-size: 16px;color:#333; font-weight: bold; width: 125px; height: 40px; background: url("../img/registeredBtnBg.png") no-repeat;}
+.applyFws a:active,
+.applyFws a:hover{display:inline-block;font-size: 16px; font-weight: bold; width: 125px; color:#333;height: 40px; background: url("../img/registeredBtnBg.png") no-repeat;}
+
+/*找回密码*/
+#userLogin input{background:url(../img/button_a.gif) repeat-x left top; color:#333;height:24px;border:1px solid #ccc;width:200px;}
+/*找回密码导航图*/
+.regGuide.security ol li span {display:block;width:140px;height:58px;text-indent:-9999px;background:url(../img/security.gif) no-repeat}
+.security ol li span#step01.finish {background-position:0% -58px}
+.security ol li span.next {width:35px;background-position:-120px 0%;}
+.security ol li span.next.finish {background-position:-120px -58px}
+.security ol li span#step02 {background-position:-155px 0%}
+.security ol li span#step02.finish {background-position:-155px -58px;}
+.security ol li span#step03 {background-position:-290px 0%}
+.security ol li span#step03.finish {background-position:-290px -58px}
+
+.contentText{  width:420px;  position:absolute;  z-index:9999; background:#fff; top:70px; left:50%; margin-left:1px; border:1px dotted #a0c6ea; padding:3px 8px 8px 8px; overflow:hidden;}
+.contentText h2{ margin-top:5px;}
+.contentText p{ border:1px solid #a0c6ea; padding:5px; }
+.contentText a:link{ color:#3464cb; text-decoration:underline;}
+.contentText a:visited{ color:#3464cb; text-decoration:underline;}
+.contentText a:hover{ color:#3464cb; text-decoration:underline;}
+
+/*填写注册信息*/
+.regFliiInfo label{ width:200px; text-align:right; display:inline-block;}
+.regFliiInfo li.formTextarea{height: 100px;}
+.regFliiInfo .formTextarea textarea{ width:300px; height: 90px;}
+.regFliiInfo .fullLine input[type="text"],input[type="password"] {width: 300px;}

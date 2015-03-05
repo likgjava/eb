@@ -1,0 +1,195 @@
+﻿@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: sunshineBusiness 阳光商务
+Design: OTiger
+Email: fanhy@gpcsoft.com
+Remark: 购物车列表样式。
+--------------------------------------------------------------------------------------------------------- */
+/*3比1布局样式*/
+.frameMS31 {overflow:hidden; margin:0; clear:both; width:100%;}
+.frameMS31 .frameSub{ float:right;clean:left; width:23%; border:0;}
+.frameMS31 .frameMain{float:left; clean:both; border:0;width:75%;}
+
+/*3列布局*/
+.goodsBox .frame3Pa .framePaCon { border:0;}
+.goodsBox .frame3Pa .framePaCon img { height:100px;}
+.goodsBox .frame3Pa .framePaCon2 { border:0;}
+.goodsBox .frame3Pa .framePaCon3 { float:right; clear:right;border:0; margin:5px 10px;}
+.goodsBox .frame3Pa .framePaCon3 { top:0;}
+
+
+/*--------------分类检索----------------*/
+.categoryBox{ margin-bottom:5px;overflow:hidden;}
+.category{}
+.category h5{ border-bottom:#dbdada 1px dotted;height:22px; line-height:22px; margin-bottom:5px;}
+.category a{margin:0 5px 5px 0;height:22px; line-height:22px;}
+.category ul li a.all{ background:#CCC; padding:2px 5px;}
+
+/*--------------排序方式 售量.....共**件商品----------------*/
+.conrank{ height:30px; border:1px solid #CCC;background:url(../img/bg-conrank2.png) repeat-x; position:relative; overflow:hidden; margin-bottom:4px;}
+.conrank ul li { height:30px; line-height:30px;}
+.conrank ul li a{ margin:0 5px;}
+.conrank ul li img{ vertical-align:middle;}
+.conrank ul li.shortBy { position:absolute; left:270px; top:0;}
+.conrank ul li.displayBy { position:absolute; left:10px; top:0; _top:5px;/*by liuly 2011-01-24*/}
+.conrank ul li.proAmount{ position:absolute; right:10px; top:0;}/* 由left:660px; 改为right:10px; 解决分页总数量文本显示不全bug listDetail.css同改*/
+
+/*我的购物车*/
+.titleSub2{background:url(../img/h4_bg.gif) repeat-x left top;border:#a92f06 1px solid; border-top:none; margin-bottom:10px; position:relative;}
+.titleSub2 h4{background:url(../img/gif-0055.gif) no-repeat 6px center;height:26px; line-height:26px; padding-left:0; font-weight:bold;}
+.titleSub2 h4 span{ background:none; color:#fff;}
+.titleSub2 ul{margin:2px 5px;}
+.titleSub2 ul li{ }
+.titleSub2 ul li ul{border-bottom:#e3dfdd 1px dotted; }
+.titleSub2 span.more {position:absolute; right:5px; top:0; line-height:26px;}
+.titleSub2 span.more a { color:#fff;}
+
+/*热销产品*/
+.titleSub3{background:url(../img/h4_bg.gif) repeat-x left top;border:#a92f06 1px solid; border-top:none; margin-bottom:10px; position:relative;}
+.titleSub3 h4{background:url(../img/gif-0055.gif) no-repeat 6px center;height:26px; line-height:26px; font-weight:bold;}
+.titleSub3 h4 span{ background:none; color:#fff;}
+.titleSub3 ul{margin:5px;}
+.titleSub3 ul li{ background:url(../img/liStyle_bg.gif) no-repeat left center;border-bottom:#e3dfdd 1px dotted;}
+.titleSub3 ul li a{ padding-left:10px; line-height:26px; height:26px;}
+
+/*产品列表-列表显示*/
+.goodsBox{ overflow:hidden;}
+.goodsBox ul{ margin:0; padding:0;}
+.goodsBox ul li {border-bottom:#CCC 1px dotted;} 
+
+/*商品信息*/
+	.goodsInfo { margin:5px 0;}
+	.goodsInfo ul{}
+	.goodsInfo ul li{ float:none; line-height:24px; border:none;}
+	
+/*产品列表-大图显示*/
+.goodsBox2{overflow:hidden;}
+.goodsBox2 ul{margin:0; padding:0;}
+.goodsBox2 ul li{}
+
+.goodslist2 { margin:0; padding:0;width:220px;}
+.goodslist2 ul li{line-height:25px;float:none; border:none;}
+
+/*无边框按钮*/ 
+.conOperation{clear:both;}
+.conOperation ul li{ border:none; margin:5px 0; float:none;}
+
+/*---页码----*/
+.flipPage{margin:3px 10px; text-align:right;}
+.flipPage a {color:#333; margin:0 3px;}
+.flipPage a:hover { color:#ff6e02;}
+.flipPage a.select { color:#009; font-weight:bold;}
+.flipPage input.smallInput {height:12px; margin:0 3px; width:50px;}
+
+/*--------------商品图简介图片----------------*/
+.conimg ul {float:left; margin-bottom:20px;}
+.conimgul1{  margin-right:10px;}
+.conimgul1 .img1{ height:150px; width:150px; overflow:hidden; text-align:center;}
+.conimgul1 .img2{ width:150px; height:25px; overflow:hidden; text-align:center;}
+.conimg .imgbtn img{ float:left; margin-right:10px;}
+.conimg ul li{ line-height:25px;width:497px; overflow:hidden; }
+
+/*--------------评论----------------*/
+.condiscuss{ margin-top:27px; }
+.condiscusstable .condiscussli1{ float:left; width:80px; text-align:center; }
+.condiscusstable .condiscussphoto{ text-align:center; width:80px; vertical-align:top; line-height:50px;}
+.condiscusstable th{ background:#F2F2F2;}
+.condiscusstable th{ line-height:30px;}
+.condiscusstable th,.condiscusstable td{ height:30px;}
+.tittlediscussem{ font-weight:bold; font-size:12px; color:#06C; margin-right:10px;}
+.condiscusstableul li{ float:left; line-height:30px; height:30px; margin-right:10px; min-width:50px; color:#666; }
+.condiscusstableul li img{ margin-top:5px; cursor:pointer;}
+.condiscusstabletd{ background:url(../img/icon/triangular.png) no-repeat center left; padding-left:10px;}
+
+/*购物车列表*/
+table.frontGoodsTableList { background:#fff; border:1px solid #fff0a1; width:100%; border-collapse:collapse; border-spacing:0; clear:left;}
+table.frontGoodsTableList th, table.frontGoodsTableList td {padding:3px; }
+table.frontGoodsTableList th {vertical-align:middle; text-align:center;color:#a1030a; }
+table.frontGoodsTableList caption { height:25px; font:1em/25px "宋体"; background:#f7d497; color:#000; padding:0 3px; border-top:1px solid #fff0a1; position:relative; }
+
+table.frontGoodsTableList input{ width:60px; text-align:right; }
+table.frontGoodsTableList td input.paddingR{margin-right:7px;}
+table.frontGoodsTableList a{ margin-right:5px;}
+.conOperation.s {text-align:right;margin-top:-30px;margin-top:-27px\9;}
+.conOperation.r { text-align:right; margin-top:-30px;margin-top:-27px\9;}/*右对齐*/
+.operationBtnDiv.r{ margin-top:0;}
+
+/*结算信息*/
+.billingInfo { background:#f7d497; height:30px; line-height:30px;position:relative; font-size:14px; overflow:hidden; position:relative;}
+.billingInfo .conOperation{ position:absolute; top:30px; right:0;}
+.billingInfo ul{ position:absolute; right:10px;}
+.billingInfo ul li{ float:left; margin:0 20px;background:#f7d497;}
+
+/*--------------商品列表2---------------*/
+.goodsList2 { margin:0; padding:0;border:1px solid #fff0a1; width:100%;}
+.goodsList2 td{}
+.goodsList2 ul li{line-height:25px;float:none; border:none;}
+/*商品比较容器*/
+.goodsBox2{overflow:hidden;}
+.goodsBox2 ul{margin:0; padding:0;}
+.goodsBox2 ul li{ float:left;}
+.goodsBox2 li li{ float:none;}
+/*商品比较单列数据*/
+.goodslist3 { margin:0 10px; padding:7px; width:230px;}
+.goodslist3 ul li{line-height:25px;float:none; border:none; height:75px;}
+.goodslist3 h6{ border-bottom:#ececec 1px solid;}
+.goodslist3 ul li.img{width:111px;height:100px;}
+.goodslist3 ul li.fixedHigh{height:25px;}
+.goodslist3 ul li.fixedHighT{ height:50px;}
+
+/*订单管理*/
+.orderManagement h2 { display:none;}
+.orderManagement .conOperation.s{ text-align:right;}
+
+/*订单信息*/
+.orderInfo {}
+.orderInfo li{ float:left; margin-left:10px; display:inline;width:30%; height:30px; line-height:30px; clear:right;}
+.orderInfo em{ font-weight:bold;}
+
+/*----产品分类-----*/
+.sortBox{margin-bottom:10px; overflow:hidden;}
+.sortBox h2{ display:none;}
+.sort {border:#a92f06 1px solid; height:auto;position:relative; overflow:hidden;}
+.sort h4{border-bottom:1px solid #CCC;height:40px;_height:20px;_line-height:20px;line-height:40px; margin:0 10px;text-indent:20px;clear:both;margin-bottom:0px;color:#012B67;position:relative}
+.sort h5{}
+.sort ul ul{margin-top:0px;padding:0px;}
+.sort li{margin:0;float:left; width:30%;}
+.sort li li{ float:left;}
+.sort li li a{color:#012B67; height:25px; line-height:25px; margin:0 5px;}
+.sort li li a:hover{color:#F00;text-decoration:underline}
+.sort a.release{width:73px;height:19px; line-height:22px;background: url(../img/bj_release.gif) no-repeat left top;position:absolute;right:10px;bottom:5px; text-indent:6px; font-weight:normal;}
+.sort a.more{ color:#B6001F;}
+	
+/*拼音索引*/
+.pinyinIndex{ background:#f6f6f6; height:35px; line-height:35px; text-indent:10px; font-size:14px;}
+.pinyinIndex a{ margin:0 5px; font-weight:bold;}
+
+/*热门产品*/
+.hotProducts{background:url(../img/procurement_h4_bg.gif) repeat-x left top;border:#d5d5d5 1px solid; border-top:none;position:relative;}
+.hotProducts h4{background:url(../img/gif-0054.gif) no-repeat 6px center;height:26px; line-height:26px; font-weight:bold; color:#b6001f; text-indent:25px;}
+.hotProducts ul{margin:2px 15px;_margin:2px 5px;}
+.hotProducts ul li{}
+.hotProducts ul li a{ margin:2px 10px; border:#CCC 1px solid; width:125px; height:71px; display:block; float:left;}
+.hotProducts span.more {position:absolute; right:5px; top:0; line-height:26px;}
+.hotProducts span.more a { color:#000;}
+
+/*----供应商排行------*/
+.titleSub{background:url(../img/h4_bg.gif) repeat-x left top;border:#a92f06 1px solid; border-top:none; margin-bottom:10px; position:relative;}
+.titleSub h4{background:url(../img/gif-0055.gif) no-repeat 6px center;height:26px; line-height:26px; font-weight:bold; color:#fff; text-indent:25px;}
+.titleSub ul{margin:5px;}
+.titleSub ul li{ border-bottom:#e3dfdd 1px dotted; line-height:25px;}
+.titleSub ul li a{ background:#036;background:url(../img/liStyle_bg.gif) no-repeat left center;padding-left:10px;}
+.titleSub span.more {position:absolute; right:5px; top:0; line-height:26px;}
+.titleSub span.more a{ color:#fff; text-decoration:none;}
+
+
+/*电子监督*/
+#electronicMonitoring {}
+#electronicMonitoring li{ border:#fff0a1 1px solid;background:#fffed4 url(../../sysicon/16/resultset_next.png) no-repeat 5px center;}
+
+/*对齐方式*/
+.r{ text-align:right;}
+.l{ text-align:left;}
+.center { text-align:center;}
