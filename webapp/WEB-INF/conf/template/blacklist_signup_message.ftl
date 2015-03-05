@@ -1,0 +1,1 @@
+黑名单客户<span style="color: #FF0000;">${blackOrgName!}</span>报名了您发布的【<a href="${contextPath!}/BargainProjectController.do?method=toProjectView&userType=buyer&projectId=${projectId!}" target="_blank">${projectName!}</a>】项目。

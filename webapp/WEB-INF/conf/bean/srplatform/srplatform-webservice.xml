@@ -1,0 +1,56 @@
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:jaxws="http://cxf.apache.org/jaxws"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd   
+						http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">   
+  
+    <import resource="classpath:META-INF/cxf/cxf.xml" />   
+    <import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />   
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml" />   
+
+	<bean id="aegisBean"  
+        class="org.apache.cxf.aegis.databinding.AegisDatabinding"  
+        scope="prototype" />  
+         
+    <bean id="jaxws-and-aegis-service-factory"  
+        class="org.apache.cxf.jaxws.support.JaxWsServiceFactoryBean"  
+        scope="prototype">   
+        <property name="dataBinding" ref="aegisBean" />   
+        <property name="serviceConfigurations">   
+            <list>   
+                <bean   
+                    class="org.apache.cxf.jaxws.support.JaxWsServiceConfiguration" />   
+                <bean   
+                    class="org.apache.cxf.aegis.databinding.AegisServiceConfiguration" />   
+                <bean   
+                    class="org.apache.cxf.service.factory.DefaultServiceConfiguration" />   
+            </list>   
+        </property>   
+    </bean>   
+
+    <jaxws:endpoint id="TakingSystemUserListServices" address="/TakingSystemUserList">
+       
+      <jaxws:implementor>  
+      	<bean class="com.gpcsoft.plugin.acegi.webServiceImpl.TakingSystemUserList" />  
+      </jaxws:implementor> 
+      
+      <jaxws:serviceFactory>   
+        <ref bean="jaxws-and-aegis-service-factory" />   
+      </jaxws:serviceFactory> 
+ 
+      <jaxws:inInterceptors>   
+		<ref bean="wsSecurity"/>
+	  </jaxws:inInterceptors>
+    </jaxws:endpoint>
+
+    <bean id="wsSecurity" class="org.apache.cxf.ws.security.wss4j.WSS4JInInterceptor">   
+	    <constructor-arg>   
+	        <map>   
+	            <entry key="action" value="UsernameToken"></entry>   
+	            <entry key="passwordType" value="PasswordText" />   
+	            <entry key="passwordCallbackClass" value="com.gpcsoft.plugin.acegi.webService.ServerPasswordHandler" />   
+	        </map>   
+	    </constructor-arg>   
+	</bean>   
+    
+</beans>  

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd">
+		
+		<bean id="projectPlanTask" class="com.gpcsoft.epp.common.timerTask.ProjectPlanEndTimeTask"></bean>
+
+		<bean id="relBulletinTask" class="com.gpcsoft.epp.common.timerTask.RelBulletinTask"></bean>
+		
+		<bean id="startSignUpTask" class="com.gpcsoft.epp.common.timerTask.ProjectStartSignupTimeTask"></bean>
+		<bean id="endSignUpTask" class="com.gpcsoft.epp.common.timerTask.ProjectEndSignupTimeTask"></bean>
+		<bean id="startBidTask" class="com.gpcsoft.epp.common.timerTask.ProjectStartBidTimeTask"></bean>
+		<bean id="endBidTask" class="com.gpcsoft.epp.common.timerTask.ProjectEndBidTimeTask"></bean>
+		<bean id="openBidTask" class="com.gpcsoft.epp.common.timerTask.ProjectStartOpenBidTimeTask"></bean>
+		<!--生成静态页面定时任务-->
+		<bean id="makeStaticPageTimeTask" class="com.gpcsoft.pubservice.application.staticpage.MakeStaticPageTimeTask"></bean>
+
+		<bean id="projectPlanScheduled"
+			class="com.gpcsoft.plugin.timer.TimerScheduledTask">
+			<property name="timerTask">
+				<ref bean="projectPlanTask" />
+			</property>
+
+			<!-- 
+				任务执行周期毫秒
+				1秒为 	1000
+				1分钟为	60000
+				1小时为	3600000
+				1天为	86400000 
+			-->
+			<property name="period">
+				<value>60000</value>
+			</property>
+
+			<!-- 
+				开始执行任务的时间 
+				格式	 hh:mm:ss
+			-->
+			<property name="date">
+				<value>23:00:00</value>
+			</property>
+		</bean>
+	
+		<bean id="relBulletinScheduled"
+			class="com.gpcsoft.plugin.timer.TimerScheduledTask">
+			<property name="timerTask">
+				<ref bean="relBulletinTask" />
+			</property>
+			<property name="period">
+				<value>86400000</value>
+			</property>
+			<property name="date">
+				<value>23:00:00</value>
+			</property>
+		</bean>
+		
+		<bean id="startSignUpScheduled"
+			class="com.gpcsoft.plugin.timer.TimerScheduledTask">
+			<property name="timerTask">
+				<ref bean="startSignUpTask" />
+			</property>
+			<property name="period">
+				<value>86400000</value>
+			</property>
+			<property name="delay">
+				<value>5000000</value>
+			</property>
+		</bean>
+		<bean id="endSignUpScheduled"
+			class="com.gpcsoft.plugin.timer.TimerScheduledTask">
+			<property name="timerTask">
+				<ref bean="endSignUpTask" />
+			</property>
+			<property name="period">
+				<value>86400000</value>
+			</property>
+			<property name="delay">
+				<value>5000000</value>
+			</property>
+		</bean>
+		<bean id="startBidScheduled"
+			class="com.gpcsoft.plugin.timer.TimerScheduledTask">
+			<property name="timerTask">
+				<ref bean="startBidTask" />
+			</property>
+			<property name="period">
+				<value>86400000</value>
+			</property>
+			<property name="delay">
+				<value>5000000</value>
+			</property>
+		</bean>
+		<bean id="endBidScheduled"
+			class="com.gpcsoft.plugin.timer.TimerScheduledTask">
+			<property name="timerTask">
+				<ref bean="endBidTask" />
+			</property>
+			<property name="period">
+				<value>86400000</value>
+			</property>
+			<property name="delay">
+				<value>5000000</value>
+			</property>
+		</bean>
+		<bean id="openBidScheduled"
+			class="com.gpcsoft.plugin.timer.TimerScheduledTask">
+			<property name="timerTask">
+				<ref bean="openBidTask" />
+			</property>
+			<property name="period">
+				<value>86400000</value>
+			</property>
+			<property name="delay">
+				<value>5000000</value>
+			</property>
+		</bean>
+		<bean id="makeStaticPageScheduled" class="com.gpcsoft.plugin.timer.TimerScheduledTask">
+			<property name="timerTask"><ref bean="makeStaticPageTimeTask" /></property>
+			<property name="period"><value>86400000</value></property>
+			<property name="date"><value>23:00:00</value></property>
+		</bean>
+		
+		<!-- 启动定时器
+		<bean id="timerBean" class="com.gpcsoft.plugin.timer.TimerScheduledFactory">
+			<property name="scheduledTimerTasks">
+				<list>
+					<ref bean="projectPlanScheduled" />
+					<ref bean="relBulletinScheduled" />
+					
+					<ref bean="startSignUpScheduled" />
+					<ref bean="endSignUpScheduled" />
+					<ref bean="startBidScheduled" />
+					<ref bean="endBidScheduled" />
+					<ref bean="openBidScheduled" />
+				</list>
+			</property>
+		</bean>
+		 -->
+		 
+		 <bean id="timerBean" class="com.gpcsoft.plugin.timer.TimerScheduledFactory">
+			<property name="scheduledTimerTasks">
+				<list>
+					<ref bean="projectPlanScheduled" />
+					<ref bean="relBulletinScheduled" />
+					<ref bean="makeStaticPageScheduled" />
+				</list>
+			</property>
+		</bean>
+</beans>
+
+

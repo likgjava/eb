@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:aop="http://www.springframework.org/schema/aop"
+		xmlns:tx="http://www.springframework.org/schema/tx"
+		xmlns:jee="http://www.springframework.org/schema/jee"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd">
+<bean id="expertRuleSendManagerImpl"  class="com.gpcsoft.epp.expertrule.manager.impl.ExpQdExpertRuleSendImpl"/>
+		<!--<bean id="publishBulletinImpl"  class="com.gpcsoft.es.planform.bulletin.manager.impl.PublishBulletinQDExt"/>-->
+		<!-- 生成项目编号实现类 -->
+		<bean id="genTenderCodeImpl"  class="com.gpcsoft.epp.project.manager.impl.GenTenderCodeImpl"/>
+		<!-- 生成匿名投标编号实现类 -->
+		<bean id="genTenderNoImpl"  class="com.gpcsoft.epp.bid.service.impl.GenTenderNoImpl"/>
+		<!-- 匿名投标次数控制实现类 -->
+		<bean id="anonymousTenderNoImpl"  class="com.gpcsoft.epp.bid.service.impl.AnonymousTenderNoImpl"/>
+		<!-- 资金管理实现类 -->
+		<!--bean id="accountAssetImpl"  class="com.gpcsoft.epp.bid.service.impl.AnonymousTenderNoImpl"/-->
+</beans>

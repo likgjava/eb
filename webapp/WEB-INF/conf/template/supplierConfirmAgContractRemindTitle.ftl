@@ -1,0 +1,1 @@
+您好！供应商${supplierConfirmStatusCN!}合同
