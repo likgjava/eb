@@ -1,0 +1,137 @@
+﻿@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: base 基础样式
+Design: OTiger
+Email: fanhy@gpcsoft.com
+Remark: 表单样式表，用于设置系统表单样式。
+----------------------------------------------------------------------
+
+----------------------------------- */
+/*基本设置*/
+input[type="text"],input[type="password"],select,textarea { width:146px; padding-left:4px;}
+
+input.sysicon{width:130px;}/*重新定义带图标输入框的宽度 by lijx*/
+/*增加长短样式 by lijx*/
+input.long{width:300px;}
+input.short{ width:90px;}
+select { width:154px; height:22px; line-height:22px;}
+select.short{width:90px;}
+select.long{width:200px;}
+/*增加多选样式*/
+select.long2{width:300px;}
+select[multiple]{height:48px;}
+select[multiple].p1{height:19px;}
+select[multiple].p2{height:109px;}
+select[multiple].p3{height:320px;}
+/*增加较长样式*/
+textarea.long{ width:300px;}
+textarea.texFull{ width:98%; margin-left:8px;height:80px;}
+textarea { font:1em "宋体"}
+.formLayout { position:relative; zoom:1; margin-bottom:10px;}
+.formLayout h4{ font-size:14px; font-weight:bold; border:0; background:#c4d9ef; padding-left:10px; margin-bottom:10px;}
+.formLayout h5 { background:#fff url(../../../plug-in/jquery/flexigrid/css/flexigrid/images/wbg.gif) repeat-x left -1px;height:25px; line-height:25px; text-indent:.5em; margin:0; padding:0;}
+.formLayout h6 { text-indent:2em; border-bottom:1px dotted #ccc;}
+.formLayout ul { list-style:none; padding:0; margin:0; overflow:hidden;}
+.formLayout li { height:25px; line-height:25px;}
+.formLayout li li { width:auto; border:0; background:none;}
+.formLayout label { display:block; float:left; width:18em; height:100%; text-align:right; margin:0 5px 0 1px; color:#666;}
+.formLayout label.short{width:10em;}
+.formLayout li span { display:inline-block; *display:inline; vertical-lign:middle; padding-left:3px;}
+.formLayout div label { display:inline; float:none; width:auto; height:auto; background:none; margin:0; font-weight:normal; vertical-align:middle;}
+.formLayout input,.formLayout textarea,.formLayout select { position:relative;}
+.formLayout td input,.formLayout td textarea,.formLayout td select {top:0;}
+	
+/*分栏*/
+.form2Pa li, .form3Pa li { float:left;}
+.form2Pa li { width:49.5%;}
+.form2Pa label{ width:10em;}
+.form3Pa li { width:33.3%;}
+.form3Pa label { width:7.5em;}
+/*提示信息及元素*/
+/*只读项*/
+.eleReadonly input, .eleReadonly textarea { border:0; background:none;}
+.eleReadonly span { padding-left:3px; }
+/*必填项*/
+.eleRequired { color:#F00;}
+/*禁用项*/
+.eleDisable input, .eleDisable textarea { border:0; background:none;}
+.eleDisable span { padding-left:3px; }
+/*信息*/
+.eleNote { color:#999;}
+/*警告*/
+.eleWarning { color:#C00;}
+/*正确*/
+.eleRight { color:#060;}
+/*隐藏提示信息*/
+.form3Pa .eleNote, .form3Pa .eleWarning, .form3Pa .eleRight { 
+
+position:absolute; top:30px; left:0; display:none; }
+/*文本输入框*/
+.formLayout li.formTextarea { height:120px; clear:both; background:none; width:100%;}
+.formLayout .formTextarea textarea { width:38%; height:80px; }
+/*增加formTextarea的long样式*/
+.formLayout li.formTextarea.long { height:220px;}
+.form2Pa .formTextarea,.form3Pa .formTextarea { width:100%;}
+.form2Pa .formTextarea textarea { width:65%; }
+.form3Pa .formTextarea textarea { width:82%; }
+/*整行数据*/
+.formLayout .fullLine { clear:both; background:none; height:auto; }
+.form2Pa .fullLine,.form3Pa .fullLine { width:100%;}
+.form2Pa .fullLine input[type="text"],.form2Pa .fullLine input
+
+[type="password"],.form3Pa .fullLine input[type="text"],.form3Pa 
+
+.fullLine input[type="password"] { width:auto;}
+.form2Pa .fullLine input[type="text"].long,.form2Pa .fullLine input
+
+[type="password"].long,.form3Pa .fullLine input
+
+[type="text"].long,.form3Pa .fullLine input[type="password"].long { width:300px;}
+
+/*Table设置*/
+.formLayout table {  background:#f7f7f7; border:1px solid #fff; border-top:0; width:100%; border-collapse:collapse; border-spacing:0; margin-bottom:10px;s}
+.formLayout table label { display:inline; float:none; width:auto; height:auto; background:none; margin:0;}
+.formLayout th,
+.formLayout td { border:1px solid #fff; border-top:0; padding:5px; line-height:1.5em;}
+.formLayout th { text-align:right; vertical-align:top; background:#ebecee; width:18em; border-right:0; padding:5px 0; font-weight:bold; color:#666;}
+.formLayout td { border-left:0;}
+/*分栏*/
+.form2Pa th { width:14em;}
+.form3Pa th { width:10em;}
+
+/*提交按钮容器*/
+.formLayout .operationBtnDiv,
+.formLayout .conOperation { padding:5px 0; background:#f7f7f7; text-align:center;  border-top:1px dotted #ccc; zoom:1; }
+
+/*附件上传*/
+.uploadFile { overflow:hidden; height:auto;}
+.uploadFile li { float:none; border:0; background:none;}
+.uploadFile .sysicon { display:inline-block; width:18px; height:18px; text-indent:-9999px; overflow:hidden; cursor:pointer;}
+.uploadFile .linkButton span { padding-right:8px;}
+	
+/*附件上传图片横向排列*/
+.uploadFile2 { overflow:hidden; height:auto;}
+.uploadFile2 li { float:none; border:0; background:none; width:140px; 
+
+height:auto;margin:5px; position:relative; text-align:center;}
+/*.uploadFile2 li img{ width:100px; height:75px;} by yucy*/
+.uploadFile2 .sysicon { display:inline-block; width:18px; height:18px; 
+
+text-indent:-9999px; overflow:hidden; cursor:pointer; }
+.uploadFile2 .linkButton span { padding-right:8px;}
+.uploadFile2 ul{ float:left; border:#8dadcb 1px solid; /*height:130px; 
+
+by yucy*/ margin-right:10px; margin-bottom:10px; }
+
+/*tfoot下的strong 颜色变红*/
+/* 商品和选配列表(购物车、订单)-----开始*/
+#goodsAndOption .goodsImg{width:50px;height:50px; float:left; margin-right:5px;border:1px solid #ddd;}
+#goodsAndOption .fitting{color:#808080;}
+#goodsAndOption .goodsInfo td{border-bottom:1px solid #D1EBFF;border-left:1px solid #D1EBFF;padding:5px 5px 5px 5px;background:none repeat scroll 0 0 #EFF7FE;}
+#goodsAndOption tfoot strong{ color: #FF7302;font-weight: bold;}
+#goodsAndOption tfoot td{font-size:13px;height:30px;line-height:30px;}
+#goodsAndOption tfoot td ul{float:right;}
+#goodsAndOption tfoot td ul li {float:left;margin:0 10px;}
+/* 商品和选配列表(购物车、订单)-----结束*/

@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: base 基础样式
+Design: OTiger
+Email: fanhy@gpcsoft.com
+Remark: 文件样式表，用于设置公告文件样式。
+--------------------------------------------------------------------------------------------------------- */
+/*--------------
+	标准文件文档
+----------------*/
+@media projection, screen { 
+.frameReport { border:1px solid #ccc; padding:10px;}
+.frameReport table { border-top:1px solid #D5D5D5; border-left:1px solid #D5D5D5; }
+.frameReport th, .frameReport td { border-right:1px solid #D5D5D5; border-bottom:1px solid #D5D5D5; }
+.frameReport.frOverFlow { overflow:auto; height:380px;}
+}
+/*打印样式*/
+@media print {
+.frameReport table { border-top:1px solid #000; border-left:1px solid #000; }
+.frameReport th, .frameReport td { border-right:1px solid #000; border-bottom:1px solid #000; }
+.frameReport #conOperation { display:none }
+}
+.frameReport { position: relative; background:#fff; font:20px/2em "仿宋", serif; overflow:hidden; }
+/*副标题*/
+.frameReport .reportTitle { font:bold 1em/1.5em "宋体"; text-align:center; padding-bottom:10px; border-bottom:3px solid #F00;}
+.frameReport .reportTitle span { font:normal 12px/1.5em "宋体"; color:#999;}
+/*称谓*/
+.frameReport .title { font:bold 1.1em "仿宋"; margin-top:40px; }
+/*正文*/
+.frameReport p { text-indent:2em; }
+/*各级标题*/
+.frameReport h1, .frameReport h2, .frameReport h3, .frameReport h4, .frameReport h5 { color:#000; background:none; border:0; }
+.frameReport h1, .frameReport h3 { font-family:"黑体"; }
+.frameReport h1 { text-align:center; font-size:1.5em; }
+.frameReport h2 { text-align:center; font-size:1em; font-weight:normal;}
+.frameReport h3 { font-size:1.1em; }
+.frameReport h4 { font-size:1em; }
+/*强调*/
+.frameReport .em { text-decoration:underline; margin:0 5px; }
+/*表格*/
+.frameReport table { width:90%; margin:5px 2em; border-collapse:collapse;}
+.frameReport td,.frameReport th { vertical-align:middle; padding:3px; background:#fff; line-height:1em; }
+.frameReport th { font-weight:bold;}
+/*署名*/
+.frameReport .signature { float:right; margin:40px 20px 20px 0; line-height:3em; font:bold 20px/2em "仿宋", serif; }
+.frameReport .signature ul { list-style:none; margin:0 }
+/*操作容器*/
+.frameReport .operationBtnDiv { position:absolute; top:5px; left:5px; }
+
+/*--------------
+	新闻公告
+----------------*/
+@media projection, screen { 
+.frameNews{ padding:20px 0;}
+.frameNews table { border-color:#ccc;}
+.frameNews th, .frameNews td { border-right:1px solid #D5D5D5; border-bottom:1px solid #D5D5D5; }
+}
+@media print {
+.frameNews{ padding:0;}
+.frameNews table { border-color:#000;}
+.frameNews th, .frameNews td {border-color:#000;}
+.frameNews .operation,.frameNews .related { display:none}
+}
+.frameNews {position:relative; font-size:1.2em; line-height:2.5em;}
+	.frameNews h1 {font-size:2em; text-align:center;}
+	.frameNews .subtitle {text-align:center;}
+	.frameNews .source {color:#666; text-align:center; margin:10px auto; border-bottom:1px solid #ccc}
+		.frameNews .source span { margin-right:5px;}
+	.frameNews p { text-indent:2em; }
+	frameNews p img{ text-align:center;}
+	.frameNews .abstract { padding:2px; border:1px solid #CCC; background:#f1f1f1;}
+	.frameNews .newspic { margin:10px auto; text-align:center; font-size:12px; color:#999;}
+	.frameNews .signature { text-align:center; color:#666; margin:5px auto;}
+	.frameNews .related { border:1px dotted #ccc; border-left:0; border-right:0; padding:5px; margin:10px auto;}
+	.frameNews .related h6 { font-size:1em; margin:0;}
+	.frameNews .operationBtnDiv { position:absolute; top:5px; left:5px;}
+	.frameNews strong{color:#000;}
+	.frameNews table{ border-width:1px; border-style:solid; border-collapse:collapse;}
+	.frameNews th, .frameNews td{ border-width:1px; border-style:solid;}

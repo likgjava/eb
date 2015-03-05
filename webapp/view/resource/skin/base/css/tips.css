@@ -1,0 +1,38 @@
+﻿@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: base 基础样式
+Design: OTiger
+Email: fanhy@gpcsoft.com
+Remark: 提示样式表，用于设置系统提示样式。
+--------------------------------------------------------------------------------------------------------- */
+/*提示、说明，用于用户操作提示*/
+.userTips { text-align:center; padding:5px; background:#FFC; color:#C00; border:1px solid #f9d587; margin-bottom:5px; width:948px; height:30px; margin:0 auto; background:url(../img/tipsBg.png) repeat-x; line-height:30px;}
+.userTips  p{background:url(../img/icon/iconWarning.png) no-repeat left center; display:inline; clear:both;  height:20px; padding-left:20px;word-spacing:2px; font-weight:bold;}
+.userTips p a{background:url(../img/icon/ieICon.png) no-repeat left center; color:#016a9f; padding:5px 0px 0px 20px; height:20px; line-height:20px;}
+	#sysContainer .userTips { min-height:128px; line-height:2em; border:1px dashed #4691d8; font-size:14px; background:#FFC url(../img/icon/tips_error.png) no-repeat 10px 10px; padding:20px 10px 10px 140px;}
+.sysCaption { padding:10px; background:#ffffd7; color:#666; margin-bottom:5px;}
+	.sysCaption li { line-height:2em; list-style:inside disc;}
+	.sysCaption p { text-indent:2em;}
+
+/*强调、提示、突出文字内容*/
+.eleEm { font-weight:bold;}/*强调*/
+eleStrong { font-weight:bolder; color:#FF0000;}/*着重强调，比em语气更重*/
+.highlight { color:#F00;}/*高亮 红色*/
+.greenHighlight { color:#090;}/*高亮 绿色*/
+.grayHighlight{ color:gray;}
+.em{color:#F00; font-weight:bold;}
+
+/*提示信息*/
+.formTips {background:url("../img/msg_bg.png") no-repeat scroll 0 0 transparent;border:1px solid #DDDDDD;color:#404040;float:left;
+line-height:24px;padding:2px 10px 2px 23px;margin-bottom:10px;}
+.formTips  em {color:#FF6600;font-weight:normal;}
+.formTips  .big {font-size:14px;font-weight:bold;}
+.attention{background-position:0px -972px;border-color:#FFCA80;float:none;background-color:#FFFEE2;overflow:hidden;}
+.warm{background-position:5px -526px;border-color:#FAE2B9;float:none;background-color:#FFFFE3;}
+.smallLight{background-position:0px -675px;border-color:#FFCA80;float:none;background-color:#FFFEE2;overflow:hidden;}
+.light{background-position:0px -2105px;border-color:#C4D5E0;float:none;background-color:#F3F8FE;padding-left:40px;}
+.attention strong, .light strong{color:blue;}
+.smallLight strong{color:#000000;font-weight:bold;}
+.nodata{color:#999;line-height:50px;text-align:center;}

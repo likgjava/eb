@@ -1,0 +1,219 @@
+﻿@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: base 基础样式
+Design: OTiger
+Email: fanhy@gpcsoft.com
+Remark: 通用样式文件。
+--------------------------------------------------------------------------------------------------------- */
+/*隐藏元素*/
+.eleHide { display:none;}
+
+/*对齐方式*/
+.r{ text-align:right;}
+.l{ text-align:left;}
+.center { text-align:center;}
+
+/*-页面搜索-*/
+.conSearch { border:1px solid #c4d9ef; padding:10px; -moz-border-radius:5px;　-webkit-border-radius:5px;　border-radius:5px; position:relative; margin:10px auto;}
+.conSearch h4 { font:bold 1em/1.5em "宋体"; padding:0 5px; position:absolute; top:-10px; left:8px; background:#fff;}
+.conSearch ul { overflow:hidden;}
+.conSearch li { float:left; line-height:30px; white-space:nowrap;}
+.conSearch label { display:inline-block; text-align:right; padding-left:10px; width:7em;}
+.conSearch .operationBtnDiv { text-align:left; padding:0; padding-left:5px;}
+.conSearch .operationBtnDiv button { background:url(../img/btn.gif) no-repeat -69px center; width:63px; padding-left:25px; line-height:normal;}
+
+.conSearch input[type="text"],.conSearch select{width:120px; *width:100px;}
+
+.conSearch .hightSearchBtn { clear:both; text-align:center; border-top:#ddd 1px dotted; height:30px; line-height:30px; width:100%;}
+.conSearch .hightSearch { display:none;}
+.conSearch input.sysicon { padding-right:0;}
+.conSearch .siSearch{ padding-left:0;}
+
+/*--------------
+项目驱动
+----------------*/
+#projectTitle { font:bold 1em/1.5em "宋体"; color:#127998; border-top:1px dotted #c4d9ef;}
+#projectInfo { display:none}/*此样式尽量在页面添加eleHide样式代替*/
+#projectNav ul { float:left; width:100%; padding:5px 0; color:#315e88; border-bottom:1px dotted #c4d9ef; position:relative; z-index:2;}
+#projectNav li { float:left; padding-bottom:20px; width:6em; background:url(../img/projectNav.gif) no-repeat center -235px; text-align:center; cursor:pointer; position:relative; z-index:2;}
+	/*已完成图标*/
+	#projectNav li.pCompletedF { background-position:center -35px;}/*头部*/
+	#projectNav li.pCompletedC { background-position:center -185px;}/*中间*/
+	#projectNav li.pCompletedE { background-position:center -335px;}/*尾部*/
+	/*进行中图标*/
+	#projectNav li.pGoingF { background-position:center 15px;}/*头部*/
+	#projectNav li.pGoingC { background-position:center -135px;}/*中间*/
+	#projectNav li.pGoingE { background-position:center -285px;}/*尾部*/
+	/*未完成图标*/
+	#projectNav li.pFirst { background-position:center -85px;}/*头部*/
+	#projectNav li.pEnd { background-position:center -385px;}/*尾部*/
+	
+	#projectNav li ul { display:none; width:8em; text-align:left; position:absolute; top:33px; left:3em;  background:#f7fdff; border:1px solid #c4d9ef; padding:1px;}
+	#projectNav li:hover { color:#f00;}
+	#projectNav li:hover li { color:#315e88;}
+	#projectNav li:hover li:hover { background:#c4d9ef; color:#fff;}
+	#projectNav li ul ul { top:0; left:8em;}
+	#projectNav li li { float:none; padding:5px; text-align:left; background-image:none; width:auto}
+	#projectNav li span { background:url(../../sysicon/16/bullet_arrow_down.png) no-repeat right; display:block;}
+	#projectNav li li span { background:url(../../sysicon/16/bullet_arrow_right.gif) no-repeat right;}
+	#projectNav a { display:block; color:#315e88; text-decoration:none; white-space:nowrap; hide-focus:expression( this.hideFocus=true ); outline:none;}
+	#projectNav a:hover { color:#fff;}
+	/* 多行排序 */
+	#projectNav #projectNav1 { z-index:10;}
+	#projectNav #projectNav2 { z-index:9;}
+	#projectNav #projectNav3 { z-index:8;}
+	#projectNav #projectNav4 { z-index:7;}
+	#projectNav #projectNav5 { z-index:6;}
+	#projectNav #projectNav6 { z-index:5;}
+	#projectNav #projectNav7 { z-index:4;}
+	#projectNav #projectNav8 { z-index:3;}
+	#projectNav #projectNav9 { z-index:2;}
+	#projectNav #projectNav10 { z-index:1;}
+/*--------------
+工作记录
+----------------*/
+.operationLog { border:1px solid #bfdbe4; background:#fff url(../img/tableTh_bg.gif) repeat-x;}
+.operationLog h5 { margin:0; padding-left:5px; height:25px; line-height:25px; border:0; color:#315e88;}
+.operationLog h5 span { display:inline-block;}
+.operationLog .logTitle { display:none; background:#cde9f0; font-weight:bold; border-top:1px solid #bfdbe4; line-height:25px;}
+.operationLog .logContent { display:none; background:#eff9fb; }
+.logTitle span,.logContent span { display:inline-block; padding:3px; text-align:center; vertical-align:top;}
+.operationLog li { border-bottom:2px solid #fff;}
+.operationLog .reply { clear:both; display:block; background:#f4fdff; margin:2px 0 0 110px;}
+.operationLog .schedule { width:100px;}/*项目进度*/
+.operationLog .time { width:120px;}/*操作时间*/
+.operationLog .organization { width:9em; text-align:left;}/*所属机构*/
+.operationLog .department { width:6em;}/*所属部门*/
+.operationLog .name { width:5em;}/*操作人员*/
+.operationLog .telephone { width:100px;}/*联系电话*/
+.operationLog .workingInfo { width:220px; text-align:left;}/*工作信息－留言或备注*/
+.operationLog .replyInfo { width:20%; text-align:left;}/*回复信息*/
+.operationLog .functionBtnDiv { padding:0 3px; text-align:left;}/*操作容器*/
+/*--------------
+操作空间
+----------------*/
+.operationDiv { padding:5px; border:1px solid #bfdbe4;}
+.operationDiv legend { font:bold 1em/1.5em "宋体"; padding:0 5px; margin-bottom:10px; color:#315e88;}
+/*--------------
+页面结构
+----------------*/
+.frameMainSub { overflow:hidden;}
+.frameMain { overflow:auto; float:left; border:1px solid #c4d9ef;}
+.frameSub,
+.frameSupp { overflow:auto; border:1px solid #c4d9ef; padding:5px 0;}
+.frameMain > *,.frameSub > *,.frameSupp > * { margin:5px;}
+
+/*修改.frameMs12/.frameMs21比例为3：7*/
+.frameMs12 .frameMain { width:30%;}
+.frameMs12 .frameSub { float:right;width:69%}
+.frameMs21 .frameMain { width:70%;}
+.frameMs21 .frameSub { float:right;width:29%}
+.frameMs11 .frameMain { width:50%;}
+.frameMs11 .frameSub { float:right;width:49%}	
+
+.frameMs121 .frameMain { width:50%; margin-left:25%; float:none;}
+.frameMs121 .frameSub { width:24%; float:left;}
+.frameMs121 .frameSupp { width:24%; float:right;}
+
+.frameMsChange .frameMain { width:45%}
+.frameMsChange .frameSub { float:right; width:45%}
+.frameMsChange .frameOperation { margin:0 0 0 45%; width:10%;*width:8%; line-height:1.5em; text-align:center;}
+/*增加《带操作功能布局》功能按钮样式，原按钮在窗口缩小时会变型，在按钮文字小时会排成一列。 by lijx*/
+/*增加margin:3px 0;按钮之间空隙。 by lijx*/
+.frameMsChange .frameOperation button{ width:70%;margin:3px 0;}
+
+.frameParallel { overflow:hidden;}
+.framePaCon { float:left; border:1px solid #c4d9ef;}
+.framePaCon > * { margin:5px;}
+
+.frame2Pa .framePaCon { width:49.5%;}
+.frame2Pa div:first-child + div { float:right;}
+
+.frame3Pa .framePaCon { width:33%;} 
+.frameParallel div:first-child { margin-right:1px;}
+.frameParallel div:first-child + div { margin-right:1px;}
+
+
+/*修复固定宽下无法并排成一列*/
+.frame3Pa .framePaCon { width:20%;*width:20%;}
+.frame3Pa .framePaCon2 { width:65%;*width:65%;}
+.frame3Pa .framePaCon3 { width:10%;*width:10%;} 
+/*修复固定宽度下文字换行*/
+.detail{ margin:0;padding:0;}
+.detail h4{ font-size:1em; padding-left:2px;}
+/*修复固定宽度下按钮文字排成一列*/
+.frameMsChange .frameMain { width:43%}
+.frameMsChange .frameSub {width:43%}
+.frameMsChange .frameOperation { margin:0 0 0 44%; width:13%;*width:8%; line-height:1.5em; text-align:center;}
+.frameMsChange .frameOperation button{ width: auto;margin:3px 5px;}
+/*修复固定宽在IE7下布局错乱*/
+.frame2Pa .framePaCon { *width:49%;}
+/*修复IE7下布局错乱*/
+.frameMs121 .frameMain { width:50%; margin-left:25%; float:none;}
+.frameMs121 .frameSub { *width:23%; float:left;}
+.frameMs121 .frameSupp { *width:23%; float:right;}
+
+/*附件上传*/
+.uploadFile input{border:1px solid #a0c6ea;}
+.uploadFile{ padding:3px 3px 3px 0;}
+.uploadFile table.tableList{ background:#fff; margin:3px 0;}
+
+/*--------------
+树
+----------------*/
+/*treeBtn by lijx*/
+
+.treeBtn { overflow:hidden;}/*清除li浮动*/
+.treeBtn li { float:left;}/* 左浮动列表，使之并列 */
+.treeBtn li a { display:block; overflow:hidden;}/* 1.转换为块对象，因为内联对象不可以包含块对象span。2.清除span浮动。 */
+.treeBtn li a span { cursor:pointer;}/* 设置光标为手形 */
+
+.treeBtn a span { width:20px; height:16px; overflow:hidden; display:block; float:left; background:url(../img/icons.gif) no-repeat; margin:0 3px 0 0 }/* 负边距用于特殊情况，尽量少用 */
+
+.treeBtn a.upMove span { background-position:0px 0px; }
+.treeBtn a.downMove span { background-position:0px -16px; }
+.treeBtn a.open span { background-position:0px -32px; }
+.treeBtn a.close span { background-position:0px -48px; }
+.treeBtn a.ok span { background-position:0px -64px; }
+.treeBtn a.refresh span { background-position:0px -80px; }
+.treeBtn a.authorize span { background-position:0px -96px; }
+.treeBtn a.unAuthorize span { background-position:0px -112px; }
+.treeBtn a.add span { background-position:0px -128px; }
+.treeBtn a.del span { background-position:0px -144px; }
+.treeBtn a.undo span { background-position:0px -160px; }
+.treeBtn a.redo span { background-position:0px -176px; }
+.treeBtn a.smallOpen span { background-position:0px -192px; }
+.treeBtn a.smallClose span { background-position:0px -208px; }
+.treeBtn a.base span { background-position:0px -224px; }
+
+/*采购任务明细*/
+.operationLog .purchasingItems{ width:20%; text-align:left;}
+.operationLog .specification{ width:20%; text-align:left;}
+.operationLog .quantity{width:10%;}
+.operationLog .unit{width:10%;}
+.operationLog .unitPrice{width:10%;text-align:right;}
+.operationLog .total{ width:10%;text-align:right;}
+.operationLog .notes{ width:10%;}
+
+ table.frontTableList thead {background:#fff; }
+ table.frontTableList thead th {white-space:nowrap; font-size:12px;}
+ table.frontTableList td img{line-height:25px;vertical-align: middle;}
+
+.treeRight { margin:0;padding:0;min-height:300px;}/*清除外间距*/
+.treeEditNav{ float:none;position: relative;}
+.treeEditNav ul{position:absolute;right:10px;}
+
+.formLayout .uploadFile2 li { margin:5px; border:0;}
+.frameNews{width:auto;}
+
+.bulletin {border-bottom:2px solid #F27B04;font-size:13px;height:24px;line-height:20px;padding-left:20px;color:#444444;}
+
+/*选择商品类目*/
+.goodsSel{ overflow:hidden; height:350px;}
+.goodsSel li{ border:0;}
+.goodsSel h5{ background:none;}
+.goodsSel select{ width:98%;}
+/*商品金额向右对齐 by-liuly*/
+.frontTableList .money{text-align:right;}

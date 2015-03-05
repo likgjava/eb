@@ -1,0 +1,61 @@
+﻿@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: base 基础样式
+Design: OTiger
+Email: fanhy@gpcsoft.com
+Remark: 表格样式表，用于设置系统表格样式。
+--------------------------------------------------------------------------------------------------------- */
+
+/*非控件数据列表样式
+--------------------------------------------------------------------------------------------------------- */
+table.tableList { background:#fff; border:1px solid #C4D9EF; border-top:0; width:100%; border-collapse:collapse; border-spacing:0; }
+table.tableList th, table.tableList td { border:1px solid #C4D9EF; padding:3px; }
+table.tableList th { font-weight:bold; vertical-align:middle; background:#e6f5f9; text-align:center; color:#000; }
+/*增加标题宽度样式 by lijx*/
+table.tableList th.p1{width:10%;}
+table.tableList th.p2{width:20%;}
+table.tableList th.p3{width:30%;}
+table.tableList th.p4{width:40%;}
+table.tableList th.p5{width:50%;}
+table.tableList th.p6{width:60%;}
+table.tableList th.p7{width:70%;}
+table.tableList th.p8{width:80%;}
+table.tableList th.p9{width:90%;}
+table.tableList th.vertical {text-align:right; }/*表标题增加居右样式 by lijx*/
+table.tableList caption { height:25px; font:bold 1em/25px "宋体"; background:#f6f6ff; color:#00579e; padding:0 3px; border:1px solid #C4D9EF; border-bottom:1px solid #C4D9EF; position:relative; }
+table.tableList caption span.unit { position:absolute; top:0; right:3px; font-weight:normal; }/*单位样式*/
+tfoot tr { background:#fff; }
+/*翻页样式*/
+.pageTurnTable { border:1px solid #C4D9EF; border-top:0; background:#f6f6ff;}
+
+/* 数据列控制
+:notes:不添加列样式，宽度自适应，自动换行
+--------------------------------------------------------------------------------------------------------- */
+/*文字居中*/
+table .choose, table .serialNumber, table .time, table .state, table .name, table .sex, table .position, table .type, table .telephone { text-align:center }
+/*文字靠右*/
+table .amount { text-align:right }
+/*文字不换行*/
+table .number, table .state, table .operation, table .position, table .type, table .telephone, table .amount, table .time { white-space:nowrap }
+/*数据类型*/
+table .choose { width:30px }/*选择*/
+table .number { }/*编号*/
+table .serialNumber { width:30px }/*序号*/
+table .time { width:110px; }/*日期时间*/ 
+table .state {}/*状态*/  
+table .operation { text-align:center; min-width:60px }/*操作*/
+table .name { width:60px; }/*姓名*/
+table .sex { width:40px }/*姓别*/
+table .position { }/*职务*/	
+table .type { }/*类型*/	
+table .telephone { width:110px; }/*电话*/
+table .amount { text-align:right;white-space:nowrap; }/*数量*/
+table .money { text-align:right;white-space:nowrap; }/*金额*/
+table .date { text-align:center; overflow:hidden; white-space:nowrap; }/*日期*/
+table .dateType { text-align:center; }/*大小、数量、单位、重量、非编号的数字*/
+table .total { text-align:right; }/*合计*/
+table .remark{ text-align:left;}/*备注*/
+
+
