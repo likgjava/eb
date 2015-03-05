@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* 
+Label: ebid360
+Version: 1.0
+Skin: skin01
+Design: 
+Email: liuly@gpcsoft.com
+Remark: 议价项目详情页面样式表。
+--------------------------------------------------------------------------------------------------------- */
+	
+.package_headline {background: url("../img/bg_function.png") no-repeat scroll 0 0 transparent;font-size: 18px;margin: 10px 5px 0;padding: 0 0 10px 45px;width:570px;float:left;}
+.layoutfix {display: block;overflow: hidden;}
+.package_fontcolor {color: #999999;font-size: 12px;font-weight: normal;}
+.package_details_intro {margin-bottom: 10px;clear:both}
+.package_details_intro .b_bd {background: none repeat scroll 0 0 #E8F4FF;border: 1px solid #CBD2DC;padding: 10px;margin-bottom: 10px;}
+.package_details_info {background-color: #FFFDED;border: 1px solid #E0E0E1;float: left;height: 120px;margin-bottom: 10px;overflow: hidden;padding: 0 12px;width: 300px;position: relative;z-index: 1;}
+.package_details_info .package_name {color: #333333;font-size: 16px;font-weight: bold;height: 30px;line-height: 20px;overflow: hidden;padding: 20px 0 0;width: 230px;}
+.package_details_date {height: 40px;overflow: hidden;width: 100%;}
+.package_details_info .mailtofrd {bottom: 6px;position: absolute;padding-left:50px;}
+.base_txtgray {color:#A6A6A6;}
+.base_txtred {color:#E56700;}
+.base_txtgreen {color:green;}
+.base_black {color:#000000;}
+.base_txtnormal {font-weight:normal;}
+.base_bold {font-weight:bold;}
+.base_cols_2{width:450px;float:left;}
+.base_cols_4{width:220px;float:left;}
+.pripackage_date_list {border-bottom: 1px solid #DEDEDE;border-left: 1px solid #DEDEDE;float: left;margin: 10px;width: 920px;}
+.pripackage_date_list thead {font-weight: bold;}
+.pripackage_date_list thead th {font-weight: bold;border-right: 1px solid #DEDEDE;border-top: 1px solid #DEDEDE;height: 25px;text-align: center;}
+.pripackage_date_list .col_title_1 {width:380px;}
+.pripackage_date_list .col_title_1 .alignR, .pripackage_date_list .col_title_2 .alignR {float:right; margin-right:15px; font-weight: normal;}
+.pripackage_date_list .col_sum {width:538px;background-color:#E8F4FF;}
+.pripackage_date_list .col_4 {width:180px;}
+.pripackage_date_list .col_3 {width:240px;}
+.pripackage_date_list .col_big {width:400px;}
+.pripackage_date_list tbody td {border-right: 1px solid #DEDEDE;border-top: 1px solid #DEDEDE;height: 25px;text-align: center;}
+.pripackage_date_list tbody td.desc{padding-left: 5px;padding-right: 5px;text-align: left;text-indent: 20px;}
+.pripackage_date_list tbody td.flag{background: url("../../smallscale/img/flag_red.png") no-repeat scroll 0 0 #e6e6e6;}
+.pripackage_date_list tbody td.stamp{background: url("../../smallscale/img/stamp.gif") no-repeat scroll right 0 ;} /*by yucy 中标样式*/
+.pripackage_date_list tbody td.price_td_hilight{background-color:#F7FFC4;}
+.pripackage_date_main {background: none repeat scroll 0 0 #FFFFFF;overflow: hidden;}
+.pripackage_date_main h5 {line-height: 20px;padding-left: 20px;}
+.pripackage_date_main h5 .alignR {float:right; margin-right:15px;}
+.pripackage_date_main .describ {padding-left:20px;font-size:11px;}
+.base_btns7 {background: url("../img/un_base_btn.png") no-repeat scroll 0 0 #DDDDDD;border: 0 none;color: #FFFFFF;cursor: pointer;padding-bottom: 1px;text-align: center;background-position: -80px -432px;font-weight: normal;height: 20px;width: 72px;}
+.base_t3 .operationBtn {float: left;margin: 10px 5px 0;width: 320px;}
+.base_t3 .more_info_btn {float: right;margin: 10px 5px 0;}
+.base_t3 .more_info {clear:both;margin-top: 26px;}
+.base_t3 .more_info .boxx {float: left;width: 50%;margin-bottom: 10px;position: relative;}
+.base_t3 .more_info .boxx .hd {background-color: #EDEDED;background-position: -162px -165px;background-repeat: no-repeat;border-width: 0;height: 25px;}
+.base_t3 .more_info .boxx .hd h3 {background-position: 80px -165px;font-size: 14px;padding-left: 30px;line-height: 25px;padding: 0;text-align: center;}
+.base_t3 .more_info .boxx .bd {border-right: 1px solid #E1E1E1;border-bottom: 1px solid #E1E1E1;height: 350px;margin-top: 10px;padding: 0 15px 15px 15px;-moz-border-bottom-colors: none;-moz-border-image: none;-moz-border-left-colors: none;-moz-border-right-colors: none;-moz-border-top-colors: none;}
+.base_t3 .more_info .boxx dt {font-weight: 700;padding-bottom: 5px;clear:both;}
+.base_t3 .more_info .boxx dd {margin-bottom: 10px;padding-left: 10px;color: #808080;}
+.base_t3 .more_info .boxx dd.col2{width:210px;float:left;}
+.save_total {font-size:11px;font-style: italic;color:#666666;}
+.proce_status { float: left;margin: 10px 0;font-size:13px; width:320px;}
+.proce_status span { display:inline-block; padding:0 2px 8px 2px; background:url(../../agreement/img/projectProcedure_finished.png) no-repeat center bottom }
+/*已完成*/
+.proce_status .finished { color:#090; background-image:url(../../agreement/img/projectProcedure_finished.png) }
+.proce_status .finishedFirst { color:#090; background-image:url(../../agreement/img/projectProcedure_finished_first.png) }
+.proce_status .finishedLast { color:#090; background-image:url(../../agreement/img/projectProcedure_finished_last.png) }
+/*未完成*/
+.proce_status .unfinished { color:#333; background-image:url(../../agreement/img/projectProcedure_unfinished.png) }
+.proce_status .unfinishedFirst { color:#333; background-image:url(../../agreement/img/projectProcedure_unfinished_first.png) }
+.proce_status .unfinishedLast { color:#333; background-image:url(../../agreement/img/projectProcedure_unfinished_last.png) }
+/*当前*/
+.proce_status .current { color:#c00; background-image:url(../../agreement/img/projectProcedure_current.png) }
+.proce_status .currentFirst { color:#c00; background-image:url(../../agreement/img/projectProcedure_current_first.png) }
+.proce_status .currentLast { color:#c00; background-image:url(../../agreement/img/projectProcedure_current_last.png) }
+
+.bidding_record {text-align: left; background-color: #FFFDED; border: 0px solid #CBD2DC; margin: 4px;}
+.high_show {background-color: #FFFF00;}
+
+.prodtail{background-color: #EBEFF2; height:23px; background:url('../img/hallLogo.png') no-repeat scroll 10px 2px #EBEFF2;}
+.prodtail .ti{line-height:23px;padding-left:180px;}
+.prodtail2{padding-left: 50px; height:70px;}
+.prodtail2 .pti{font-weight: bold; height: 50px; line-height: 50px; font-size: 18px; color: rgb(102, 102, 102);}
+.prodtail2 .pot{width:450px;float:left;}
+.prodtail3{float:right;padding-right:50px;}
+.prodtail4{width:250px;float:right;}
+.prodtail4 .ptime{font-size: 14px; font-weight: bold;color:#E56700}
+.app-box {float: left;margin-top:-25px;}
+.app-box .app-icon-a {display: block;text-align: center;width: 64px;color:#000;}
+.app-box .app-icon {background-repeat: no-repeat;display: block;font-size: 0;height: 36px;line-height: 0;margin: 0 auto;overflow: hidden;width: 36px;}
+.app-box .app-icon-a:link, .app-box .app-icon-a:visited, .app-box .app-icon-a:hover {color: #000;cursor: pointer;text-decoration: none;}
+
+/*聊天记录*/
+.tdog-popup-talkhistory {background-color: #FFFFFF; height: 150px; overflow-x: auto; overflow-y: scroll; padding-left: 0; position: relative; width: 528px; word-wrap: break-word; text-align: left;  margin: 5px;}
+.tdog-popup-talkhistory .tdog-talk-others {margin: 3px 3px 3px 13px;}
+.tdog-popup-talkhistory {word-wrap: break-word;}
+.tdog-popup-talkhistory .tdog-talk-time {color: #A6A6A6;}
+.tdog-talk-content {padding-left: 20px;}
+.tdog-popup .tdog-popup-clear {clear: both;}
+.chatNew {background:url(../img/chat.gif) no-repeat left center;}
+
+/*商品礼包*/
+.goodsGift {float: left;}
+.goodsGift .goodsImg {border: 0px solid #DDDDDD; float: left; height: 50px; margin-right: 5px; width: 50px;}
+.goodsGift .fitting { color: #808080; }
+

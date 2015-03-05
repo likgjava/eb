@@ -1,0 +1,38 @@
+﻿@charset "utf-8";
+/* 
+Label: ebid360
+Version: 1.0
+Skin: skin01
+Design: 
+Email: liuly@gpcsoft.com
+Remark: 需求采购内容样式表。
+--------------------------------------------------------------------------------------------------------- */
+
+/*商品分类样式*/
+.categories{ background:url(../img/categories.gif) repeat-y; border-bottom:#ffcd6d 1px solid; margin-bottom:10px; position:relative; z-index:80;}
+.categories h2,.categories h3{ height:25px; line-height:25px;font-size:13px;}
+.categories h2{text-indent:1em; background:url(../img/categories_top.gif) no-repeat left top; color:#e60021; font-size:14px;}
+.categories h3{background:url(../img/categories_h3.gif) no-repeat; padding:0;font-weight:normal;}
+.categories h3 a{ color:#000;}
+.categories h3.nochild{background:none;}
+.categories a{ display:block; height:30px; line-height:30px; white-space:nowrap;}
+.categories li{ text-indent:1em; background:url(../img/categories_li.gif) no-repeat; position:relative;}
+.categories ul li:hover dl,.categories li:hover a{visibility:visible; background:#fae688;}
+.categories ul li:hover dl{ border:#fae688 4px solid; background:#fff;}
+.categories ul li:hover dl dd a{ background:#fff;}
+.categories ul li:hover dl dt a{ display:block; background:#fdfbf3;}
+.categories ul dl{visibility:hidden;position:absolute;left:180px;top:0;width:200px; z-index:99;overflow:hidden; padding:5px; _display:none;}
+.categories dl{ text-indent:0;}
+.categories dt{ font-weight:bold;}
+.categories dl a{ display:inline-block; padding:0 2px; height:26px; line-height:26px;}
+.categories dt a{ color:#000;}
+/*焦点资讯*/
+.focusNews{ height:173px;}
+/*重磅推荐商品列表*/
+.goodsShow{ height:120px; margin-bottom:10px; border:none;}
+.goodsShow .picturesShow img{ width:100px; height:70px;}
+/*推荐项目*/
+.personalProject{ height:222px;}
+/*数据统计*/
+.purStats{background:url(../img/stats.png) no-repeat;width:260px;height:72px;}
+.purStats .count{font-size: 13px; overflow: hidden; position: absolute; margin-top: 35px; font-weight: bold; margin-left: 90px;}

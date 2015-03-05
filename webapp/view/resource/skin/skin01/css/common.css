@@ -1,0 +1,164 @@
+﻿@charset "utf-8";
+/* 
+Label: ebid360
+Version: 1.0
+Skin: skin01
+Design: 
+Email: liuly@gpcsoft.com
+Remark: 公共样式表。
+--------------------------------------------------------------------------------------------------------- */
+/*公共设置*/
+body { font:12px/1.5 Verdana,Arial,Helvetica, "宋体" , "黑体" ,sans-serif;}
+a{hide-focus:expression( this.hideFocus=true ); outline:none; text-decoration:none; color:#2953a6;}/*取消链接痕迹*/
+a:hover{ text-decoration:underline; color:#C00;}
+
+h3{ font-size:14px; font-weight:bold; padding-left:10px;}
+
+.leftShow{ text-align:left;}/*向左显示*/
+.rightShow{ text-align:right;}/*向右显示*/
+.middleShow{ text-align:center;}/*中间显示*/
+
+strong{color:#ff5500;}/*一般强调*/
+em{ font-weight:bold;}/*更为强调*/
+.em{color:#ff5500;}/*更为强调*/
+.greenHL{ color:green;}/*绿色高亮*/
+.grayHL{ color:gray;}/*灰色高亮*/
+.redHL{ color:red;}/*红色高亮*/
+.largerHL{ font-size:14px;}/*大字号高亮*/
+.hiddden{ display:none;}/*隐藏*/
+
+/*ie6下提示安装最新版本浏览器*/
+.userTips{ width:958px; margin:auto; border:#fdbf90 1px dotted; background:#feebc3; padding:10px 0; text-align:center;}
+
+/*主要内容*/
+#sysContent{ overflow:hidden;}
+
+/*外包装*/
+.wrap{ overflow:hidden;  _height:100%;}
+/*广告位*/
+.wrapAdv{ margin-bottom:5px; overflow:hidden;}
+
+	.col-sub{ float:left; width:210px;overflow:hidden;}/*左列*/
+	.col-main{ float:left; width:500px; margin-left:10px; display:inline;}/*中间列*/
+	.col-supp{ float:right; width:230px;overflow:hidden;}/*右列*/
+	
+	/*二列平均*/
+	.twoCol .clos{float:left; width:48%; margin:5px; display:inline;overflow:hidden;}
+	.twoCol_fist{ float:left; width:49.5%;}
+	.twoCol_last{ margin-left:50.5%;}
+	
+	/*二列2:8*/
+	.twoCol_fist2{ float:left; width:180px;}
+	.twoCol_fist8{ margin-left:190px;  _margin-left:187px;}
+	
+	/*二列7:3*/
+	.twoCol_fist7{ float:left; width:650px;}
+	.twoCol_fist3{ margin-left:655px;}
+	
+	/*二列6:4*/
+	.twoCol_fist6{ float:left; width:500px;}
+	.twoCol_fist4{ float:right; width:260px; overflow:hidden;}
+	
+	/*三列平均*/
+	.threeCol{ overflow:hidden;}
+	.threeCol .clos{ float:left; width:32%; margin:5px; display:inline;overflow:hidden;}
+
+/*推荐*/
+	.recommend{border:#ececec 1px solid; margin-bottom:10px;position:relative;}
+	.recommend h2{ border-bottom:#e60021 3px solid; color:#e60021; height:30px; line-height:30px; padding-left:10px; font-size:14px; font-weight:bold; background:#f9f9f9;}
+	.recommend .popKeywords{ position:absolute; left:100px; top:0px; line-height:30px;}
+	.recommend .more{ position:absolute; top:0; line-height:30px; right:5px;}
+	.recommend .more a{ color:#666;}
+    .recommend .more a:hover{ color:#c2001c;}
+    
+    /*推荐模块，高列高*/
+    .HlineHeight{line-height:25px;}
+	/*产品列表展示*/
+	.goodsList{ margin:0; padding:0;}
+	.goodsList ul{ overflow:hidden;}
+	.goodsList li{ position:relative; width:132px; text-align:center; float:left; margin:5px 10px; _margin:5px 8px; display:inline;}
+	.goodsList li h4{ position:absolute; top:105px; left:0; right:0; _width:100%; max-height:40px; font-weight:normal; line-height:20px; overflow:hidden;}
+	.goodsList li .marketPrice{ margin-top:42px;}
+	.goodsList li .goodsPic{  border:#ececec 1px solid;}
+	.goodsList li .goodsPic img{ width:100px; height:100px;}
+	
+	/*相同高*/
+	.sameHeight{ height:420px;}
+	.sameHeightSimple{ height:210px;}
+
+    /*通用层*/
+	.layout{border:#ececec 1px solid; margin-bottom:10px; position:relative;}
+	.layout h3{ border:#fff 1px solid; border-bottom:#e60021 3px solid; background:#f9f9f9; height:28px; line-height:28px; color:#e60021;}
+	.layout ul{ padding:5px 6px;}
+	.layout li{border-bottom:#ccc 1px dotted; background:url(../img/liStyle_bg.gif) no-repeat left center; padding-left:10px;}
+	.layout h4{ padding:5px 10px;}
+	.layout p{ padding:0 10px; color:gray; line-height:22px;}
+	.layoutGray h3{border:#fff 1px solid;}/*白色边框*/
+	.layout .more{ position:absolute; top:0; line-height:30px; right:5px;}
+	.layout .more a{ color:#666;}
+    .layout .more a:hover{ color:#c2001c;}
+    .layout li{ line-height:24px; position:relative;}
+    .layout li .date{ position:absolute; right:5px; color:gray;}
+    .layout li .state{ position:absolute; right:50px;}
+    .layout li .state2{ position:absolute; right:100px;}
+   
+	
+	/*栏目层*/
+	.columns{ border:#ececec 1px solid; height:300px;}
+	/*品牌展示*/
+	.brand{ overflow:hidden;}
+	.brand ul{ overflow:hidden;}
+	.brand li{ float:left; width:50%; _width:49%; margin:5px 0; padding:0; border:none; background:none; text-align:center;}
+	.brand li img{ height:57px; width:76px;}
+	/*品牌展示下的广告*/
+	.addvertise{padding-top:5px;}
+	/*特别推荐*/
+	.specialChoice{ overflow:hidden; position:relative; margin:5px; height:105px;}
+	.specialChoice .personalPic{ position:absolute; top:0; left:0;}
+	.specialChoice .personalPic img{ width:120px; height:90px;/*by yucy*/}
+	.specialChoice h4{ position:absolute; top:0; left:145px; font-size:14px;}
+	.specialChoice h5{ position:absolute; top:25px; left:145px; font-weight:normal;}
+	.specialChoice .personalInfo{ margin-left:145px; margin-top:30px; color:gray; padding-right:10px; line-height:22px;}
+    /*项目统计*/
+	.stats{ border:#fdbf90 1px solid; margin-bottom:10px;}
+	.stats h3{ border:#fff 1px solid; background:#feebc3;}
+	.stats p{ padding:5px; text-align:right; color:#e60021; font-weight:bold; font-size:16px;}
+	/*商品展示*/
+	.goodsShow{ border:1px solid #ececec; padding-bottom:5px;}
+	.goodsShow h3{ background:#f9f9f9; border:#fff 1px solid; border-bottom:1px solid #FDBF90;}
+	.goodsShow h4{ height:30px; line-height:30px; text-align:center;}
+	.goodsShow h4 a{ /*color:#ff5500;*/ font-weight:bold; font-size:14px;}
+	.goodsShow .picturesShow{ float:left; margin-left:3px; display:inline;}
+	.goodsShow .picturesShow img{ width:100px; height:80px;}
+	.goodsShow  ul{ margin-left:106px; margin-right:3px;}
+	.goodsShow label{ width:60px; display:inline-block; text-align:right; color:#666;}
+
+	/*按钮样式*/
+.orders,.promoterBtn,.signUp{ background:url(../img/pic.png) no-repeat left center;}
+	.orders{ background-position:0 0; width:86px; height:24px; display:inline-block; text-indent:-9999px;}/*下订单*/
+	.promoterBtn{ background-position:0 -59px; width:86px; height:24px; display:inline-block;}/*注册为推广人*/
+	.promoterBtn span{ display:none;}
+	.signUp{ background-position:0 -88px; width:86px; height:24px; display:inline-block; color:#fff; text-align:center; font-weight:bold; }/*我要报名*/
+	.signUp:hover{ color:#ff6; text-decoration:none;}
+	/*商品库下第一屏三列同高*/
+	.lowH{ height:240px;}
+	/*项目详情布局*/
+	.proLayout{ overflow:hidden;}
+    .proLayout .formLayout{ float:left; width:50%;}
+    .proLayout .statusLights{ margin-left:52%;}
+    /*剩余时间*/
+    .proLayout .remainingTime { margin:10px 0; margin-left:52%;}
+    .proLayout .remainingTime li{line-height:30px; text-align:center;}
+    .proLayout .remainingTime li{ font-size:14px;font-weight:bold;}
+    .proLayout .remainingTime .conOperation{clear:none}
+	
+	/*状态灯*/
+	.statusLights,.statusLights li.stept1,.statusLights li.stept2,.statusLights li.stept3{background:url(../img/statusLights.png) no-repeat;}
+	.statusLights{  margin-bottom:10px; }
+	.statusLights ol{height:29px;overflow:hidden;}
+	.statusLights li{ float:left; width:100px;line-height:29px; text-indent:43px; padding:0;}
+	.statusLights li.stept1{ background-position:0 0; text-indent:30px;}
+	.statusLights .selected{ font-weight:bold; font-size:14px;}
+	.statusLights li.stept2{ background-position:-100px -36px;}
+	.statusLights li.stept3{background-position:-200px -36px;}
+

@@ -1,0 +1,20 @@
+﻿@charset "utf-8";
+/* 
+Label: ebid360
+Version: 1.0
+Skin: skin01
+Design: 
+Email: liuly@gpcsoft.com
+Remark: 控件修改样式表，用于修改系统控件默认样式。
+--------------------------------------------------------------------------------------------------------- */
+/* 焦点图片控件样式 */
+.imgPlayer{ width:500px; height:300px; border:none; margin-bottom:10px;}
+.imgPlayer img{width:500px; height:300px;}
+.playerNav{background:#ccc; filter:alpha(opacity=60); -moz-opacity:0.6; opacity:0.6; padding:0; height:30px; line-height:30px;}
+.playerNav a {width:30px; height:18px; line-height:18px;}
+.imgPlayer li a span {bottom:11px; color:#000; text-align:center;}
+.playerNav a{background:#fff; border:1px solid #e60021;  color:#000; margin-top:5px;}
+.playerNav a:hover, .playerNav a.hover{background:#e60021; border:1px solid #e60021; color:#fff;}
+/* 焦点图片控件样式2 */
+.lowH{ height:240px;}
+.lowH img{ height:240px;}

@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* 
+Label: ebid360
+Version: 1.0
+Skin: skin01
+Design: 
+Email: liuly@gpcsoft.com
+Remark: 公告详情页面样式表。
+--------------------------------------------------------------------------------------------------------- */
+
+/*公告详情页面样式*/
+.package_headline { background: url(../img/bg_function.png) no-repeat scroll 0 0 transparent; font-size: 18px; margin: 20px 5px 0; padding: 0 0 10px 45px; }
+.layoutfix { display: block; overflow: hidden; }
+.package_fontcolor { color: #999999; font-size: 12px; font-weight: normal; }
+.base_step { height: 46px; overflow: hidden; }
+.base_step li { background-image: url(../img/un_step.png); background-position: 0 -78px; background-repeat: no-repeat; color: #999999; float: left; height: 36px; margin-left: -10px; text-align: center; width: 200px; }
+.base_step1 .view,.base_step2 .select,.base_step3 .book,.base_step4 .check,.base_step5 .submit { background-position: 0 18px; color: #333333; font-weight: bold; }
+.base_step2 .view,.base_step3 .view,.base_step3 .select,.base_step4 .view,.base_step4 .select,.base_step4 .book,.base_step5 .view,.base_step5 .select,.base_step5 .book,.base_step5 .check { background-position: 0 -30px; color: #333333; }
+.package_details_intro { margin-bottom: 20px; overflow: hidden; }
+.package_details_intro .b_bd { background: none repeat scroll 0 0 #E8F4FF; border: 1px solid #CBD2DC; padding: 10px; height: 120px; }
+.package_details_info { background-color: #FFFDED; border: 1px solid #E0E0E1; float: left; height: 100px; margin-bottom: 10px; overflow: hidden; padding: 0 12px; width: 370px; position: relative; z-index: 1; }
+.package_details_info .package_name { color: #333333; font-size: 16px; font-weight: bold; height: 30px; line-height: 20px; overflow: hidden; padding: 20px 0 0; width: 370px; }
+.pripackage_date_main { float: left; width: 500px; margin-left: 20px; }
+.package_details_date { height: 30px; /*overflow: hidden;*/ width: 100%; }
+.pacage_details_date p{padding-bottom:5px;}
+.package_details_info .mailtofrd { bottom: 6px; position: absolute; padding-left: 50px; }
+.package_lines { background-color: #FFFFFF; margin-top: 5px; border:1px solid #e7e7e7; }
+.package_linecon { background-color: #FFFFFF; border: 1px solid #DFDFDF; padding: 0 15px 0 18px; }
+.package_pribg { margin-top: 20px; }
+.package_pribg h2 { background: url(../img/bg_place.png) repeat-x scroll 0 -48px transparent; font-size: 14px; height: 23px; padding: 6px 0 0 10px; }
+.package_recommend { padding-top: 10px; }
+.package_recommend li { border-left: 1px solid #D8D8D8; float: left; margin-left: -1px; padding: 0 14px; width: 45%; height: 50px; }
+.package_recommend .item { height: 20px; overflow: hidden; }
+.package_recommend .item span { float: right; margin-left: 20px; }
+.base_price02 { color: #E56700; font-family: Verdana; font-style: normal; font-weight: bold; margin: 0 2px; text-decoration: none; }
+.base_txtgray { color: red; }
+.base_btns1,.base_btns1_disabled,.base_btns4,.base_btns4_disabled { background: url(../img/un_base_btn.png) no-repeat scroll 0 0 #DDDDDD; border: 0 none; color: #FFFFFF; cursor: pointer; font-weight: bold; height: 27px; padding-bottom: 1px; text-align: center; width: 115px; margin-left: 30px; }
+.base_btns1,.base_btns1_disabled,.base_btns4,.base_btns4_disabled { font-size: 14px; height: 32px; }
+.base_btns1 { background-position: 0 0; }
+.base_btns1_disabled { background-position: 0 -80px;}
+.base_btns4 { background-position: -120px 0; }
+.base_btns4,.base_btns4_disabled { text-indent: 20px; }
+.package_itinerary_table { width: 100%; }
+.package_itinerary_table th { background: none repeat scroll 0 0 #EDEDED; color: #333333; line-height: 26px; padding: 0 10px; text-align: center; }
+.package_itinerary_table td { border-bottom: 1px dotted #CCCCCC; color: #333333; padding: 4px 10px; }
+.package_itinerary_table .price { text-align: right; }
+
+/*特殊定义竞价公告中th的宽度*/
+.conbody-beer-three th { padding-left: 30px; width: 150px; }
+.center { text-align: center; }

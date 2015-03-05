@@ -1,0 +1,28 @@
+﻿@charset "utf-8";
+/* 
+Label: ebid360
+Version: 1.0
+Skin: skin01
+Design: 
+Email: liuly@gpcsoft.com
+Remark: 图标样式。
+--------------------------------------------------------------------------------------------------------- */
+.icon{white-space:nowrap; padding-left:20px; display:inline-block;}
+.room { background:url(../img/icon/home.gif) no-repeat left center;}/*我的商务室*/
+.room2 { background:url(../img/icon/home.png) no-repeat left center;}/*我的商务室2*/
+.news{ background:url(../img/icon/news.gif) no-repeat left center;}/*我要推广*/
+.users{ background:url(../img/icon/users.gif) no-repeat left center;}/*客户意见*/
+.phone{ background:url(../img/icon/phone.gif) no-repeat left center; padding-left:24px;}/*客服中心*/
+.shoppingCart{ background:url(../img/icon/shoppingCart.gif) no-repeat left center; padding-left:30px;}/*购物车*/
+.down{ background:url(../img/icon/down.gif) no-repeat right center; padding-right:16px;}/*箭头-向下*/
+/*箭头-向右*/
+.right{ background:url(../img/icon/right.gif) no-repeat right center; padding-right:16px;}
+.right:hover{background:url(../img/icon/right_red.gif) no-repeat right center; padding-right:16px;}
+
+.star05,.star04,.star03,.star02,.star01{ background:url(../img/star.png) no-repeat;}
+.star05{ background-position:0 -73px; width:90px; display:inline-block; text-indent:-9999px; height:16px;}/*五星*/
+.star04{ background-position:0 -55px; width:90px; display:inline-block; text-indent:-9999px; height:16px;}/*四星*/
+.star03{ background-position:0 -37px; width:90px; display:inline-block; text-indent:-9999px; height:16px;}/*三星*/
+.star02{ background-position:0 -17px; width:90px; display:inline-block; text-indent:-9999px; height:16px;}/*二星*/
+.star01{ background-position:0 0; width:90px; display:inline-block; text-indent:-9999px; height:16px;}/*一星*/
+

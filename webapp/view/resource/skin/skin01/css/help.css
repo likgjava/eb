@@ -1,0 +1,55 @@
+﻿@charset "utf-8";
+/* 
+Label: ebid360
+Version: 1.0
+Skin: skin01
+Design: 
+Email: liuly@gpcsoft.com
+Remark: 帮助中心内容样式表。
+--------------------------------------------------------------------------------------------------------- */
+
+/*商品库样式*/
+.categories{ background:url(../img/categoriesG.gif) repeat-y; border-bottom:#d6d6d6 1px solid; margin-bottom:10px;}
+.categories h2,.categories h3{ height:30px; line-height:30px;}
+.categories h2{text-indent:1em; background:url(../img/categories_topG.gif) no-repeat left top; color:#e60021; font-size:14px;}
+.categories h3{background:url(../img/categories_h3G.gif) no-repeat; padding:0;}
+.categories h3 a{ color:#000;}
+.categories ul li li:hover ul,.categories ul ul a:hover ul{visibility:visible; background:#d6d6d6;}
+.categories ul ul ul {visibility:hidden;position:absolute;left:180px;top:0;width:180px; z-index:99;overflow:hidden; padding:5px; _display:none;}
+.categories li{ text-indent:1em; background:url(../img/categories_liG.gif) no-repeat;}
+.categories a{ display:block; height:30px; line-height:30px;}
+.categories li:hover{background:#d6d6d6;}
+
+/*快捷工具*/
+.fastTools { margin-bottom:10px; border:#fdbf90 1px solid; padding:0 5px; padding-bottom:20px;}
+.fastTools h3{padding:10px;}
+.fastTools li{font-size:14px; line-height:30px; background:url(../img/icon/jt_r.gif) no-repeat 10px center; padding-left:25px;}
+
+/*购、议、竞*/
+.helpBase{background:url(../img/help_bg.gif) repeat-x; position:relative; margin-bottom:10px; _width:99%; overflow:hidden;}
+.helpBase h3,.help_yi h3,.help_jing h3{background:url(../img/pic2.png) no-repeat left top;}
+.helpBase h3 {background-position:0 0; text-indent:-9999px;height:59px; overflow:hidden;}
+.helpBase p{ position:absolute; left:230px;top:0; line-height:59px; font-size:16px;}
+.helpBase ol{ overflow:hidden; padding:5px;}
+.helpBase li{ float:left;background:url(../img/icon/next.png) no-repeat right center; padding-right:24px; margin-right:5px; margin-top:10px; white-space:nowrap;}
+.helpBase h4{background:#fffefc url(../img/help_z_bg.gif) repeat-x left bottom; color:#4a9abc; border:#4a9abc 1px solid; padding:0 5px; }
+.helpBase strong{font-weight:bold; padding-right:5px; font-size:16px; color:#4a9abc;}
+.helpBase li.end{ background:none; padding-right:0;}
+	.help_gou h4{border-color:#fc9658; color:#fc9658;}
+	.help_gou strong{color:#fc9658;}
+	.help_yi h3{ background-position:0 -68px;}
+	
+	.help_jing h3{ background-position:0 -136px;}
+	.help_jing h4{border-color:#fc5776; color:#fc5776;}
+	.help_jing strong{ color:#fc5776;}
+
+	
+/*问题搜索*/
+.question_search{ border:#fdbf90 1px solid; padding:5px 5px 10px 5px; margin-bottom:10px;}
+.question_search h3{ margin-bottom:10px;}
+.question_search input{ width:100px;}
+
+/*常用帮助*/
+.helpNews { height:200px; _height:220px;}
+.helpNews ul{ overflow:hidden; padding-bottom:10px;}
+.helpNews li{ float:left; width:45.5%; margin:0 10px; display:inline; border:none;}
