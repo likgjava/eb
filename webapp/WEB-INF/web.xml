@@ -1,0 +1,357 @@
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    
+    <display-name>srplatform</display-name>
+    <description>政采超源平台</description>
+
+	 <!-- dataSource 
+    <resource-ref id="ResourceRef_1208372995591">   
+        <res-ref-name>jdbc/platform</res-ref-name>   
+        <res-type>java.sql.DataSource</res-type>   
+        <res-auth>Container</res-auth>   
+        <res-sharing-scope>Shareable</res-sharing-scope>   
+    </resource-ref> -->
+    
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+			/WEB-INF/conf/bean/**/*.xml
+        </param-value>
+    </context-param>
+    
+    <!-- UrlRewriteFilter url隐藏过滤器 -->
+	<filter>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+    
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    
+    
+    <filter>
+    	<!-- 此filter用来过滤.pay请求, 因为网银接口回调时的乱码一直无法有效解决 -->
+        <filter-name>gbkFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>GBK</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    
+    <filter>
+        <filter-name>hibernateFilter</filter-name>
+        <filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+         <init-param>       
+	        <param-name>singleSession</param-name> 
+	        <param-value>true</param-value>    
+     	</init-param>
+    </filter>
+    
+    <filter>
+        <filter-name>securityFilter</filter-name>
+        <filter-class>org.springframework.security.util.FilterToBeanProxy</filter-class>
+        <init-param>
+            <param-name>targetClass</param-name>
+            <param-value>org.springframework.security.util.FilterChainProxy</param-value>
+        </init-param>
+    </filter>
+    
+    <!-- 缓存首页index.jsp -->
+	<filter> 
+           <filter-name>SimplePageCachingFilter</filter-name> 
+           <filter-class>         
+           		com.gpcsoft.core.web.filter.FrameSimplePageCachingFilter
+           </filter-class>
+           <init-param>
+		      	<param-name>cacheName</param-name>
+	   			<param-value>SimplePageCachingFilter</param-value>
+           </init-param>
+    </filter>
+           
+    <!-- cas begin -->   
+    <filter>  
+	    <filter-name>CAS Filter</filter-name>  
+		<filter-class>edu.yale.its.tp.cas.client.filter.CASFilter</filter-class>  
+	    <init-param>  
+	    	<param-name>edu.yale.its.tp.cas.client.filter.loginUrl</param-name>  
+	        <param-value>https://casweb:8443/cas/login</param-value>  
+	   	</init-param>  
+	    <init-param>  
+	    	<param-name>edu.yale.its.tp.cas.client.filter.validateUrl</param-name>  
+	        <param-value>https://casweb:8443/cas/serviceValidate</param-value>  
+	  	</init-param>  
+	    <init-param>  
+	    	<param-name>edu.yale.its.tp.cas.client.filter.serverName</param-name>  
+	        <param-value>localhost:8443</param-value>  
+	   	</init-param>  
+	</filter>  
+	
+	<filter-mapping>  
+		<filter-name>CAS Filter</filter-name>  
+	    <url-pattern>/userNameLogin.do</url-pattern>  
+	</filter-mapping>
+    <!-- cas end --> 
+    
+	<filter-mapping> 
+	       <filter-name>SimplePageCachingFilter</filter-name> 
+	       <url-pattern>*.index.jsp</url-pattern> 
+	</filter-mapping>
+	
+	<filter-mapping>
+        <filter-name>gbkFilter</filter-name>
+        <url-pattern>*.pay</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+    
+    <filter-mapping>
+        <filter-name>hibernateFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>hibernateFilter</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+   	<filter-mapping>
+        <filter-name>hibernateFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+	    <dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+   		<dispatcher>INCLUDE</dispatcher>
+   		<dispatcher>EXCEPTION</dispatcher>
+    </filter-mapping>
+
+	<filter>
+		<filter-name>etagFilter</filter-name>
+		<filter-class>org.springframework.web.filter.ShallowEtagHeaderFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>etagFilter</filter-name>
+		<servlet-name>petclinic</servlet-name>
+	</filter-mapping>  
+        
+    <filter-mapping>
+        <filter-name>securityFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+   			<dispatcher>FORWARD</dispatcher>
+    		<dispatcher>INCLUDE</dispatcher>
+    		<dispatcher>EXCEPTION</dispatcher>
+    </filter-mapping>
+        <filter-mapping>
+        <filter-name>securityFilter</filter-name>
+        <url-pattern>*.pay</url-pattern>
+    </filter-mapping> 
+    <filter-mapping>
+        <filter-name>securityFilter</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping> 
+    
+    <listener>
+        <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+    </listener>
+    
+    <listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+    
+    <listener>
+        <listener-class>com.gpcsoft.srplatform.core.web.listener.FrameServletContextListener</listener-class>
+    </listener>
+    
+    <listener>  
+    	<listener-class>org.springframework.security.ui.session.HttpSessionEventPublisher</listener-class>  
+	</listener>
+    
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>/WEB-INF/classes/sys/log4j.properties</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
+    
+    <servlet>
+        <servlet-name>action</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+		      	<param-name>namespace</param-name>
+	   			<param-value>conf/**/action*-servlet</param-value>
+		</init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+	<servlet>   
+        <servlet-name>CXFServlet</servlet-name>   
+        <servlet-class>   
+            org.apache.cxf.transport.servlet.CXFServlet   
+        </servlet-class>   
+        <load-on-startup>1</load-on-startup>   
+    </servlet>   
+  
+    <servlet-mapping>   
+        <servlet-name>CXFServlet</servlet-name>   
+        <url-pattern>/ws/*</url-pattern>   
+    </servlet-mapping>  
+    
+    <servlet-mapping>
+        <servlet-name>action</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>action</servlet-name>
+        <url-pattern>*.pay</url-pattern>
+    </servlet-mapping>
+    
+    <session-config> 
+        <session-timeout>30</session-timeout> 
+	</session-config> 
+
+ <!-- configure axis1.4 zhouzhanghe  begin -->    
+  <listener>
+       <listener-class>org.apache.axis.transport.http.AxisHTTPSessionListener</listener-class>
+  </listener>
+  <servlet>
+    <servlet-name>AxisServlet</servlet-name>
+    <servlet-class>
+        org.apache.axis.transport.http.AxisServlet
+    </servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>AdminServlet</servlet-name>
+    <servlet-class>
+        org.apache.axis.transport.http.AdminServlet
+    </servlet-class>
+    <load-on-startup>100</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>AxisServlet</servlet-name>
+    <url-pattern>/servlet/AxisServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AxisServlet</servlet-name>
+    <url-pattern>*.jws</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AxisServlet</servlet-name>
+    <url-pattern>/services/*</url-pattern>
+  </servlet-mapping>
+
+
+   <servlet>
+    <servlet-name>UploadFileHttpServlet</servlet-name>
+    <servlet-class>
+        com.gpcsoft.epp.webService.webService.ue.http.UploadFileHttpServlet
+    </servlet-class>
+  </servlet>
+	
+  <servlet-mapping>
+    <servlet-name>UploadFileHttpServlet</servlet-name>
+    <url-pattern>/UploadFileHttpServlet</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+    <servlet-name>DownloadFileHttpServlet</servlet-name>
+    <servlet-class>
+        com.gpcsoft.epp.webService.webService.ue.http.DownloadFileHttpServlet
+    </servlet-class>
+  </servlet>
+	
+  <servlet-mapping>
+    <servlet-name>DownloadFileHttpServlet</servlet-name>
+    <url-pattern>/DownloadFileHttpServlet</url-pattern>
+  </servlet-mapping>
+  	
+ <!-- uncomment this if you want the admin servlet -->
+ <!-- 
+  <servlet-mapping>
+    <servlet-name>AdminServlet</servlet-name>
+    <url-pattern>/servlet/AdminServlet</url-pattern>
+  </servlet-mapping>
+ -->
+    <!-- currently the W3C havent settled on a media type for WSDL;
+    http://www.w3.org/TR/2003/WD-wsdl12-20030303/#ietf-draft
+    for now we go with the basic 'it's XML' response -->
+  <mime-mapping>
+    <extension>wsdl</extension>
+    <mime-type>text/xml</mime-type>
+  </mime-mapping>
+
+  <mime-mapping>
+    <extension>xsd</extension>
+    <mime-type>text/xml</mime-type>
+  </mime-mapping>
+  <mime-mapping>
+    <extension>.zip</extension>
+    <mime-type>application/zip</mime-type>
+  </mime-mapping>
+  
+  <!-- soap监视器 begin -->
+   <!--<servlet>
+    <servlet-name>SOAPMonitorService</servlet-name>
+    <display-name>SOAPMonitorService</display-name>
+    <servlet-class>
+        org.apache.axis.monitor.SOAPMonitorService
+    </servlet-class>
+    <init-param>
+      <param-name>SOAPMonitorPort</param-name>
+      <param-value>5001</param-value>
+    </init-param>
+    <load-on-startup>100</load-on-startup>
+   </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>SOAPMonitorService</servlet-name>
+    <url-pattern>/SOAPMonitor</url-pattern>
+  </servlet-mapping>-->
+  <!-- soap监视器 end -->
+ <!-- configure axis1.4 zhouzhanghe end -->    
+
+	<servlet>
+		<display-name>FCExporter</display-name>
+		<servlet-name>FCExporter</servlet-name>
+        <servlet-class>com.fusioncharts.exporter.servlet.FCExporter</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FCExporter</servlet-name>
+		<url-pattern>/FCExporter</url-pattern>
+	</servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>view/srplatform/portal/index.jsp</welcome-file>
+    </welcome-file-list>
+    
+</web-app>
+

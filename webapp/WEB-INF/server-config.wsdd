@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+ <globalConfiguration>
+  <parameter name="adminPassword" value="admin"/>
+  <parameter name="enableNamespacePrefixOptimization" value="true"/>
+  <parameter name="attachments.Directory" value="F:\worksapce\java\company\zc\product\gpcsoft-eps-es\webapp\WEB-INF\attachments"/>
+  <parameter name="disablePrettyXML" value="true"/>
+  <parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
+  <parameter name="sendMultiRefs" value="true"/>
+  <parameter name="sendXsiTypes" value="true"/>
+  <parameter name="sendXMLDeclaration" value="true"/>
+ </globalConfiguration>
+ <handler name="LocalResponder" type="java:org.apache.axis.transport.local.LocalResponder"/>
+ <handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper"/>
+ <service name="epp/evaluatesys/timeSoapService" provider="java:RPC">
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="className" value="com.gpcsoft.epp.webService.webService.time.ws.TimeSoapService"/>
+  <parameter name="scope" value="session"/>
+ </service>
+ <service name="epp/evaluatesys/bidSoapService" provider="java:RPC">
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="className" value="com.gpcsoft.epp.webService.webService.bid.ws.BidSoapService"/>
+  <parameter name="scope" value="session"/>
+ </service>
+ <service name="es/ueSystem/orginfoSoapService" provider="java:RPC">
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="scope" value="session"/>
+  <parameter name="className" value="com.gpcsoft.epp.webService.webService.ue.soap.OrginfoSoapService"/>
+ </service>
+ <service name="AdminService" provider="java:MSG">
+  <parameter name="allowedMethods" value="AdminService"/>
+  <parameter name="enableRemoteAdmin" value="false"/>
+  <parameter name="className" value="org.apache.axis.utils.Admin"/>
+  <namespace>http://xml.apache.org/axis/wsdd/</namespace>
+ </service>
+ <service name="es/evaluatesys/BidSoapService" provider="java:RPC">
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="scope" value="session"/>
+  <parameter name="className" value="com.gpcsoft.epp.webService.webService.bid.ws.BidSoapService"/>
+ </service>
+ <service name="openBidSoapService" provider="java:RPC">
+  <parameter name="allowedMethods" value="enterOpenBidRoom,signOpenBidRoom,getSignedSuppliers,getWorkGroup,startOpenBid,getOpenBidInfo,confirmOpenInfo,getOpenConfirmInfo,uploadOpenBid,uploadSubKey,downSubKey,getPrjOpenStatus"/>
+  <parameter name="scope" value="session"/>
+  <parameter name="className" value="com.gpcsoft.epp.webService.openbid.OpenBidService"/>
+ </service>
+ <service name="es/ueSystem/bidSoapService" provider="java:RPC">
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="className" value="com.gpcsoft.epp.webService.webService.bid.ws.BidSoapService"/>
+  <parameter name="scope" value="session"/>
+ </service>
+ <service name="ecp/purchaseFileSoapService" provider="java:RPC">
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="className" value="com.gpcsoft.epp.webService.purchaseFile.PurchaseFileSoapService"/>
+  <parameter name="scope" value="session"/>
+ </service>
+ <service name="es/ueSystem/factorSoapService" provider="java:RPC">
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="className" value="com.gpcsoft.epp.webService.webService.evaluate.soap.FactorSoapService"/>
+  <parameter name="scope" value="session"/>
+ </service>
+ <service name="es/evaluatesys/projectSoapService" provider="java:RPC">
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="scope" value="session"/>
+  <parameter name="className" value="com.gpcsoft.epp.webService.webService.evaluate.soap.ProjectSoapService"/>
+ </service>
+ <service name="es/evaluatesys/uploadEvalBidRecordService" provider="java:RPC">
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="scope" value="session"/>
+  <parameter name="className" value="com.gpcsoft.epp.webService.webService.evaluate.soap.UploadEvalBidRecordService"/>
+ </service>
+ <service name="Version" provider="java:RPC">
+  <parameter name="allowedMethods" value="getVersion"/>
+  <parameter name="className" value="org.apache.axis.Version"/>
+ </service>
+ <service name="es/evaluatesys/uploadOpenBidService" provider="java:RPC">
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="scope" value="session"/>
+  <parameter name="className" value="com.gpcsoft.epp.webService.webService.evaluate.soap.UploadOpenBidService"/>
+ </service>
+ <service name="es/gxoa/syncProjectService" provider="java:RPC">
+  <parameter name="allowedMethods" value="*"/>
+  <parameter name="scope" value="session"/>
+  <parameter name="className" value="com.gpcsoft.pubservice.webService.webService.gxoa.ws.SyncProjectService"/>
+ </service>
+ <transport name="http">
+  <requestFlow>
+   <handler type="URLMapper"/>
+   <handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler"/>
+  </requestFlow>
+  <parameter name="qs:list" value="org.apache.axis.transport.http.QSListHandler"/>
+  <parameter name="qs:wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+  <parameter name="qs.list" value="org.apache.axis.transport.http.QSListHandler"/>
+  <parameter name="qs.method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+  <parameter name="qs:method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+  <parameter name="qs.wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+ </transport>
+ <transport name="local">
+  <responseFlow>
+   <handler type="LocalResponder"/>
+  </responseFlow>
+ </transport>
+</deployment>

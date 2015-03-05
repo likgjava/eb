@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd">
+	<tlib-version>1.0</tlib-version>
+	<jspversion>1.1</jspversion>
+	<short-name>dmTag</short-name>
+  	<uri>/tags/ecp-dm</uri>
+  	<info>实现显示领域属性值功能</info>
+  <!-- out 标签 -->
+  <tag>
+    <name>out</name>
+    <tagclass>com.gpcsoft.epp.common.tag.DmOutTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+    </info>
+    <attribute>
+      <name>value</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>tenderType</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>ebuyMethod</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+</taglib>
