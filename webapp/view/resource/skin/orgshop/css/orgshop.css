@@ -1,0 +1,136 @@
+@charset "utf-8";/* CSS Document *//* Label: ECP - E Concentration ProcurementVersion: 1.0Skin: base 基础样式Design: OTigerEmail: fanhy@gpcsoft.comRemark: 格式化样式表文件，用于初始化浏览器标签默认样式，以达到统一视觉效果的目的。--------------------------------------------------------------------------------------------------------- */
+/* Normalizes margin,padding */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, input, p, blockquote, th, td, form, iframe { margin:0; padding:0 }
+/* Normalizes font-size for headers */
+h1, h2, h3, h4, h5, h6 { font-size:100% }h1,h2,h3,h4,h5,h6{margin:0;padding:0;font-size:12px;font-weight:normal;}h2 a {color:#FFFFFF;}
+/* Removes list-style from lists */
+ol, ul { list-style:none }
+/* Normalizes font-style and font-weight to normal */
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal }
+/* Removes border from fieldset and img */
+img { border:0 }
+/* Left-aligns text in caption and th */
+caption, th { text-align:left }
+/* Removes quotation marks from q */
+q:before, q:after { content:'' }
+/* Normalizes other */
+html { width:100%; height:100%; background:#fff;}button { cursor:pointer;}
+
+/*页面容器*/
+#shopcontainer{ width:957px; margin:auto;} 
+.martop{ margin-top:10px;}
+
+/*头部样式*/
+.header {  -moz-background-clip: border; -moz-background-origin: padding; -moz-background-size: auto auto; background-attachment: scroll;background-color: transparent; width:953px; background-position: 0 0; background-repeat: repeat-x; margin-bottom: 10px; margin-left:0;overflow-x: hidden; overflow-y: hidden; position: relative; margin:0; padding:0;}
+.logo{float:left; margin:6px 11px; border:0;}
+.logo img{  margin-left:20px; height:30px; border:0;}
+.quickMenu{ float:right; height:30px; line-height:30px; display:block; margin-top:6px; }
+.quickMenu li{ margin-right::10px; padding:0 5px;display:inline; }
+
+/*企业名称信息*/ 
+.branding { -moz-background-clip: border; -moz-background-origin: padding; -moz-background-size: auto auto; background-attachment: scroll;background-image:url(../img/header_name.png); width:953px; background-position: 0 0; background-repeat: repeat-x; height: 104px; margin-top: 10px; position: relative; }
+h1{ font-family:"黑体" ; font-size:30px; font-style:normal; color:#1784C5; font-weight:bold;  display:block;}
+h2{ font-family:"宋体" ; font-size:14px; font-style:normal; color:#1784C5; font-weight:bold;  display:block; letter-spacing:2px;}
+.webName{ padding-top:20px; padding-bottom::35px; height:86px; display:block; overflow:hidden;}
+.branding .topAdv{ position:absolute; top:0; right:0;}
+
+/*顶部广告*//*主导航
+*/.navMain{overflow:hidden;background: url(../img/nav.png) no-repeat left center;width:953px;height:32px;line-height:32px;font-size:14px;font-weight:bold;display:block;margin:0;padding:0;}
+.navMain li{ float:left; margin-right:1px;margin-left:1px; display:block;}
+.navMain a{ color:#fff; display:block; text-align:center;width:134px;}
+/*.navMain a:hover,.navMain li.selected{ background:url(../img/navMain_h.png) no-repeat; text-decoration:none;}
+.hotline { position:absolute; top:50px; right:5px; background:url(../img/phone.png) no-repeat; width:500px; height:30px; text-indent:-9999px;}*/
+
+/*广告开始*/
+.advert{  margin-top:5px; background-image:url(../img/advertising.jpg);  width:953px; height:198px;display:block; float:none;}
+.text{ font-family:"黑体"; color:#FFFFFF; font-size:25px; margin-left:125px; padding-top:50px; position: relative; width: 500px;line-height:50px;}
+.text2 { color:#FFFFFF;  font-family:"黑体";  font-size:25px;  line-height:40px; margin-left:125px; position: relative;  width: 500px; } .quickMenu{ float:right; height:30px; line-height:30px; display:block; margin-top:6px; }
+
+/*搜索开始*/
+.wrapper{  margin-bottom: 0;  margin-left: auto; margin-right: auto;  margin-top: 0;  overflow-x: hidden;  overflow-y: hidden; width: 957px;}
+.crumbs { padding-bottom: 8px;  padding-right: 0; padding-top: 10px;height:25px;}
+.crumbs span {color: #000000; float: left; padding-left: 20px; padding-top: 11px;}
+.bor-comments{border:#dcdcdc 1px solid;}
+.marlf{ float:left;}
+.marrg{ float:right;}
+
+/*左侧开始*/
+.boxleft{ float: left;  height: auto; width: 243px;overflow:hidden; }
+/*企业档案*/
+.Ent{ height:auto; display:block;  overflow:hidden;margin:0;padding:0;margin-bottom:10px;}
+.title{  background-image:url(../img/title_bg.png); background-position:top; background-repeat:no-repeat; border:none;  height:40px; width:233px; font-size:14px; color:#0198CD;font-weight:bold; display:block;}
+.marginlf{background-image:url(../img/pic3.png);background-repeat:no-repeat;background-position:left 85%;padding:12px 0 0px 18px;margin-left:20px;float:left;}
+.leficon{float:left;	margin-left:15px; margin-top:13px;display:block;overflow:hidden;}
+.lefcon{overflow:hidden;display:block;height:275px;	width:231px;margin:0;border-left:1px solid #CADADA; border-right:1px solid #CADADA;border-bottom:1px solid #CADADA;background-color:#E4F5FF;}
+.lefcon div p{margin-left:10px;margin-top:13px;}
+.pic{float:left;margin:10px;}
+.scores{float:left;margin:10px;padding:0;display:inline; }
+.scorestext{float:left;display:block;width:231px;height:150px;}
+.text3 { float:left; display:block;font-weight:bold;/*width:80px;*/}
+.text4{float:left; display:block; font-weight:bold; width:70px;}
+*html #div{ margin-left:-3px}
+*html ul{ margin-left:-3px}
+*html p{ margin-left:-3px}
+.lefcon1 p{margin-left:10px; margin-top:13px;}
+.scoresbtn{display:inline;float:left;margin-top:0;padding-top:0;width:231px;height:50px;overflow:hidden;text-align:center;}
+.btn{  background: url(../img/collect_btn.gif) no-repeat;  height:24px; width:74px; margin:0px;  padding:0px;  border:none; }
+.btn1{ background: url(../img/message_btn.gif);height:24px;width:74px; margin:0px; padding:0px; border:none; margin-left:20px;}
+
+/*产品信息*/
+.lefcon1{	display:block;height:auto;width:231px;margin:0;border-left:1px solid #CADADA; border-right:1px solid #CADADA;border-bottom:1px solid #CADADA;background-color:#E4F5FF;overflow:hidden;}
+
+/*商品分类*/		
+.categories{ background:#E4F5FF;  border:1px solid #CADADA; width:231px; height:260px;}
+.categories h3{ height:30px; line-height:30px;padding:0;}
+.categories h3 a{ color:#000;}
+.categories a{ display:block; height:30px; line-height:30px; white-space:nowrap;}
+.categories li{ text-indent:2em; background:url(../img/pic1.png) no-repeat 5px center; border-bottom:1px dotted #CCCCCC;}
+.categories ul li:hover dl,.categories li:hover a{visibility:visible; background:#CADADA;}
+.categories ul li:hover dl{ border:#CADADA 4px solid; background:#fff;}
+.categories ul li:hover dl dd a{ background:#fff;}
+.categories ul li:hover dl dt a{ display:block; background:#fdfbf3;}
+.categories ul dl{visibility:hidden;position:absolute;left:80px;top:0;width:140px; z-index:99;overflow:hidden; padding:5px; _display:none;}
+.categories dl{ text-indent:0;}
+.categories dt{ font-weight:bold;}
+.categories dl a{ display:inline-block; padding:0 2px; height:26px; line-height:26px;}
+.categories dt a{ color:#000;}.infor{float:left;margin:10px;padding:0;display:inline; }
+
+.infor li{background-image:url(../img/pic1.png);background-position:left;background-repeat:no-repeat;padding-left:20px;line-height:3;border-bottom: 1px dotted #CCCCCC;width:190px;display:block;margin-top:2px;font-weight:bold;}
+.ul li a{color:#0066CC;}
+
+/*右侧开始
+*/.boxright{ float: right;height: auto; width: 706px;}
+
+/*公司介绍*/
+.introduction{float:left;width:706px;overflow:hidden;display:block;margin:0;padding:0;}
+.titleright{ background-image: url(../img/pic0.png); background-position:top; background-repeat:no-repeat;border:none; height:30px; width:706px;font-size:14px; color:#0198CD; font-weight:bold; display:block;}
+.marginright{ float:left;margin-left:10px;margin-right:10px; margin-top:5px;display:block;color:#FFFFFF;}
+.more{float:right;font-size:12px;color:#0066CC;margin-right:10px;margin-top:6px;font-weight:normal;display:block;background-image:url(../img/pic2.png);background-repeat:no-repeat;background-position:right;width:40px;}
+.more img{margin:2px;}
+.title .more{margin-top:12px;}
+.conrig{float:left;width:704px;background-color:#FFFFFF;text-indent:25px;border-left:1px solid #98D7FF; border-right:1px solid #98D7FF;border-bottom:1px solid #98D7FF;overflow: hidden;}
+.details{padding:20px;margin-left:136px;font-size:14px;	font-weight:normal;color:#333;line-height:2;}  
+.conrig .orgImg { float: left; height: 150px;  width: 200px;padding:20px;}
+.conrig .goodsImg { float: left; height: 140px; width: 140px; }
+.figure {display: inline; float: left; height: 182px;margin:10px 10px 10px 10px;  width: 152px;	overflow: hidden}
+.photo {  border:1px solid  #CCC;background-color:#fff;margin:0px;padding:4px;height: 142px;}
+.name{text-align:center;text-indent:0;height:30px;margin-top:10px;}
+.conrig ul {border-bottom:1px dotted #CCC;}
+.conrig ul li {color:#666;display:block;line-height:2;margin-right:10px;text-align:right;}
+.conrig .list ul li {color:#666;display:block;line-height:2;margin-right:10px;text-align:left;}
+.message {padding:20px;font-weight:normal;color:#333;line-height:2;} 
+.sidder{ list-style:none;}*html .h2{margin-left:-3px;}
+
+.wrap {-moz-background-clip: border;-moz-background-origin: padding;-moz-background-size: auto auto;background-attachment: scroll;background-color: #CEF1F7;background-image: none;background-position: 0 0;background-repeat: repeat;height: auto;margin-bottom: 0;margin-left: auto;margin-right: auto;margin-top: 0;width: 960px;}
+
+div {position: relative;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, input, p, blockquote, th, td, form, iframe {margin-bottom: 0;margin-left: 0;margin-right: 0;margin-top: 0;padding-bottom: 0;padding-left: 0;padding-right: 0;padding-top: 0;}
+* {}body {font-family: Verdana,Arial,Helvetica,"宋体","黑体",sans-serif;font-size: 12px;font-size-adjust: none;font-style: normal;font-variant: normal;font-weight: normal;line-height: 1.5;}
+
+/* 默认链接颜色 */
+a{outline-style:none;color:#333;text-decoration:none}
+a:hover{color:#FF0000;text-decoration:underline;}
+
+/*底部信息*/
+.footer{ border-top:2px solid #5dabe3;clear:both;/*background-image:url(../img/Bottom_bg.png); by yucy */background-repeat:repeat-x;height:106px;margin:20px 0;color:#0067CA ;text-align:center;padding-top:15px;line-height:2;}
+.footer p{color:#0066cc;text-align:center;/*margin-top:50px;*/}

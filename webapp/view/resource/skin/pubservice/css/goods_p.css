@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+/* 
+Label: EPs2008 
+Version: 2.0
+Design: OTiger
+Email: liuly@gpcsoft.com
+Remark: 商品展示页面使用。
+--------------------------------------------------------------------------------------------------------- */
+/*.list-content {clear: both;margin: 0 0 15px;width: 760px;}*/
+.list-content .list-view-enlarge {margin: 22px auto 10px;width: 756px;}
+
+.list-view-enlarge li.list-item {border-bottom: 1px dashed #CCCCCC;float: left;height: 340px;margin: 0 0 22px;overflow: hidden;
+padding: 0 10px;position: relative;text-align: center;width: 232px;}
+
+.list-view-enlarge h3.summary {background: none repeat scroll 0 0 transparent;border: medium none;bottom: 7px;font-size: 12px;font-weight: 600;height: 45px;left: 13px;line-height: normal;overflow: hidden;padding: 0 0 0 20px;position: absolute;text-align: left;width: 200px;z-index: 9;}
+
+.list-view-enlarge .photo {border: 1px solid #DDDDDD;height: 220px;margin: 0 auto 5px;padding: 5px;position: relative;
+width: 220px;}
+
+.list-view-enlarge .photo a {display: table-cell;height: 220px;outline: medium none;text-align: center;vertical-align: middle;width: 220px;}
+.list-view-enlarge .photo a img {vertical-align: middle;width: 220px;height: 220px;}
+.list-view-enlarge .price:after {clear: both;content: "";display: block;height: 0;visibility: hidden;}
+.list-view-enlarge .price {height: 25px;line-height: 20px;overflow: hidden;text-align: right;}
+.list-view-enlarge .price em {color: #FF6501;font-weight: 700;margin: 0 3px;}
+.list-view-enlarge .price span.item-price{	float: left;}
+.list-view-enlarge .price span.item-price span {display: none;}
+.list-view-enlarge .attribute {height: 40px;text-align: left;}
+.list-view-enlarge .attribute li {display: inline;float: left;margin: 0 2px;border: 0px;}
+.list-view-enlarge .attribute li img {vertical-align: middle;}
+.list-view-enlarge .attribute a.ensure,.list-view .attribute a.ensure {display: inline-block;font-size: 0 !important;height: 16px;line-height: 9999em !important;overflow: hidden;vertical-align: middle;width: 16px;}
+.list-view-enlarge .attribute a.ensure span,.list-view .attribute a.ensure span{display: none !important;}
+.list-view-enlarge .attribute .disabled {color: #aaa;}
+.list-view-enlarge . a.promotion,.list-view .attribute a.promotion{background-position: -197px -52px;height: 16px;width: 37px;}
+.list-view-enlarge .other {bottom: 13px;display: block;height: 40px;left: 12px;position: absolute;width: 20px;z-index: 10;}

@@ -1,0 +1,27 @@
+@charset "utf-8"; fieldset, img {border:medium none; }
+.ic-btn {	width:78px; height:25px; border:0; font-size:14px; font-weight:700; background:url(../img/ic_btn.png) no-repeat; cursor:pointer; }
+.ic-btn-blue {	color:#FFF; background-position:0 0; }
+.ic-btn-blue:hover {	background-position:-80px 0; }
+.ic-btn-gray {	color:#000; background-position:0 -25px; }
+.ic-btn-gray:hover {	background-position:-80px -25px; }
+.goods-box {	position:relative; zoom:1; }
+.goods-box .hd,.goods-box .rc-tp,.goods-box .rc-tp span,.goods-box .rc-bt,.goods-box .rc-bt span {	background:url(../img/box_bg.png) no-repeat; }
+.goods-box .rc-tp,.goods-box .rc-bt {	display:block; width:100%; height:4px; _overflow:hidden; position:relative; }
+.goods-box .rc-tp span,.goods-box .rc-bt span {	float:right; width:4px; height:4px; }
+.goods-box .rc-tp {	background-position:-3px 0; margin-bottom:-4px; }
+.goods-box .rc-bt {	background-position:-3px -3px; margin-top:-4px; }
+.goods-box .rc-bt span {	background-position:0 -3px; }
+.goods-box .hd {	height:28px; border:solid #c1dbff; border-width:1px 1px 0; background-color:#e1eefe; background-position:0 -89px; background-repeat:repeat-x; padding:0 10px; }
+.goods-box .hd h3 {	font:bold 14px/ 28px arial, sans-serif; color:#004d80; }
+.goods-box .bd {	border:1px solid #c1dbff; padding:10px; background:#FFF; }
+.goods-box .form-tip {	position:absolute; right:1px; top:1px; line-height:28px; line-height:30px; padding:0 10px 0 0; }
+.goods-box .form-tip em {	color:red; font-style:normal; }
+.publish-title h2,dl.hint dt {	background:transparent url(../img/ic_bg.png) no-repeat scroll 500px 500px; }
+.publish-title {	zoom:1; }
+.publish-title:after {	display:block; visibility:hidden; clear:both; height:0; content:"\0020"; }
+.publish-title {	height:74px; }
+.type-a h2 {	background-position:0 -70px; }
+.type-b h2 {	background-position:0 -24px; }
+.publish-title h2 {	float:left; width:161px; height:44px; margin:15px 10px 15px 22px; padding:0; }
+.publish-title h2 span {	display:none; }
+.publish-title .hint {	float:left; margin-top:28px; }

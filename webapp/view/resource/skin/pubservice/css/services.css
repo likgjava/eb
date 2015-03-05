@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+/**
+Label: EPs2008 
+Version: 2.0
+Design: OTiger
+Email: liuly@gpcsoft.com
+Remark: 服务模块使用。
+*/
+/**************************服务展示***************************/
+#serviceSubscribe,#generalService{overflow:hidden;font-size:12px;}
+.title{background: url("../img/arrow.gif") no-repeat scroll 0 5px transparent;border-bottom: 1px solid #CECECE;color: #333333;font-size: 14px;font-weight: bold;margin-bottom: 8px;padding: 0 0 5px 20px;}
+.unity-list {margin-bottom: 8px; width: 100%;overflow:hidden;}
+.unity-list li {float: left;margin: 10px 0 0;padding: 0 0 10px;width: 100%;}
+.unity-line {border-bottom: 1px dashed #E6E6E6;}
+.unity-list div, .unity-list dl {float: left;line-height: 1.5;}
+.unity-logo {padding: 0 15px;width: 70px;}
+.unity-logo img{width:70px;}
+.unity-info {padding: 0 15px;width: 355px;}
+.unity-list dt {color: #333333;margin-bottom: 5px;}
+.unity-list dd {color: #666666;text-indent: 2em;}
+.unity-tilte strong{font-weight:bold;}
+.unity-content a{color:#0066CC;}
+.unity-content a:hover{color:#FF7300;}
+.unity-price {padding: 13px 0 0;text-align: center; width: 170px; }
+.unity-price-box {color: #666666; text-align: center;cursor: pointer;}
+.unity-price strong {color: #FF7300; font-family: "宋体"; font-size: 14px; font-weight:bold; padding-left: 6px;}
+.unity-btn-order, .unity-btn-order a:link, .unity-btn-order a:visited {background: url("../img/btn-01.png") no-repeat scroll 0 0 transparent;display: inline-block;color:#999999;font-size: 14px;font-weight: bold;height: 30px;line-height: 30px;text-align: center;text-decoration: none;width: 92px;margin: 10px 0;z-index: 10;}
+.unity-btn-order a:link, .unity-btn-order a:visited {color: #333333;margin: 0;}
+.unity-btn-zindex {z-index:15;}
+.unity-btn-down { background: url("../img/arrow_down.gif") no-repeat scroll 0 5px transparent;float: left;height: 25px;margin: 0 10px 0 0;position: relative;width: 20px;z-index: 10;}
+.unity-arrow-down {border: 1px solid #FFFFFF;padding: 5px;position: relative;width: 120px;z-index: 5;}
+.unity-arrow-box {background-color:#F2F7FC;border-color: #86AAD1;border-style: solid;border-width: 1px 2px 1px 1px;display: none;margin-top: -30px;padding: 5px;position: relative;width: 146px;z-index: 9;}
+#new-content p { line-height: 180%; }
+.unity-btn { float: right; padding: 0; text-align: center; width: 90px;}
+.unity-btn-box { height: 55px; text-align: left; }
+.unity-tit {background: url("../img/arrow.gif") no-repeat scroll 0 5px transparent;border-bottom: 1px solid #CECECE;color: #333333;font-size: 14px;font-weight: bold;margin-bottom: 8px;padding: 5px 0 5px 20px;}
+
+/*******************************服务订阅******************************/
+.title_v1 { height: 28px; padding: 0 2px; position: relative; }
+.title_v1 .titie_txt {background: url("../img/cb.png") repeat scroll 0 0 transparent;color: #1C4E86;font-weight: bold;line-height: 28px;margin: 0;padding: 0 0 0 10px;}
+.title_v1 .c_left {background: url("../img/cl.png") no-repeat scroll 0 0 transparent;height: 28px;left: 0;position: absolute;top: 0;width: 2px;}
+.title_v1 .c_right {background: url("../img/cr.png") no-repeat scroll -1px top transparent;height: 28px;position: absolute;right: 0;top: 0;width: 2px;}
+.content_box {border-color: #C9E0FE;border-style: solid;border-width:1px;color: #666666;font-family: '宋体';margin-bottom: 10px; padding:10px 0;}
+.content_box .inline_box { float: left; line-height: 1.8; width:600px;}
+.content_box .title_1 {color:#000;font-size: 14px;font-weight: bold; line-height: 1.5; float:left; width: 140px; text-align:right; padding-right:20px;}
+.box_1, .box_2, .box_3, .box_4, .box_5 {clear:both; width:100%; overflow:hidden; margin-bottom:10px;}
+.box_1 {}
+.box_1 .title_1 .img_box { /*position: relative; top: -4px;*/ overflow:hidden;}
+.box_2 .p1,.box_3 .p1 { width: 120px;}
+.box_3 .p1{float:left;}
+.box_5 .img1 { padding-top: 16px; width: 68px; }
+.box_5 .img3 { height: 170px; overflow: hidden; }
+.box_5 .img3 .selectsell_box {background: none repeat scroll 0 0 #E9F3FF;border: 1px solid #CAE1FE;float: left;height: 160px;margin-right: 8px;overflow: hidden;padding: 5px 10px 0;width: 110px;}
+.box_5 .img1 span {display: block;line-height: 1.5;padding: 4px 0;text-align: center;}
+.box_5 .img2 {background: url("../img/add.png") no-repeat scroll center center transparent;height: 72px;width: 72px;}
+.box_5 .img3 .selectsell_box .ico { height: 60px; padding: 6px 24px; width: 82px; }
+.box_5 .img3 .selectsell_box p {line-height: 1.5;}
+.box_5 .img3 .selectsell_box .p1,.box_5 .img3 .selectsell_box .p2 {padding-left: 24px;}
+.box_6 .table_count .txt_box { margin-right: 24px; }
+.box_7 { padding: 8px 12px 4px; }
+.box_8 { border-bottom: 1px solid #EEEEEE; margin-bottom: 64px; padding: 4px; position: relative;}
+.box_8 .submit_btn, .box_8 .submit_btn_hover {background: url("../img/btn_1.gif") no-repeat scroll 0 -96px transparent;color: #CCCCCC;cursor: pointer;font-size: 14px;font-weight: bold;height: 31px;line-height: 32px;margin-left: 32px;text-align: center;width: 85px;}
+.box_8 .tips {background: url("../img/submit_tips.gif") no-repeat scroll 0 0 transparent;display: block;font-weight: bold;height: 39px;left: 32px;padding-top: 16px;position: absolute;text-align: center;top: 40px;width: 142px;}
+.cb_ico2 {background: url("../img/cb_ico2.png") no-repeat scroll 0 0 transparent;cursor: default; padding: 0 10px;}
+.cb_ico3 {background: url("../img/cb_ico3.png") no-repeat scroll 0 0 transparent;cursor: default; padding: 0 10px;}
+.box_8 .submit_btn_hover { background-position: 0 0; color: #934002;}
+.box_8 .submit_btn, .box_8 .submit_btn_hover {background: url("../img/btn_1.gif") no-repeat scroll 0 -96px transparent;color: #CCCCCC;cursor: pointer;font-size: 14px;font-weight: bold;height: 31px;line-height: 32px;margin-left: 32px;text-align: center;width: 85px;}
+.box_8 .submit_btn_hover {background-position: 0 0;color: #934002;}
+.no-data {background: url("../img/warning.gif") no-repeat scroll 140px 30px transparent;padding: 30px 0 30px 205px;}
+.no-data p {color: #666666;}
+.mt10 {margin-top: 10px;}
+.strong_num {color: #FF7302;font-weight: bold;}
+.normal_num {color: #FF7302;}
+.btn-unity {background: url("../img/btn-03.png") no-repeat scroll 0 0 transparent;display: inline-block;height: 32px;margin-left: 8px;padding-left: 16px;}
+.no-data .nodata-tit { color: #333333; font-size: 14px; font-weight: bold;}
+.btn-unity a, .btn-unity a:link, .btn-unity a:visited {background: url("../img/btn-03.png") no-repeat scroll right 0 transparent;color: #934002;display: inline-block;font-size: 14px;font-weight: bold;height: 32px;line-height: 32px;padding-right: 16px;}
+.table_count td ul{float:right;}
+.table_count td ul li {float:left;margin:0 10px;}

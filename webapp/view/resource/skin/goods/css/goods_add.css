@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+/* 
+Label: EPs2008 
+Version: 2.0
+Design: OTiger
+Email: liuly@gpcsoft.com
+Remark: 商品图片展示页面使用。
+--------------------------------------------------------------------------------------------------------- */
+.k1{ width:200px; height:200px; float:left; margin-right:10px;}
+.imgAndForm ul{ _float:left;_width:530px;}
+.img_250_1  {background-repeat:no-repeat;border:1px solid #D5D5D5;margin-bottom:5px;height:175px;width:200px}
+.imgInch {width:120px;height:120px}

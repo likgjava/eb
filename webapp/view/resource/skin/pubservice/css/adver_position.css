@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/**
+Label:EPs2008 
+Version:2.0
+Design:OTiger
+Email:liuly@gpcsoft.com
+Remark:服务模块使用。
+*/
+/**************************服务展示***************************/
+	.imgPlay{ width:260px; height:200px; margin-bottom:10px; overflow:hidden;}
+	.imgPlay img{ width:260px; height:200px;}
+	.imgPlay li{ width:260px; height:260px;}
+	.adverTypeDivSize{ text-align:center; width:240; height:240; float:left;margin-left:10px; overflow:hidden;}
+	.adverDivPo{ margin-bottom:10px;}
+	.adverPosInfoDiv{width:500px;margin-left:130px;border:1px double #FFCD6D;}
+	.adverPosInfoDiv ul li{margin-left:140px;margin-bottom:5px;}
+	
+	.adverPreview{margin-left:150px;overflow:hidden;}
+	
+	
+	

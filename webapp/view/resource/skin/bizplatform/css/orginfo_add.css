@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+/* 
+Label: EPs2008 
+Version: 2.0
+Design: OTiger
+Email: liuly@gpcsoft.com
+Remark: 机构图片展示页面使用。
+--------------------------------------------------------------------------------------------------------- */
+
+.img_250_2  {background-repeat:no-repeat;border:1px solid #D5D5D5;margin-bottom:5px;height:200px;width:200px}
+.bagClose {background-position:left center; background-repeat:no-repeat; text-indent:18px; line-height:18px;background-image:url(../img/minus3.gif);padding-left:20px;}
+.bagOpen {background-position:left center; background-repeat:no-repeat; text-indent:18px; line-height:18px;background-image:url(../img/plus3.gif);padding-left:20px;}
+.bagTreeLine {background-position:left center; background-repeat:no-repeat; text-indent:18px; line-height:18px;background-image:url(../img/line3.gif);padding-left:20px;}

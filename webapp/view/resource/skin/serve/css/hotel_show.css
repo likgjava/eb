@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/* 
+Label: EPs2008 
+Version: 2.0
+Design: OTiger
+Email: liuly@gpcsoft.com
+Remark: 酒店图片展示页面使用。
+--------------------------------------------------------------------------------------------------------- */
+.hotel_stars01, .hotel_stars02, .hotel_stars03, .hotel_stars04, .hotel_stars05 { background-image: url(../img/bg_star.gif); background-repeat: no-repeat;overflow: hidden; padding-bottom:2px;}
+.hotel_stars01 {padding-left:10px;}
+.hotel_stars02 {padding-left:26px;}
+.hotel_stars03 {padding-left:43px;}
+.hotel_stars04 {padding-left:59px;}
+.hotel_stars05 {padding-left:75px;}
+
+.pay_00, .pay_01, .pay_02, .pay_03, .pay_04, .pay_05 {}
+.pay_00 {background-image: url(../img/unionPay.gif);padding-left:37px;padding-bottom:12px;}
+.pay_01 {background-image: url(../img/master.gif);padding-left:39px;padding-bottom:11px;}
+.pay_02 {background-image: url(../img/visa.gif);padding-left:41px;padding-bottom:10px;}
+.pay_03 {background-image: url(../img/amex.gif);padding-left:22px;padding-bottom:11px;}
+.pay_04 {background-image: url(../img/dinersClub.gif);padding-left:36px;padding-bottom:11px;}
+.pay_05 {background-image: url(../img/jcb.gif);padding-left:17px;padding-bottom:11px;}
+
+.searchresult_caption { background-color: #ddd; padding: 6px;}
+.layoutfix { display: block; overflow: hidden;}
+.searchresult_caplist { padding-left: 5px;}
+.searchresult_caplist li { background: url(../../skin07/img/dot.png) no-repeat 10px 10px transparent; display: inline; float: left;
+overflow: hidden; padding-left: 20px;text-align: left;white-space: nowrap;width: 40%;}
+.searchresult_caption .link {background-position: center center;background-repeat: no-repeat; float: left;}

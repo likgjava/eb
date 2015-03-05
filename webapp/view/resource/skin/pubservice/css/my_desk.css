@@ -1,0 +1,308 @@
+@charset "utf-8";
+
+/* 
+Label: EPs2008 
+Version: 2.0
+Design: OTiger
+Email: liuly@gpcsoft.com
+Remark: 我的桌面使用。
+--------------------------------------------------------------------------------------------------------- */
+@import url(goods_list.css);  /*商品显示。*/
+
+@import url(goods_l.css);  /*商品列表显示。*/
+
+@import url(goods_p.css);  /*商品大图显示。*/
+
+.infocenter {
+	border:1px solid #E2C4B0;
+	padding: 10px 10px 5px 10px;
+	position: relative;
+	height: auto;
+	overflow: hidden;
+}
+
+.infocenter .avatar {
+	left: 10px;
+	position: absolute;
+	top: 10px;
+}
+
+.infocenter .avatar img {
+	height: 80px;
+	width: 80px;
+}
+
+.infocenter .avatar .modify {
+	background-color: #FFFFFF;
+	bottom: 0;
+	display: none;
+	left: 0;
+	opacity: 0.75;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	width: 80px;
+}
+
+.infocenter .avatar-hover .modify,.infocenter .avatar:hover .modify {
+	display: block;
+}
+
+.infocenter .info {
+	line-height: 23px;
+}
+
+.infocenter .info .sstrong {
+	font-family: "Microsoft Yahei", "Arial", sans-serif;
+	font-size: 21px;
+	line-height: 1em;
+}
+
+.infocenter .info .vip {
+	padding-left:10px;
+}
+
+.infocenter .prompt {
+	margin-top: 3px;
+}
+
+.infocenter .prompt li {
+	float: left;
+	margin-right: 8px;
+	white-space: nowrap;
+}
+
+.infocenter .prompt li.logintips {
+	color: #999999;
+}
+
+.infocenter .imgRight {
+	float:right;
+}
+.infocenter .imgRight .ico-payment{
+	background-position:-470px 0;
+
+}
+
+.infocenter .imgRight ul li{
+ height: 80px;
+ width: 80px;
+ margin-right: 5px;
+ float:  left;
+}
+
+
+.infocenter .notice {
+	border: 1px solid #C4D6DA;
+	clear: both;
+	margin: 15px 0 5px;
+}
+
+.infocenter .notice .wrapper {
+	background:
+		url("view/resource/skin/pubservice/img/mytb_v4_bg.png")
+		repeat-x scroll center -750px #F0F6F9;
+	border: 1px solid #FFFFFF;
+	overflow: hidden;
+}
+
+.infocenter .notice .section {
+	border-top: 1px solid #E1E2E7;
+	line-height: 10px;
+	margin: -1px 6px 0;
+	padding-left: 70px;
+}
+
+.infocenter .notice strong,.infocenter .notice .section ul,.infocenter .notice .section ul li
+	{
+	float: left;
+}
+
+.infocenter .notice strong {
+	clear: left;
+	font-weight: bold;
+	margin-left: -67px;
+}
+
+.infocenter .notice .section ul {
+	width: 100%;
+}
+
+.infocenter .notice .section ul li {
+	color: #999999;
+	margin-right: 5px;
+	min-width: 100px;
+	white-space: nowrap;
+}
+
+.infocenter .notice .section ul li strong {
+	clear: none;
+	color: #FF6600;
+	float: none;
+	font-weight: normal;
+	margin: 0;
+}
+
+.infocenter .alipay {
+	margin-top: 15px;
+}
+
+.infocenter .alipay a {
+	margin-right: 6px;
+}
+
+.infocenter .alipay a.account {
+	border-bottom: 1px solid #404040;
+	color: #404040;
+	text-decoration: none;
+}
+
+.infocenter .alipay a.account:hover {
+	border-bottom: 1px solid #FF6600;
+	color: #FF6600;
+}
+
+.chapter {
+	width: auto;
+	margin-bottom: 10px;
+}
+.sec-tab {
+	background:url("../img/mytb_v4_bg.png") repeat-x scroll center -299px #FFFFFF;
+	border: 1px solid #b8d3ec;
+	border-bottom:0px;
+	height: 22px;
+	line-height:22px;
+}
+.sec-tab li a span {
+color:#404040;
+font-size:12px;
+padding:0 5px;
+font-weight: bold;
+}
+#alipay-notice .alipay-manage li,#alipay-notice .alipay-manage {
+	background: url("../img/alipay_bg.png")
+		no-repeat scroll 1000px 1000px transparent;
+}
+#alipay-notice .alipay-manage {
+	background-position: -135px 5px;
+	height: 100px;
+	padding: 0 0 20px 80px;
+}
+
+#alipay-notice .alipay-manage h4 {
+	font-weight: normal;
+	margin: 10px 5px;
+}
+.alipay-manage h4 b{
+	font-size:15px;
+}
+.alipay-manage h4 a{
+	padding-right:10px;
+}
+.alipay-manage h4 .login{
+	font-size:11px;
+	color:#999999;
+}
+
+#alipay-notice .alipay-manage ul {
+	overflow: hidden;
+}
+
+
+#alipay-notice .alipay-manage li {
+	background-position: 0 0;
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 5px;
+	text-align: center;
+	width: 70px;
+}
+
+
+.sec {
+	border-top: 0 none;
+	margin: 0;
+	padding: 2px 0 2px 70px;
+}
+
+.mytaobao-notice {
+	overflow: hidden;
+	position: relative;
+}
+
+.mytaobao-notice .sec {
+	border-top: 1px dotted #CCCCCC;
+	margin: -1px 0 0;
+	padding: 5px 0 7px 80px;
+	position: relative;
+}
+
+.mytaobao-notice .sec h4 {
+	color: #404040;
+	font-size: 12px;
+	font-weight: normal;
+	left: 0;
+	position: absolute;
+	text-align: right;
+	width: 70px;
+}
+
+.mytaobao-notice .sec ul {
+	margin: 0 0 2px;
+}
+
+.mytaobao-notice .sec li {
+	float: left;
+	line-height: 18px;
+	margin: 0 0 3px;
+	width: 135px;
+}
+
+.mytaobao-notice .sec li.long-text {
+	width: 170px !important;
+}
+
+.mytaobao-notice .sec li em {
+	color: #FF6600;
+	font-weight: 700;
+	padding: 0;
+}
+
+.mytaobao-notice .sec li em.none {
+	color: #999999;
+}
+
+.myTask{
+	margin-top:5px;
+	border:1px solid #E2C4B0;
+	
+}
+
+.myTaskL{
+	width:49%;
+	float:left;
+	margin-right:5px;
+}
+.myTaskR{
+	width:49%;
+	float:right;
+}
+
+div .sorry{
+	font-size:20px;
+	font-weight:bold;
+	height:85px;
+	line-height:85px;
+	padding-left:90px;
+	background:url('../img/sweat.png') scroll no-repeat 0 0;
+}
+/*************供应商维护资质样式****************/
+.provinceNotice, .exposureFrame {background:url(../../skin07/img/tabs_bg_x.gif) repeat-x;border:1px solid #B6CFF9;position:relative;}
+.recommondNote,.importantNote {background:url(../../skin07/img/title.jpg) repeat-x;border:1px solid #B6CFF9;position:relative;}
+.provinceNotice h4, .exposureFrame h4,.importantNote h4,.recommondNote h4 {background:url("../../skin07/img/gif-0054.gif") no-repeat scroll 2px 50%;font-weight:bold;height:24px;line-height:24px;text-indent:10px;padding-left:10px;}
+.provinceNotice span.more, .exposureFrame span.more,.importantNote span.more,.recommondNote span.more {line-height:27px;position:absolute;right:10px;top:0;}
+.provinceNotice span.more a, .exposureFrame span.more a,.importantNote span.more a ,.recommondNote span.more a{color:#023d69;}
+.importantNote li {border-bottom:1px dotted #E3DFDD;line-height:26px;position:relative;margin-left:10px;}
+.importantNote li a {background:url(../../skin07/img/redCircle.gif) no-repeat scroll left center;display:block;overflow:hidden;padding-left:10px;white-space:nowrap;width:85%; text-overflow:ellipsis;}
+.importantNote li span.right {bottom:1px;color:#999999;position:absolute;right:0;top:0;}

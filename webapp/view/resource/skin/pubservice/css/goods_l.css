@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+/* 
+Label: EPs2008 
+Version: 2.0
+Design: OTiger
+Email: liuly@gpcsoft.com
+Remark: 商品展示页面使用。
+--------------------------------------------------------------------------------------------------------- */
+.list-content {/*clear: both;margin: 0 0 15px;width: 760px;*/}
+.list-content .list-view { overflow:hidden;margin: 0 0 10px;}
+.list-view li.list-item {border-bottom: 1px dashed #CDCDCD; height:100px; margin: 10px 0 0; overflow:hidden; position: relative;}
+
+.list-view h3 {/*background-image: none;border: medium none;font-size: 14px;font-weight: 400;height: 32px;line-height: normal;margin: 0 0 -30px;padding: 0;width: 275px;*/font-size: 14px; font-weight:normal; height:32px; line-height:normal; width:275px; margin-left:100px;}
+/*by-liuly 2011-01-24*/
+.list-view .seller{ position:absolute; left:100px; top:52px; right:120px;}/*by-liuly 2011-01-24*/
+.list-view h3 em {color: #FF5500;font-weight: 700;}
+.list-view .photo {/*	float: left;height: 80px;margin: 0 0 0 -95px;width: 80px;border: 1px solid #DDDDDD;*/position:absolute; left:0; top:0; height: 80px; width: 80px; border: 1px solid #DDDDDD;/*by-liuly 2011-01-24*/}
+
+.list-view .photo a {display: table-cell;height: 80px;text-align: center;vertical-align: middle;width: 80px;}
+.list-view .photo img {width: 80px;height:80px;}
+.list-view .attribute{ position:absolute; top:0; right:50px;}
+.list-view .attribute li{ float:right;}
+.list-view .attribute .legend2 a{ display:block;}
+.list-view .attribute .legend2 span{ display:block;}
+.list-view .attribute .place {width:120px; margin-right:20px;}
+.list-view .attribute .price a {color: #666666;}
+.list-view .attribute .price a:hover {color: #FF6600;text-decoration: none;}
+.list-view .attribute .price img {margin-right: 0;}
+
+.list-view .attribute img {margin-right: 3px;vertical-align: middle;}
+.list-view .attribute .legend a {display: block;height: 16px;margin: 0 auto 5px;padding: 0;width: 16px;}
+.list-view .attribute li.srvlist {margin-top:-2px;width:100px;}
+.list-view .attribute li.srvlist a {border:1px solid #FFFFFF;display:block;font-size:12px;height:21px;line-height:20px;padding:0;
+text-align:left}
+
+.list-view .attribute li.srvlist a.disabled{color:#aaa;}
+.list-view .attribute li.srvlist a span {cursor:pointer;padding-left:24px;}
+.list-view .attribute li.srvlist span {display:block;width:auto;}
+.list-view .attribute .price {width:140px;}
+.list-view .attribute li span {display: none;}
+.list-view .attribute li em {color: #FF6600;display: block;font-size: 13px;font-weight: 700;}
+.list-view .extend {position:absolute; left:100px; top:32px;}
+.list-view .extend a {margin: 0 8px 0 0;}
+.list-view .extend img {vertical-align: middle;}
+.list-view li.list-item .extend .specs {border: 1px solid #FA9614 !important;color: #666666;display: inline;margin-right: 5px;padding: 1px 5px;}
+.list-view .extend .specs span span {font-weight: bold;}
+.list-view .seller a.fn {color: #666666;margin: 0 5px 0 0;}
+.list-view .other {position: absolute;right:18px;right: 0px;top: 5px;}
+.izViewer{width:360px;height:300px;position:absolute;left:300px;top:150px;display:none; border:1px solid #999;z-index:999}
+.handle{display:none;opacity:0.6;filter:alpha(opacity=60);background:#E6EAF3; cursor:crosshair; z-index:999;position:inherit;}
+.nowrap{ white-space:nowrap;}

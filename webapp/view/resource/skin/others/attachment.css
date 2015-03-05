@@ -1,0 +1,15 @@
+body{ background:#fff;}
+.upFile{ width:100%; border:none}
+.upFile tr th, .upFile tr td{ border:none}
+.upFile{font-size: 12px;line-height: normal;font-weight: normal;}
+.upFile tr td input{ border:1px solid #cde9f0; height:24px; line-height:24px; padding:0px 6px 0px 6px; background:#e6f5f9}
+.upFileSub{ border-collapse:collapse; empty-cells:hide; width:100%}
+.upFileSub tr th{background:#e6f5f9;border:1px solid #cde9f0;border-width:1px 0px 1px 1px;border-spacing:0;padding:4px 2px;font-size: 14px;font-style: normal;font-weight: normal;font-variant: normal;text-align: center;}
+.upFileSub tr th:first-child { border-left-width:0px} 
+.upFileSub tr td{border-bottom: 1px dotted #cde9f0;border-left: 1px solid #cde9f0;text-align: center;height:14px;line-height:14px;padding:4px 2px;}
+.upFileSub tr td:first-child {border-left-width:0px;text-align: left;text-indent:0.5em }
+.upFileSub tfoot tr td{border: 1px solid #cde9f0;border-width:1px 0px 1px 0px}
+.upFileSub tfoot tr td input{ border:1px solid #989898; height:24px; line-height:24px; padding:0px 6px 0px 6px; background:#F4F4F4}
+
+.upFileSub tr th,.upFileSub tr td{_border-left-width:expression(this.previousSibling==null?'0px':'1px');}
+.upFileSub tr td{_text-align: expression(this.previousSibling==null?'left':'center');_text-indent: expression(this.previousSibling==null?'0.5em':'0em');}

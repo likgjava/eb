@@ -1,0 +1,118 @@
+@import url(publish_base.css);/*基础发布样式表。*/
+
+#newEditorContainer textarea {margin:0;padding:0;border:none;background:none;}
+#J_ItemEditor {display:block;}
+.goods-box h5 {padding:9px 0 9px 18px;font-weight:bold;}
+input {color:#666;font-size:12px;background:white url(../img/input-bg.png) 0 0	no-repeat;}
+input.text {margin:0 0 0 5px;padding:3px 2px 0 3px;height:16px;border:1px solid #a7a6aa;}
+input.checkbox {margin:0 4px 0 5px; *margin:0 4px 0 0;height:18px;vertical-align:middle;background:none;}
+input.radio {margin:0 4px 0 5px; *margin:0 4px 0 0;height:24px;vertical-align:middle;background:none;}
+.form select {margin:0 4px 0 5px;padding:1px 1px 0 2px;border:1px solid #a7a6aa;font-size:12px;}
+.form {zoom:1;margin-bottom:10px;}
+.form:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+.form ul {zoom:1;}
+.form li {clear:left;margin-bottom:8px;}
+.form li div.msg-left {margin-left:24px;}
+.form li div.msg-left a {margin-left:8px;}
+.form label.form_attribute{width:100px;float:left;}
+.form span.form_content{width:610px;float:left;overflow:hidden;}
+.form label {float:left;width:152px;text-align:right;color:#404040;padding-right:8px;line-height:1.2;padding-top:4px;zoom:1;}
+.form label b {font-weight:normal;color:#40d9ff;}
+.form li span.form_span {overflow:hidden;display:block;zoom:1;float:left;}
+.form li span.eleWarning {display:inline;color:#CC0000;margin-left:12px;}
+.form li span.prop-tips {display:inline;color:#808080;margin-left:12px;}
+.form li span.prop-tips:after {content:"";display:inline;}
+.form li span em {position:absolute;margin:0 0 0 -8px;font-style:normal;color:red;line-height:24px;font-size:12px;font-family:'simsun';font-weight:normal;}
+.form li span .text {width:193px;}
+.form li span .text-short {width:100px;}
+.form li span .text-shorter {width:60px;}
+.form li span ul.ul-radio li {padding-top:1px;}
+.form li span .text-long {width:400px;}
+.form li span .noun-hint-box {position:absolute;}
+.form li span ul {zoom:1;}
+.form li.face-value {position:relative;}
+.form li span li,.form li span .module-property li span li {float:left;clear:none;margin:0 20px 0 0;white-space:nowrap;zoom:1;}
+.form li span .module-property li {float:none;margin:0 0 18px 0;clear:left;min-height:18px;}
+.form li span .tips {margin-left:5px;color:#404040;}
+.form li span li label,.form li span .module-property li span li label {float:none;width:auto;padding-right:0;padding-top:0;line-height:1.8;}
+.form li span .module-property li span li label {white-space:nowrap;}
+.form li span .module-property li label {float:left;width:110px;padding-right:8px;line-height:1.2;padding-top:4px;}
+.form li span .module-property li label.label-title {white-space:normal;}
+.form li span .module-property li span {zoom:1;width:490px;}
+.form li span .module-property li span .preview {width:90px;height:91px;overflow:hidden;}
+.form li span .module-property li span .preview span {width:86px;height:86px;padding-left:0;overflow:hidden;zoom:1;}
+.submit {text-align:center;padding:20px 0 60px;}
+.submit .ic-btn {margin:0 7px;}
+#product-edit h3,#item-publish h3 {padding-left:18px;background:url(../img/product_edit_h3.png)	no-repeat 0 44%;zoom:1 !important;}
+#item-publish .bd {padding:0;overflow:hidden;zoom:1;background:url(../img/product_search_bd.png)	repeat-y 198px 0;}
+#item-publish .bd-sub {float:left;width:198px;}
+#item-publish .bd-main {padding:10px 0;float:right;overflow:hidden;border-left:1px solid #c1dbff;width:749px;}
+#item-publish .bd-sub {padding:10px 0;}
+#item-publish h5 {padding-left:10px;}
+#item-publish .bd-main h5 {font-size:14px;color:#404040;float:left;width:150px;}
+#item-publish .bd-main .hint {float:left;margin:0 0 11px 51px;width:540px;}
+#item-publish .bd-main .skin .hint { *margin-left:25px;}
+#item-publish .bd-sub h5 {color:#404040;font-size:12px;}
+.bd-main label {width:86px;}
+#item-publish .bd-sub ul {padding:0 10px;}
+#item-publish .bd-sub li {margin-bottom:4px;}
+#J_module-property .cphelp_content {margin-left:123px;white-space:normal;color:#a6a6a6;}
+html #J_module-property .cphelp_content {_margin-left:126px;}
+.bd-main .form { *clear:both;}
+#J_module-property .cphelp_content a {padding-left:4px;color:#36c;}
+.module-form {overflow:hidden;zoom:1;margin-left:107px;margin-bottom:10px;}
+.module-form .skin {float:left;background:#f8f8f8;border:1px solid #ececec;overflow:hidden;padding:10px 0 10px 10px;}
+.form li span .module-form {margin-left:5px;margin-right:10px;}
+.form li span .module-form .skin {float:none;zoom:1;}
+.module-property .skin {padding-bottom:0;}
+.form li span .ul-select li {margin-right:10px;}
+.form li span .ul-radio li {margin-right:10px;}
+#product-info .pic {margin:0 10px;}
+#product-info .pic img {width:118px;height:118px;border:1px solid #ccc;margin-bottom:8px;}
+#product-info .preview {margin-top:12px;}
+.form li span table.tb-color em {margin:-3px 0 0 -8px;}
+#J_form {line-height:1.3;}
+.upload-pic {margin:0 10px 10px 5px;}
+.upload-pic .tabs {position:relative;padding-left:22px;overflow:hidden;zoom:1;}
+.upload-pic .tabs li {float:left;width:auto;margin-top:3px;margin-right:3px;background:red;}
+.upload-pic .tabs .selected {margin-top:0;}
+.upload-pic .tabs li span,.upload-pic .tabs li a {background:url(../img/upload_pic_tabs.png) no-repeat;}
+.upload-pic .tabs li span {float:left;margin:0;background-color:#e8f2fe;}
+.upload-pic .tabs li a {float:left;line-height:23px;color:#424240;padding:0 9px;border-bottom:1px solid #add2ff;background-position:right -30px;}
+.upload-pic .tabs .selected span {background-position:0 -60px;background-color:white;}
+.upload-pic .tabs .selected a {line-height:26px;color:black;font-weight:bold;border-bottom-color:white;background-position:right -90px;}
+.upload-pic .tabs li a:hover {text-decoration:none;}
+.upload-pic .panel {zoom:1;margin-top:-1px;background:white;border:1px solid #add2ff;padding:8px;}
+.pic-manager {/*padding-left:128px; by yucy*/min-height:120px;_height:120px;}
+.side {float:left;padding-top:30px;background:url(../img/picPreview.png) no-repeat scroll 0 0 transparent;/*margin-left:-128px; by yucy*//*position:absolute;*/width:124px; height:127px;}
+.side li, .pic-manager .upload a, .upload-video .upload, .upload-manager .preview, .upload-manager .act span {
+  background:url(../img/upload_sets.png) no-repeat scroll 0 0 transparent;
+}
+.upload-manager{text-align:left;margin:0;}
+.pic-manager .main { overflow:hidden; width:490px;}
+.pic-manager .main ul { overflow:hidden; }
+.pic-manager .main li { float:left; margin-right:10px; position:relative; width:90px; }
+.pic-manager .first .preview { border-color:#FFC097; }
+.pic-manager .preview {  background-color:white; background-position:20px -120px;  border:1px solid #CFCFCF; /*display:table-cell;*/font-family:arial; height:88px;line-height:88px; overflow:hidden; text-align:center; vertical-align:middle; width:88px;}
+.pic-manager .preview img {/*max-height:88px;max-width:88px;vertical-align:middle;*/}
+
+.ke-gecko .form li span, .ke-trident4 .form li span, .ke-trident5 .form li span, .ke-webkit .form li span { display:block; }
+.pic-manager .upload a { background-position:-32px -40px; cursor:pointer; display:block; height:20px; margin-top:7px; overflow:hidden; width:90px;}
+.pic-manager .upload input { cursor:pointer; direction:rtl; font-size:40px; height:40px; opacity:0; width:100px;}
+.upload-manager .main .act { background:none repeat scroll 0 0 #C1DBFF; display:none; height:18px; opacity:0.8; overflow:hidden;
+ /*left:1px; padding:7px 0 0 17px;  position:absolute; top:64px; width:71px;*/}
+.pic-manager .main .unsupport:hover .act,
+.pic-manager .main .support:hover .act,
+.pic-manager .main div.hover .act, 
+.pic-manager .main li.hover .act, 
+.upload-video-ed .main:hover .act, 
+.upload-video-ed .hover .act { display:block;}
+.rc-bt {clear:both;}
+.upload-manager .main .act span { cursor:pointer; float:left; height:11px; /*margin-left:20px;*/text-indent:-999em; width:11px; }
+.upload-manager .act .moveright { background-position:-66px -3px; }
+.upload-manager .act .del { background-position:-77px -3px; }
+
+.form li span .module-form { margin-left:5px; margin-right:10px;}
+.form li span .module-form .skin { float:none;}
+.module-form .skin {background:none repeat scroll 0 0 #F8F8F8;border:1px solid #ECECEC;float:left;overflow:hidden;padding:10px 0 10px 10px;}
+.form li span li label, .form li span .module-property li span li label {float:none;line-height:1.8;padding-right:0;padding-top:0;width:auto;}
