@@ -1,0 +1,81 @@
+<%@ page pageEncoding="UTF-8"%>
+<%@ include file="/view/srplatform/common/taglibs.jsp"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="view/srplatform/portal/logo.ico" type="image/ico" rel="shortcut icon"/> 
+<title>审计风暴揭开中铝重组能力画皮- 【阳光易购】</title>
+<c:import url="/view/srplatform/common/init.jsp">
+	<c:param name="isLastLoadPage">
+		true
+	</c:param>
+</c:import>
+
+<!--CSS-->
+<link rel="stylesheet" type="text/css" href="/view/resource/skin/thems/default/web.css" />
+<link rel="stylesheet" type="text/css" href="/view/resource/skin/skin07/css/seller.css" />
+<link rel="stylesheet" type="text/css" href="/view/resource/skin/thems/default/listDetail.css" />
+<!--JS-->
+<script type="text/javascript" src='/view/srplatform/portal/include/common.js'></script>
+</head>
+
+<body>
+
+<div id="container">
+	<!-- 头部开始 -->
+	<div class="header">
+		<%@ include file="/view/srplatform/portal/include/main_header_index.jsp" %>
+	</div>
+	<!-- 头部结束-->
+    <!--主要内容 开始-->
+	<div id="sysContent" class="page">
+		<div id="contentSub" class="index3pa">
+			<%@ include file="/view/staticpags/load/left_cms.jsp" %>
+		</div>
+		<div id="contentMain" class="index3pa">
+			<div id="conTitle">
+				<div class="navCurrent ">
+
+	<a href="/view/srplatform/portal/index.jsp" id="/view/srplatform/portal/index.jsp" title="首页" target="_self">首页</a>
+	<a href="javascript:void(0)" id="/view/staticpags/supplierzx/supplierzx.jsp" title="供应商资讯" class="cmsHref_self">供应商资讯</a>
+	<a href="javascript:void(0)" id="/view/staticpags/supplierzx/ff8080813008ca4701301f791ce40585.jsp" title="审计风暴揭开中铝重组能力画皮" class="cmsHref_self">审计风暴揭开中铝重组能力画皮</a>
+		
+				</div>
+			</div>
+ 
+			<div id="conBody">
+				<input type="hidden"  id="channelId" value="2c9087922e6f5c1a012e6f71f9460134" />
+				<div class="frameNews">
+					<h1>审计风暴揭开中铝重组能力画皮</h1>
+					<div class="source">
+						<span>发布时间：2011-05-24</span>
+						<span>发布人：-  </span>
+					</div>
+					<p><p>多年来，中国铝业公司(下称&ldquo;中铝&rdquo;)通过各种方式收购重组多家企业，但是整合情况如何，一直备受关注。审计署20日公布的关于中铝的审计报告，将中铝的软肋暴露出来。</p>
+<p>审计报告称，中铝并购重组云南铜业等11个项目，因多种因素影响，截至2009年底尚未实现预期盈利目标。此外，审计报告指出，中铝还存在账务处理不够规范、部分自建和收购电解铝等项目未经核准、未及时清退部分中层以上领导干部违规持股等问题。</p>
+<p>中铝从2007年开始，就正式收购云铜，当年分两次向云铜注资近95亿元，获得云铜49%的股权。去年11月15日，云南省国资委又将云铜2%的股权无偿划转给中铝，使得中铝对云铜的持股比例由49%上升到51%。</p>
+<p>云铜是中铝发展铜产业最大的平台，但是2009年实现营业收入192.01亿元的情况下，净利润只有区区2.89亿元。</p>
+</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--主要内容 结束-->
+	<!-- 脚开始 -->
+	<div class="footer">
+	    <%@ include file="/view/srplatform/portal/include/foot.jsp" %>
+	</div>
+	<!-- 脚结束 -->
+</div>
+</body>
+
+</html>
+
+<script>
+	// 为左边栏设定选中样式,判断用于解决点击左边栏后样式被覆盖问题
+	var id = $("#channelId").val();
+	if(null != $('.subnav>li[id='+id+']').html()) {
+		$('.subnav>li').removeClass('selected');
+		$('.subnav>li[id='+id+']').addClass('selected');
+	}
+</script>
