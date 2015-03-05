@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+.jpjc { background:url(../img/jpjc.gif) no-repeat; height:26px; line-height:26px; font-size:1.2em; font-weight:bold; padding-left:10px;}
+.jpjc_cp{ border:1px solid #c4d9ef; border-top:0; margin-bottom:10px; padding:10px; background:#edf3fa; overflow:hidden;}
+
+
+.jc_aa{ float:left; height:350px; width:280px; margin:10px 19px; display:inline; position:relative; border:1px solid #ccc; background:#fff;}
+.jc_jiage{ background:url(../img/jc_jiage.gif) no-repeat; height:58px;}
+.jc_jiage .jc_shichang,.jc_jiage2 .jc_shichang{ float:left; width:100px; padding-left:10px; padding-top:5px;}
+.jc_jiage .jc_tuangou,.jc_jiage2 .jc_tuangou{ line-height:58px; padding-left:50px; font-size:1.3em; font-weight:bold; color:red;} 
+.jc_jiage2{ background:url(../img/jc_jiage2.gif) no-repeat; height:58px;}
+
+.jc_img{ margin:10px;}
+.jc_img img{width:260px; height:175px; overflow:hidden;}
+
+.jc_wenzi{ font-size:1.2em; font-weight:bold; text-align:center; line-height:40px;}
+
+.jc_sub{ text-align:center;}
+.jc_sub input{ cursor:pointer;}
+.jc_subm,.jc_subm2{width:92px; height:37px; display:inline-block; border:none;}
+.jc_subm{ background:url(../img/jc_sub.gif) no-repeat; }
+.jc_subm2{background:url(../img/sc_sub_02.gif) no-repeat;}

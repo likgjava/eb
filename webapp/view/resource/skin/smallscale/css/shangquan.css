@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 商圈*/
+.communityInfo{overflow:hidden;}
+.communityInfo .zixun li {border-bottom: 1px dotted #E5E5E5;clear: both; margin-bottom: 6px;padding-left:5px;}
+.wh40{width:40px;height:40px;}
+
+/*商圈左栏*/
+.shangquanLeft{width:190px;overflow:hidden;float:left;}
+.shangquanLeft .leftCol{border:1px solid #decbad; margin-bottom:10px;}
+.shangquanLeft .leftCol h2{background:url(../img/shanquanLeftColH2Bg.png) no-repeat left top; height:32px; font-size:14px; line-height:32px; color:#85211a; border-bottom:#cea881 1px solid;text-align:center;}
+.shangquanLeft .leftCol h4{text-align:center; padding-top:5px;}
+.shangquanLeft .leftCol .img{margin:5px auto 0; text-align:center;}
+.shangquanLeft .leftCol ul{padding:5px; }
+.shangquanLeft .leftCol p{text-indent:2em; text-align:left; line-height:24px; padding-left:5px;}
+.shangquanLeft .leftCol .more{padding-right:5px;text-align:right;line-height:24px;}
+.shangquanLeft .leftCol .more a{color:#666666;}
+
+/*商圈中栏*/
+.shangquanCenter{width:520px;float:left;overflow:hidden;margin-left:10px;}
+.shangquanCenter .centerCol{border:1px solid #decbad; border-top:3px solid #e20004; margin-bottom:10px;overflow:hidden;position:relative; }
+.shangquanCenter .centerCol h2{height:32px; line-height:32px; padding-left:10px; font-size:14px;  background:#f3f3f3; border:1px solid #fff;}
+.shangquanCenter .centerCol .more{position:absolute; top:0; right:5px; line-height:35px;}
+.shangquanCenter .centerCol .more a{color:#666666;}
+.shangquanCenter .centerCol .zixun li{line-height:24px;height:24px;_height:auto;}
+.shangquanCenter .centerCol .zixun a{color: #333333;float: left;font-size: 12px;}
+.shangquanCenter .centerCol span.date{color:gray;position:absolute;right:5px;}
+
+/**最新商务活动*/
+.shangquanCenter .centerCol .newActivity{display:block; width:98%; overflow: hidden; background:none; padding:5px;}
+.shangquanCenter .centerCol .newActivity p{display: inline; float: left; }
+.shangquanCenter .centerCol .newActivity p img{width: 200px;height: 125px; padding:0 10px;}
+
+/**最新主题*/
+.shangquanCenter .centerCol table{width:100%}
+.shangquanCenter .centerCol tr{line-height:24px;}
+.shangquanCenter .centerCol thead th{border-bottom:1px dashed #CCCCCC;}
+.shangquanCenter .centerCol th{text-align:center; color:gray;font-weight:bold;}
+
+/**商圈服务项目*/
+.shangquanCenter .centerCol .serverProject li{line-height:25px;font-size: 13px;margin-left:15px;}
+.shangquanCenter .centerCol .serverProject .title{padding-left: 15px;background:url(../..//skin07/img/dot2.png) no-repeat scroll left center transparent }
+.shangquanCenter .centerCol .serverProject .content{padding-left: 10px;color: gray;}
+
+/*商圈右栏*/
+.shangquanRight{width:230px;float:left;overflow:hidden;margin-left:10px;}
+.shangquanRight .rightCol{ margin-bottom:10px;border:1px solid #decbad;position:relative;}
+.shangquanRight .rightCol h2{ position:relative;font-size:14px; font-weight:bold; padding-left:10px;height:32px; line-height:32px;background:url(../img/huiyongH2Bg.png) right top no-repeat;}
+.shangquanRight .rightCol h2 a{ color:#ffffcc;}
+
+/**商圈会员列表（底部）*/
+.communityList { border:1px solid #decbad; height: 290px;width:958px;}
+.communityList li{display: inline; float: left; height: 130px; position: relative; width: 106px;}
+.communityList li h4{margin-top: 87px; text-align: center;}
+.communityList li .goodsPic{left: 0; right: 0; top: 10px; position: absolute; text-align: center; width: 106px;}
+.communityList li .goodsPic img{height: 72px; width: 96px;}
+.communityList h2 {background: none repeat scroll 0 0 #F9F9F9;border-bottom: 3px solid #E60021; color: #E60021;font-size: 14px;font-weight: bold;height: 30px;line-height: 30px;padding-left: 10px;}
+
+/*商圈菜单*/
+.shangquanLeft .selected{ background:url(../img/shanquanLeftColH2Bg.png) no-repeat left top;  font-size:12px; line-height:32px;  color:#85211a; font-weight:bold; border-left:1px solid #DECBAD;border-right:1px solid #DECBAD;}
+.shangquanLeft .selected span{padding-left:15px;}
+.shangquanLeft li li{ font-weight:normal; padding-left:8px; border:0px; border-bottom:1px dotted #ddd;}
+.shangquanLeft li li.selected {background: none repeat scroll 0 0 #FFFFE3; }

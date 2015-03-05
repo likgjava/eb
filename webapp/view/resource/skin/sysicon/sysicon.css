@@ -1,0 +1,199 @@
+﻿@charset "utf-8";
+/* 
+Label: ECP - E Concentration Procurement
+Version: 1.0
+Skin: all
+Design: OTiger
+Email: fanhy@gpcsoft.com
+Remark: 图标样式表，用于设置系统默认应用图标样式，特殊表现由各皮肤主题修补。
+--------------------------------------------------------------------------------------------------------- */
+/*系统图标*/
+.sysicon { background-position:left center; background-repeat:no-repeat; text-indent:18px; line-height:18px;}
+	input.sysicon { background-position:right center; text-indent:0;padding-right:16px;}/*增加adding-right修补输入框文字与图标的重叠 by lijx*/
+	/*常用图标*/
+	.siAccept { background-image:url(16/accept.png);}
+	.siUnacceptable { background-image:url(16/unacceptable.png);}
+	.siAdd { background-image:url(16/add.png);}
+	.siModify { background-image:url(16/modify.png);}
+	.siDelete { background-image:url(16/cross.png);}	
+	.siCancel { background-image:url(16/cancel.png);}
+	.siAnchor { background-image:url(16/anchor.png);}	
+	.siDisk { background-image:url(16/disk.png);}	
+	.siDate { background-image:url(16/date.png);}	
+	.siSearch { background-image:url(16/magnifier.gif);}
+	.siReload { background-image:url(16/arrow_rotate_clockwise.png);}
+	.siPrinter { background-image:url(16/printer.png);}
+	.siSitemap { background-image:url(16/sitemap_color.png);}
+	.siInfo{background-image:url(16/information.png);}
+	.autoSearch{background-image:url(16/find.png);}
+	.siSearch_view_tree { background-image:url(16/siSearch_tree.png);}
+	.siSearch_view_list { background-image:url(16/siSearch_list.png);}
+	
+	.siExit{background-image:url(16/dialog-operate_r1_c2.png);}
+	.siExitBtn{background-image:url(16/dialog-operate_r1_c1.png);}
+	.siUp{background-image:url(16/dialog-operate_r3_c2.png);}
+	.siUpBtn{background-image:url(16/dialog-operate_r3_c1.png);}
+	.siDown{background-image:url(16/dialog-operate_r2_c2.png);}
+	.siDownBtn{background-image:url(16/dialog-operate_r2_c1.png);}
+	.siEdit{background-image:url(16/dialog-operate_r4_c2.png);}
+	.siEditBtn{background-image:url(16/dialog-operate_r4_c1.png);}
+	.siExitGray{background-image:url(16/dialog-operate_r5_c1.png);}
+	.siUpGray{background-image:url(16/dialog-operate_r7_c1.png);}
+	.siDownGray{background-image:url(16/dialog-operate_r6_c1.png);}
+	.siEditGray{background-image:url(16/dialog-operate.png);}
+	.siSave{background-image:url(16/bullet_disk.png);}
+	.siSaveBtn{background-image:url(16/bullet_disk_btn.png);}
+	.siSaveGray{background-image:url(16/bullet_disk_gray.png);}
+	
+	.siAdd { background-image:url(16/add.png);padding-left:20px;text-indent:0;}
+	.siModify { background-image:url(16/modify.png);padding-left:20px;text-indent:0;}
+	.siDelete { background-image:url(16/cross.png);padding-left:20px;text-indent:0;}	
+	.siCancel { background-image:url(16/cancel.png);padding-left:20px;text-indent:0;}
+	span.siExit{background-image:url(16/dialog-operate_r1_c2.png);padding-left:20px;text-indent:0;}
+	span.siExitBtn{background-image:url(16/dialog-operate_r1_c1.png); padding-left:20px;text-indent:0;}
+	span.siUp{background-image:url(16/dialog-operate_r3_c2.png);padding-left:20px;text-indent:0;}
+	span.siUpBtn{background-image:url(16/dialog-operate_r3_c1.png);padding-left:25px;text-indent:0;}
+	span.siDown{background-image:url(16/dialog-operate_r2_c2.png);padding-left:20px;text-indent:0;}
+	span.siDownBtn{background-image:url(16/dialog-operate_r2_c1.png);padding-left:25px;text-indent:0;}
+	span.siEdit{background-image:url(16/dialog-operate_r4_c2.png);padding-left:20px;text-indent:0;}
+	span.siEditBtn{background-image:url(16/dialog-operate_r4_c1.png);padding-left:25px;text-indent:0;}
+	span.siExitGray{background-image:url(16/dialog-operate_r5_c1.png);padding-left:20px;text-indent:0;}
+	span.siUpGray{background-image:url(16/dialog-operate_r7_c1.png);padding-left:20px;text-indent:0;}
+	span.siDownGray{background-image:url(16/dialog-operate_r6_c1.png);padding-left:20px;text-indent:0;}
+	span.siEditGray{background-image:url(16/dialog-operate.png);padding-left:20px;text-indent:0;}
+	span.siSave{background-image:url(16/bullet_disk.png);padding-left:20px;text-indent:0;}
+	span.siSaveBtn{background-image:url(16/bullet_disk_btn.png);padding-left:20px;text-indent:0;}
+	span.siSaveGray{background-image:url(16/bullet_disk_gray.png);padding-left:20px;text-indent:0;}
+	span.award_star_delete{background-image:url(16/award_star_delete.png);padding-left:20px;text-indent:0;}
+	span.award_star_add{background-image:url(16/award_star_add.png);padding-left:20px;text-indent:0;}
+	
+	.noText{ text-indent:-9999px;}/*隐藏文字*/
+	
+	
+	/*应用程序*/
+	.siApplication { background-image:url(16/application.png);}
+	.siApplication_double { background-image:url(16/application_double.png);}
+	.siApplication_view_list { background-image:url(16/application_view_list.png);}
+	.siApp_side_tree { background-image:url(16/application_side_tree.png); background-repeat:no-repeat; padding-left:20px;text-indent:0;}
+	.siApp_view_columns { background-image:url(16/application_view_columns.png);}
+	.siApp_cascade { background-image:url(16/application_cascade.png);}
+	.siApp_resetPwd{background-image:url(16/calculator_edit.png);}
+	
+	.siApp_resetPwd{background-image:url(16/calculator_edit.png);}
+	.siAppxia{ background:url(16/dialog-operate_r2_c1.png);}
+	.siAppxiao{ font-size:0; color:#FFF;}
+	.siApp_view_columnss { background-image:url(16/dialog-operate_r2_c1.png);}
+	.siApp_view_columnsx { background-image:url(16/dialog-operate_r1_c1.png);}
+	.siApp_view_columnsa { background-image:url(16/dialog-operate_r3_c1.png);}
+	.siApp_view_columnsb { background-image:url(16/dialog-operate_r4_c1.png);}
+	.siApp_view_columnsh1 { background-image:url(16/dialog-operate_r5_c1.png);}
+	.siApp_view_columnshx { background-image:url(16/dialog-operate_r2_c2.png);}
+	.siApp_view_columnsc { background-image:url(16/dialog-operate_r1_c2.png);}
+	.siApp_view_columnsak { background-image:url(16/dialog-operate_r3_c2.png);}
+	.siApp_view_columnsg { background-image:url(16/dialog-operate_r4_c2.png);}
+	.siApp_view_columnsh2 { background-image:url(16/dialog-operate_r6_c1.png);}
+	.siApp_view_columnsh3 { background-image:url(16/dialog-operate_r7_c1.png);}
+	.siApp_view_columnsh4 { background-image:url(16/dialog-operate.png);}
+	.cog_go { background-image:url(16/cog_go.png);}
+	.cog_error{ background-image:url(16/cog_error.png);}
+	.cog_edit{ background-image:url(16/cog_edit.png);}
+	.cog_delete{ background-image:url(16/cog_delete.png);}
+	.cog_add{ background-image:url(16/cog_add.png);}
+	.cog{ background-image:url(16/cog.png);}
+	.report_word{ background-image:url(16/report_word.png);padding-left:20px;text-indent:0;}
+	.report_user{ background-image:url(16/report_user.png);padding-left:20px;text-indent:0;}
+	.report_picture{ background-image:url(16/report_picture.png);padding-left:20px;text-indent:0;}
+	.report_magnify{background-image:url(16/report_magnify.png);padding-left:20px;text-indent:0;}
+	.report_link{background-image:url(16/report_link.png);padding-left:20px;text-indent:0;}
+	.report_key{background-image:url(16/report_key.png);padding-left:20px;text-indent:0;}
+	.report_go{background-image:url(16/report_go.png);padding-left:20px;text-indent:0;}
+	.report_edit{background-image:url(16/report_edit.png);padding-left:20px;text-indent:0;}
+	.report_disk{background-image:url(16/report_disk.png);padding-left:20px;text-indent:0;}
+	.report_delete{background-image:url(16/report_delete.png)padding-left:20px;text-indent:0;}
+	.report_add{background-image:url(16/report_add.png);padding-left:20px;text-indent:0;}
+	.report{background-image:url(16/report.png);padding-left:20px;text-indent:0;}
+	.group{background-image:url(16/group.png);}
+	.group_add{background-image:url(16/group_add.png);}
+	.group_delete{background-image:url(16/group_delete.png);}
+	.group_edit{background-image:url(16/group_edit.png);}
+	.group_error{background-image:url(16/group_error.png);}
+	.group_gear{background-image:url(16/group_gear.png);}
+	.group_go{background-image:url(16/group_go.png);}
+	.group_key{background-image:url(16/group_key.png);}
+	.group_link{background-image:url(16/group_link.png);}
+	.ruby{background-image:url(16/ruby.png);}
+	.ruby_add{background-image:url(16/ruby_add.png);}
+	.ruby_delete{background-image:url(16/ruby_delete.png);}
+	.ruby_gear{background-image:url(16/ruby_gear.png);}
+	.ruby_get{background-image:url(16/ruby_get.png);}
+	.ruby_go{background-image:url(16/ruby_go.png);}
+	.ruby_key{background-image:url(16/ruby_key.png);}
+	.ruby_link{background-image:url(16/ruby_link.png);}
+	.ruby_put{background-image:url(16/ruby_put.png);}
+	.coins{background-image:url(16/coins.png);}
+	.coins_add{background-image:url(16/coins_add.png);}
+	.coins_delete{background-image:url(16/coins_delete.png);}
+	.plugin_link{background-image:url(16/plugin_link.png);}
+	.plugin_go{background-image:url(16/plugin_go.png);}
+	.plugin_error{background-image:url(16/plugin_error.png);}
+	.plugin_edit{background-image:url(16/plugin_edit.png);}
+	.plugin_disabled{background-image:url(16/plugin_disabled.png);}
+	.plugin_delete{background-image:url(16/plugin_delete.png);}
+	.plugin_add{background-image:url(16/plugin_add.png);}
+	.plugin{background-image:url(16/plugin.png);}
+	.award_star_silver_3{background-image:url(16/award_star_silver_3.png);}
+	.award_star_silver_2{ background-image:url(16/award_star_silver_2.png);}
+	.award_star_silver_1{background-image:url(16/award_star_silver_1.png);}
+	.award_star_gold_3{background-image:url(16/award_star_gold_3.png);padding-left:20px;text-indent:0;}
+	.award_star_gold_2{background-image:url(16/award_star_gold_2.png);padding-left:20px;text-indent:0;}
+	.award_star_gold_1{background-image:url(16/award_star_gold_1.png);padding-left:20px;text-indent:0;}
+	.award_star_delete{background-image:url(16/award_star_delete.png);}
+	.award_star_bronze_3{background-image:url(16/award_star_bronze_3.png);}
+	.award_star_bronze_2{background-image:url(16/award_star_bronze_2.png);}
+	.award_star_bronze_1{background-image:url(16/award_star_bronze_1.png);}
+	.award_star_add{background-image:url(16/award_star_add.png);}
+	.folder{background-image:url(16/folder.png);}
+	.folder_close{background-image:url(16/folder_close.png);}
+	.woman{background-image:url(16/woman.png);}
+	.man{background-image:url(16/man.png);}
+	.womanGray{background-image:url(16/womanGray.png);}
+	.manGray{background-image:url(16/manGray.png);}
+
+	
+	
+	/*箭头图标*/
+	.siArrow_in { background-image:url(16/arrow_in.png);}
+	.siArrow_inout { background-image:url(16/arrow_inout.png);}
+	.siArrow_out { background-image:url(16/arrow_out.png);}
+	.siArrow_refresh { background-image:url(16/arrow_refresh.png);}
+	.siArrow_refresh_small { background-image:url(16/arrow_refresh_small.png);}
+	.siArrow_left { background-image:url(16/arrow_left.png);}
+	.siArrow_right { background-image:url(16/arrow_right.png);}
+	.siFirst { background-image:url(16/resultset_first.png);}
+	.siPrev { background-image:url(16/resultset_previous.png);}
+	.siNext { background-image:url(16/resultset_next.png);}
+	.siLast { background-image:url(16/resultset_last.png);}
+	.siBullet_arrow_down { background-image:url(16/bullet_arrow_down.png);}
+	.siBullet_arrow_up { background-image:url(16/bullet_arrow_up.png);}
+	.siBullet_arrow_left { background-image:url(16/bullet_arrow_left.png);}
+	.siBullet_arrow_right { background-image:url(16/bullet_arrow_right.png);}
+    .siControl_fastforward_right { background-image:url(16/control_fastforward_blue.png);}
+
+/*详情开关图标*/
+	.detailsSwitch { margin-left:5px; display:inline-block; background:url(16/bullet_arrow_down.png) no-repeat right center; font-weight:normal; padding-right:16px; cursor:pointer; color:#c00;}
+	.detailsSwitch.collapsable { background-image:url(16/bullet_arrow_up.png);}
+
+	
+/*add by-liuly 20110901*/
+.shoppingCart{padding-left:20px; background:url(16/shop_car.png) no-repeat left center;}/*我的购物车*/
+.promotion{ background:url(16/promotion.png) no-repeat left center; padding-left:20px;}/*我要推广*/
+.opinion{ background:url(16/opinion.png) no-repeat left center; padding-left:20px;}/*客户意见*/
+.phone{ background:url(16/phone.png) no-repeat left center; padding-left:20px;}/*客服中心*/
+.time{background:url(16/time.png) no-repeat left center; padding-left:20px;}/*时间*/
+.collection{background:url(16/collection.png) no-repeat left center; padding-left:20px;}
+.good{background:url(16/good.png) no-repeat left center; padding-left:20px;}
+.ebidHome{background:url(16/ebidHome.png) no-repeat left center; padding-left:20px;}
+.ztbhome{background:url(16/ztbhome.png) no-repeat left center; padding-left:20px;}
+.help{background:url(16/help.png) no-repeat left center; padding-left:20px;}
+.dzcghome{background:url(16/dzcghome.png) no-repeat left center; padding-left:20px;}
+.ask{background:url(16/helpGray.png) no-repeat right center; padding-right:20px;}
